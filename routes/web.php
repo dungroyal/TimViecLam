@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'home@index');
-Route::get('/flight', 'flights@index');
-Route::get('/flight/{id}', 'flights@passengers');
+Route::get('/', 'indexController@index');
