@@ -7,7 +7,7 @@
     <meta name="keywords" content="Directing, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Directing | Template</title>
+    <title>Tuyển dụng | Tìm Việc Làm nhanh,hiệu quả | Timvieclam.xyz</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
 </head>
 
 <body>
@@ -45,9 +46,8 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./listing.html">Listing</a></li>
-                                <li><a href="#">Categories</a></li>
+                                <li class="active"><a href="./index.html">Trang chủ</a></li>
+                                <li><a href="./listing.html">Tuyển dụng</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.html">About</a></li>
@@ -56,13 +56,15 @@
                                         <li><a href="./contact.html">Contact</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">Blog</a></li>
-                                <li><a href="#">Shop</a></li>
+                                <li><a href="./blog.html">Góc nghề nghiệp</a></li>
                             </ul>
                         </nav>
                         <div class="header__menu__right">
-                            <a href="#" class="primary-btn"><i class="fa fa-plus"></i>Add Listing</a>
-                            <a href="#" class="login-btn"><i class="fa fa-user"></i></a>
+                            <a href="#" class="primary-btn"><i class="fa fa-user-circle" aria-hidden="true"></i>Tài khoản</a>
+                            <a href="#" class="primary-btn" id="login-btn-employer">Nhà tuyển dụng</a>
+                            <a href="#" class="primary-btn" id="login-btn-job_seeker">Ứng viên</a>
+                            
+                            <!-- <a href="#" class="login-btn"><i class="fa fa-user"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -79,23 +81,39 @@
                 <div class="col-lg-12">
                     <div class="hero__text">
                         <div class="section-title">
-                            <h2>Discover The Best Services Near You</h2>
-                            <p>1.118.940.376 The best service package is waiting for you</p>
+                            <h2>Tìm việc khó? Đã có TimViecLam.xyz</h2>
+                            <p>1.118.940.376 Công việc đang chờ đón bạn!</p>
                         </div>
                         <div class="hero__search__form">
                             <form action="#">
-                                <input type="text" placeholder="Search...">
+                                <input type="text" placeholder="Tìm kiếm...">
                                 <div class="select__option">
                                     <select>
-                                        <option value="">Choose Categories</option>
+                                        <option value="">Chọn nghành nghề</option>
+                                        <option value="">Công nghệ thông tin</option>
+                                        <option value="">Lễ tân</option>
+                                        <option value="">Ngân hàng</option>
+                                        <option value="">Bảo vệ</option>
                                     </select>
                                 </div>
                                 <div class="select__option">
                                     <select>
-                                        <option value="">Choose Location</option>
+                                        <option value="">Chọn nơi làm việc</option>
+                                        <option value="">Q. Gò vấp</option>
+                                        <option value="">Q. Tân bình</option>
+                                        <option value="">Q. Quận 1</option>
+                                        <option value="">Q. Quận 2</option>
+                                        <option value="">Q. Quận 3</option>
+                                        <option value="">Q. Quận 4</option>
+                                        <option value="">Q. Quận 5</option>
+                                        <option value="">Q. Quận 6</option>
+                                        <option value="">Q. Quận 7</option>
+                                        <option value="">Q. Quận 8</option>
+                                        <option value="">Q. Quận 9</option>
+                                        <option value="">Q. Quận 10</option>
                                     </select>
                                 </div>
-                                <button type="submit">Explore Now</button>
+                                <button type="submit">Tìm kiếm ngay</button>
                             </form>
                         </div>
                         <ul class="hero__categories__tags">
@@ -1436,8 +1454,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Trusted By Over 5000+ User</h2>
-                        <p>What people say about us</p>
+                        <h2>Được tin cậy bởi hơn 5000+ doanh nghiệp</h2>
+                        <p>Họ nói gì về "TimViecLam.xyz"</p>
                     </div>
                     <div class="testimonial__slider owl-carousel">
                         <div class="testimonial__item" data-hash="review-1">
@@ -1516,8 +1534,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>News Post</h2>
-                        <p>Checkout Latest News And Articles From Our Blog</p>
+                        <h2>Góc nghề nghiệp</h2>
+                        <p>Nhữ tin tức mới về công việc hiện hay.</p>
                     </div>
                 </div>
             </div>
@@ -1529,75 +1547,57 @@
                         </div>
                         <div class="blog__item__text">
                             <ul class="blog__item__tags">
-                                <li><i class="fa fa-tags"></i> Travel</li>
+                                <li><i class="fa fa-tags"></i>Việc làm</li>
                                 <li>Videos</li>
                             </ul>
-                            <h5><a href="#">Internet Banner Advertising Most Reliable</a></h5>
+                            <h5><a href="#">Nhân sự mùa Covid-19: Ngành sản xuất và CNTT có nhu cầu tuyển dụng cao nhất</a></h5>
                             <ul class="blog__item__widget">
-                                <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                <li><i class="fa fa-user"></i> John Smith</li>
+                                <li><i class="fa fa-clock-o"></i> 1 tháng 6, 2020</li>
+                                <li><i class="fa fa-user"></i> DungRoyal</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg">
+                            <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        </div>
                         <div class="blog__item__text">
                             <ul class="blog__item__tags">
-                                <li><i class="fa fa-tags"></i> Travel</li>
-                                <li>Restaurant</li>
+                                <li><i class="fa fa-tags"></i>Việc làm</li>
+                                <li>Videos</li>
                             </ul>
-                            <h5><a href="#">Internet Banner Advertising Most Reliable</a></h5>
+                            <h5><a href="#">Nhân sự mùa Covid-19: Ngành sản xuất và CNTT có nhu cầu tuyển dụng cao nhất</a></h5>
                             <ul class="blog__item__widget">
-                                <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                <li><i class="fa fa-user"></i> John Smith</li>
+                                <li><i class="fa fa-clock-o"></i> 1 tháng 6, 2020</li>
+                                <li><i class="fa fa-user"></i> DungRoyal</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg">
+                            <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        </div>
                         <div class="blog__item__text">
                             <ul class="blog__item__tags">
-                                <li><i class="fa fa-tags"></i> Travel</li>
-                                <li>Restaurant</li>
+                                <li><i class="fa fa-tags"></i>Việc làm</li>
+                                <li>Videos</li>
                             </ul>
-                            <h5><a href="#">Internet Banner Advertising Most Reliable</a></h5>
+                            <h5><a href="#">Nhân sự mùa Covid-19: Ngành sản xuất và CNTT có nhu cầu tuyển dụng cao nhất</a></h5>
                             <ul class="blog__item__widget">
-                                <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                <li><i class="fa fa-user"></i> John Smith</li>
+                                <li><i class="fa fa-clock-o"></i> 1 tháng 6, 2020</li>
+                                <li><i class="fa fa-user"></i> DungRoyal</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </d>
     </section>
     <!-- Blog Section End -->
-
-    <!-- Newslatter Section Begin -->
-    <section class="newslatter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="newslatter__text">
-                        <h3>Subscribe Newsletter</h3>
-                        <p>Subscribe to our newsletter and don’t miss anything</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <form action="#" class="newslatter__form">
-                        <input type="text" placeholder="Your email">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Newslatter Section End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -1607,24 +1607,23 @@
                         <div class="footer__about__logo">
                             <a href="./index.html"><img src="img/footer-logo.png" alt=""></a>
                         </div>
-                        <p>Challenging the way things have always been done can lead to creative new options that reward
-                            you.</p>
+                        <p>Tìm việc làm khó? Đã có TimViecLam.xyz.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 col-md-6">
                     <div class="footer__address">
                         <ul>
                             <li>
-                                <span>Call Us:</span>
-                                <p>(+12) 345-678-910</p>
+                                <span>Hotline:</span>
+                                <p>0398 022 720</p>
                             </li>
                             <li>
                                 <span>Email:</span>
-                                <p>info.colorlib@gmail .com</p>
+                                <p>contact@timvieclam.com</p>
                             </li>
                             <li>
                                 <span>Fax:</span>
-                                <p>(+12) 345-678-910</p>
+                                <p>345-678-910</p>
                             </li>
                             <li>
                                 <span>Connect Us:</span>
@@ -1661,7 +1660,7 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Royal TEAM</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                         <div class="footer__copyright__links">
