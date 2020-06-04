@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vn">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -26,13 +26,11 @@
     <link rel="stylesheet" href="{{ asset('home')}}/css/style.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('home')}}/css/custom.css" type="text/css">
 </head>
-
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -1410,7 +1408,7 @@
                     <a href="#" class="feature__location__item large-item set-bg"
                         data-setbg="{{ asset('home')}}/img/feature-location/fl-1.jpg">
                         <div class="feature__location__item__text">
-                            <h5>Washington, D.C</h5>
+                            <h5>Quận 1</h5>
                             <ul>
                                 <li>2045 Listings</li>
                                 <li>3648 Users</li>
@@ -1424,7 +1422,7 @@
                             <a href="#" class="feature__location__item set-bg"
                                 data-setbg="{{ asset('home')}}/img/feature-location/fl-2.jpg">
                                 <div class="feature__location__item__text">
-                                    <h5>Chicago</h5>
+                                    <h5>Quận Tân Bình</h5>
                                 </div>
                             </a>
                         </div>
@@ -1432,14 +1430,14 @@
                             <a href="#" class="feature__location__item set-bg"
                                 data-setbg="{{ asset('home')}}/img/feature-location/fl-3.jpg">
                                 <div class="feature__location__item__text">
-                                    <h5>San Antonio</h5>
+                                    <h5>Quận Thủ Đức</h5>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <a href="#" class="feature__location__item set-bg" data-setbg="{{ asset('home')}}/img/feature-location/fl-4.jpg">
                         <div class="feature__location__item__text">
-                            <h5>Los Angeles</h5>
+                            <h5>Quận 7</h5>
                         </div>
                     </a>
                 </div>
