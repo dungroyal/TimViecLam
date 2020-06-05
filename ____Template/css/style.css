@@ -1372,9 +1372,9 @@ ol {
 }
 
 .listing {
-	width: 55%;
+	width: 100%;
 	height: 100%;
-	padding: 0 40px;
+	padding: 0 70px;
 	padding-top: 140px;
 	overflow-y: auto;
 	float: left;
@@ -1390,9 +1390,9 @@ ol {
 }
 
 .listing .listing__list .listing__item {
-	max-width: calc(50% - 30px);
+	max-width: calc(29% - 30px);
 	float: left;
-	margin-right: 30px;
+	margin-right: 94px;
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 50%;
 	flex: 0 0 50%;
@@ -1407,7 +1407,7 @@ ol {
 }
 
 .listing__item__pic {
-	height: 260px;
+	height: 160px;
 	position: relative;
 }
 
