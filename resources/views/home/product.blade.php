@@ -1,6 +1,5 @@
 @extends('home.main')
 @section('content')
-
 <div class="container">
 <h5 id="title-categories"><i class="fa fa-list-alt" aria-hidden="true"></i> 
     @if (isset($nameCategory))

@@ -2,18 +2,12 @@
 <html lang="en">
     @include('home.element.head')
 <body>
-    @include('home.element.header')
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                @include('home.element.sitebar')
-            </div>
-            <div class="col-lg-9">
-            @yield('content')
-            </div>
-        </div>
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
+    @include('home.element.header')
+    @yield('content')
     @include('home.element.footer')
+    @include('home.element.script')
 </body>
-    @include('home.element.scrip')
 </html>

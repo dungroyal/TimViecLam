@@ -1,14 +1,25 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>BookStore | Sách cho mọi người!</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('home/') }}/css/custom.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Directing Template">
+    <meta name="keywords" content="Directing, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tuyển dụng | Tìm Việc Làm nhanh,hiệu quả | Timvieclam.xyz</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ asset('home') }}/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('home') }}/css/custom.css" type="text/css">
 </head>
