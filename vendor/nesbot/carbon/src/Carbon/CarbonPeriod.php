@@ -30,8 +30,6 @@ use DateTimeInterface;
 use InvalidArgumentException;
 use Iterator;
 use JsonSerializable;
-use ReflectionException;
-use RuntimeException;
 
 /**
  * Substitution of DatePeriod with some modifications and many more features.
@@ -585,7 +583,7 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
      *
      * @param object|string $mixin
      *
-     * @throws ReflectionException
+     * @throws \ReflectionException
      *
      * @return void
      */
@@ -800,7 +798,7 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
      *
      * @param int|null $options
      *
-     * @throws InvalidArgumentException
+     * @throws \InvalidArgumentException
      *
      * @return $this
      */
@@ -1437,7 +1435,7 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
     /**
      * Move forward to the next date.
      *
-     * @throws RuntimeException
+     * @throws \RuntimeException
      *
      * @return void
      */
@@ -1463,7 +1461,7 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
      * @see https://bugs.php.net/bug.php?id=74274
      * @see https://wiki.php.net/rfc/datetime_and_daylight_saving_time
      *
-     * @throws RuntimeException
+     * @throws \RuntimeException
      *
      * @return void
      */
@@ -1510,7 +1508,7 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
     /**
      * Keep incrementing the current date until a valid date is found or the iteration is ended.
      *
-     * @throws RuntimeException
+     * @throws \RuntimeException
      *
      * @return void
      */

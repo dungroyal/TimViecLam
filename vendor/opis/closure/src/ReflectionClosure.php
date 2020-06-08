@@ -607,6 +607,7 @@ class ReflectionClosure extends ReflectionFunction
         }
 
         if ($isShortClosure) {
+            $code .= ';';
             $this->useVariables = $this->getStaticVariables();
         } else {
             $this->useVariables = empty($use) ? $use : array_intersect_key($this->getStaticVariables(), array_flip($use));

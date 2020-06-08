@@ -515,8 +515,6 @@ class Mailer implements MailerContract, MailQueueContract
      */
     protected function sendSwiftMessage($message)
     {
-        $this->failedRecipients = [];
-
         try {
             return $this->swift->send($message, $this->failedRecipients);
         } finally {

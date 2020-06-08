@@ -2,15 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', 'homeController@index');
+Route::get('/product', 'productController@index');
+Route::get('/product/{id}', 'productController@detail');
+Route::get('/category/{id}', 'productController@product_by_id');
+Route::post('/login', 'homeController@login');
+Route::post('/search', 'productController@search');
 
-Route::get('/', 'indexController@index');
+
+
+// $prefix='product';
+// Route::group(['prefix' => $prefix], function () use($prefix) {
+//     $controller = $prefix.'Controller@';
+//     Route::get('/',$controller.'index');
+//     Route::get('/product/a',$controller.'detail');
+
+    
+//     Route::get('/'.$prefix.'/edit/{id}',$controller.'form')->where('id','[0-9]+');
+//     Route::get('/'.$prefix.'/delete/{id}',$controller.'delete')->where('id','[0-9]+');
+// });
