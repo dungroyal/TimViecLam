@@ -10,10 +10,6 @@ class homeController extends Controller
 {
     function index()
     {
-        // $products=product::all();
-        // $products=product::paginate(4);
-        // $catalogs=catalog::all();
-        // return view('home.index',['list_products'=>$products,'list_catalog'=>$catalogs]);
         return view('home.index');
     }
 
@@ -21,20 +17,20 @@ class homeController extends Controller
     {
         return view('home.contact');
     }
-
     
     function about()
     {
         return view('home.about');
     }
 
-      
-    function login(Request $request)
+    function dang_nhap()
     {
-        $request->validate([
-            'username'=>['required'],
-            'password'=>['required']
-         ]);
-        return 'Đăng nhập thành công';
+        return view('home.dang_nhap');
     }
+
+    function dang_ky()
+    {
+        return view('home.dang_ky');
+    }
+
 }

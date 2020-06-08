@@ -1,20 +1,11 @@
-/*  ---------------------------------------------------
-    Template Name: Directing
-    Description:  Directing directory listing HTML Template
-    Author: Colorlib
-    Author URI: https://colorlib.com
-    Version: 1.0
-    Created: Colorlib
----------------------------------------------------------  */
-
 'use strict';
 
-(function ($) {
+(function($) {
 
     /*------------------
         Preloader
     --------------------*/
-    $(window).on('load', function () {
+    $(window).on('load', function() {
         $(".loader").fadeOut();
         $("#preloder").delay(200).fadeOut("slow");
     });
@@ -22,7 +13,7 @@
     /*------------------
         Background Set
     --------------------*/
-    $('.set-bg').each(function () {
+    $('.set-bg').each(function() {
         var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
     });
@@ -34,7 +25,7 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
-    
+
     /*--------------------------
     Testimonial Slider
     ----------------------------*/
@@ -77,7 +68,7 @@
         min: 0,
         max: 2,
         value: 1,
-        slide: function (event, ui) {
+        slide: function(event, ui) {
             radius.val(ui.value + 'km');
         }
     });
@@ -88,12 +79,12 @@
 	------------------------ */
     var rangeSliderPrice = $(".price-range"),
         minamount = $("#minamount");
-        rangeSliderPrice.slider({
+    rangeSliderPrice.slider({
         range: 'min',
         min: 0,
         max: 80,
         value: 20,
-        slide: function (event, ui) {
+        slide: function(event, ui) {
             minamount.val('$' + ui.value);
         }
     });
@@ -107,7 +98,7 @@
     /*------------------
 		Single Product
 	--------------------*/
-    $('.listing__details__gallery__slider img').on('click', function () {
+    $('.listing__details__gallery__slider img').on('click', function() {
 
         var imgurl = $(this).data('imgbigurl');
         var bigImg = $('.listing__details__gallery__item__large').attr('src');
@@ -167,6 +158,11 @@
 	--------------------*/
     $('.video-popup').magnificPopup({
         type: 'iframe'
-      });
+    });
+
+    $('.header__menu__right a').first().click(function() {
+        $('.header__menu__right a').eq(1).toggleClass('display_none');
+        $('.header__menu__right a').eq(2).toggleClass('display_none');
+    });
 
 })(jQuery);

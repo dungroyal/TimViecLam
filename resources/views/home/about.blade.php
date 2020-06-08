@@ -6,10 +6,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>About Us</h2>
+                        <h2>Giới thiệu về "TimViecLam.xyz"</h2>
                         <div class="breadcrumb__option">
-                            <a href="#"><i class="fa fa-home"></i> Home</a>
-                            <span>Aboutus</span>
+                            <a href="/"><i class="fa fa-home"></i> Trang chủ</a>
+                            <span>Giới thiệu</span>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                 <div class="col-lg-5 col-md-5">
                     <div class="about__title">
                         <h2>Welcome to<br /> Directing Listing</h2>
-                        <a href="#" class="primary-btn">Contact Us</a>
+                        <a href="/contact" class="primary-btn">Liên hệ với chúng tôi</a>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-7">

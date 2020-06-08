@@ -1,26 +1,62 @@
-.header__menu__right{
+.header__menu__right {
     position: relative;
 }
 
-.header__logo img{
+.header__logo img {
     width: 50%;
 }
 
-#login-btn-employer{
+#login-btn-employer {
     position: absolute;
-    top: 50px;
+    top: 52px;
     left: 0;
-    padding: 10px 12px;
-    background-color:#29baff;
-    color:#000000;
+    padding: 11px 42px;
+    background-color: #29baff;
+    color: #ffffff;
+    border-radius: 3px;
 }
 
-#login-btn-job_seeker{
+#login-btn-job_seeker {
     position: absolute;
-    top: 98px;
+    top: 100px;
     left: 0;
-    padding: 10px 41px;
-    background-color:#29baff;
-    color:#000000;
+    padding: 11px 52px;
+    background-color: #29baff;
+    color: #ffffff;
+    border-radius: 3px;
 }
 
+.display_none {
+    display: none;
+}
+
+.btn-hover {
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #ca000a, #880105, #9b4b00, #fcb430);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+.filter__title {
+    margin-bottom: 15px;
+}

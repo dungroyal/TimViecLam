@@ -9,6 +9,8 @@ Route::get('/blog', 'blogController@index');
 Route::get('/job', 'jobController@index');
 Route::get('/contact', 'homeController@contact');
 Route::get('/about', 'homeController@about');
+Route::get('/dang-nhap', 'homeController@dang_nhap');
+Route::get('/dang-ky', 'homeController@dang_ky');
 
 
 Route::get('/product/{id}', 'productController@detail');

@@ -2,7 +2,7 @@
 @section('content')
     <!-- Hero Section Begin -->
     <section class="hero set-bg" data-setbg="{{ asset('home') }}/img/hero/hero-bg.jpg">
-        <div class="container">
+        <div class="container search-bar-home">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__text">
@@ -58,8 +58,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Most Popular Categories</h2>
-                        <p>Travelocity empowers travelers who are giving back on their trips in ways big and small</p>
+                        <h2>Các ngành cần nguồn nhân lực cao</h2>
+                        <p>Giúp cho bạn dễ dàng tìm kiếm công việc phù hợp hơn!</p>
                     </div>
                     <div class="categories__item__list">
                         <div class="categories__item">
@@ -100,56 +100,40 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>The Most Searched Services</h2>
-                        <p>Travelocity empowers travelers who are giving back on their trips in ways big and small</p>
+                        <h2>Việc làm mới</h2>
+                        <p>Nhanh chân ứng tuyển vào vị trí công việc phù hợp với mình nào! go go go ....</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="most__search__tab">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                                    <span class="flaticon-039-fork"></span>
-                                    Restaurent
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
-                                    <span class="flaticon-030-kebab"></span>
-                                    Shopping
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
-                                    <span class="flaticon-032-food-truck"></span>
-                                    Travel
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
-                                    <span class="flaticon-017-croissant"></span>
-                                    Beauty
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab">
-                                    <span class="flaticon-038-take-away"></span>
-                                    Event
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">
-                                    <span class="flaticon-031-delivery"></span>
-                                    Rental
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="listing__item">
+                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
+                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
+                                        </div>
+                                        <div class="listing__item__text">
+                                            <div class="listing__item__text__inside">
+                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
+                                                <ul>
+                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
+                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
+                                                </ul>
+                                            </div>
+                                            <div class="listing__item__text__info">
+                                                <div class="listing__item__text__info__left">
+                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
+                                                    <span>Restaurant</span>
+                                                </div>
+                                                <div class="listing__item__text__info__right">Open Now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-4 col-md-6">
                                     <div class="listing__item">
                                         <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
@@ -162,20 +146,9 @@
                                         </div>
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
-                                                <h5>Chinese Sausage Restaurant</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
+                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
                                                 <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
+                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
                                                     <li><span class="icon_phone"></span> (+12) 345-678-910</li>
                                                 </ul>
                                             </div>
@@ -189,49 +162,11 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-4 col-md-6">
                                     <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-2.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-2.png" alt="">
-                                            <div class="listing__item__pic__tag top_rate">Top Rate</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Shrimp floured and fried</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 1012 Vesper Dr. Columbus,
-                                                        Georgia(GA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-2.png" alt="">
-                                                    <span>Food & Drink</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-3.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-3.png" alt="">
+                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
+                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
                                             <div class="listing__item__pic__tag">Popular</div>
                                             <div class="listing__item__pic__btns">
                                                 <a href="#"><span class="icon_zoom-in_alt"></span></a>
@@ -240,20 +175,9 @@
                                         </div>
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
-                                                <h5>Sweet and sour pork ribs</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
+                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
                                                 <ul>
-                                                    <li><span class="icon_pin_alt"></span> 251 Wiley St. Forks,
-                                                        Washington(WA), United States</li>
+                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
                                                     <li><span class="icon_phone"></span> (+12) 345-678-910</li>
                                                 </ul>
                                             </div>
@@ -267,11 +191,11 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-4 col-md-6">
                                     <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-4.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-4.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
+                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
+                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
                                             <div class="listing__item__pic__btns">
                                                 <a href="#"><span class="icon_zoom-in_alt"></span></a>
                                                 <a href="#"><span class="icon_heart_alt"></span></a>
@@ -279,72 +203,52 @@
                                         </div>
                                         <div class="listing__item__text">
                                             <div class="listing__item__text__inside">
-                                                <h5>Crab fried with tamarind</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
+                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
                                                 <ul>
-                                                    <li><span class="icon_pin_alt"></span> 14320 Keenes Mill Rd.
-                                                        Cottondale, Alabama(AL), United States</li>
+                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
                                                     <li><span class="icon_phone"></span> (+12) 345-678-910</li>
                                                 </ul>
                                             </div>
                                             <div class="listing__item__text__info">
                                                 <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-5.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-5.png" alt="">
-                                            <div class="listing__item__pic__tag hot_deal">Hot Deal</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Tortoise grilled on salt</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-4.png" alt="">
-                                                    <span>Shopping</span>
+                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
+                                                    <span>Restaurant</span>
                                                 </div>
                                                 <div class="listing__item__text__info__right">Open Now</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="listing__item">
+                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
+                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
+                                            <div class="listing__item__pic__btns">
+                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
+                                                <a href="#"><span class="icon_heart_alt"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="listing__item__text">
+                                            <div class="listing__item__text__inside">
+                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
+                                                <ul>
+                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
+                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
+                                                </ul>
+                                            </div>
+                                            <div class="listing__item__text__info">
+                                                <div class="listing__item__text__info__left">
+                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
+                                                    <span>Restaurant</span>
+                                                </div>
+                                                <div class="listing__item__text__info__right">Open Now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
                                 <div class="col-lg-4 col-md-6">
                                     <div class="listing__item">
                                         <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-6.jpg">
@@ -1271,58 +1175,14 @@
     </section>
     <!-- Most Search Section End -->
 
-    <!-- Work Section Begin -->
-    <section class="work spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>How Does It Work</h2>
-                        <p>Travelocity empowers travelers who are giving back on their trips in ways big and small</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="work__item">
-                        <div class="work__item__number">01.</div>
-                        <img src="{{ asset('home') }}/img/work/work-1.png" alt="">
-                        <h5>Location & Categories</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="work__item">
-                        <div class="work__item__number">02.</div>
-                        <img src="{{ asset('home') }}/img/work/work-2.png" alt="">
-                        <h5>Explore Listting</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="work__item">
-                        <div class="work__item__number">03.</div>
-                        <img src="{{ asset('home') }}/img/work/work-3.png" alt="">
-                        <h5>Making Appointments</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Work Section End -->
-
     <!-- Feature Location Section Begin -->
     <section class="feature-location spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Top Featured Locations</h2>
-                        <p>Explore restaurants, bars, and cafés by locality</p>
+                        <h2>Công việc gần nhà</h2>
+                        <p>Công việc ở gần sẻ giúp bạn dễ dàng trong việc di chuyển hơn.</p>
                     </div>
                 </div>
             </div>
@@ -1331,21 +1191,26 @@
                     <a href="#" class="feature__location__item large-item set-bg"
                         data-setbg="{{ asset('home') }}/img/feature-location/fl-1.jpg">
                         <div class="feature__location__item__text">
-                            <h5>Washington, D.C</h5>
+                            <h5>TP. Hồ Chí Minh</h5>
                             <ul>
-                                <li>2045 Listings</li>
+                                <li>2045 Job</li>
                                 <li>3648 Users</li>
                             </ul>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-6">
+                    <a href="#" class="feature__location__item set-bg" data-setbg="{{ asset('home') }}/img/feature-location/fl-4.jpg">
+                        <div class="feature__location__item__text">
+                            <h5>Thủ đô Hà Nội</h5>
+                        </div>
+                    </a>
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <a href="#" class="feature__location__item set-bg"
                                 data-setbg="{{ asset('home') }}/img/feature-location/fl-2.jpg">
                                 <div class="feature__location__item__text">
-                                    <h5>Chicago</h5>
+                                    <h5>TP. Đà Nẵng</h5>
                                 </div>
                             </a>
                         </div>
@@ -1353,16 +1218,12 @@
                             <a href="#" class="feature__location__item set-bg"
                                 data-setbg="{{ asset('home') }}/img/feature-location/fl-3.jpg">
                                 <div class="feature__location__item__text">
-                                    <h5>San Antonio</h5>
+                                    <h5>XEM THÊM</h5>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <a href="#" class="feature__location__item set-bg" data-setbg="{{ asset('home') }}/img/feature-location/fl-4.jpg">
-                        <div class="feature__location__item__text">
-                            <h5>Los Angeles</h5>
-                        </div>
-                    </a>
+                    
                 </div>
             </div>
         </div>

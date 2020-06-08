@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>Our Blog</h2>
+                    <h2>Góc nghề nghiệp</h2>
                     <div class="breadcrumb__option">
-                        <a href="#"><i class="fa fa-home"></i> Home</a>
-                        <span>Our Blog</span>
+                        <a href="/"><i class="fa fa-home"></i> Trang chủ</a>
+                        <span>Góc nghề nghiệp</span>
                     </div>
                 </div>
             </div>
@@ -237,25 +237,4 @@
     </div>
 </section>
 <!-- Blog Section End -->
-
-<!-- Newslatter Section Begin -->
-<section class="newslatter">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="newslatter__text">
-                    <h3>Subscribe Newsletter</h3>
-                    <p>Subscribe to our newsletter and don’t miss anything</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <form action="#" class="newslatter__form">
-                    <input type="text" placeholder="Your email">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Newslatter Section End -->
 @endsection
