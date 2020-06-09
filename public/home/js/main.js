@@ -160,6 +160,9 @@
         type: 'iframe'
     });
 
+
+    // CUSTOM JQUERY
+
     $('.header__menu__right a').first().click(function() {
         $('.header__menu__right a').eq(1).toggleClass('display_none');
         $('.header__menu__right a').eq(2).toggleClass('display_none');
