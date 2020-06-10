@@ -359,12 +359,13 @@ ol {
     bottom: 0;
     height: 2px;
     width: 0%;
-    background: #f03250;
+    background: #175ec8;
     content: "";
     opacity: 0;
     -webkit-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     transition: all, 0.3s;
+    border-radius: 50%;
 }
 
 .header__menu__right {
