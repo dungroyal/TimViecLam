@@ -275,7 +275,7 @@ ol {
 }
 
 .header__logo {
-    padding: 30px 0;
+    padding: 33px 0;
 }
 
 .header__nav {
@@ -508,6 +508,8 @@ ol {
     border-radius: 0;
     margin-top: 0;
     width: 100%;
+    height: 300px;
+    overflow: auto;
 }
 
 .hero__search__form form .select__option .nice-select:after {
