@@ -14,5 +14,28 @@
                 </div>
             </div>
         </div>
-    </div>
+
+
+            <div id="login-box">
+                <div class="left-box">
+                    <h1>Nhà Tuyển Dụng</h1>
+                    <p>✔ Ứng viên sẵn sàng tiếp cận thông tin tuyển dụng</p>
+                    <p>✔ Không giới hạn tương tác với ứng viên qua hệ thống nhắn tin nội bộ MIỄN PHÍ</p>
+                    <p>✔ Quảng cáo thông minh</p>
+                    <p>✔ Nhận bản tin công việc phù hợp định kỳ</p>
+                    <button onclick="location.href='/dang-ky/ntd'" class="social google">Đăng Ký Nhà Tuyển Dụng</button>          
+                </div>
+                <div class="right-box">
+                    <h1 style="text-align:center;">Ứng Viên</h1>
+                    <p>✔ Công việc được cập nhật thường xuyên</p>
+                    <p>✔ Ứng tuyển công việc yêu thích HOÀN TOÀN MIỄN PHÍ</p>
+                    <p>✔ Hiển thị thông tin hồ sơ với nhà tuyển dụng hàng đầu</p>
+                    <p>✔ Nhận bản tin công việc phù hợp định kỳ</p>
+                    <button onclick="location.href='/dang-ky/uv'" class="social facebook">Đăng Ký Ứng Viên</button>    
+                
+                </div>
+                <div class="or">OR</div>
+            </div>
+        </div>
+    
 @endsection
