@@ -1,4 +1,6 @@
-
+@extends('home.main')
+@section('content')
+<div class="margin_top_custom"></div>
 <div class="wrapper" style="margin: 100px auto;">
     <div class="title">
       Đăng Ký Ứng Viên
@@ -36,10 +38,6 @@
       </div>
     </div>    
 </div>
-<!-- <div class="right-box">
-   <span class="signinwith">Sign in with<br/>Social Network</span> 
-     
- 
- </div> -->
+@endsection
 
 

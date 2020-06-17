@@ -27,13 +27,17 @@ class homeController extends Controller
     {
         return view('home.dang_nhap');
     }
+
+
     function dang_nhap_ntd()
     {
-        return view('home.login_signup.dang_nhap_ntd');
+        return view('home.auth.dang_nhap_ntd');
     }
+
+
     function dang_nhap_uv()
     {
-        return view('home.login_signup.dang_nhap_uv');
+        return view('home.auth.dang_nhap_uv');
     }
 
     function dang_ky()
@@ -42,11 +46,11 @@ class homeController extends Controller
     }
     function dang_ky_ntd()
     {
-        return view('home.login_signup.dang_ky_ntd');
+        return view('home.auth.dang_ky_ntd');
     }
     function dang_ky_uv()
     {
-        return view('home.login_signup.dang_ky_uv');
+        return view('home.auth.dang_ky_uv');
     }
 
 }

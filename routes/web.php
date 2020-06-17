@@ -9,7 +9,8 @@ Route::get('/blog', 'blogController@index');
 Route::get('/job', 'jobController@index');
 Route::get('/contact', 'homeController@contact');
 Route::get('/about', 'homeController@about');
-// đăng ký - đăng nhập
+
+// ====================== AUTH ======================
 Route::get('/dang-nhap', 'homeController@dang_nhap');
 Route::get('/dang-nhap/ntd', 'homeController@dang_nhap_ntd');
 Route::get('/dang-nhap/uv', 'homeController@dang_nhap_uv');

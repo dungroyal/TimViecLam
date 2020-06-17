@@ -19,8 +19,8 @@
                     </nav>
                     <div class="header__menu__right">
                         <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i> Tài khoản</a>
-                        <a href="dang-nhap" class="primary-btn display_none" id="login-btn-employer">Đăng nhập</a>
-                        <a href="dang-ky" class="primary-btn display_none" id="login-btn-job_seeker">Đăng ký</a>
+                        <a href="/dang-nhap" class="primary-btn display_none" id="login-btn-employer">Đăng nhập</a>
+                        <a href="/dang-ky" class="primary-btn display_none" id="login-btn-job_seeker">Đăng ký</a>
                         
                         <!-- <a href="#" class="login-btn"><i class="fa fa-user"></i></a> -->
                     </div>

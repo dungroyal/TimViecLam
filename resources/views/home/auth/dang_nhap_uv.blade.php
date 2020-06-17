@@ -1,3 +1,6 @@
+@extends('home.main')
+@section('content')
+<div class="margin_top_custom"></div>
 <div class="wrapper" style="margin: 100px auto;">
     <div class="title">
       Đăng Nhập Ứng Viên
@@ -16,3 +19,4 @@
       </div>
     </div>    
 </div>
+@endsection

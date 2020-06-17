@@ -60,3 +60,7 @@
 .filter__title {
     margin-bottom: 15px;
 }
+
+.margin_top_custom {
+    margin-top: 160px;
+}
