@@ -200,8 +200,8 @@ strong {
 
 .title-1 {
     text-transform: capitalize;
-    font-weight: 400;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .title-2 {
@@ -299,7 +299,7 @@ section {
 }
 
 .section__content--p30 {
-    padding: 0 30px;
+    padding: 0 10px;
 }
 
 @media (max-width: 991px) {
@@ -356,7 +356,7 @@ section {
 
 .page-container2 {
     background: #f2f2f2;
-    padding-left: 300px;
+    padding-left: 250px;
 }
 
 @media (max-width: 991px) {
@@ -509,7 +509,7 @@ section {
 /* ----- Buttons----- */
 
 .au-btn {
-    line-height: 45px;
+    line-height: 40px;
     padding: 0 35px;
     text-transform: uppercase;
     color: #fff;
@@ -1249,14 +1249,14 @@ section {
 /* ----- Header ----- */
 
 .header-desktop {
-    background: #f5f5f5;
+    background: #097ed8;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     right: 0;
-    left: 300px;
+    left: 250px;
     height: 75px;
     z-index: 3;
 }
@@ -1429,7 +1429,7 @@ section {
 
 .noti__item i {
     font-size: 30px;
-    color: #a9b3c9;
+    color: #ffffff;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -2110,7 +2110,7 @@ section {
 }
 
 .notifi-dropdown {
-    left: -117px;
+    left: -250px;
     top: 49px;
 }
 
@@ -2191,7 +2191,7 @@ section {
 }
 
 .menu-sidebar2 {
-    width: 300px;
+    width: 250px;
     position: fixed;
     left: 0;
     top: 0;
@@ -2327,10 +2327,10 @@ section {
 }
 
 .navbar-sidebar2 .navbar__list li a {
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
     display: block;
-    padding: 18px 35px;
+    padding: 15px 30px;
     border-bottom: 1px solid #f2f2f2;
 }
 
@@ -2382,7 +2382,7 @@ section {
     z-index: 1001;
     top: 0;
     right: 0;
-    left: 300px;
+    left: 250px;
 }
 
 @media (max-width: 991px) {
@@ -2425,7 +2425,7 @@ section {
 }
 
 .header-button .notifi-dropdown::before {
-    left: 117px;
+    left: 250px;
 }
 
 .header-button2 {
@@ -3283,7 +3283,7 @@ section {
 .overview-box .text h2 {
     font-weight: 300;
     color: #fff;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 1;
     margin-bottom: 5px;
 }
@@ -4835,7 +4835,7 @@ section {
 /* ----- Breadcrumb ----- */
 
 .au-breadcrumb {
-    height: 75px;
+    height: 60px;
     background: #fff;
     position: relative;
     z-index: 0;
@@ -5037,7 +5037,7 @@ section {
 /* ----- Statistic ----- */
 
 .statistic {
-    padding-top: 57px;
+    padding-top: 20px;
 }
 
 .statistic__item {
@@ -13320,4 +13320,18 @@ section {
 .vue-lists ul,
 .vue-lists ol {
     padding-left: 30px;
+}
+
+#custom-btn {
+    text-align: center;
+    color: white;
+}
+
+#custom-btn i {
+    font-size: 30px;
+}
+
+#custom-btn p {
+    font-size: 14px;
+    font-weight: 400;
 }

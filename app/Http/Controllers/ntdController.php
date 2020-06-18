@@ -8,6 +8,6 @@ class ntdController extends Controller
 {
     function index()
     {
-        return view('nhatuyendung.main');
+        return view('nhatuyendung.index');
     }
 }

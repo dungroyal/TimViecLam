@@ -8,6 +8,6 @@ class uvController extends Controller
 {
     function index()
     {
-        return view('ungvien.main');
+        return view('ungvien.index');
     }
 }

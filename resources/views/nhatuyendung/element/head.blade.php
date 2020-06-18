@@ -1,30 +1,35 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Directing Template">
-    <meta name="keywords" content="Directing, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tuyển dụng | Tìm Việc Làm nhanh,hiệu quả | Timvieclam.xyz</title>
-    <link rel="icon" href="{{ asset('home') }}/img/favicon.png" type="image/gif" sizes="16x16">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="{{ asset('home') }}/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/style.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/custom.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/base.css" type="text/css">
-    {{-- dangky_dangnhap --}}
-    <link rel="stylesheet" href="{{ asset('home') }}/css/dangnhap-dangky.css" type="text/css">
-    {{-- home dangky_dangnhap --}}
-    <link rel="stylesheet" href="{{ asset('home') }}/css/style1.css" type="text/css">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Nhà Tuyển Dụng | Tìm Việc Làm</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{{ asset('user') }}/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{{ asset('user') }}/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="{{ asset('user') }}/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ asset('user') }}/css/theme.css" rel="stylesheet" media="all">
+
 </head>
