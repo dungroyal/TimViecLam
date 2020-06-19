@@ -172,29 +172,29 @@
                     </div>
                     <div class="categories__item__list">
                         <div class="categories__item">
-                            <img src="{{ asset('home') }}/img/categories/cat-1.png" alt="">
-                            <h5>Food & Drink</h5>
-                            <span>78 Listings</span>
+                            <img src="{{ asset('images') }}/official_staff.png" alt="">
+                            <h5>Nhân viên chính thức</h5>
+                            <span>78 công việc</span>
                         </div>
                         <div class="categories__item">
-                            <img src="{{ asset('home') }}/img/categories/cat-2.png" alt="">
-                            <h5>Restaurent</h5>
-                            <span>32 Listings</span>
+                            <img src="{{ asset('images') }}/thoi-vu.png" alt="">
+                            <h5>Nhân viên thời vụ</h5>
+                            <span>32 công việc</span>
                         </div>
                         <div class="categories__item">
-                            <img src="{{ asset('home') }}/img/categories/cat-3.png" alt="">
-                            <h5>Hotels</h5>
-                            <span>16 Listings</span>
+                            <img src="{{ asset('images') }}/part-time-employee.png" alt="">
+                            <h5>Bán thời gian</h5>
+                            <span>56 công việc</span>
                         </div>
                         <div class="categories__item">
-                            <img src="{{ asset('home') }}/img/categories/cat-4.png" alt="">
-                            <h5>Beauty & Spa</h5>
-                            <span>55 Listings</span>
+                            <img src="{{ asset('images') }}/work-extra-overtime.png" alt="">
+                            <h5>Làm thêm ngoài giờ</h5>
+                            <span>58 công việc</span>
                         </div>
                         <div class="categories__item">
-                            <img src="{{ asset('home') }}/img/categories/cat-5.png" alt="">
-                            <h5>Shopping</h5>
-                            <span>23 Listings</span>
+                            <img src="{{ asset('images') }}/thuc-tap-sinh.png" alt="">
+                            <h5>Thực tập và dự án</h5>
+                            <span>62 công việc</span>
                         </div>
                     </div>
                 </div>
@@ -215,1070 +215,283 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-lg-12  show-job__index" id="style-scrollbar">
+                    <div class="listing__list">
 
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Nhân viên chứng từ xuất nhập khẩu</h5>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VẬN TẢI ĐẠI DƯƠNG XANH</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-6.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-6.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Fish cooked with fishsauce</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 2604 E Drachman St. Tucson,
-                                                        Arizona, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tabs-2" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Chinese Sausage Restaurant</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-2.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-2.png" alt="">
-                                            <div class="listing__item__pic__tag top_rate">Top Rate</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Shrimp floured and fried</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 1012 Vesper Dr. Columbus,
-                                                        Georgia(GA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-2.png" alt="">
-                                                    <span>Food & Drink</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-3.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-3.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Sweet and sour pork ribs</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 251 Wiley St. Forks,
-                                                        Washington(WA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-4.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-4.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Crab fried with tamarind</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 14320 Keenes Mill Rd.
-                                                        Cottondale, Alabama(AL), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-5.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-5.png" alt="">
-                                            <div class="listing__item__pic__tag hot_deal">Hot Deal</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Tortoise grilled on salt</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-4.png" alt="">
-                                                    <span>Shopping</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tabs-3" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-3.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-3.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Sweet and sour pork ribs</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 251 Wiley St. Forks,
-                                                        Washington(WA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-4.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-4.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Crab fried with tamarind</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 14320 Keenes Mill Rd.
-                                                        Cottondale, Alabama(AL), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-5.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-5.png" alt="">
-                                            <div class="listing__item__pic__tag hot_deal">Hot Deal</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Tortoise grilled on salt</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-4.png" alt="">
-                                                    <span>Shopping</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-6.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-6.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Fish cooked with fishsauce</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 2604 E Drachman St. Tucson,
-                                                        Arizona, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tabs-4" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Chinese Sausage Restaurant</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-2.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-2.png" alt="">
-                                            <div class="listing__item__pic__tag top_rate">Top Rate</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Shrimp floured and fried</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 1012 Vesper Dr. Columbus,
-                                                        Georgia(GA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-2.png" alt="">
-                                                    <span>Food & Drink</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-3.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-3.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Sweet and sour pork ribs</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 251 Wiley St. Forks,
-                                                        Washington(WA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-6.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-6.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Fish cooked with fishsauce</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 2604 E Drachman St. Tucson,
-                                                        Arizona, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tabs-5" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Chinese Sausage Restaurant</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-2.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-2.png" alt="">
-                                            <div class="listing__item__pic__tag top_rate">Top Rate</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Shrimp floured and fried</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 1012 Vesper Dr. Columbus,
-                                                        Georgia(GA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-2.png" alt="">
-                                                    <span>Food & Drink</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-3.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-3.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Sweet and sour pork ribs</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 251 Wiley St. Forks,
-                                                        Washington(WA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-4.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-4.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Crab fried with tamarind</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 14320 Keenes Mill Rd.
-                                                        Cottondale, Alabama(AL), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-6.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-6.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Fish cooked with fishsauce</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 2604 E Drachman St. Tucson,
-                                                        Arizona, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tabs-6" role="tabpanel">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-1.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-1.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Chinese Sausage Restaurant</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-1.png" alt="">
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-2.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-2.png" alt="">
-                                            <div class="listing__item__pic__tag top_rate">Top Rate</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Shrimp floured and fried</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 1012 Vesper Dr. Columbus,
-                                                        Georgia(GA), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-2.png" alt="">
-                                                    <span>Food & Drink</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-4.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-4.png" alt="">
-                                            <div class="listing__item__pic__tag">Popular</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Crab fried with tamarind</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 14320 Keenes Mill Rd.
-                                                        Cottondale, Alabama(AL), United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-3.png" alt="">
-                                                    <span>Hotel</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right closed">Closed</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="listing__item">
-                                        <div class="listing__item__pic set-bg" data-setbg="{{ asset('home') }}/img/listing/list-5.jpg">
-                                            <img src="{{ asset('home') }}/img/listing/list_icon-5.png" alt="">
-                                            <div class="listing__item__pic__tag hot_deal">Hot Deal</div>
-                                            <div class="listing__item__pic__btns">
-                                                <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                                                <a href="#"><span class="icon_heart_alt"></span></a>
-                                            </div>
-                                        </div>
-                                        <div class="listing__item__text">
-                                            <div class="listing__item__text__inside">
-                                                <h5>Tortoise grilled on salt</h5>
-                                                <div class="listing__item__text__rating">
-                                                    <div class="listing__item__rating__star">
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star"></span>
-                                                        <span class="icon_star-half_alt"></span>
-                                                    </div>
-                                                    <h6>$40 - $70</h6>
-                                                </div>
-                                                <ul>
-                                                    <li><span class="icon_pin_alt"></span> 236 Littleton St. New
-                                                        Philadelphia, Ohio, United States</li>
-                                                    <li><span class="icon_phone"></span> (+12) 345-678-910</li>
-                                                </ul>
-                                            </div>
-                                            <div class="listing__item__text__info">
-                                                <div class="listing__item__text__info__left">
-                                                    <img src="{{ asset('home') }}/img/listing/list_small_icon-4.png" alt="">
-                                                    <span>Shopping</span>
-                                                </div>
-                                                <div class="listing__item__text__info__right">Open Now</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items job-item">
+                            <div class="list-items__img">
+                                <img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Avatar">
+                            </div>
+                            <div class="list-items-content">
+                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                <div class="list-items-content-subinfo">
+                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
+                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>

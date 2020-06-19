@@ -1,35 +1,34 @@
-<div class="card mt-4">
-    <article class="card-group-item">
-        <header class="card-header"><h6 class="title" id="title-side-bar">DANH MỤC SÁCH</h6></header>
-        <div class="filter-content">
-            <div class="list-group list-group-flush">
-				<a href="/product" class="list-group-item">Tất cả thể loại </a>
-				@foreach ($list_catalog as $cat)
-					<a href="/category/{{$cat->idCategory}}" class="list-group-item">{{$cat->nameCategory}}</a>
-				@endforeach
-            </div>
-        </div>
-	</article>
-</div>
+<div class="filter nice-scroll">
+	<div class="filter__title">
+		<h5><i class="fa fa-filter"></i> Bộ lọc thần kỳ</h5>
+	</div>
+	<div class="filter__search">
+		<input type="text" placeholder="Tìm kiếm ....">
+	</div>
+	<div class="filter__select">
+		<select>
+			<option value="">Ngành nghề</option>
+			<option value="">Lập trình viên</option>
+			<option value="">Bác sĩ</option>
+		</select>
+	</div>
 
-<div class="card mt-4 mb-5">
-    <article class="card-group-item">
-        <header class="card-header"><h6 class="title" id="title-side-bar">ĐĂNG NHẬP</h6></header>
-		<div class="filter-content">
-			<div class="col-md-offset-5 col-md-12">
-				<form action="/login" method="post">
-					@csrf
-					<div class="form-login mt-3">
-						<input type="text" id="userName" name="username" class="form-control input-sm chat-input" placeholder= @if ($errors->has('username')) "Chưa nhập tên đăng nhập" @else "Tên đăng nhập" @endif>
-						</br>
-						<input type="text" id="userPassword" name="password"  class="form-control input-sm chat-input" placeholder= @if ($errors->has('username')) "Chưa nhập mật khẩu" @else "Mật khẩu" @endif>
-						</br>
-						<div class="wrapper justify-content-center mb-4">
-						<button type="submit" class="btn btn-primary btn-md">Đăng nhập <i class="fa fa-sign-in"></i></button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</article>
+	<div class="filter__select">
+		<select>
+			<option value="">Mức lương</option>
+			<option value="">Dưới 5 triệu</option>
+			<option value="">5 triệu đến 10 triệu</option>
+			<option value="">10 triệu đến 15 triệu</option>
+			<option value="">15 triệu đến 20 triệu</option>
+			<option value="">Trên 20 triệu</option>
+		</select>
+	</div>
+	<div class="filter__location">
+		<input type="text" placeholder="Location">
+		<i class="fa fa-map-marker"></i>
+	</div>
+	<div class="filter__btns">
+		<button type="submit">Lọc công việc</button>
+		<button type="submit" class="filter__reset">Xóa bộ lọc</button>
+	</div>
 </div>
