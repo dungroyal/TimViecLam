@@ -1438,7 +1438,7 @@ ol {
 -----------------------*/
 
 .listing-hero {
-    padding-top: 230px;
+    padding-top: 150px;
     padding-bottom: 40px;
 }
 
@@ -1452,7 +1452,7 @@ ol {
 }
 
 .listing__hero__text h2 {
-    font-size: 40px;
+    font-size: 30px;
     color: #ffffff;
     font-weight: 600;
     margin-bottom: 6px;
@@ -1461,6 +1461,22 @@ ol {
 .listing__hero__text p {
     font-size: 15px;
     color: #E1DEDE;
+    margin: 4px 0px;
+}
+
+.listing__hero__text p strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.listing__hero__text p a {
+    color: #00e8fd;
+}
+
+.listing__hero__text p i {
+    width: 25px;
+    text-align: center;
+    color: #eadada;
 }
 
 .listing__hero__text p span {
@@ -1500,7 +1516,8 @@ ol {
 
 .listing__hero__btns {
     text-align: right;
-    padding-top: 85px;
+    padding-top: 0px;
+    float: right;
 }
 
 .listing__hero__btns .primary-btn {
@@ -3350,4 +3367,34 @@ ol {
 #style-scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(181, 201, 4)), color-stop(0.72, rgb(73, 125, 189)), color-stop(0.86, rgb(29, 70, 255)));
+}
+
+.listing__hero__btns__sl {
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    float: right;
+    background-color: white;
+    opacity: .8;
+}
+
+.listing__hero__btns__sl h4 {
+    color: #000000;
+    line-height: 44px;
+    padding-top: 24px;
+    font-size: 50px;
+    font-weight: 800;
+    padding-bottom: 13px;
+    text-align: center;
+    opacity: 1;
+}
+
+.listing__hero__btns__sl p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
 }

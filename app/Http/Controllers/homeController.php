@@ -52,5 +52,9 @@ class homeController extends Controller
     {
         return view('home.auth.dang_ky_uv');
     }
+    function cong_ty()
+    {
+        return view('home.congty');
+    }
 
 }

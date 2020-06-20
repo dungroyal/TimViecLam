@@ -14,6 +14,9 @@ Route::get('/category/{id}', 'productController@product_by_id');
 Route::post('/login', 'homeController@login');
 Route::post('/search', 'productController@search');
 
+
+Route::get('/cong-ty', 'homeController@cong_ty');
+
 // ====================== AUTH ======================
 Route::get('/dang-nhap', 'homeController@dang_nhap');
 Route::get('/dang-nhap/ntd', 'homeController@dang_nhap_ntd');
