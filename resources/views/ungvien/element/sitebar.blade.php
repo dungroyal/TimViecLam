@@ -23,13 +23,13 @@
 		<nav class="navbar-sidebar2">
 			<ul class="list-unstyled navbar__list">
 				<li class="active has-sub">
-					<a class="js-arrow" href="#">
+					<a class="js-arrow" href="/ung-vien">
 						<i class="fa fa-line-chart" aria-hidden="true"></i>Quản lý chung
 					</a>
 				</li>
 				
 				<li>
-					<a href="inbox.html">
+					<a href="/quan-ly-ho-so">
 						<i class="fa fa-search-plus" aria-hidden="true"></i>Quản lý hồ sơ</a>
 				</li>
 				
@@ -42,15 +42,15 @@
 					</a>
 					<ul class="list-unstyled navbar__sub-list js-sub-list">
 						<li>
-							<a href="button.html">
+							<a href="/viec-lam-da-ung-tuyen">
 								<i class="fa fa-paper-plane" aria-hidden="true"></i>Việc làm đã ứng tuyển</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="/viec-lam-da-luu">
 								<i class="fa fa-bookmark" aria-hidden="true"></i>Việc làm đã lưu</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="/viec-lam-da-xem">
 								<i class="fa fa-eye" aria-hidden="true"></i>Việc làm đã xem</a>
 						</li>
 					</ul>
@@ -65,11 +65,11 @@
 					</a>
 					<ul class="list-unstyled navbar__sub-list js-sub-list">
 						<li>
-							<a href="button.html">
+							<a href="/cap-nhat-thong-tin">
 								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>Cập nhật thông tin</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="/doi-mat-khau">
 								<i class="fa fa-key" aria-hidden="true"></i>Đổi mật khẩu</a>
 						</li>
 					</ul>

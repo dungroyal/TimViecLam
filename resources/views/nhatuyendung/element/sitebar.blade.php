@@ -15,7 +15,7 @@
 		<nav class="navbar-sidebar2">
 			<ul class="list-unstyled navbar__list">
 				<li class="active has-sub">
-					<a class="js-arrow" href="#">
+					<a class="js-arrow" href="/nha-tuyen-dung">
 						<i class="fa fa-line-chart" aria-hidden="true"></i>Quản lý chung
 					</a>
 				</li>
@@ -28,17 +28,17 @@
 					</a>
 					<ul class="list-unstyled navbar__sub-list js-sub-list">
 						<li>
-							<a href="table.html">
+							<a href="/dangtuyendung">
 								<i class="fa fa-plus-circle" aria-hidden="true"></i>Đăng tuyển dụng mới</a>
 						</li>
 						<li>
-							<a href="form.html">
+							<a href="/alltin">
 								<i class="fa fa-list-alt" aria-hidden="true"></i>Tất cả tin tuyển dụng</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="inbox.html">
+					<a href="/searchungvien">
 						<i class="fa fa-search-plus" aria-hidden="true"></i>Tìm kiếm ứng viên</a>
 				</li>
 				<li class="has-sub">
@@ -50,15 +50,15 @@
 					</a>
 					<ul class="list-unstyled navbar__sub-list js-sub-list">
 						<li>
-							<a href="button.html">
+							<a href="/hsdaluu">
 								<i class="fa fa-bookmark" aria-hidden="true"></i>Hồ sơ đã lưu</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="/hsdaxem">
 								<i class="fa fa-eye" aria-hidden="true"></i>Hồ sơ đã xem</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="/hsungtuyen">
 								<i class="fa fa-paper-plane" aria-hidden="true"></i>Hồ sơ ứng tuyển</a>
 						</li>
 					</ul>
@@ -73,11 +73,11 @@
 					</a>
 					<ul class="list-unstyled navbar__sub-list js-sub-list">
 						<li>
-							<a href="button.html">
+							<a href="/thongtin">
 								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>Cập nhật thông tin</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="/doimatkhau">
 								<i class="fa fa-key" aria-hidden="true"></i>Đổi mật khẩu</a>
 						</li>
 					</ul>

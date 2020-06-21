@@ -29,11 +29,26 @@ Route::get('/dang-ky/uv', 'homeController@dang_ky_uv');
 // ====================== Nhà tuyển dụng ======================
 Route::group(['prefix' => '/nha-tuyen-dung'], function () {
     Route::get('/', 'ntdController@index');
+    
 });
+Route::get('/dangtuyendung', 'ntdController@tuyendungmoi');
+Route::get('/alltin', 'ntdController@alltintuyendung');
+Route::get('/searchungvien', 'ntdController@searchvien');
+Route::get('/hsdaluu', 'ntdController@hsdaluu');
+Route::get('/hsdaxem', 'ntdController@hsdaxem');
+Route::get('/hsungtuyen', 'ntdController@hsungtuyen');
+Route::get('/thongtin', 'ntdController@thongtin');
+Route::get('/doimatkhau', 'ntdController@matkhau');
 
 // ====================== Ứng viên ======================
 Route::group(['prefix' => '/ung-vien'], function () {
     Route::get('/', 'uvController@index');
 });
+Route::get('/quan-ly-ho-so', 'uvController@quanlyhs');
+Route::get('/viec-lam-da-ung-tuyen', 'uvController@ungtuyen');
+Route::get('/viec-lam-da-luu', 'uvController@daluu');
+Route::get('/viec-lam-da-xem', 'uvController@daxem');
+Route::get('/cap-nhat-thong-tin', 'uvController@thongtin');
+Route::get('/doi-mat-khau', 'uvController@doimatkhau');
 
 // hhvh
