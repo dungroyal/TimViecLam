@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 21, 2020 lúc 11:24 AM
+-- Thời gian đã tạo: Th6 21, 2020 lúc 11:56 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.2
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `congviec` (
   `id` int(11) NOT NULL,
+  `idNhaTuyenDung` int(11) NOT NULL,
   `tenCongViec` varchar(150) NOT NULL,
   `soluong` int(4) NOT NULL,
   `capBac` varchar(50) NOT NULL,
@@ -59,10 +60,10 @@ CREATE TABLE `hosocongty` (
   `id` int(11) NOT NULL,
   `idNhaTuyeDung` int(11) NOT NULL,
   `tenCty` varchar(100) NOT NULL,
-  `idChi` varchar(100) NOT NULL,
+  `diaChi` varchar(100) NOT NULL,
   `tinh` varchar(20) NOT NULL,
   `quyMo` varchar(20) NOT NULL,
-  `linhVucHD` varchar(150) NOT NULL,
+  `idNganhNghe` int(11) NOT NULL,
   `soLuocCty` text NOT NULL,
   `logoCty` varchar(100) NOT NULL,
   `website` varchar(30) NOT NULL,
@@ -99,6 +100,17 @@ CREATE TABLE `hosoungvien` (
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `nganhnghe`
+--
+
+CREATE TABLE `nganhnghe` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `nhatuyedung`
 --
 
@@ -115,6 +127,13 @@ CREATE TABLE `nhatuyedung` (
   `tinh` varchar(50) NOT NULL COMMENT 'tỉnh, thành phố'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `nhatuyedung`
+--
+
+INSERT INTO `nhatuyedung` (`id`, `email`, `password`, `hoTen`, `soDienThoai`, `tenCty`, `linhVucHD`, `quyMo`, `diaChi`, `tinh`) VALUES
+(1, 'dungdq5520@gmail.com', '$2y$10$81OwjeNdjwOR.ZzpXkfabuHkZ1KjRAPi.DQIjmojYPI6Ep/LVTlQC', 'Đoàn Quốc Dũng', '0398022720', 'Công Ty TNHH TM Dv Công Nghệ Thành Nhân', 'CNTT', '50 người', '992 Âu Cơ, Phường 14, Quận Tân Bình', 'TP. Hồ Chí Minh');
+
 -- --------------------------------------------------------
 
 --
@@ -123,11 +142,18 @@ CREATE TABLE `nhatuyedung` (
 
 CREATE TABLE `ungvien` (
   `id` int(11) NOT NULL,
-  `hoTen` int(50) NOT NULL,
+  `hoTen` varchar(50) NOT NULL,
   `soDienThoai` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `ungvien`
+--
+
+INSERT INTO `ungvien` (`id`, `hoTen`, `soDienThoai`, `email`, `password`) VALUES
+(1, 'Đoàn Quốc Dũng', '0398022720', 'dungdqps08542@fpt.edu.vn', '$2y$10$81OwjeNdjwOR.ZzpXkfabuHkZ1KjRAPi.DQIjmojYPI6Ep/LVTlQC');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -143,12 +169,21 @@ ALTER TABLE `congviec`
 -- Chỉ mục cho bảng `hosocongty`
 --
 ALTER TABLE `hosocongty`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_hsct_NhaTuyenDung` (`idNhaTuyeDung`),
+  ADD KEY `FK_hsct_NganhNghe` (`idNganhNghe`);
 
 --
 -- Chỉ mục cho bảng `hosoungvien`
 --
 ALTER TABLE `hosoungvien`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_hsuv_UngVien` (`idUngVien`);
+
+--
+-- Chỉ mục cho bảng `nganhnghe`
+--
+ALTER TABLE `nganhnghe`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -186,16 +221,39 @@ ALTER TABLE `hosoungvien`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT cho bảng `nganhnghe`
+--
+ALTER TABLE `nganhnghe`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT cho bảng `nhatuyedung`
 --
 ALTER TABLE `nhatuyedung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `ungvien`
 --
 ALTER TABLE `ungvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `hosocongty`
+--
+ALTER TABLE `hosocongty`
+  ADD CONSTRAINT `FK_hsct_NganhNghe` FOREIGN KEY (`idNganhNghe`) REFERENCES `nganhnghe` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `FK_hsct_NhaTuyenDung` FOREIGN KEY (`idNhaTuyeDung`) REFERENCES `nhatuyedung` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Các ràng buộc cho bảng `hosoungvien`
+--
+ALTER TABLE `hosoungvien`
+  ADD CONSTRAINT `FK_hsuv_UngVien` FOREIGN KEY (`idUngVien`) REFERENCES `ungvien` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

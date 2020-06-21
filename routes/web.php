@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 
 // ====================== HOME ======================
@@ -35,3 +34,11 @@ Route::group(['prefix' => '/nha-tuyen-dung'], function () {
 Route::group(['prefix' => '/ung-vien'], function () {
     Route::get('/', 'uvController@index');
 });
+
+
+
+
+
+// Route::get('/getPassword', function () {
+//     return Hash::make('matkhau');
+// });
