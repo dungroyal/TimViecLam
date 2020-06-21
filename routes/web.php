@@ -35,3 +35,5 @@ Route::group(['prefix' => '/nha-tuyen-dung'], function () {
 Route::group(['prefix' => '/ung-vien'], function () {
     Route::get('/', 'uvController@index');
 });
+
+// hhvh
