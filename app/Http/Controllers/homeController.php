@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\product;
-use App\catalog;
+use App\Nghanhnghe;
 
 class homeController extends Controller
 {
+    function __construct()
+    {
+        $this->Nghanhnghe=Nghanhnghe::all();
+    }
+
     function index()
     {
-        return view('home.index');
+        return view('home.index',['Nghanhnghe'=>$this->Nghanhnghe]);
     }
 
     function contact()
@@ -52,9 +56,10 @@ class homeController extends Controller
     {
         return view('home.auth.dang_ky_uv');
     }
-    function cong_ty()
-    {
-        return view('home.congty');
-    }
+
+    function cong_ty($id)
+        {
+            return view('home.congty');
+        }
 
 }

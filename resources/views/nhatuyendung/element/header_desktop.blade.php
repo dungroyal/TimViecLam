@@ -65,7 +65,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="noti__item js-item-menu" title="Đăng xuất">
+                        <a href="/logout_ntd" class="noti__item" title="Đăng xuất">
                             <i class="zmdi zmdi-sign-in"></i>
                         </a>
                     </div>

@@ -46,6 +46,28 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'ungvien' => [
+            'driver' => 'session',
+            'provider' => 'ungvien',
+        ],
+
+        'ungvien_api' => [
+            'driver' => 'token',
+            'provider' => 'ungvien',
+            'hash' => false,
+        ],
+
+        'nhatuyendung' => [
+            'driver' => 'session',
+            'provider' => 'nhatuyendung',
+        ],
+
+        'nhatuyendung_api' => [
+            'driver' => 'token',
+            'provider' => 'nhatuyendung',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +91,15 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'ungvien' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+        'nhatuyendung' => [
+            'driver' => 'eloquent',
+            'model' => App\Nhatuyendung::class,
         ],
 
         // 'users' => [

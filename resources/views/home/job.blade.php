@@ -18,28 +18,30 @@
             </div>
             <div class="listing__text__top__right">Nearby <i class="fa fa-sort-amount-asc"></i></div>
         </div>
-
-
         <div class="listing__list">
-            <div class="list-items job-item">
-                <div class="list-items__img">
-                    <img src="{{ asset('images') }}/Thiết-kế-logo-công-ty-xnk.jpg" alt="Avatar">
-                </div>
-                <div class="list-items-content">
-                    <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                    <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                    <div class="list-items-content-subinfo">
-                        <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                        <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+            @foreach ($list_job as $item)
+                <div class="list-items job-item">
+                    <div class="list-items__img">
+                        <img src="{{ asset('images') }}/{{ $item->logoCty }}" alt="Avatar">
+                    </div>
+                    <div class="list-items-content">
+                        <div class="list-items-content__title text_ellipsis"><a href="/job/{{{ $item->id }}}" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> {{ $item->tenCongViec }}</a></div>
+                        <div class="list-items-content__cty"><a href="/cong-ty/{{{ $item->idNTD }}}"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">{{ $item->tenCty }}</a></div>
+                        <div class="list-items-content-subinfo">
+                            <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> {{ $item->mucLuong }} triệu</div>
+                            <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $item->deadline }}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+
+        
             <div class="list-items job-item">
                 <div class="list-items__img">
                     <img src="{{ asset('images') }}/thiet-ke-logo-ha-noi-nhat-son-1.jpg" alt="Avatar">
                 </div>
                 <div class="list-items-content">
-                    <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
+                    <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)">x Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
                     <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
                     <div class="list-items-content-subinfo">
                         <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
@@ -99,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="list-items job-item">
+        {{-- <div class="list-items job-item">
                 <div class="list-items__img">
                     <img src="{{ asset('images') }}/logo-cong-ty-phan-mem.png" alt="Avatar">
                 </div>
@@ -307,7 +309,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </section>
     @include('home.element.script')
 </body>

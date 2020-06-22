@@ -64,3 +64,12 @@
 .margin_top_custom {
     margin-top: 160px;
 }
+
+.error-login {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+    color: red;
+    font-size: 15px;
+}

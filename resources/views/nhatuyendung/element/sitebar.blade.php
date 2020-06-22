@@ -9,7 +9,10 @@
 			<div class="image img-cir img-120">
 				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Đoàn Quốc Dũng" />
 			</div>
-			<h4 class="name">CTY TNHH TM-DV Công nghệ Thành Nhân</h4>
+			{{-- <h4 class="name">CTY TNHH TM-DV Công nghệ Thành Nhân</h4> --}}
+			@if(session()->has('nhatuyendung'))
+					{{ Auth::user()->email}}
+				@endif
 			<a href="#">Sign out</a>
 		</div>
 		<nav class="navbar-sidebar2">
@@ -86,3 +89,5 @@
 		</nav>
 	</div>
 </aside>
+
+

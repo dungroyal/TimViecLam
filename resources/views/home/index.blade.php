@@ -11,66 +11,14 @@
                             <p>1.118.940.376 Công việc đang chờ đón bạn!</p>
                         </div>
                         <div class="hero__search__form">
-                            <form action="#">
+                            <form action="#" method="POST">
                                 <input type="text" placeholder="Tìm kiếm...">
                                 <div class="select__option">
                                     <select>
-                                        <option value="32">Kinh doanh</option>
-                                        <option value="10">Bán hàng</option>
-                                        <option value="21">Chăm sóc khách hàng</option>
-                                        <option value="29">Hành chính/Thư ký/Trợ lý</option>
-                                        <option value="47">Tài chính/Kế toán/Kiểm toán</option>
-                                        <option value="16">Cơ khí/Kĩ thuật ứng dụng</option>
-                                        <option value="33">Lao động phổ thông</option>
-                                        <option value="35">Sinh viên/Mới tốt nghiệp/Thực tập</option>
-                                        <option value="22">Điện/Điện tử/Điện lạnh</option>
-                                        <option value="12">Báo chí/Biên tập viên</option>
-                                        <option value="20">Bảo vệ/Vệ sĩ/An ninh</option>
-                                        <option value="13">Bất động sản</option>
-                                        <option value="14">Biên dịch/Phiên dịch</option>
-                                        <option value="15">Bưu chính viễn thông</option>
-                                        <option value="17">Công nghệ thông tin</option>
-                                        <option value="18">Dầu khí/Địa chất</option>
-                                        <option value="19">Dệt may</option>
-                                        <option value="23">Du lịch/Nhà hàng/Khách sạn</option>
-                                        <option value="24">Dược/Hóa chất/Sinh hóa</option>
-                                        <option value="25">Giải trí/Vui chơi</option>
-                                        <option value="26">Giáo dục/Đào tạo/Thư viện</option>
-                                        <option value="27">Giao thông/Vận tải/Thủy lợi/Cầu đường</option>
-                                        <option value="28">Giày da/Thuộc da</option>
-                                        <option value="55">Khác</option>
-                                        <option value="30">Kho vận/Vật tư/Thu mua</option>
-                                        <option value="58">Khu chế xuất/Khu công nghiệp</option>
-                                        <option value="31">Kiến trúc/Nội thất</option>
-                                        <option value="59">Làm đẹp/Thể lực/Spa</option>
-                                        <option value="34">Luật/Pháp lý</option>
-                                        <option value="36">Môi trường/Xử lý chất thải</option>
-                                        <option value="37">Mỹ phẩm/Thời trang/Trang sức</option>
-                                        <option value="38">Ngân hàng/Chứng khoán/Đầu tư</option>
-                                        <option value="39">Nghệ thuật/Điện ảnh</option>
-                                        <option value="56">Ngoại ngữ</option>
-                                        <option value="40">Nhân sự</option>
-                                        <option value="41">Nông/Lâm/Ngư nghiệp</option>
-                                        <option value="64">PG/PB/Lễ tân</option>
-                                        <option value="65">Phát triển thị trường</option>
-                                        <option value="66">Phục vụ/Tạp vụ/Giúp việc</option>
-                                        <option value="42">Quan hệ đối ngoại</option>
-                                        <option value="44">Quản lý điều hành</option>
-                                        <option value="45" selected="selected">Quảng cáo/Marketing/PR</option>
-                                        <option value="46">Sản xuất/Vận hành sản xuất</option>
-                                        <option value="60">Tài xế/Lái xe/Giao nhận</option>
-                                        <option value="43">Thẩm định/Giám định/Quản lý chất lượng</option>
-                                        <option value="48">Thể dục/Thể thao</option>
-                                        <option value="49">Thiết kế/Mỹ thuật</option>
-                                        <option value="50">Thời vụ/Bán thời gian</option>
-                                        <option value="51">Thực phẩm/DV ăn uống</option>
-                                        <option value="61">Trang thiết bị công nghiệp</option>
-                                        <option value="62">Trang thiết bị gia dụng</option>
-                                        <option value="63">Trang thiết bị văn phòng</option>
-                                        <option value="11">Tư vấn bảo hiểm</option>
-                                        <option value="52">Xây dựng</option>
-                                        <option value="53">Xuất-Nhập khẩu/Ngoại thương</option>
-                                        <option value="54">Y tế</option>
+                                        <option value="32">Ngành nghề</option>
+                                        @foreach ($Nghanhnghe as $item)
+                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="select__option">
