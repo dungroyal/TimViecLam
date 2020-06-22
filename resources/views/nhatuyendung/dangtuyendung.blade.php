@@ -23,40 +23,61 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2">
-                                    <h3 class="title-3">Danh sách các tin mới đã đăng</h3>
-                                    <div class="chart-info">
-                                        <div class="chart-info__left">
-                                            <div class="chart-note">
-                                                <span class="dot dot--blue"></span>
-                                                <span>products</span>
-                                            </div>
-                                            <div class="chart-note">
-                                                <span class="dot dot--green"></span>
-                                                <span>Services</span>
-                                            </div>
-                                        </div>
-                                        <div class="chart-info-right">
-                                            <div class="rs-select2--dark rs-select2--md m-r-10">
-                                                <select class="js-select2" name="property">
-                                                    <option selected="selected">All Properties</option>
-                                                    <option value="">Products</option>
-                                                    <option value="">Services</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                            <div class="rs-select2--dark rs-select2--sm">
-                                                <select class="js-select2 au-select-dark" name="time">
-                                                    <option selected="selected">All Time</option>
-                                                    <option value="">By Month</option>
-                                                    <option value="">By Day</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                        </div>
+                                <form>
+ 
+                                    <div class="form-group"> <!-- Full Name -->
+                                    <label for="full_name_id" class="control-label">Vị trí cần tuyển</label>
+                                    <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Quản trị kinh doanh">
                                     </div>
-                                    <div class="recent-report__chart">
-                                        <canvas id="recent-rep2-chart"></canvas>
+                                    
+                                    <div class="form-group"> <!-- Street 1 -->
+                                    <label for="street1_id" class="control-label">Địa chỉ</label>
+                                    <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Phần mềm Quang Trung">
                                     </div>
+                                    
+                                    <div class="form-group"> <!-- Street 2 -->
+                                    <label for="street2_id" class="control-label">Tên công ty</label>
+                                    <input type="text" class="form-control" id="street2_id" name="street2" placeholder="FPT Software">
+                                    </div>
+
+                                    <div class="form-group"> <!-- Street 2 -->
+                                    <label for="street2_id" class="control-label">Ngày đăng</label>
+                                    <input type="date" class="form-control" id="street3_id" name="street3" placeholder="">
+                                    </div>
+
+                                    <div class="form-group"> <!-- Street 2 -->
+                                    <label for="street2_id" class="control-label">Mức lương</label>
+                                    <input type="text" class="form-control" id="street4_id" name="stree4" placeholder="100,000,000 triệu">
+                                    </div>
+
+                                    <div class="form-group"> <!-- Street 2 -->
+                                    <label for="street2_id" class="control-label">Hình ảnh công ty</label>
+                                    <input type="file" class="form-control" id="street5_id" name="street5" placeholder="">
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group"> <!-- State Button -->
+                                    <label for="state_id" class="control-label">Thành phố</label>
+                                    <select class="form-control" id="state_id">
+                                    <option value="AL">Hồ Chí Minh</option>
+                                    <option value="AK">Hà Nội</option>
+                                    <option value="AZ">Cần Thơ</option>
+                                    <option value="AR">Đà Nẵng</option>
+                                    <option value="CA">Cà Mau</option>
+
+                                    </select>
+                                    </div>
+                                    
+                                    <div class="form-group"> <!-- Zip Code-->
+                                    <label for="zip_id" class="control-label">Mô tả công việc</label>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Việc nhẹ lương cao bao ăn ở. Được ngủ chung với sếp" rows="7"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group"> <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-primary">Đăng tin</button>
+                                    </div> 
+  
+ </form>
                                 </div>
                                 <!-- END RECENT REPORT 2             -->
                             </div>
