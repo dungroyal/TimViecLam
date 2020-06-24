@@ -24,7 +24,7 @@ Route::get('/dang-ky/uv', 'homeController@dang_ky_uv');
 
 // ====================== Nhà tuyển dụng ======================
 Route::group(['prefix' => '/nha-tuyen-dung'], function () {
-    Route::get('/', 'ntdController@index');
+    Route::get('/', 'ntdController@index')->name("nhatuyendung");
 });
 
 // ====================== Ứng viên ======================

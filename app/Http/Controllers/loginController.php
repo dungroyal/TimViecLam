@@ -16,8 +16,8 @@ class loginController extends Controller
             'password'=>['required']
         ]);
         if (Auth::guard('ungvien')->attempt(['email' => $request['email'], 'password' => $request['password']])) {
-            if (Auth::check()) {
-                session(['ungvien'=>Auth::user()]);
+            if (Auth::guard('ungvien')->check()) {
+                session(['ungvien'=>Auth::guard('ungvien')->user()]);
                 return redirect('/ung-vien');
             }
         } else {
@@ -31,9 +31,10 @@ class loginController extends Controller
             'email'=>['required'],
             'password'=>['required']
         ]);
+
         if (Auth::guard('nhatuyendung')->attempt(['email' => $request['email'], 'password' => $request['password']])) {
-            if (Auth::check()) {
-                session(['nhatuyendung'=>Auth::user()]);
+            if (Auth::guard('nhatuyendung')->check()) {
+                session(['nhatuyendung'=>Auth::guard('nhatuyendung')->user()]);
                 return redirect('/nha-tuyen-dung');
             }
         } else {
@@ -49,7 +50,7 @@ class loginController extends Controller
 
     function logout_ntd()
     {
-        session()->forget('nhatuyendung');
+        Auth::logout();
         return redirect('/');
     }
 }

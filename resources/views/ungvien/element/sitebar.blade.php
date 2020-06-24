@@ -9,11 +9,7 @@
 			<div class="image img-cir img-120">
 				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Đoàn Quốc Dũng" />
 			</div>
-			<h4 class="name">
-				@if(session()->has('ungvien'))
-					{{ Auth::user()->hoTen }}
-				@endif
-			</h4>
+			<h4 class="name">{{ Auth::guard('ungvien')->user()->hoTen}}</h4>
 			
 			<a href="#">Sign out</a>
 			

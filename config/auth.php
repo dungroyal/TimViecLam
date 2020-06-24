@@ -38,35 +38,32 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'users'
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
+            'provider' => 'users'
         ],
 
         'ungvien' => [
             'driver' => 'session',
-            'provider' => 'ungvien',
+            'provider' => 'ungvien'
         ],
 
         'ungvien_api' => [
-            'driver' => 'token',
-            'provider' => 'ungvien',
-            'hash' => false,
+            'driver' => 'session',
+            'provider' => 'ungvien'
         ],
 
         'nhatuyendung' => [
             'driver' => 'session',
-            'provider' => 'nhatuyendung',
+            'provider' => 'nhatuyendung'
         ],
 
         'nhatuyendung_api' => [
-            'driver' => 'token',
-            'provider' => 'nhatuyendung',
-            'hash' => false,
+            'driver' => 'session',
+            'provider' => 'nhatuyendung'
         ],
     ],
 
