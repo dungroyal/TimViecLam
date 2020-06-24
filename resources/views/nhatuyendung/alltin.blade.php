@@ -23,12 +23,12 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2">
-                                    <h3 class="title-3">DANH SÁCH CÁC TIN TUYỂN DỤNG</h3>
+                                    
                                     <a href="/dangtuyendung" class="btn btn-primary">Thêm mới</a>
                                     <div class="card">
-                                    <div class="card-header">
+                                    <h3 class="card-header">
                                     DANH SÁCH CÁC TIN TUYỂN DỤNG
-                                    </div>
+                                    </h3>
                                     <div class="card-body">
                                         <table class="table">
                                         <thead>

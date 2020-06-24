@@ -23,41 +23,58 @@
                             <div class="col-xl-12">
                                 <!-- RECENT REPORT 2-->
                                 <div class="recent-report2">
-                                    <h3 class="title-3">DANH SÁCH CÁC HỒ SƠ ỨNG TUYỂN</h3>
-                                    <div class="chart-info">
-                                        <div class="chart-info__left">
-                                            <div class="chart-note">
-                                                <span class="dot dot--blue"></span>
-                                                <span>products</span>
-                                            </div>
-                                            <div class="chart-note">
-                                                <span class="dot dot--green"></span>
-                                                <span>Services</span>
-                                            </div>
-                                        </div>
-                                        <div class="chart-info-right">
-                                            <div class="rs-select2--dark rs-select2--md m-r-10">
-                                                <select class="js-select2" name="property">
-                                                    <option selected="selected">All Properties</option>
-                                                    <option value="">Products</option>
-                                                    <option value="">Services</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                            <div class="rs-select2--dark rs-select2--sm">
-                                                <select class="js-select2 au-select-dark" name="time">
-                                                    <option selected="selected">All Time</option>
-                                                    <option value="">By Month</option>
-                                                    <option value="">By Day</option>
-                                                </select>
-                                                <div class="dropDownSelect2"></div>
-                                            </div>
-                                        </div>
+                                <div class="card">
+                                    <h3 class="card-header">
+                                    DANH SÁCH CÁC HỒ SƠ ỨNG TUYỂN
+                                    </h3>
+                                    <div class="card-body">
+                                        <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Tên ứng viên</th>
+                                                <th>Vị trí ứng tuyển</th>
+                                                <th>Địa chỉ</th>
+                                                <th>Hình ảnh</th>
+                                                <th>Cv ứng viên</th>
+                                                
+                                                <th>Email</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        <tr>
+                                            <td>Lê Nhật Hào</td>
+                                            <td>Thiết kế website</td>
+                                            <td>Cà Mau</td>
+                                            <td><img src="../images/L123123ogo.jpg" alt="" style="height:100px"> </td>
+                                            <td>...</td>
+                                            
+                                            <td>lenhathao3112@gmail.com</td>
+                                            <td>
+                                            <a href="#" class="btn btn-primary">Save</a>
+                                            <a href="#" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Lê Nhật Hào</td>
+                                            <td>Kê toán</td>
+                                            <td>Cần thơ</td>
+                                            <td><img src="../images/L123123ogo.jpg" alt="" style="height:100px"> </td>
+                                            <td>...</td>
+                                            
+                                            <td>lenhathao3112@gmail.com</td>
+                                            <td>
+                                            <a href="#" class="btn btn-primary">Save</a>
+                                            <a href="#" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                        </table>
                                     </div>
-                                    <div class="recent-report__chart">
-                                        <canvas id="recent-rep2-chart"></canvas>
-                                    </div>
-                                </div>
+                                </div><!--end card-->
                                 <!-- END RECENT REPORT 2             -->
                             </div>
                             
