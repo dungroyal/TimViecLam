@@ -1,17 +1,18 @@
 <aside class="menu-sidebar2">
 	<div class="logo">
-		<a href="/" title="Quay về trang chủ">
+		<a href="#">
 			<img src="{{ asset('home') }}/img/logo.png" alt="">
 		</a>
 	</div>
 	<div class="menu-sidebar2__content js-scrollbar1">
 		<div class="account2">
-			<div class="image img-cir img-120">
+			{{-- <div class="image img-cir img-120">
 				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Đoàn Quốc Dũng" />
-			</div>
-			<h4 class="name">{{ Auth::guard('ungvien')->user()->hoTen}}</h4>
+			</div> --}}
+			{{-- <h4 class="name">{{ Auth::guard('admin')->user()->hoTen}}</h4> --}}
+			Hi, Super Admin
 			
-			<a href="#">Sign out</a>
+			{{-- <a href="#">Sign x out</a> --}}
 			
 		</div>
 		{{-- <p>Hoàn thiệ hồ sơ</p>

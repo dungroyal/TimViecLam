@@ -12,9 +12,9 @@ class jobController extends Controller
     function index()
         {
             $job=DB::table('congviec')
-            ->join('nhatuyedung', 'congviec.idNhaTuyenDung', '=', 'nhatuyedung.id')
-            ->join('hosocongty', 'nhatuyedung.id', '=', 'hosocongty.idNhaTuyeDung')
-            ->select('congviec.*', 'nhatuyedung.tenCty', 'nhatuyedung.id AS idNTD', 'hosocongty.logoCty')
+            ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+            ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+            ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
             ->get();
             return view('home.job',['list_job'=>$job]);
         }
@@ -25,12 +25,12 @@ class jobController extends Controller
             ->Where('congviec.id', '=', $id)
             ->first();
 
-            $ctyById=DB::table('nhatuyedung')
-            ->Where('nhatuyedung.id', '=', $jobById->idNhaTuyenDung)
+            $ctyById=DB::table('nhatuyendung')
+            ->Where('nhatuyendung.id', '=', $jobById->idNhaTuyenDung)
             ->first();
 
             $hoSoCty=DB::table('hosocongty')
-            ->Where('hosocongty.idNhaTuyeDung', '=', $ctyById->id)
+            ->Where('hosocongty.idNhaTuyenDung', '=', $ctyById->id)
             ->first();
 
             return view('home.job_detail', ['jobById'=>$jobById ,'ctyById'=> $ctyById,'hoSoCty'=> $hoSoCty]);

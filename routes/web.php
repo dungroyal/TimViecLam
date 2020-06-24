@@ -32,6 +32,12 @@ Route::group(['prefix' => '/ung-vien'], function () {
     Route::get('/', 'uvController@index');
 });
 
+// ====================== Super Admin TimViecLam ======================
+Route::group(['prefix' => '/admin'], function () {
+    Route::get('/login', 'adminController@login');
+    Route::post('/admin_login', 'loginController@checklogin_admin');
+    Route::get('/', 'adminController@index');
+});
 
 
 

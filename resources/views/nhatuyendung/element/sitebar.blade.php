@@ -1,6 +1,6 @@
 <aside class="menu-sidebar2">
 	<div class="logo">
-		<a href="#">
+		<a href="/"  title="Quay về trang chủ">
 			<img src="{{ asset('home') }}/img/logo.png" alt="">
 		</a>
 	</div>

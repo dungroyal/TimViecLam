@@ -8,7 +8,7 @@ class uvController extends Controller
 {
     function index()
     {
-        if (session('nhatuyendung')) {
+        if (session('ungvien')) {
             return view('ungvien.index');
         }else{
             return redirect('/dang-nhap/uv');

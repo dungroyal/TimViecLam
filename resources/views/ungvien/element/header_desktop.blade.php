@@ -1,4 +1,4 @@
-<header class="header-desktop">
+<header class="header-desktop" id="custom_header_uv">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="header-wrap">
@@ -15,7 +15,7 @@
                             <p>Trang chủ</p>
                         </a>
 
-                        <a href="#"class="noti__item " id="custom-btn">
+                        <a href="/job"class="noti__item " id="custom-btn">
                             <i class="zmdi zmdi-case-check"></i>
                             <p>Tuyển dụng</p>
                         </a>

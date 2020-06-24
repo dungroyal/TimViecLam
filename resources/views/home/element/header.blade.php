@@ -18,11 +18,20 @@
                         </ul>
                     </nav>
                     <div class="header__menu__right">
-                        <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i> Tài khoản</a>
-                        <a href="/dang-nhap" class="primary-btn display_none" id="login-btn-employer">Đăng nhập</a>
-                        <a href="/dang-ky" class="primary-btn display_none" id="login-btn-job_seeker">Đăng ký</a>
-                        
-                        <!-- <a href="#" class="login-btn"><i class="fa fa-user"></i></a> -->
+                        @if (session()->has('nhatuyendung'))
+                            <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i>  {{ Auth::guard('nhatuyendung')->user()->tenCty}}</a>
+                            <a href="/nha-tuyen-dung" class="primary-btn display_none" id="login-btn-employer">Quản lý hồ sơ</a>
+                            <a href="/logout_ntd" class="primary-btn display_none" id="login-btn-job_seeker">Đăng xuất</a>
+                        @elseif(session()->has('ungvien'))
+                            <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ Auth::guard('ungvien')->user()->hoTen}}</a>
+                            <a href="/ung-vien" class="primary-btn display_none" id="login-btn-employer">Quản lý hồ sơ</a>
+                            <a href="/logout_uv" class="primary-btn display_none" id="login-btn-job_seeker">Đăng xuất</a>
+                        @else
+                            <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i> Tài khoản</a>
+                            <a href="/dang-nhap" class="primary-btn display_none" id="login-btn-employer">Đăng nhập</a>
+                            <a href="/dang-ky" class="primary-btn display_none" id="login-btn-job_seeker">Đăng ký</a>
+                        @endif
+                    
                     </div>
                 </div>
             </div>

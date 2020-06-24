@@ -42,6 +42,23 @@ class loginController extends Controller
         }
     }
 
+    function checklogin_admin(Request $request)
+    {
+        $request->validate([
+            'email'=>['required'],
+            'password'=>['required']
+        ]);
+
+        if (Auth::guard('admin')->attempt(['email' => $request['email'], 'password' => $request['password']])) {
+            if (Auth::guard('admin')->check()) {
+                session(['admin'=>Auth::guard('admin')->user()]);
+                return redirect('/admin');
+            }
+        } else {
+            return redirect('/admin/login')->with('error-login-admin', 'Sai tên đăng nhập hoặc mật khẩu.');
+        }
+    }
+
     function logout_uv()
     {
         session()->forget('ungvien');
@@ -50,7 +67,13 @@ class loginController extends Controller
 
     function logout_ntd()
     {
-        Auth::logout();
+        session()->forget('nhatuyendung');
+        return redirect('/');
+    }
+
+    function logout_admin()
+    {
+        session()->forget('admin');
         return redirect('/');
     }
 }

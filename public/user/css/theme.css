@@ -13335,3 +13335,15 @@ section {
     font-size: 14px;
     font-weight: 400;
 }
+
+#custom_header_ntd {
+    background-color: #ff6a00;
+}
+
+#custom_header_uv {
+    background-color: #097ed8;
+}
+
+#custom_header_admin {
+    background-color: #0c953f;
+}

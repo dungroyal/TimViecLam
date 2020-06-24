@@ -51,7 +51,7 @@ return [
             'provider' => 'ungvien'
         ],
 
-        'ungvien_api' => [
+        'ungvien-api' => [
             'driver' => 'session',
             'provider' => 'ungvien'
         ],
@@ -61,10 +61,19 @@ return [
             'provider' => 'nhatuyendung'
         ],
 
-        'nhatuyendung_api' => [
+        'nhatuyendung-api' => [
             'driver' => 'session',
             'provider' => 'nhatuyendung'
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin'
+        ],
+
+        'admin-api' => [
+            'driver' => 'session',
+            'provider' => 'admin'
+        ]
     ],
 
     /*
@@ -92,12 +101,17 @@ return [
 
         'ungvien' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Ungvien::class,
         ],
         'nhatuyendung' => [
             'driver' => 'eloquent',
             'model' => App\Nhatuyendung::class,
         ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
+        
 
         // 'users' => [
         //     'driver' => 'database',
