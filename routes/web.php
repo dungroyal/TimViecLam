@@ -30,6 +30,7 @@ Route::group(['prefix' => '/nha-tuyen-dung'], function () {
 // ====================== Ứng viên ======================
 Route::group(['prefix' => '/ung-vien'], function () {
     Route::get('/', 'uvController@index');
+    Route::get('/ung-tuyen/{id}', 'uvController@ung_tuyen');
 });
 
 // ====================== Super Admin TimViecLam ======================

@@ -19,8 +19,14 @@
                 
                 <div class="col-lg-4">
                     <div class="btn-group-lg">
-                        <button type="button" class="btn btn-info"><i class="fa fa-bookmark" aria-hidden="true"></i> Lưu việc làm</button>
-                        <button type="button" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i> Ứng tuyển</button>
+                        @if (session()->has('ungvien'))
+                            <a href="/job/save/{{{$ctyById->id}}}" class="btn btn-info"><i class="fa fa-bookmark" aria-hidden="true"></i> Lưu việc làm </a>
+                            <a href="/ung-vien/ung-tuyen/{{{$ctyById->id}}}" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i> Ứng tuyển </a>
+                        @elseif(session()->has('nhatuyendung'))
+                        @else
+                            <a href="/dang-nhap" class="btn btn-info"><i class="fa fa-bookmark" aria-hidden="true"></i> Lưu việc làm </a>
+                            <a href="/dang-nhap" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i> Ứng tuyển </a>
+                        @endif
                     </div>
                 </div>
             </div>
