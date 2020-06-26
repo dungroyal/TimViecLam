@@ -16,7 +16,7 @@
 		<nav class="navbar-sidebar2">
 			<ul class="list-unstyled navbar__list">
 				<li class="active has-sub">
-					<a class="js-arrow" href="#">
+					<a class="js-arrow" href="{{ Route("nhatuyendung") }}">
 						<i class="fa fa-line-chart" aria-hidden="true"></i>Quản lý chung
 					</a>
 				</li>
@@ -59,7 +59,7 @@
 								<i class="fa fa-eye" aria-hidden="true"></i>Hồ sơ đã xem</a>
 						</li>
 						<li>
-							<a href="button.html">
+							<a href="{{ Route("HoSoCongViec") }}">
 								<i class="fa fa-paper-plane" aria-hidden="true"></i>Hồ sơ ứng tuyển</a>
 						</li>
 					</ul>

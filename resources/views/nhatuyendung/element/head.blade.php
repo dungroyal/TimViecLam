@@ -9,6 +9,8 @@
 
     <!-- Title Page-->
     <title>Nhà Tuyển Dụng | Tìm Việc Làm</title>
+    
+    <link rel="icon" href="{{ asset('home') }}/img/favicon.png" type="image/gif" sizes="16x16">
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">

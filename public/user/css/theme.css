@@ -329,7 +329,7 @@ section {
 
 .page-wrapper {
     overflow: hidden;
-    background: #e5e5e5;
+    background: #f2f2f2;
     padding-bottom: 8vh;
 }
 
@@ -13346,4 +13346,8 @@ section {
 
 #custom_header_admin {
     background-color: #0c953f;
+}
+
+.show {
+    margin: 35px;
 }

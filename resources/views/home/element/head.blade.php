@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="{{ asset('home') }}/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('home') }}/css/style.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('home') }}/css/custom.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('home') }}/css/base.css" type="text/css">
     {{-- dangky_dangnhap --}}
     <link rel="stylesheet" href="{{ asset('home') }}/css/dangnhap-dangky.css" type="text/css">
     {{-- home dangky_dangnhap --}}
