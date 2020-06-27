@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 23, 2020 lúc 07:22 PM
+-- Thời gian đã tạo: Th6 27, 2020 lúc 09:31 PM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.2
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `timvieclam`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `sdt` varchar(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `sdt`, `email`, `password`) VALUES
+(1, 'Super Admin TVL', '0398022720', 'admin@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi');
 
 -- --------------------------------------------------------
 
@@ -80,9 +101,10 @@ CREATE TABLE `congviec` (
 --
 
 INSERT INTO `congviec` (`id`, `idNhaTuyenDung`, `tenCongViec`, `soluong`, `idCapBac`, `mucLuong`, `diaDiem`, `idNganhNghe`, `moTa`, `quyenLoi`, `kinhNghiem`, `trinhDo`, `gioiTinh`, `deadline`, `yeuCau`, `yeuCauHoSo`, `tenNguoiLienHe`, `phoneNLH`, `emailNLH`) VALUES
-(1, 1, 'Nhân viên thết kế Web chuyên nghiệp', 2, 1, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com'),
-(2, 1, 'Nhân viên thiết kế đồ họa', 2, 1, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com'),
-(3, 1, 'Nhân viên kĩ thuật ', 2, 1, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com');
+(1, 2, 'Nhân viên thết kế Web chuyên nghiệp', 2, 1, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com'),
+(2, 2, 'Nhân viên thiết kế đồ họa', 2, 1, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com'),
+(3, 1, 'Nhân viên kĩ thuật ', 2, 1, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com'),
+(4, 2, 'Nhân viên bảo vệ', 2, 4, '12', 'TP. Hồ Chí Minh', 15, '- Tiếp nhận và phân tích các yêu cầu thiết kế từ khách hàng để tư vấn, định hướng thiết kế cho khách hàng;\r\n- Làm concept và lên phối cảnh 3D của công trình;\r\n- Tư vấn cho khách hàng ý tưởng thiết kế, tư vấn thiết kế, tư vấn chất liệu/ vật liệu thi công,...\r\n- Lập, triển khai bản vẽ sơ bộ và phối hợp với kỹ Thuật để triển khai bản vẽ thi công;\r\n- Giám sát tác quyền…', '- Lương cơ bản từ 10 - 12 triệu\r\n- Thu nhập hấp dẫn ( được hưởng % hoa hồng thiết kế và thi công các dự án)\r\n- Xét tăng lương hàng năm\r\n- Môi trường làm việc mở, trẻ trung, năng động, văn minh.\r\n- Thưởng các ngày lễ, thưởng lương tháng 13 đầy đủ\r\n- Tham gia BHXH, BHYT, BHTN theo quy định Nhà nước\r\n- Hàng năm được tham gia nghỉ mát, thăm quan và nhiều hoạt động ngoại khóa.\r\n- Thường xuyên được đào tạo, nâng cao kỹ năng\r\n- Có nhiều cơ hội thăng tiến', '2 năm', 'Đại học', 'Nam', '2020-06-24', '- Tốt nghiệp Đại học chuyên ngành Công nghệ thông tin hệ chính quy tập trung.\r\n- Tiếng Anh theo chuẩn Quốc tế IELTS tối thiểu 4.0 hoặc TOEIC tối thiểu 350 hoặc có chứng chỉ tương đương; trường hợp tại thời điểm tuyển dụng, nếu nhân sự chưa đáp ứng trình độ ngoại ngữ thì đơn vị có thể xem xét tuyển dụng nhưng người lao động phải cam kết tự đào tạo để đáp ứng yêu cầu chức danh trong thoài gian giao kết hợp đồng xác định thời hạn.\r\n- Độ tuổi không quá 27 tuổi; trường hợp ứng viên là lao động thuê lại đang làm việc cho VNPT Bình Phước, trường hợp không giới hạn độ tuổi tuyển dụng khi ứng viên đáp ứng ít nhất một trong các điều kiện sau:\r\n+ Đã tham gia tối thiểu 03 dự án lớn triển khai cho các khách hàng là các tổ chức/doanh nghiệp uy tín trong và ngoài nước;\r\n+ Có các sản phẩm, công trình nghiên cứu trong lĩnh vực CNTT đạt giải thưởng của các tổ chức uy tín trong nước và quốc tế;\r\n+ Chuyên gia trong các lĩnh vực nghiên cứu phát triển công nghệ mới, cơ sở dữ liệu, giải pháp tích hợp hệ thống; phân tích thiết kế hệ thống, sản phẩm phần mềm.\r\nb. Về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ:\r\nNhân sự được tuyển dụng phải đáp ứng về kiến thức, kinh nghiệm, kỹ năng, phẩm chất, thái độ làm việc theo yêu cầu của vị trí công việc.', '- Đơn xin tham gia dự tuyển/đơn xin việc (ký 01 bản);\r\n- Bản sơ yếu lý lịch loại 8 trang có dán ảnh 4x6, người khai phải ký tên, có xác nhận của địa phương nơi đăng ký hộ khẩu thường trú (có giá trị trong thời hạn 6 tháng gần nhất);\r\n- Giấy khám sức khỏe của các cơ sở y tế có thẩm quyền (có giá trị trong thời hạn 03 tháng gần nhất);\r\n- Bản sao công chứng hợp pháp các giấy tờ sau: Bằng tốt nghiệp PTTH, học bạ cấp 3; Bằng tốt nghiệp đại học, các chứng chỉ đào tạo; Kết quả học tập theo các văn bằng chứng chỉ; Giấy CMND, giấy khai sinh, hộ khẩu; Giấy chứng nhận ưu tiên (nếu có);\r\n- Ảnh 3x4 và ảnh 4x6 (mỗi loại 02 ảnh).\r\n- Bản tóm tắt thông tin cá nhân của người dự tuyển về quá trình học tập, công tác, kinh nghiệm làm việc, … của bản thân.', 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -92,7 +114,7 @@ INSERT INTO `congviec` (`id`, `idNhaTuyenDung`, `tenCongViec`, `soluong`, `idCap
 
 CREATE TABLE `hosocongty` (
   `id` int(11) NOT NULL,
-  `idNhaTuyeDung` int(11) NOT NULL,
+  `idNhaTuyenDung` int(11) NOT NULL,
   `tenCty` varchar(100) NOT NULL,
   `diaChi` varchar(100) NOT NULL,
   `tinh` varchar(20) NOT NULL,
@@ -113,7 +135,7 @@ CREATE TABLE `hosocongty` (
 -- Đang đổ dữ liệu cho bảng `hosocongty`
 --
 
-INSERT INTO `hosocongty` (`id`, `idNhaTuyeDung`, `tenCty`, `diaChi`, `tinh`, `quyMo`, `idNganhNghe`, `soLuocCty`, `logoCty`, `website`, `phoneCty`, `nguoiLH`, `phoneNguoiLH`, `dcNguoiLH`, `emailNLH`, `chuVu`) VALUES
+INSERT INTO `hosocongty` (`id`, `idNhaTuyenDung`, `tenCty`, `diaChi`, `tinh`, `quyMo`, `idNganhNghe`, `soLuocCty`, `logoCty`, `website`, `phoneCty`, `nguoiLH`, `phoneNguoiLH`, `dcNguoiLH`, `emailNLH`, `chuVu`) VALUES
 (1, 1, 'CTy NTHH TM DV Công Nghệ Thành Nhân', '992 Âu cơ, phường 14, Tân bình', 'TP. Hồ Chí Minh', '10 người', 15, 'Công ty như loằn', 'thiet-ke-logo-cong-ty-thang-long-1.jpg', 'thanhnhancomputer.vn', '0398022720', 'Đoàn Quốc Dũng', '0398022147', 'Gò Vấp', 'Doanquocdung55@gmail.com', 'Trưởng phòng nhân sự');
 
 -- --------------------------------------------------------
@@ -132,11 +154,18 @@ CREATE TABLE `hosoungvien` (
   `quocTich` varchar(15) NOT NULL,
   `diaChi` varchar(100) NOT NULL,
   `tinh` varchar(20) NOT NULL,
-  `gioiTinh` varchar(5) NOT NULL,
+  `gioiTinh` varchar(5) NOT NULL DEFAULT 'Nam',
   `honNhan` varchar(10) NOT NULL,
-  `avata` varchar(150) NOT NULL,
+  `avata` varchar(150) NOT NULL DEFAULT 'avatar_1.png',
   `cv` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `hosoungvien`
+--
+
+INSERT INTO `hosoungvien` (`id`, `idUngVien`, `hoTen`, `phone`, `email`, `birthdate`, `quocTich`, `diaChi`, `tinh`, `gioiTinh`, `honNhan`, `avata`, `cv`) VALUES
+(1, 1, 'Đoàn Quốc Dũng', '0398022720', 'doanquocdung55@gmail', '2018-05-23', 'Việt Nam', '34D, Đường số 12, Phường 14, Gò Vấp', 'TP. Hồ Chí Minh', 'Nam', 'Độc thân', 'avatar_1.png', 'link');
 
 -- --------------------------------------------------------
 
@@ -213,10 +242,10 @@ INSERT INTO `nganhnghe` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhatuyedung`
+-- Cấu trúc bảng cho bảng `nhatuyendung`
 --
 
-CREATE TABLE `nhatuyedung` (
+CREATE TABLE `nhatuyendung` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -230,11 +259,34 @@ CREATE TABLE `nhatuyedung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nhatuyedung`
+-- Đang đổ dữ liệu cho bảng `nhatuyendung`
 --
 
-INSERT INTO `nhatuyedung` (`id`, `email`, `password`, `hoTen`, `soDienThoai`, `tenCty`, `linhVucHD`, `quyMo`, `diaChi`, `tinh`) VALUES
-(1, 'dungdq5520@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi', 'Đoàn Quốc Dũng', '0398022720', 'Liên Hiệp HTX Thương Mại TP. Hồ Chí Minh', 'CNTT', '50 người', '992 Âu Cơ, Phường 14, Quận Tân Bình', 'TP. Hồ Chí Minh');
+INSERT INTO `nhatuyendung` (`id`, `email`, `password`, `hoTen`, `soDienThoai`, `tenCty`, `linhVucHD`, `quyMo`, `diaChi`, `tinh`) VALUES
+(1, 'dungdq5520@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi', 'Đoàn Quốc Dũng', '0398022720', 'Liên Hiệp HTX Thương Mại TP. Hồ Chí Minh', 'CNTT', '50 người', '992 Âu Cơ, Phường 14, Quận Tân Bình', 'TP. Hồ Chí Minh'),
+(2, 'ntd@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi', 'Đoàn Quốc Dũng', '0398022720', 'Liên Hiệp HTX Thương Mại TP. Hồ Chí Minh', 'CNTT', '50 người', '992 Âu Cơ, Phường 14, Quận Tân Bình', 'TP. Hồ Chí Minh');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `ungtuyen`
+--
+
+CREATE TABLE `ungtuyen` (
+  `id` int(11) NOT NULL,
+  `idCongviec` int(11) NOT NULL,
+  `idUngvien` int(11) NOT NULL,
+  `idNhaTuyenDung` int(11) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp(),
+  `status` tinyint(4) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `ungtuyen`
+--
+
+INSERT INTO `ungtuyen` (`id`, `idCongviec`, `idUngvien`, `idNhaTuyenDung`, `date`, `status`) VALUES
+(4, 1, 1, 1, '2020-06-25 23:44:27', 0);
 
 -- --------------------------------------------------------
 
@@ -255,11 +307,22 @@ CREATE TABLE `ungvien` (
 --
 
 INSERT INTO `ungvien` (`id`, `hoTen`, `soDienThoai`, `email`, `password`) VALUES
-(1, 'Đoàn Quốc Dũng', '0398022720', 'dungdqps08542@fpt.edu.vn', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi');
+(1, 'Đoàn Quốc Dũng', '0398022720', 'uv@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi'),
+(2, 'Trần Quang Chánh', '0321254512', 'tqc2000@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi'),
+(3, 'Nguyễn Quốc Thịnh', '0325412145', 'nqt2000@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi'),
+(4, 'Lê Nhật Hào', '0312455124', 'haocamau1999@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi'),
+(5, 'Lê Trọng Nhân', '0301245480', 'nhanlt1997@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi'),
+(6, 'Nguyễn Quang Huy', '0312455210', 'nqh2000@gmail.com', '$2y$10$HzpjWmhiEJLXrT53ZQMIOOnyj2HDO03rkGOrssTIDK/yYPpSIxJNi');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `capbac`
@@ -281,7 +344,7 @@ ALTER TABLE `congviec`
 --
 ALTER TABLE `hosocongty`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_hsct_NhaTuyenDung` (`idNhaTuyeDung`),
+  ADD KEY `FK_hsct_NhaTuyenDung` (`idNhaTuyenDung`),
   ADD KEY `FK_hsct_NganhNghe` (`idNganhNghe`);
 
 --
@@ -298,9 +361,15 @@ ALTER TABLE `nganhnghe`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `nhatuyedung`
+-- Chỉ mục cho bảng `nhatuyendung`
 --
-ALTER TABLE `nhatuyedung`
+ALTER TABLE `nhatuyendung`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `ungtuyen`
+--
+ALTER TABLE `ungtuyen`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -314,6 +383,12 @@ ALTER TABLE `ungvien`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `capbac`
 --
 ALTER TABLE `capbac`
@@ -323,7 +398,7 @@ ALTER TABLE `capbac`
 -- AUTO_INCREMENT cho bảng `congviec`
 --
 ALTER TABLE `congviec`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `hosocongty`
@@ -335,7 +410,7 @@ ALTER TABLE `hosocongty`
 -- AUTO_INCREMENT cho bảng `hosoungvien`
 --
 ALTER TABLE `hosoungvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `nganhnghe`
@@ -344,16 +419,22 @@ ALTER TABLE `nganhnghe`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT cho bảng `nhatuyedung`
+-- AUTO_INCREMENT cho bảng `nhatuyendung`
 --
-ALTER TABLE `nhatuyedung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `nhatuyendung`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `ungtuyen`
+--
+ALTER TABLE `ungtuyen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `ungvien`
 --
 ALTER TABLE `ungvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -365,14 +446,14 @@ ALTER TABLE `ungvien`
 ALTER TABLE `congviec`
   ADD CONSTRAINT `FK_CongViec_CapBac` FOREIGN KEY (`idCapBac`) REFERENCES `capbac` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `FK_CongViec_NghanhNghe` FOREIGN KEY (`idNganhNghe`) REFERENCES `nganhnghe` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_CongViec_NhaTuyenDung` FOREIGN KEY (`idNhaTuyenDung`) REFERENCES `nhatuyedung` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_CongViec_NhaTuyenDung` FOREIGN KEY (`idNhaTuyenDung`) REFERENCES `nhatuyendung` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Các ràng buộc cho bảng `hosocongty`
 --
 ALTER TABLE `hosocongty`
   ADD CONSTRAINT `FK_hsct_NganhNghe` FOREIGN KEY (`idNganhNghe`) REFERENCES `nganhnghe` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_hsct_NhaTuyenDung` FOREIGN KEY (`idNhaTuyeDung`) REFERENCES `nhatuyedung` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_hsct_NhaTuyenDung` FOREIGN KEY (`idNhaTuyenDung`) REFERENCES `nhatuyendung` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Các ràng buộc cho bảng `hosoungvien`

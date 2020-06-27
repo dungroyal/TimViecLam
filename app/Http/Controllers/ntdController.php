@@ -41,4 +41,17 @@ class ntdController extends Controller
 
         return view('nhatuyendung.page.hoSoUngTuyen', ['listUngTuyen'=>$listUngTuyen,'congviec'=>$congviec]);
     }
+
+    function ung_vien($id){
+        $ungVien=DB::table('ungvien')
+        ->where('ungvien.id', '=',$id)
+        ->join('hosoungvien', 'ungvien.id', '=', 'hosoungvien.idUngVien')
+        ->select('ungvien.*', 'hosoungvien.hoTen')
+        ->first();
+
+        // return $ungVien;
+
+        return view('nhatuyendung.page.cvUngVien', ['listungVien'=>$ungVien]);
+
+    }
 }

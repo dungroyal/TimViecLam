@@ -11,6 +11,10 @@ Route::get('/contact', 'homeController@contact');
 Route::get('/about', 'homeController@about');
 Route::get('/cong-ty/{id}', 'homeController@cong_ty');
 
+// ====================== Search ======================
+Route::post('/search_CongViec', 'jobController@search_CongViec');
+
+
 // ====================== AUTH ======================
 Route::get('/dang-nhap', 'homeController@dang_nhap');
 Route::get('/dang-nhap/ntd', 'homeController@dang_nhap_ntd');
@@ -27,6 +31,7 @@ Route::group(['prefix' => '/nha-tuyen-dung'], function () {
     Route::get('/', 'ntdController@index')->name("nhatuyendung");
     Route::get('/ho-so-cong-viec', 'ntdController@hs_cong_viec')->name("HoSoCongViec");
     Route::get('/ung-tuyen/{id}', 'ntdController@hs_ung_tuyen')->name("HoSoUngTuyen");
+    Route::get('/ung-vien/{id}', 'ntdController@ung_vien');
 });
 
 // ====================== Ứng viên ======================

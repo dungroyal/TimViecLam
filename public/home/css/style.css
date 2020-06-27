@@ -441,8 +441,8 @@ ol {
 }
 
 .hero__search__form {
-    margin-bottom: 30px;
-    background: rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.22);
     padding: 20px;
     border-radius: 5px;
 }

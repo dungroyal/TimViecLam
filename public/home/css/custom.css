@@ -73,3 +73,18 @@
     color: red;
     font-size: 15px;
 }
+
+#active-search {
+    color: black;
+    background-color: #ffffff;
+}
+
+.hero__categories__tags li a:hover {
+    background-color: rgb(255, 255, 255);
+    transition: all .2s;
+    color: #000000;
+}
+
+.hero__categories__tags li a {
+    border-radius: 3px;
+}

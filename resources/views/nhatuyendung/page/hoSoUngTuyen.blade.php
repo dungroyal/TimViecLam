@@ -57,7 +57,7 @@
                             <td>{{ $ut->date }}</td>
                             <td>
                                 <div class="table-data-feature">
-                                    <a href="/nha-tuyen-dung/ung-tuyen/" class="item" data-toggle="tooltip" title="Xem chi tiết">
+                                    <a href="/nha-tuyen-dung/ung-vien/{{{ $ut->idUngvien }}}" class="item" data-toggle="tooltip" title="Xem chi tiết">
                                         <i class="zmdi zmdi-square-right"></i>
                                     </a>
                                 </div>
