@@ -1947,7 +1947,7 @@ ol {
 -----------------------*/
 
 .breadcrumb-area {
-    padding-top: 130px;
+    padding-top: 180px;
     padding-bottom: 25px;
 }
 
@@ -2394,8 +2394,8 @@ ol {
 -----------------------*/
 
 .blog-details-hero {
-    padding-top: 170px;
-    padding-bottom: 30px;
+    padding-top: 32px;
+    padding-bottom: 15px;
 }
 
 .blog__hero__text .label {
@@ -2412,7 +2412,8 @@ ol {
 
 .blog__hero__text h2 {
     font-size: 42px;
-    color: #ffffff;
+    color: black;
+    
     font-weight: 700;
     line-height: 50px;
     margin-top: 25px;
