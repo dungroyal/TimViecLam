@@ -22,7 +22,6 @@ class uvController extends Controller
     {
         $idUngvien=Auth::guard('ungvien')->user()->id;
         $idJob=$id;
-
         $jobById=DB::table('congviec')
             ->Where('congviec.id', '=', $id)
             ->first();
