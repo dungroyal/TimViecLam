@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 // ====================== HOME ======================
 
 Route::get('/', 'homeController@index');
-Route::get('/blog', 'blogController@index');
+Route::get('/blog','blogController@index');
+Route::get('/blogdetail', 'blogController@detail');
 Route::get('/job', 'jobController@index');
 Route::get('/job/{id}', 'jobController@job_detail');
 Route::get('/contact', 'homeController@contact');

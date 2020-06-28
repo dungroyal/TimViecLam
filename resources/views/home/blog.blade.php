@@ -24,116 +24,115 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="blog__item__large">
-                    <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/blog-large.jpg">
-                        <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                    <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/1.jpg">
+                        
                     </div>
                     <div class="blog__item__text">
                         <ul class="blog__item__tags">
-                            <li><i class="fa fa-tags"></i> Travel</li>
-                            <li>Videos</li>
+                            <li><i class="fa fa-tags"></i> Cơ hội việc làm</li>
+                            <li>Tin tức</li>
                         </ul>
-                        <h3><a href="#">Internet Banner Advertising Most Reliable</a></h3>
+                        <h3><a href="/blogdetail">Môi trường làm việc lý tưởng tại VIFON</a></h3>
                         <ul class="blog__item__widget">
-                            <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                            <li><i class="fa fa-user"></i> John Smith</li>
+                            <li><i class="fa fa-clock-o"></i> 21th June, 2020</li>
+                            <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh </li>
                         </ul>
-                        <p>One of my favourite things I like to watch is the bloopers and outtakes that are shown of
-                            mistakes made during the making of a movie.</p>
+                        <p>Công ty Cổ phần VIFON là một trong những thương hiệu quen thuộc, gắn bó với người tiêu dùng thông qua nhiều sản phẩm mì sợi ăn liền và gia vị. Thành lập từ năm 1963, VIFON đã xây dựng được chỗ đứng vững chắc trong ngành, có mặt khắp 64 tỉnh thành trong nước và hơn 100 nước trên thế giới bao gồm các thị trường với yêu cầu rất khắt khe về chất lượng hàng hóa như Mỹ, Úc, Nhật, Hàn Quốc và Liên minh châu Âu.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="blog__item">
-                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/bp-1.jpg"></div>
+                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/details/3.jpg"></div>
                             <div class="blog__item__text">
                                 <ul class="blog__item__tags">
-                                    <li><i class="fa fa-tags"></i> Travel</li>
-                                    <li>Videos</li>
+                                    <li><i class="fa fa-tags"></i> Cơ hội việc làm</li>
+                                    <li>Tin tức</li>
                                 </ul>
-                                <h5><a href="#">Florida for 20 YEARS swims in the Gulf for the FIRST</a></h5>
+                                <h5><a href="#">Cơ hội phát triển nghề nghiệp tại ngân hàng ABBANK</a></h5>
                                 <ul class="blog__item__widget">
-                                    <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                    <li><i class="fa fa-user"></i> John Smith</li>
+                                    <li><i class="fa fa-clock-o"></i> 21th June, 2020</li>
+                                    <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="blog__item">
-                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/bp-2.jpg">
-                                <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/details/2.jpg">
+                               
                             </div>
+                            <div class="blog__item__text">
+                                <ul class="blog__item__tags">
+                                    <li><i class="fa fa-tags"></i> Cơ hội việc làm</li>
+                                    <li>Tin tức</li>
+                                </ul>
+                                <h5><a href="#">Bạn đã biết cách tạo động lực giúp nhân viên làm việc hiệu quả hơn?</a></h5>
+                                <ul class="blog__item__widget">
+                                    <li><i class="fa fa-clock-o"></i> 21th June, 2020</li>
+                                    <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/details/4.jpg"></div>
+                            <div class="blog__item__text">
+                                <ul class="blog__item__tags">
+                                    <li><i class="fa fa-tags"></i> Cơ hội việc làm</li>
+                                </ul>
+                                <h5><a href="#">Abbott Việt Nam – Nơi truyền cảm hứng cho nhân viên</a></h5>
+                                <ul class="blog__item__widget">
+                                    <li><i class="fa fa-clock-o"></i>  21th June, 2020</li>
+                                    <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/details/5.jpg">
+                              
+                            </div>
+                            <div class="blog__item__text">
+                                <ul class="blog__item__tags">
+                                    <li><i class="fa fa-tags"></i> Góc chia sẽ</li>
+                                </ul>
+                                <h5><a href="#">Làm thế nào khi vướng phải tin đồn nơi công sở?</a></h5>
+                                <ul class="blog__item__widget">
+                                    <li><i class="fa fa-clock-o"></i> 21th June, 2020</li>
+                                    <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="blog__item">
+                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/details/6.jpg"></div>
                             <div class="blog__item__text">
                                 <ul class="blog__item__tags">
                                     <li><i class="fa fa-tags"></i> Videos</li>
-                                    <li>Restaurant</li>
                                 </ul>
-                                <h5><a href="#">Florida Bar Removes Famous Dollar Bill Decor</a></h5>
+                                <h5><a href="#">Khám phá bản thân và tự do sáng tạo cùng Diana Unicharm</a></h5>
                                 <ul class="blog__item__widget">
-                                    <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                    <li><i class="fa fa-user"></i> John Smith</li>
+                                    <li><i class="fa fa-clock-o"></i> 28th June, 2020</li>
+                                    <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="blog__item">
-                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/bp-3.jpg"></div>
-                            <div class="blog__item__text">
-                                <ul class="blog__item__tags">
-                                    <li><i class="fa fa-tags"></i> Hotel</li>
-                                </ul>
-                                <h5><a href="#">'Junior detectives' help Roseville, Calif police</a></h5>
-                                <ul class="blog__item__widget">
-                                    <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                    <li><i class="fa fa-user"></i> John Smith</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/bp-4.jpg">
-                                <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="blog__item__text">
-                                <ul class="blog__item__tags">
-                                    <li><i class="fa fa-tags"></i> Restaurant</li>
-                                </ul>
-                                <h5><a href="#">Dog Rescues Florida Woman After Her iPad Catches</a></h5>
-                                <ul class="blog__item__widget">
-                                    <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                    <li><i class="fa fa-user"></i> John Smith</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/bp-5.jpg"></div>
-                            <div class="blog__item__text">
-                                <ul class="blog__item__tags">
-                                    <li><i class="fa fa-tags"></i> Videos</li>
-                                </ul>
-                                <h5><a href="#">Citrus Heights Snack Man Helps Feed The Homeless</a></h5>
-                                <ul class="blog__item__widget">
-                                    <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                    <li><i class="fa fa-user"></i> John Smith</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="blog__item">
-                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('home') }}/img/blog/bp-6.jpg"></div>
+                            <div class="blog__item__pic set-bg" data-setbg="{{ asset('images') }}/blog/details/7.jpg"></div>
                             <div class="blog__item__text">
                                 <ul class="blog__item__tags">
                                     <li><i class="fa fa-tags"></i> Travel</li>
                                 </ul>
-                                <h5><a href="#">Homeless woman’s viral subway opera performance</a></h5>
+                                <h5><a href="#">5 dấu hiệu chứng tỏ bạn đang làm việc quá sức</a></h5>
                                 <ul class="blog__item__widget">
-                                    <li><i class="fa fa-clock-o"></i> 19th March, 2019</li>
-                                    <li><i class="fa fa-user"></i> John Smith</li>
+                                    <li><i class="fa fa-clock-o"></i> 28th June, 2020</li>
+                                    <li><i class="fa fa-user"></i> Nguyễn Quốc Thịnh</li>
                                 </ul>
                             </div>
                         </div>
@@ -162,9 +161,9 @@
                                 <img src="{{ asset('home') }}/img/blog/recent-1.jpg" alt="">
                             </div>
                             <div class="blog__sidebar__recent__item__text">
-                                <span><i class="fa fa-tags"></i> Shopping</span>
-                                <h6>Tortoise grilled on salt</h6>
-                                <p><i class="fa fa-clock-o"></i> 19th March, 2019</p>
+                                <span><i class="fa fa-tags"></i> Cơ hội việc làm</span>
+                                <h6>Môi trường làm việc lý tưởng tại VIFON</h6>
+                                <p><i class="fa fa-clock-o"></i> 21th June, 2020</p>
                             </div>
                         </a>
                         <a href="#" class="blog__sidebar__recent__item">
@@ -172,9 +171,9 @@
                                 <img src="{{ asset('home') }}/img/blog/recent-2.jpg" alt="">
                             </div>
                             <div class="blog__sidebar__recent__item__text">
-                                <span><i class="fa fa-tags"></i> Hotels</span>
-                                <h6>Shrimp floured and fried</h6>
-                                <p><i class="fa fa-clock-o"></i> 22th March, 2019</p>
+                                <span><i class="fa fa-tags"></i> Tin Tức</span>
+                                <h6>Cơ hội phát triển nghề nghiệp tại ngân hàng ABBANK</h6>
+                                <p><i class="fa fa-clock-o"></i> 21th June, 2020</p>
                             </div>
                         </a>
                         <a href="#" class="blog__sidebar__recent__item">
@@ -182,9 +181,9 @@
                                 <img src="{{ asset('home') }}/img/blog/recent-3.jpg" alt="">
                             </div>
                             <div class="blog__sidebar__recent__item__text">
-                                <span><i class="fa fa-tags"></i> Restaurant</span>
-                                <h6>Sweet and sour pork ribs</h6>
-                                <p><i class="fa fa-clock-o"></i> 25th March, 2019</p>
+                                <span><i class="fa fa-tags"></i> Tin tức</span>
+                                <h6>Bạn đã biết cách tạo động lực giúp nhân viên làm việc hiệu quả hơn?</h6>
+                                <p><i class="fa fa-clock-o"></i> 21th June, 2020</p>
                             </div>
                         </a>
                         <a href="#" class="blog__sidebar__recent__item">
@@ -192,9 +191,9 @@
                                 <img src="{{ asset('home') }}/img/blog/recent-4.jpg" alt="">
                             </div>
                             <div class="blog__sidebar__recent__item__text">
-                                <span><i class="fa fa-tags"></i> Videos</span>
-                                <h6>Crab fried with tamarind</h6>
-                                <p><i class="fa fa-clock-o"></i> 19th March, 2019</p>
+                                <span><i class="fa fa-tags"></i> CƠ HỘI VIỆC LÀM</span>
+                                <h6>Abbott Việt Nam – Nơi truyền cảm hứng cho nhân viên</h6>
+                                <p><i class="fa fa-clock-o"></i> 21th June, 2020</p>
                             </div>
                         </a>
                         <a href="#" class="blog__sidebar__recent__item">
@@ -203,8 +202,8 @@
                             </div>
                             <div class="blog__sidebar__recent__item__text">
                                 <span><i class="fa fa-tags"></i> Travel</span>
-                                <h6>Tortoise grilled on salt</h6>
-                                <p><i class="fa fa-clock-o"></i> 19th March, 2019</p>
+                                <h6>Làm thế nào khi vướng phải tin đồn nơi công sở?</h6>
+                                <p><i class="fa fa-clock-o"></i> 21th June, 2020 </p>
                             </div>
                         </a>
                     </div>
