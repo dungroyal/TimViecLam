@@ -14,11 +14,26 @@
         <div class="listing__text__top">
             <div class="listing__text__top__left">
                 <h5>Danh Sách Việc Làm</h5>
-                <span>125 Công việc được tìm thấy</span>
+                    @if (isset($message_empty_search))
+                        {{ $message_empty_search }} 
+                    @else
+                    <?php $cout_job=0; ?>
+                        @foreach ($list_job as $item)
+                        <?php $cout_job+=1; ?>
+                        @endforeach
+                        <span><strong><?=$cout_job; ?></strong> Công việc được tìm thấy</span>
+                    @endif
             </div>
             <div class="listing__text__top__right">Nearby <i class="fa fa-sort-amount-asc"></i></div>
         </div>
         <div class="listing__list">
+            @if (isset($message_empty_search))
+            <div class="search_not_found">
+                <img src="{{ asset('images') }}/search_not_found.gif" alt="">
+                <h1>Không tìm thấy công việc phù hợp 😥</h1>
+            </div>
+            @endif
+            
             @foreach ($list_job as $item)
                 <div class="list-items job-item">
                     <div class="list-items__img">

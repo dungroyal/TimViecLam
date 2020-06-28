@@ -16,7 +16,10 @@ class jobController extends Controller
         ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
         ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
         ->get();
-        return view('home.job',['list_job'=>$job]);
+        
+        $tinh=DB::table('tvl_tinhthanhpho')->get();
+        $nganhnghe=DB::table('nganhnghe')->get();
+        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
     }
 
     function job_detail($id)
@@ -35,32 +38,53 @@ class jobController extends Controller
 
         return view('home.job_detail', ['jobById'=>$jobById ,'ctyById'=> $ctyById,'hoSoCty'=> $hoSoCty]);
     }
-
         
     function search_CongViec(Request $request)
     {
-        $query="DB::table('congviec')";
-        if ($request->keyword!=null) {
+        $tinh=DB::table('tvl_tinhthanhpho')->get();
+        $nganhnghe=DB::table('nganhnghe')->get();
+        
+        if ($request->keyword!=null && $request->nhanhNghe==null && $request->noiLamViec==null) {
             $job=DB::table('congviec')
-            ->where('tenCongViec', 'like', '%'.$request->keyword.'%')
+            ->where('congviec.tenCongViec', 'like', '%'.$request->keyword.'%')
+            ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+            ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+            ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+            ->get();
+        }
+        
+        elseif ($request->noiLamViec==null) {
+            $job=DB::table('congviec')
+            ->where('congviec.tenCongViec', 'like', '%'.$request->keyword.'%')
+            ->where('congviec.idNganhNghe', '=', ''.$request->nhanhNghe.'')
+            ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+            ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+            ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+            ->get();
+        }elseif ($request->nhanhNghe==null) {
+            $job=DB::table('congviec')
+            ->where('congviec.tenCongViec', 'like', '%'.$request->keyword.'%')
+            ->where('congviec.diaDiem', '=', ''.$request->noiLamViec.'')
+            ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+            ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+            ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+            ->get();
+        }else {
+            $job=DB::table('congviec')
+            ->where('congviec.tenCongViec', 'like', '%'.$request->keyword.'%')
+            ->where('congviec.idNganhNghe', '=', ''.$request->nhanhNghe.'')
+            ->where('congviec.diaDiem', '=', ''.$request->noiLamViec.'')
+            ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+            ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+            ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
             ->get();
         }
 
-        if ($request->nhanhNghe!=null) {
-            $job=DB::table('congviec')
-            ->where('tenCongViec', 'like', '%'.$request->keyword.'%')
-            ->where('idNganhNghe', '=', ''.$request->nhanhNghe.'')
-            ->get();
+        if ($job->isEmpty()) {
+            $message_empty_search="Không có kết quản phù hợp.";
+            return view('home.job',['list_job'=>$job,'message_empty_search'=>$message_empty_search,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
         }
 
-        if ($request->noiLamViec!=null) {
-            $job=DB::table('congviec')
-            ->where('diaDiem', '=', ''.$request->noiLamViec.'')
-            ->get();    
-        }
-        return $job;
-        // return view('home.job',['list_job'=>$job]);
+        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
     }
-
-    
 }

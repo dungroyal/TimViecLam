@@ -10,16 +10,12 @@
 				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Đoàn Quốc Dũng" />
 			</div>
 			<h4 class="name">{{ Auth::guard('ungvien')->user()->hoTen}}</h4>
-			
-			<a href="#">Sign out</a>
-			
+			{{-- <a href="#">Sign out</a> --}}
 		</div>
 		{{-- <p>Hoàn thiệ hồ sơ</p>
 		<div class="progress mr-2">
 			<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 		</div> --}}
-
-
 		<nav class="navbar-sidebar2">
 			<ul class="list-unstyled navbar__list">
 				<li class="active has-sub">
@@ -32,7 +28,6 @@
 					<a href="inbox.html">
 						<i class="fa fa-search-plus" aria-hidden="true"></i>Quản lý hồ sơ</a>
 				</li>
-				
 				<li class="has-sub">
 					<a class="js-arrow" href="#">
 						<i class="fa fa-users" aria-hidden="true"></i>Quản lý việc làm
@@ -55,7 +50,6 @@
 						</li>
 					</ul>
 				</li>
-
 				<li class="has-sub">
 					<a class="js-arrow" href="#">
 						<i class="fa fa-user-circle" aria-hidden="true"></i>Thông tin cá nhân
