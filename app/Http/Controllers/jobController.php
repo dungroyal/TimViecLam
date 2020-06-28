@@ -43,7 +43,7 @@ class jobController extends Controller
     {
         $tinh=DB::table('tvl_tinhthanhpho')->get();
         $nganhnghe=DB::table('nganhnghe')->get();
-        
+
         if ($request->keyword!=null && $request->nhanhNghe==null && $request->noiLamViec==null) {
             $job=DB::table('congviec')
             ->where('congviec.tenCongViec', 'like', '%'.$request->keyword.'%')
@@ -84,7 +84,7 @@ class jobController extends Controller
             $message_empty_search="Không có kết quản phù hợp.";
             return view('home.job',['list_job'=>$job,'message_empty_search'=>$message_empty_search,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
         }
-
+        
         return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
     }
 }

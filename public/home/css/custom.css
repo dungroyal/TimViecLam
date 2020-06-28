@@ -115,3 +115,15 @@
     padding: 14px 0 12px;
     text-align: center;
 }
+
+#header_btn_acc{
+    width: 300px;
+    height: 40px;
+}
+
+#header_btn_acc a{
+    width: 100%;
+    white-space: nowrap; 
+    width: 50px; 
+    text-overflow: ellipsis; 
+}
