@@ -7,7 +7,7 @@
 	<div class="menu-sidebar2__content js-scrollbar1">
 		<div class="account2">
 			<div class="image img-cir img-120">
-				<img src="{{ asset('images') }}/avt.jpg" alt="Nguyễn Quang Huy" />
+				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Nguyễn Quang Huy" />
 			</div>
 			<h4 class="name">{{ Auth::guard('ungvien')->user()->hoTen}}</h4>
 			{{-- <a href="#">Sign out</a> --}}
@@ -19,13 +19,13 @@
 		<nav class="navbar-sidebar2">
 			<ul class="list-unstyled navbar__list">
 				<li class="active has-sub">
-					<a class="js-arrow" href="#">
+					<a class="js-arrow" href="/ung-vien">
 						<i class="fa fa-line-chart" aria-hidden="true"></i>Quản lý chung
 					</a>
 				</li>
 				
 				<li>
-					<a href="inbox.html">
+					<a href="/ung-vien/ho-so-ung-vien">
 						<i class="fa fa-search-plus" aria-hidden="true"></i>Quản lý hồ sơ</a>
 				</li>
 				<li class="has-sub">

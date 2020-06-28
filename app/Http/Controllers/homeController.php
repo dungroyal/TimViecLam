@@ -10,13 +10,20 @@ class homeController extends Controller
 {
     function __construct()
     {
-        $this->Nghanhnghe=Nghanhnghe::all();
+        $this->tinh=DB::table('tvl_tinhthanhpho')->get();
+        $this->nganhnghe=DB::table('nganhnghe')->get();
     }
 
     function index()
     {
-        $tinh=DB::table('tvl_tinhthanhpho')->get();
-        return view('home.index',['Nghanhnghe'=>$this->Nghanhnghe,'tinhThanhPho'=>$tinh]);
+        $loaiCongViec=DB::table('loaicongviec')->get();
+        
+        $job=DB::table('congviec')
+        ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+        ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+        ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+        ->get();
+        return view('home.index',['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh,'loaiCongViec'=>$loaiCongViec]);
     }
 
     function contact()

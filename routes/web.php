@@ -8,6 +8,8 @@ Route::get('/blog','blogController@index');
 Route::get('/blogdetail', 'blogController@detail');
 Route::get('/job', 'jobController@index');
 Route::get('/job/{id}', 'jobController@job_detail');
+Route::get('/job/cong-viec/{id}', 'jobController@job_by_congviec');
+Route::get('/job/location/{id}', 'jobController@job_by_location');
 Route::get('/contact', 'homeController@contact');
 Route::get('/about', 'homeController@about');
 Route::get('/cong-ty/{id}', 'homeController@cong_ty');
@@ -39,6 +41,7 @@ Route::group(['prefix' => '/nha-tuyen-dung'], function () {
 Route::group(['prefix' => '/ung-vien'], function () {
     Route::get('/', 'uvController@index');
     Route::get('/ung-tuyen/{id}', 'uvController@ung_tuyen');
+    Route::get('/ho-so-ung-vien', 'uvController@ho_so_ung_vien');
 });
 
 // ====================== Super Admin TimViecLam ======================

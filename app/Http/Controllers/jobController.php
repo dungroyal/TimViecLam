@@ -9,6 +9,13 @@ use App\Nghanhnghe;
 
 class jobController extends Controller
 {
+    
+    function __construct()
+    {
+        $this->tinh=DB::table('tvl_tinhthanhpho')->get();
+        $this->nganhnghe=DB::table('nganhnghe')->get();
+    }
+    
     function index()
     {
         $job=DB::table('congviec')
@@ -16,10 +23,38 @@ class jobController extends Controller
         ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
         ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
         ->get();
-        
-        $tinh=DB::table('tvl_tinhthanhpho')->get();
-        $nganhnghe=DB::table('nganhnghe')->get();
-        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
+        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
+    }
+
+    function job_by_congviec($id)
+    {
+        $job=DB::table('congviec')
+        ->Where('congviec.idLoaiCongViec', '=', $id)
+        ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+        ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+        ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+        ->get();  
+        if ($job->isEmpty()) {
+            $message_empty_search="Không có kết quản phù hợp.";
+            return view('home.job',['list_job'=>$job,'message_empty_search'=>$message_empty_search,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
+        }
+        return view('home.job', ['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
+    }
+    
+    
+    function job_by_location($id)
+    {
+        $job=DB::table('congviec')
+        ->Where('congviec.diaDiem', '=', $id)
+        ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+        ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+        ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+        ->get();  
+        if ($job->isEmpty()) {
+            $message_empty_search="Không có kết quản phù hợp.";
+            return view('home.job',['list_job'=>$job,'message_empty_search'=>$message_empty_search,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
+        }
+        return view('home.job', ['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
     }
 
     function job_detail($id)
@@ -38,12 +73,9 @@ class jobController extends Controller
 
         return view('home.job_detail', ['jobById'=>$jobById ,'ctyById'=> $ctyById,'hoSoCty'=> $hoSoCty]);
     }
-        
+       
     function search_CongViec(Request $request)
     {
-        $tinh=DB::table('tvl_tinhthanhpho')->get();
-        $nganhnghe=DB::table('nganhnghe')->get();
-
         if ($request->keyword!=null && $request->nhanhNghe==null && $request->noiLamViec==null) {
             $job=DB::table('congviec')
             ->where('congviec.tenCongViec', 'like', '%'.$request->keyword.'%')
@@ -82,9 +114,9 @@ class jobController extends Controller
 
         if ($job->isEmpty()) {
             $message_empty_search="Không có kết quản phù hợp.";
-            return view('home.job',['list_job'=>$job,'message_empty_search'=>$message_empty_search,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
+            return view('home.job',['list_job'=>$job,'message_empty_search'=>$message_empty_search,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
         }
         
-        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$nganhnghe,'tinhThanhPho'=>$tinh]);
+        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
     }
 }

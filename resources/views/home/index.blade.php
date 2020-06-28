@@ -56,31 +56,15 @@
                         <p>Giúp cho bạn dễ dàng tìm kiếm công việc phù hợp hơn!</p>
                     </div>
                     <div class="categories__item__list">
-                        <div class="categories__item">
-                            <img src="{{ asset('images') }}/official_staff.png" alt="">
-                            <h5>Nhân viên chính thức</h5>
-                            <span>78 công việc</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="{{ asset('images') }}/thoi-vu.png" alt="">
-                            <h5>Nhân viên thời vụ</h5>
-                            <span>32 công việc</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="{{ asset('images') }}/part-time-employee.png" alt="">
-                            <h5>Bán thời gian</h5>
-                            <span>56 công việc</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="{{ asset('images') }}/work-extra-overtime.png" alt="">
-                            <h5>Làm thêm ngoài giờ</h5>
-                            <span>58 công việc</span>
-                        </div>
-                        <div class="categories__item">
-                            <img src="{{ asset('images') }}/thuc-tap-sinh.png" alt="">
-                            <h5>Thực tập và dự án</h5>
-                            <span>62 công việc</span>
-                        </div>
+                        @foreach ($loaiCongViec as $item)
+                        <a href="job/cong-viec/{{{$item->id}}}">
+                            <div class="categories__item">
+                                <img src="{{ asset('images') }}/{{$item->image}}" alt="">
+                                <h5>{{$item->name}}</h5>
+                                <span>78 công việc</span>
+                            </div>
+                        </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -103,221 +87,25 @@
                 <div class="col-lg-12  show-job__index" id="style-scrollbar">
                     <div class="listing__list">
 
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/Thiết-kế-logo-công-ty-xnk.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                        @foreach ($list_job as $item)
+                            <div class="list-items job-item">
+                                <div class="list-items__img">
+                                    <img src="{{ asset('images') }}/{{ $item->logoCty }}" alt="Avatar">
+                                </div>
+                                <div class="list-items-content">
+                                    <div class="list-items-content__title text_ellipsis"><a href="/job/{{{ $item->id }}}" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> {{ $item->tenCongViec }}</a></div>
+                                    <div class="list-items-content__cty"><a href="/cong-ty/{{{ $item->idNTD }}}"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">{{ $item->tenCty }}</a></div>
+                                    <div class="list-items-content-subinfo">
+                                        <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> {{ $item->mucLuong }} triệu</div>
+                                        <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $item->deadline }}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/thiet-ke-logo-ha-noi-nhat-son-1.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/logo (1).png" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/cong-ty-xay-dung-an-thinh_1317354554.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/L123123ogo.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/01-thiet-ke-logo-song-hong-construction.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/logo-cong-ty-phan-mem.png" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/9269162-logo-cong-ty-xay-dung-an-sinh.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/mau-thiet-ke-logo-cong-ty-xay-dung-anh-duc_logo_1318318276.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/thiet-ke-logo-cong-ty-thang-long-1.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/Logo-Japan_Airlines-1110x740.png" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/logo-gia-thinh-02.png" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/01-thiet-ke-logo-song-hong-construction.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/logo-cong-ty-phan-mem.png" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/9269162-logo-cong-ty-xay-dung-an-sinh.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-items job-item">
-                            <div class="list-items__img">
-                                <img src="{{ asset('images') }}/mau-thiet-ke-logo-cong-ty-xay-dung-anh-duc_logo_1318318276.jpg" alt="Avatar">
-                            </div>
-                            <div class="list-items-content">
-                                <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                <div class="list-items-content-subinfo">
-                                    <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                    <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
             </div>
         </div>
     </section>
-    <!-- Most Search Section End -->
-
-    <!-- Feature Location Section Begin -->
     <section class="feature-location spad">
         <div class="container">
             <div class="row">
@@ -330,7 +118,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <a href="#" class="feature__location__item large-item set-bg"
+                    <a href="/job/location/79" class="feature__location__item large-item set-bg"
                         data-setbg="{{ asset('home') }}/img/feature-location/fl-1.jpg">
                         <div class="feature__location__item__text">
                             <h5>TP. Hồ Chí Minh</h5>
@@ -342,14 +130,14 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <a href="#" class="feature__location__item set-bg" data-setbg="{{ asset('home') }}/img/feature-location/fl-4.jpg">
+                    <a href="/job/location/01" class="feature__location__item set-bg" data-setbg="{{ asset('home') }}/img/feature-location/fl-4.jpg">
                         <div class="feature__location__item__text">
                             <h5>Thủ đô Hà Nội</h5>
                         </div>
                     </a>
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
-                            <a href="#" class="feature__location__item set-bg"
+                            <a href="/job/location/48" class="feature__location__item set-bg"
                                 data-setbg="{{ asset('home') }}/img/feature-location/fl-2.jpg">
                                 <div class="feature__location__item__text">
                                     <h5>TP. Đà Nẵng</h5>
@@ -357,7 +145,7 @@
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <a href="#" class="feature__location__item set-bg"
+                            <a href="/job" class="feature__location__item set-bg"
                                 data-setbg="{{ asset('home') }}/img/feature-location/fl-3.jpg">
                                 <div class="feature__location__item__text">
                                     <h5>XEM THÊM</h5>
