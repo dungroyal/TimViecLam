@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Nghanhnghe;
 
 class homeController extends Controller
@@ -14,7 +15,8 @@ class homeController extends Controller
 
     function index()
     {
-        return view('home.index',['Nghanhnghe'=>$this->Nghanhnghe]);
+        $tinh=DB::table('tvl_tinhthanhpho')->get();
+        return view('home.index',['Nghanhnghe'=>$this->Nghanhnghe,'tinhThanhPho'=>$tinh]);
     }
 
     function contact()

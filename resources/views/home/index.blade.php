@@ -29,10 +29,10 @@
                                 </div>
                                 <div class="select__option">
                                     <select  name="noiLamViec">
-                                        <option value=""  selected="selected">Chọn nơi làm việc</option>
-                                        <option value="2">Hà Nội</option>
-                                        <option value="3">An Giang</option>
-                                        <option value="4">Bạc Liêu</option>
+                                        <option value="">Chọn nơi làm việc</option>
+                                        @foreach ($tinhThanhPho as $item)
+                                            <option value="{{ $item->matp }}">{{ $item->name }}</option>
+                                            @endforeach
                                     </select>
                                 </div>
                                 <button type="submit">Tìm kiếm ngay</button>

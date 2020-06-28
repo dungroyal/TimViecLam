@@ -88,3 +88,30 @@
 .hero__categories__tags li a {
     border-radius: 3px;
 }
+
+.search_not_found{
+    width: 100%;
+    text-align: center;
+}
+
+.search_not_found img{
+    width: 20%;
+    margin-bottom: 20px;
+}
+.search_not_found h1{
+    font-size:25px
+}
+
+.remove_filter{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #006caa;
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    padding: 14px 0 12px;
+    text-align: center;
+}
