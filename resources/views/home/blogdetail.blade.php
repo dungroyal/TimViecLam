@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="blog__details__text">
-                    <div class="blog__details__video set-bg" data-setbg="{{ asset('home') }}/img/blog/details/1.jpg">
+                    <div class="blog__details__video set-bg" data-setbg="{{ asset('images') }}/blog/1.jpg">
 
                     </div>
                     <p>
@@ -89,7 +89,7 @@
                         <p> Bên cạnh đó, Công ty còn đầu tư vào công nghệ kỹ thuật hiện đại, nghiên cứu các phương pháp tiên tiến trên thế giới để áp dụng vào công việc. Người lao động không những được tiếp xúc với các thiết bị hiện đại mà còn được huấn luyện, tham gia các chương trình đào tạo quốc tế để nâng cao trình độ chuyên môn của mình.</p>
 
                     </p>
-                        <div class="blog__details__video set-bg" data-setbg="{{ asset('home') }}/img/blog/details/2.jpg"></div>
+                        <div class="blog__details__video set-bg" data-setbg="{{ asset('images') }}/blog/2.jpg"></div>
                     <p>
                         <center>
                             <em> Đầu tư vào dây chuyền sản xuất tiên tiến, áp dụng công nghệ cao trong sản xuất</em> 
