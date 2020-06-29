@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="overview-wrap">
-                        <h2 class="title-1"><i class="fa fa-paper-plane" aria-hidden="true"></i> Hồ sơ ứng tuyển công viêc: <span style="color:rgb(0, 61, 194);font-weight:600">{{ $congviec->tenCongViec }}</span> tại <span style="color:rgb(0, 61, 194);font-weight:600;">{{ $congviec->name }}</span></h2>
+                        <h2 class="title-1"><i class="fa fa-paper-plane" aria-hidden="true"></i> Hồ sơ ứng tuyển theo công việc</h2>
                     </div>
                 </div>
             </div>
@@ -34,30 +34,34 @@
                 <thead>
                     <tr class="text-center">
                         <th>Stt</th>
-                        <th>Ảnh đại diện</th>
-                        <th>họ và tên</th>
-                        <th>Năm sinh</th>
-                        <th>Quốc tịch</th>
-                        <th>Giới tính</th>
-                        <th>Thời gian</th>
+                        <th>Công việc</th>
+                        <th>Số lượng</th>
+                        <th>Địa điểm</th>
+                        <th>ngày hết hạn</th>
+                        <th>Đơn ứng tuyển</th>
+                        <th>Trạng thái</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $stt=0 ?>
-                    @foreach ($listUngTuyen as $ut)
+                    @foreach ($list_job as $item)
                     <?php $stt+=1 ?>
                         <tr class="tr-shadow text-center">
                             <td>{{ $stt }}</td>
-                            <td class="desc text-center"  width="130px"><img src="{{ asset('images') }}/{{ $ut->avata }}" alt="avatar" width="100%"></td>
-                            <td>{{ $ut->hoTen }}</td>
-                            <td>{{ $ut->birthdate }}</td>
-                            <td>{{ $ut->quocTich }}</td>
-                            <td>{{ $ut->gioiTinh }}</td>
-                            <td>{{ $ut->date }}</td>
+                            <td class="desc text-left">{{ $item->tenCongViec }}</td>
+                            <td>{{ $item->soluong }}</td>
+                            <td>{{ $item->diaDiem }}</td>
+                            <td>{{ $item->deadline }}</td>
+                            <td>
+                                <span class="btn btn-outline-danger" data-toggle="tooltip" title="1 đơn ứng tuyển">1</span>
+                            </td>
+                            <td>
+                                <span class="status--process">Đang chạy</span>
+                            </td>
                             <td>
                                 <div class="table-data-feature">
-                                    <a href="/nha-tuyen-dung/ung-vien/{{{ $ut->idUngvien }}}" class="item" data-toggle="tooltip" title="Xem chi tiết">
+                                    <a href="/nha-tuyen-dung/ung-tuyen/{{{ $item->id}}}" class="item" data-toggle="tooltip" title="Xem chi tiết">
                                         <i class="zmdi zmdi-square-right"></i>
                                     </a>
                                 </div>

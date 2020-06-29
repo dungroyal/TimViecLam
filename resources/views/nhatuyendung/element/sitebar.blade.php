@@ -7,11 +7,11 @@
 	<div class="menu-sidebar2__content js-scrollbar1">
 		<div class="account2">
 			<div class="image img-cir img-120">
-				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Đoàn Quốc Dũng" />
+				<img src="{{ asset('images') }}/{{$info_cty[0]->logoCty }}" alt="" />
 			</div>
 			<h4 class="name">{{ Auth::guard('nhatuyendung')->user()->tenCty}}</h4>
 					
-			<a href="#">Sign out</a>
+			{{-- <a href="#">Sign out</a> --}}
 		</div>
 		<nav class="navbar-sidebar2">
 			<ul class="list-unstyled navbar__list">
@@ -29,17 +29,17 @@
 					</a>
 					<ul class="list-unstyled navbar__sub-list js-sub-list">
 						<li>
-							<a href="table.html">
+							<a href="/nha-tuyen-dung/add-tuyen-dung">
 								<i class="fa fa-plus-circle" aria-hidden="true"></i>Đăng tuyển dụng mới</a>
 						</li>
 						<li>
-							<a href="form.html">
+							<a href="/nha-tuyen-dung/tin-tuyen-dung">
 								<i class="fa fa-list-alt" aria-hidden="true"></i>Tất cả tin tuyển dụng</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="inbox.html">
+					<a href="/job">
 						<i class="fa fa-search-plus" aria-hidden="true"></i>Tìm kiếm ứng viên</a>
 				</li>
 				<li class="has-sub">

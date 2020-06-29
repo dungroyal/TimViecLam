@@ -32,5 +32,7 @@
 
     <!-- Main CSS-->
     <link href="{{ asset('user') }}/css/theme.css" rel="stylesheet" media="all">
-
+    
+    <script src="{{ asset('user') }}/vendor/jquery-3.2.1.min.js"></script>
+    
 </head>

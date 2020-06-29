@@ -6,20 +6,24 @@
                 <div class="col-lg-8">
                     <div class="listing__hero__option">
                         <div class="listing__hero__icon">
-                            <img src="{{ asset('images') }}/L123123ogo.jpg" alt="" width="150px">
+                            <img src="{{ asset('images') }}/{{$info_cty[0]->logoCty}}" alt="" width="150px">
                         </div>
                         <div class="listing__hero__text">
-                            <h2>Liên Hiệp HTX Thương Mại TP. Hồ Chí Minh</h2>
-                            <p><i class="fa fa-users" aria-hidden="true"></i> <strong>Quy mô:</strong> 1200 nhân viên</p>
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>Địa chỉ:</strong> 199 - 205 Nguyễn Thái Học, P.Phạm Ngũ Lão, Quận 1, TP. HCM</p>
-                            <p><i class="fa fa-link" aria-hidden="true"></i> <strong>Webstie:</strong> <a href="https://mant.vn/">https://mant.vn/</a></p>
+                            <h2>{{$info_cty[0]->tenCty}}</h2>
+                            <p><i class="fa fa-users" aria-hidden="true"></i> <strong>Quy mô:</strong> {{$info_cty[0]->quyMo}}</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>Địa chỉ:</strong> {{$info_cty[0]->diaChi}}</p>
+                            <p><i class="fa fa-link" aria-hidden="true"></i> <strong>Webstie:</strong> <a href="{{$info_cty[0]->website}}">{{$info_cty[0]->website}}</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="listing__hero__btns">
                         <div class="listing__hero__btns__sl">
-                            <h4>8</h4>
+                                <?php $count=0;?>
+                            @foreach ($list_job as $item)
+                                <?php $count+=1;?>
+                            @endforeach
+                            <h4><?=$count;?></h4>
                             <p>Công việc</p>
                         </div>
                         {{-- <div class="listing__hero__btns__save"><i class="fa fa-mail-reply"></i> Lưu công việc</div> --}}
@@ -38,11 +42,7 @@
                     <div class="listing__details__text">
                         <div class="listing__details__about">
                             <h4>Giới thiệu về công ty</h4>
-                            <p>* Tầm nhìn: Phấn đấu duy trì vị trí Nhà bán lẻ hàng đầu Việt Nam trên cơ sở phát triển nhanh và bền vững chuỗi siêu thị Co.opmart, nỗ lực đa dạng hóa các mô hình bán lẻ văn minh, hiện đại. Đồng thời không ngừng tăng cường mối quan hệ gắn kết chặt chẽ với người tiêu dùng và cộng đồng.
-                                * Sứ mệnh:
-                                - Đáp ứng nhu cầu tiêu dùng hàng ngày của khách hàng mục tiêu.
-                                - Luôn đem lại cho khách hàng sự tiện lợi, an toàn và các giá trị tăng thêm.
-                                - Góp phần nâng cao đời sống người dân và phát triển ngành bán lẻ Việt Nam.</p>
+                            <p>{{$info_cty[0]->soLuocCty}}</p>
                         </div>
                         <div class="listing__details__gallery">
                             <h4>Hình ảnh</h4>
@@ -62,50 +62,21 @@
                         <div class="listing__details__amenities">
                             <h4>Danh sách tuyển dụng</h4>
                             <div class="row">
-                                <div class="col-lg-12">
+                                @foreach ($list_job as $item)
                                     <div class="list-items job-item">
                                         <div class="list-items__img">
-                                            <img src="{{ asset('images') }}/Thiết-kế-logo-công-ty-xnk.jpg" alt="Avatar">
+                                            <img src="{{ asset('images') }}/{{ $item->logoCty }}" alt="Avatar">
                                         </div>
                                         <div class="list-items-content">
-                                            <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                            <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
+                                            <div class="list-items-content__title text_ellipsis"><a href="/job/{{{ $item->id }}}" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> {{ $item->tenCongViec }}</a></div>
+                                            <div class="list-items-content__cty"><a href="/cong-ty/{{{ $item->idNTD }}}"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">{{ $item->tenCty }}</a></div>
                                             <div class="list-items-content-subinfo">
-                                                <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                                <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
+                                                <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> {{ $item->mucLuong }} triệu</div>
+                                                <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $item->deadline }}</div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="list-items job-item">
-                                        <div class="list-items__img">
-                                            <img src="{{ asset('images') }}/Thiết-kế-logo-công-ty-xnk.jpg" alt="Avatar">
-                                        </div>
-                                        <div class="list-items-content">
-                                            <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                            <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                            <div class="list-items-content-subinfo">
-                                                <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                                <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-items job-item">
-                                        <div class="list-items__img">
-                                            <img src="{{ asset('images') }}/Thiết-kế-logo-công-ty-xnk.jpg" alt="Avatar">
-                                        </div>
-                                        <div class="list-items-content">
-                                            <div class="list-items-content__title text_ellipsis"><a href="#" title="Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)"> Nhận viên thiết kế web chuyên nghiệp (Laravel, HTML, CSS)</a></div>
-                                            <div class="list-items-content__cty"><a href="#"  title="Công Ty Cổ Phần Đầu Tư Hai Lúa">Công Ty Cổ Phần Đầu Tư Hai Lúa</a></div>
-                                            <div class="list-items-content-subinfo">
-                                                <div class="list-items-content-subinfo__wage"><i class="fa fa-money" aria-hidden="true"></i> 5 Triệu - 7 triệu</div>
-                                                <div class="list-items-content-subinfo__time"><i class="fa fa-clock-o" aria-hidden="true"></i> 30/06/2020</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -121,31 +92,13 @@
                             <div class="listing__sidebar__contact__text">
                                 <h4>Liên hệ</h4>
                                 <ul>
-                                    <li><span class="icon_pin_alt"></span> 199 - 205 Nguyễn Thái Học, P.Phạm Ngũ Lão, Quận 1, TP. HCM</li>
-                                    <li><span class="icon_phone"></span> 0398 022 720</li>
-                                    <li><span class="icon_mail_alt"></span> Info.saigon@gmail.com</li>
-                                    <li><span class="icon_globe-2"></span> https://mant.vn/ </li>
+                                    <li><span class="icon_pin_alt"></span> {{$info_cty[0]->diaChi}}, {{$info_cty[0]->tinh}}</li>
+                                    <li><span class="icon_phone"></span> {{$info_cty[0]->soDienThoai}}</li>
+                                    <li><span class="icon_mail_alt"></span> {{$info_cty[0]->email}}</li>
+                                    <li><span class="icon_globe-2"></span> {{$info_cty[0]->website}} </li>
                                 </ul>
-                                {{-- <div class="listing__sidebar__contact__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="google"><i class="fa fa-google"></i></a>
-                                </div> --}}
                             </div>
                         </div>
-                        {{-- <div class="listing__sidebar__working__hours">
-                            <h4>Working Hours</h4>
-                            <ul>
-                                <li>Monday <span>09:00 AM - 20:00 PM</span></li>
-                                <li>Tuesday <span>09:00 AM - 20:00 PM</span></li>
-                                <li>Wednesday <span>09:00 AM - 20:00 PM</span></li>
-                                <li>Thursday <span>09:00 AM - 20:00 PM</span></li>
-                                <li>Friday <span class="opening">Opening</span></li>
-                                <li>Saturday <span>09:00 AM - 20:00 PM</span></li>
-                                <li>Saturday <span class="closed">Closed</span></li>
-                            </ul>
-                        </div> --}}
                     </div>
                 </div>
             </div>

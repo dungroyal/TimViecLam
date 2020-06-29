@@ -14,7 +14,7 @@
         </div>
     </div>
 </section>
-<section class="show">
+<section id="show">
         <div class="table-data__tool">
             <div class="table-data__tool-left">
                 <div class="rs-select2--light rs-select2--md">
@@ -51,10 +51,10 @@
                             <td>{{ $stt }}</td>
                             <td class="desc text-left">{{ $cv->tenCongViec }}</td>
                             <td>{{ $cv->soluong }}</td>
-                            <td>{{ $cv->diaDiem }}</td>
+                            <td>{{ $cv->name }}</td>
                             <td>{{ $cv->deadline }}</td>
                             <td>
-                                <span class="btn btn-outline-danger" data-toggle="tooltip" title="1 đơn ứng tuyển">1</span>
+                                <span class="btn btn-outline-danger" data-toggle="tooltip" title="Chưa có đơn ứng tuyển">0</span>
                             </td>
                             <td>
                                 <span class="status--process">Đang chạy</span>

@@ -15,7 +15,7 @@
         </div>
     </div>
 </section>
-<section class="show">
+<section id="show">
         <div class="table-data__tool">
             <div class="table-data__tool-left">
                 <div class="rs-select2--light rs-select2--md">

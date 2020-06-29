@@ -19,7 +19,7 @@
                     </nav>
                     <div class="header__menu__right">
                         @if (session()->has('nhatuyendung'))
-                            <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i>  {{ Auth::guard('nhatuyendung')->user()->tenCty}}</a>
+                            <a href="#" class="primary-btn btn-hover color-2"><i class="fa fa-user-circle" aria-hidden="true"></i> Nhà tuyển dụng</a>
                             <a href="/nha-tuyen-dung" class="primary-btn display_none" id="login-btn-employer">Quản lý hồ sơ</a>
                             <a href="/logout_ntd" class="primary-btn display_none" id="login-btn-job_seeker">Đăng xuất</a>
                         @elseif(session()->has('ungvien'))

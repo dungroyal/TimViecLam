@@ -28,6 +28,8 @@ Route::post('/ntd_login', 'loginController@checklogin_ntd');
 Route::get('/dang-ky', 'homeController@dang_ky');
 Route::get('/dang-ky/ntd', 'homeController@dang_ky_ntd');
 Route::get('/dang-ky/uv', 'homeController@dang_ky_uv');
+Route::get('/logout_uv', 'loginController@logout_uv');
+Route::get('/logout_ntd', 'loginController@logout_ntd');
 
 // ====================== Nhà tuyển dụng ======================
 Route::group(['prefix' => '/nha-tuyen-dung'], function () {
@@ -35,6 +37,8 @@ Route::group(['prefix' => '/nha-tuyen-dung'], function () {
     Route::get('/ho-so-cong-viec', 'ntdController@hs_cong_viec')->name("HoSoCongViec");
     Route::get('/ung-tuyen/{id}', 'ntdController@hs_ung_tuyen')->name("HoSoUngTuyen");
     Route::get('/ung-vien/{id}', 'ntdController@ung_vien');
+    Route::get('/tin-tuyen-dung', 'ntdController@tin_tuyen_dung');
+    Route::get('/add-tuyen-dung', 'ntdController@add_tuyen_dung');
 });
 
 // ====================== Ứng viên ======================
@@ -50,13 +54,3 @@ Route::group(['prefix' => '/admin'], function () {
     Route::post('/admin_login', 'loginController@checklogin_admin');
     Route::get('/', 'adminController@index');
 });
-
-
-
-
-// Route::get('/getPassword', function () {
-//     return Hash::make('matkhau');
-// });
-
-Route::get('/logout_uv', 'loginController@logout_uv');
-Route::get('/logout_ntd', 'loginController@logout_ntd');

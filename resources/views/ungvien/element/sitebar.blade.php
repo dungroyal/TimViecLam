@@ -7,7 +7,7 @@
 	<div class="menu-sidebar2__content js-scrollbar1">
 		<div class="account2">
 			<div class="image img-cir img-120">
-				<img src="{{ asset('images') }}/51679309_714918532235468_4688277981238394880_o.jpg" alt="Nguyễn Quang Huy" />
+				<img src="{{ asset('images') }}/{{$info_uv[0]->avata}}" alt="{{ Auth::guard('ungvien')->user()->hoTen}}" />
 			</div>
 			<h4 class="name">{{ Auth::guard('ungvien')->user()->hoTen}}</h4>
 			{{-- <a href="#">Sign out</a> --}}

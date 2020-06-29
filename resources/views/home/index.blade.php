@@ -8,7 +8,7 @@
                     <div class="hero__text">
                         <div class="section-title">
                             <h2>Tìm việc khó? Đã có TimViecLam.xyz</h2>
-                            <p>1.118.940.376 Công việc đang chờ đón bạn!</p>
+                            <p>500.000 Công việc đang chờ đón bạn!</p>
                         </div>
                         <ul class="hero__categories__tags">
                             <li><a href="#" id="active-search"><i class="fa fa-briefcase" aria-hidden="true"></i> Tìm việc làm</a></li>

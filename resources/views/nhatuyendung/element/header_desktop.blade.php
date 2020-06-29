@@ -26,39 +26,29 @@
                         </a>
                         
                         <div class="noti__item js-item-menu" title="Thông báo">
+                            <?php $count=0; ?>
+                            @foreach ($ungtuyen as $item)
+                                <?php $count+=1; ?>
+                            @endforeach
                             <i class="zmdi zmdi-notifications"></i>
-                            <span class="quantity">3</span>
+                            <span class="quantity"><?=$count;?></span>
                             <div class="notifi-dropdown js-dropdown">
                                 <div class="notifi__title">
-                                    <p>Bạn có 3 thông báo mới</p>
+                                    <p>Bạn có <?=$count;?> thông báo mới</p>
                                 </div>
-                                <div class="notifi__item">
-                                    <div class="bg-c1 img-cir img-40">
-                                        <i class="zmdi zmdi-email-open"></i>
+                                @foreach ($ungtuyen as $item)
+                                <a href="/nha-tuyen-dung/ung-tuyen/{{{$item->idCongviec}}}">
+                                    <div class="notifi__item">
+                                        <div class="bg-c2 img-cir img-40">
+                                            <i class="zmdi zmdi-account-box"></i>
+                                        </div>
+                                        <div class="content">
+                                            <p><strong>{{$item->hoTen}}</strong> đã gửi đơn ứng tuyển công việc của bạn.</p>
+                                            <span class="date">{{$item->date}}</span>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <p>You got a email notification</p>
-                                        <span class="date">April 12, 2018 06:50</span>
-                                    </div>
-                                </div>
-                                <div class="notifi__item">
-                                    <div class="bg-c2 img-cir img-40">
-                                        <i class="zmdi zmdi-account-box"></i>
-                                    </div>
-                                    <div class="content">
-                                        <p>Your account has been blocked</p>
-                                        <span class="date">April 12, 2018 06:50</span>
-                                    </div>
-                                </div>
-                                <div class="notifi__item">
-                                    <div class="bg-c3 img-cir img-40">
-                                        <i class="zmdi zmdi-file-text"></i>
-                                    </div>
-                                    <div class="content">
-                                        <p>You got a new file</p>
-                                        <span class="date">April 12, 2018 06:50</span>
-                                    </div>
-                                </div>
+                                </a>
+                                @endforeach
                                 <div class="notifi__footer">
                                     <a href="#">Xem tất cả</a>
                                 </div>

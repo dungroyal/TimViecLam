@@ -12,7 +12,10 @@ class uvController extends Controller
     function index()
     {
         if (session('ungvien')) {
-            return view('ungvien.index');
+            $info_uv=DB::table('hosoungvien')
+            ->where('hosoungvien.idUngVien','=',Auth::guard('ungvien')->user()->id)
+            ->get();
+            return view('ungvien.index',['info_uv'=>$info_uv ]);
         }else{
             return redirect('/dang-nhap/uv');
         }
@@ -25,7 +28,7 @@ class uvController extends Controller
         $jobById=DB::table('congviec')
             ->Where('congviec.id', '=', $id)
             ->first();
-        DB::insert('insert into ungtuyen (idCongviec, idUngvien, idNhaTuyenDung) values ('.$idUngvien.', '.$idJob.', '.$jobById->idNhaTuyenDung.')');
+        DB::insert('insert into ungtuyen (idCongviec, idUngvien, idNhaTuyenDung) values ('.$idJob.', '.$idUngvien.', '.$jobById->idNhaTuyenDung.')');
         return redirect()->back();
     }
 

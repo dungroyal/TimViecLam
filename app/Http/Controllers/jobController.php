@@ -62,10 +62,12 @@ class jobController extends Controller
         $jobById=DB::table('congviec')
         ->Where('congviec.id', '=', $id)
         ->first();
+        
 
         $ctyById=DB::table('nhatuyendung')
         ->Where('nhatuyendung.id', '=', $jobById->idNhaTuyenDung)
         ->first();
+
 
         $hoSoCty=DB::table('hosocongty')
         ->Where('hosocongty.idNhaTuyenDung', '=', $ctyById->id)

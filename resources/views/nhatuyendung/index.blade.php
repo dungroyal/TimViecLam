@@ -5,13 +5,15 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="overview-wrap">
-                                    <h2 class="title-1">Tổng quát</h2>
-                                    <button class="au-btn au-btn-icon au-btn--blue">
-                                        <i class="zmdi zmdi-plus"></i>Thêm tin tuyển dụng mới</button>
+                                <div class="col-md-12">
+                                    <div class="overview-wrap">
+                                        <h2 class="title-1">Tổng quát</h2>
+                                        <a href="nha-tuyen-dung/add-tuyen-dung">
+                                        <button class="au-btn au-btn-icon au-btn--blue">
+                                            <i class="zmdi zmdi-plus"></i>Thêm tin tuyển dụng mới</button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>

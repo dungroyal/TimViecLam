@@ -67,8 +67,22 @@ class homeController extends Controller
     }
 
     function cong_ty($id)
-        {
-            return view('home.congty');
-        }
+    {
+        $info_cty=DB::table('nhatuyendung')
+        ->where('nhatuyendung.id','=',$id)
+        ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+        ->select('nhatuyendung.*', 'hosocongty.*')
+        ->get();
+
+        $job=DB::table('congviec')
+        ->Where('congviec.idNhaTuyenDung', '=', $id)
+        ->join('nhatuyendung', 'congviec.idNhaTuyenDung', '=', 'nhatuyendung.id')
+        ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
+        ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
+        ->get(); 
+
+        
+        return view('home.congty',['info_cty'=>$info_cty,'list_job'=>$job]);
+    }
 
 }
