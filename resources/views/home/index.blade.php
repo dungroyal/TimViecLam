@@ -171,37 +171,31 @@
                     </div>
                     <div class="testimonial__slider owl-carousel">
                         <div class="testimonial__item" data-hash="review-1">
-                            <p>" We worked with Consultant. Our representative was very knowledgeable and helpful.
-                                Consultant made a number of suggestions to help improve our systems. Consultant
-                                explained how things work and why it would help."</p>
-                            <div class="testimonial__item__author">
-                                <a href="#review-3"><img src="{{ asset('home') }}/img/testimonial/author-3.png" alt=""></a>
-                                <a href="#review-1" class="active"><img src="{{ asset('home') }}/img/testimonial/author-1.png" alt=""></a>
-                                <a href="#review-2"><img src="{{ asset('home') }}/img/testimonial/author-2.png" alt=""></a>
-                            </div>
+                            <p>" Chúng tôi đã làm việc với Tư vấn. Đại diện của chúng tôi rất hiểu biết và hữu ích.
+                                Tư vấn đã đưa ra một số gợi ý để giúp cải thiện hệ thống của chúng tôi. Tư vấn
+                                giải thích cách mọi thứ hoạt động và tại sao nó sẽ giúp
+                            ."</p>
+                            
                             <div class="testimonial__item__author__text">
-                                <h5>John Smith -</h5>
+                                <h5>Đoàn Quốc Dũng -</h5>
                                 <div class="testimonial__item__author__rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
+                                    
                                 </div>
                             </div>
-                            <span>CEO Colorlib</span>
+                            <span>CEO Lê Nhật Hào</span>
                         </div>
                         <div class="testimonial__item" data-hash="review-2">
-                            <p>" We worked with Consultant. Our representative was very knowledgeable and helpful.
-                                Consultant made a number of suggestions to help improve our systems. Consultant
-                                explained how things work and why it would help."</p>
-                            <div class="testimonial__item__author">
-                                <a href="#review-1"><img src="{{ asset('home') }}/img/testimonial/author-1.png" alt=""></a>
-                                <a href="#review-2" class="active"><img src="{{ asset('home') }}/img/testimonial/author-2.png" alt=""></a>
-                                <a href="#review-3"><img src="{{ asset('home') }}/img/testimonial/author-3.png" alt=""></a>
-                            </div>
+                            <p>" Chúng tôi đã làm việc với Tư vấn. Đại diện của chúng tôi rất hiểu biết và hữu ích.
+                                Tư vấn đã đưa ra một số gợi ý để giúp cải thiện hệ thống của chúng tôi. Tư vấn
+                                giải thích cách mọi thứ hoạt động và tại sao nó sẽ giúp
+                            ."</p>
+                            
                             <div class="testimonial__item__author__text">
-                                <h5>John Smith -</h5>
+                                <h5>Đoàn Quốc Dũng -</h5>
                                 <div class="testimonial__item__author__rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -210,19 +204,15 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                             </div>
-                            <span>CEO Colorlib</span>
+                            <span>CEO Lê Nhật Hào</span>
                         </div>
                         <div class="testimonial__item" data-hash="review-3">
-                            <p>" We worked with Consultant. Our representative was very knowledgeable and helpful.
-                                Consultant made a number of suggestions to help improve our systems. Consultant
-                                explained how things work and why it would help."</p>
-                            <div class="testimonial__item__author">
-                                <a href="#review-2"><img src="{{ asset('home') }}/img/testimonial/author-2.png" alt=""></a>
-                                <a href="#review-3" class="active"><img src="{{ asset('home') }}/img/testimonial/author-3.png" alt=""></a>
-                                <a href="#review-1"><img src="{{ asset('home') }}/img/testimonial/author-1.png" alt=""></a>
-                            </div>
+                            <p>"Chúng tôi đã làm việc với Tư vấn. Đại diện của chúng tôi rất hiểu biết và hữu ích.
+                                Tư vấn đã đưa ra một số gợi ý để giúp cải thiện hệ thống của chúng tôi. Tư vấn
+                                giải thích cách mọi thứ hoạt động và tại sao nó sẽ giúp."</p>
+                            
                             <div class="testimonial__item__author__text">
-                                <h5>John Smith -</h5>
+                                <h5>Đoàn Quốc Dũng -</h5>
                                 <div class="testimonial__item__author__rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -231,7 +221,7 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                             </div>
-                            <span>CEO Colorlib</span>
+                            <span>CEO Lê Nhật Hào</span>
                         </div>
                     </div>
                 </div>
@@ -280,7 +270,7 @@
                                 <li><i class="fa fa-tags"></i>Việc làm</li>
                                 <li>Videos</li>
                             </ul>
-                            <h5><a href="#">Nhân sự mùa Covid-19: Ngành sản xuất và CNTT có nhu cầu tuyển dụng cao nhất</a></h5>
+                            <h5><a href="#">Làm IT nhàn lắm 1 tháng 10 triệu là bình thường.</a></h5>
                             <ul class="blog__item__widget">
                                 <li><i class="fa fa-clock-o"></i> 1 tháng 6, 2020</li>
                                 <li><i class="fa fa-user"></i> DungRoyal</li>
@@ -298,7 +288,7 @@
                                 <li><i class="fa fa-tags"></i>Việc làm</li>
                                 <li>Videos</li>
                             </ul>
-                            <h5><a href="#">Nhân sự mùa Covid-19: Ngành sản xuất và CNTT có nhu cầu tuyển dụng cao nhất</a></h5>
+                            <h5><a href="#">Thị trường bây giờ là dành cho dân IT và marketing</a></h5>
                             <ul class="blog__item__widget">
                                 <li><i class="fa fa-clock-o"></i> 1 tháng 6, 2020</li>
                                 <li><i class="fa fa-user"></i> DungRoyal</li>

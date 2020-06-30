@@ -457,7 +457,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2020 ROYAL TEAM. All rights reserved. Template by <a href="https://www.facebook.com/me/">ROYAL TEAM</a>.</p>
+                                <p> © 2020 ROYAL TEAM. by <a href="https://www.facebook.com/me/">ROYAL TEAM</a>.</p>
                             </div>
                         </div>
                     </div>
