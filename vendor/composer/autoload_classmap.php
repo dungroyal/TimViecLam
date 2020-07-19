@@ -6,10 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Admin' => $baseDir . '/app/Admin.php',
     'App\\Congviec' => $baseDir . '/app/Congviec.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\adminController' => $baseDir . '/app/Http/Controllers/adminController.php',
+    'App\\Http\\Controllers\\api\\APIjobs' => $baseDir . '/app/Http/Controllers/Api/APIjobs.php',
     'App\\Http\\Controllers\\blogController' => $baseDir . '/app/Http/Controllers/blogController.php',
     'App\\Http\\Controllers\\homeController' => $baseDir . '/app/Http/Controllers/homeController.php',
     'App\\Http\\Controllers\\jobController' => $baseDir . '/app/Http/Controllers/jobController.php',
@@ -32,7 +35,8 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
-    'App\\User' => $baseDir . '/app/User.php',
+    'App\\Ungtuyen' => $baseDir . '/app/Ungtuyen.php',
+    'App\\Ungvien' => $baseDir . '/app/Ungvien.php',
     'App\\product' => $baseDir . '/app/product.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
