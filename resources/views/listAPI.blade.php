@@ -32,7 +32,7 @@
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
-              <th colspan="4">JOBS</th>
+              <th colspan="4" class="table-success">JOBS</th>
             </tr>
           </thead>
           <tbody>
@@ -58,7 +58,7 @@
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
-              <th colspan="4">JOBS</th>
+              <th colspan="4" class="table-success">AUTH</th>
             </tr>
           </thead>
           <tbody>
@@ -79,7 +79,27 @@
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
-              <th colspan="4">JOBS</th>
+              <th colspan="4" class="table-success">Nhà tuyển dụng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>POST</td>
+              <td><a href="http://127.0.0.1:8000/api/jobs">http://127.0.0.1:8000/api/jobs</a></td>
+              <td>Danh sách tất cả công việc</td>
+            </tr>
+          </tbody>
+          <tfoot>
+          </tfoot>
+        </table>
+      </div>
+      <hr>
+
+       <div class="bs-example container" data-example-id="striped-table">
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th colspan="4" class="table-success">Ứng viên</th>
             </tr>
           </thead>
           <tbody>

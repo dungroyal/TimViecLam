@@ -26,11 +26,6 @@ class homeController extends Controller
         return view('home.index',['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh,'loaiCongViec'=>$loaiCongViec]);
     }
 
-    function api()
-    {
-        return view('index');
-    }
-
     function contact()
     {
         return view('home.contact');
