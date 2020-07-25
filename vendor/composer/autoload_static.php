@@ -475,10 +475,13 @@ class ComposerStaticInit0c04efc874f19d99aa69a5bfc38cd93f
     );
 
     public static $classMap = array (
+        'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Congviec' => __DIR__ . '/../..' . '/app/Congviec.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\adminController' => __DIR__ . '/../..' . '/app/Http/Controllers/adminController.php',
+        'App\\Http\\Controllers\\api\\APIjobs' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/APIjobs.php',
         'App\\Http\\Controllers\\blogController' => __DIR__ . '/../..' . '/app/Http/Controllers/blogController.php',
         'App\\Http\\Controllers\\homeController' => __DIR__ . '/../..' . '/app/Http/Controllers/homeController.php',
         'App\\Http\\Controllers\\jobController' => __DIR__ . '/../..' . '/app/Http/Controllers/jobController.php',
@@ -501,7 +504,8 @@ class ComposerStaticInit0c04efc874f19d99aa69a5bfc38cd93f
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Ungtuyen' => __DIR__ . '/../..' . '/app/Ungtuyen.php',
+        'App\\Ungvien' => __DIR__ . '/../..' . '/app/Ungvien.php',
         'App\\product' => __DIR__ . '/../..' . '/app/product.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',

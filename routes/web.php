@@ -1,6 +1,10 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
+// ====================== API ======================
+
+Route::get('/api', 'api\listAPI@index');
+
 // ====================== HOME ======================
 
 Route::get('/', 'homeController@index');
