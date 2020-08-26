@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">RESTful APIs</a>
+                    <a href="/RESTful-API">RESTful APIs</a>
                     <a href="#">NEWS</a>
                     <a href="https://www.facebook.com/Quocdungroyal/">Contact</a>
                     <a href="https://github.com/dungroyal/TimViecLam">GitHub</a>
