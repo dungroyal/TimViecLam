@@ -18,3 +18,12 @@ php artisan make:migration create_posts_table --create=posts
 php artisan make:model Post
 
 php artisan list
+
+
+php artisan cache:clear
+composer dump-autoload
+php artisan clear-compiled
+php artisan optimize
+
+php artisan config:clear
+php artisan config:cache
