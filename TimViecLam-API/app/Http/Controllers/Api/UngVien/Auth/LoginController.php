@@ -16,16 +16,12 @@ class LoginController extends Controller
 {
         public function __construct()
     {
-        // Auth::shouldUse('ungvien');
+        Auth::shouldUse('ungvien');
         $this->ungvien = new UngVien;
     }
     
     public function login(Request $request)
     {
-       
-        config()->set( 'auth.defaults.guard', 'ungvien' );
-        config()->set('jwt.user', 'App\Models\UngVien'); 
-		config()->set('auth.providers.users.model', \App\Models\UngVien::class);
 		$credentials = $request->only('email', 'password');
 		$token = null;
         try {
@@ -35,11 +31,7 @@ class LoginController extends Controller
         } catch (JWTException $e) {
             return response()->json(['error' => 'Không thể tạo mã'], 500);
         }
-            // user = JWTAuth::toUser($token);
-            //   return response()->json(compact('token'));
-
-        $user = Auth::user();
-
+        
         return response()->json([
 		    'response' => 'success',
 		    'result' => [
@@ -47,10 +39,9 @@ class LoginController extends Controller
                 'permission'=>"Ứng viên",
                 'status' => true,
                 'token' => $token,
-                'info' => $user,
+                'info' => Auth::user(),
             ],
 		]);
     }
-
 
 }

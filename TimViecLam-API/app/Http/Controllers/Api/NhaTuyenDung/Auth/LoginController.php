@@ -22,10 +22,6 @@ class LoginController extends Controller
     
     public function login(Request $request)
     {
-       
-        config()->set( 'auth.defaults.guard', 'nhatuyendung' );
-        \Config::set('jwt.user', 'App\Models\NhaTuyenDung'); 
-		\Config::set('auth.providers.users.model', \App\Models\NhaTuyenDung::class);
 		$credentials = $request->only('email', 'password');
 		$token = null;
         try {
@@ -36,7 +32,6 @@ class LoginController extends Controller
             return response()->json(['error' => 'Không thể tạo mã'], 500);
         }
 
-        $user = Auth::user();
         return response()->json([
 		    'response' => 'success',
 		    'result' => [
@@ -44,7 +39,7 @@ class LoginController extends Controller
                 'permission'=>"Nhà tuyển dụng",
                 'status' => true,
                 'token' => $token,
-                'info' => $user,
+                'info' => Auth::user(),
             ],
 		]);
     }
