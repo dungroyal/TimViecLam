@@ -16,34 +16,43 @@ Route::post('ung-vien/login', 'Api\UngVien\Auth\LoginController@login');
 Route::post('nha-tuyen-dung/login', 'Api\NhaTuyenDung\Auth\LoginController@login');
 
 // Route đăng kí
+Route::post('admin/register', 'Api\Admin\Auth\RegisterController@register');
+Route::post('ung-vien/register', 'Api\UngVien\Auth\RegisterController@register');
+Route::post('nha-tuyen-dung/register', 'Api\NhaTuyenDung\Auth\RegisterController@register');
 
 
 // Admin
 Route::group(['prefix' => 'admin', 'middleware' => ['assign.guard:admin', 'jwt.auth']], function () {
     Route::get('/me', function () {
         return response()->json([
-		    'guard' => 'Admin',
-		    'me' => Auth::user(),
-		]);
+            'guard' => 'Admin',
+            'me' => Auth::user(),
+        ]);
     });
+
+    Route::post('logout', 'Api\Admin\Auth\LoginController@logout');
 });
 
 // Route dành cho ứng viên
 Route::group(['prefix' => 'ung-vien', 'middleware' => ['assign.guard:ungvien', 'jwt.auth']], function () {
     Route::get('/me', function () {
         return response()->json([
-		    'guard' => 'Ứng viên',
-		    'me' => Auth::user(),
-		]);
+            'guard' => 'Ứng viên',
+            'me' => Auth::user(),
+        ]);
     });
+
+    Route::post('logout', 'Api\UngVien\Auth\LoginController@logout');
 });
 
 // Route dành Nhà tuyển dụng
 Route::group(['prefix' => 'nha-tuyen-dung', 'middleware' => ['assign.guard:nhatuyendung', 'jwt.auth']], function () {
     Route::get('/me', function () {
         return response()->json([
-		    'guard' => 'Nhà tuyển dụng',
-		    'me' => Auth::user(),
-		]);
+            'guard' => 'Nhà tuyển dụng',
+            'me' => Auth::user(),
+        ]);
     });
+
+    Route::post('logout', 'Api\NhaTuyenDung\Auth\LoginController@logout');
 });
