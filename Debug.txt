@@ -1,8 +1,10 @@
 composer create-project laravel/laravel {directory} "5.0.*" --prefer-dist
-
+--------
 composer dump-autoload
 composer update --no-scripts
 composer update
+php artisan jwt:secret
+---------
 
 php artisan make:migration create_users_table
 php artisan migrate:reset
