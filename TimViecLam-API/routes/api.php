@@ -56,3 +56,10 @@ Route::group(['prefix' => 'nha-tuyen-dung', 'middleware' => ['assign.guard:nhatu
 
     Route::post('logout', 'Api\NhaTuyenDung\Auth\LoginController@logout');
 });
+
+
+
+// Test
+
+Route::get('data/search', 'SearchController@index');
+

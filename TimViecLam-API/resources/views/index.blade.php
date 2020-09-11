@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <App></App>
+
+<div class="container">
+        <search-component></search-component>
+</div>
+
 @endsection
