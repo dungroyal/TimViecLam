@@ -10,7 +10,7 @@ return [
     'timezone' => 'Asia/Ho_Chi_Minh',
     'locale' => 'vi',
     'fallback_locale' => 'en',
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'vi',
     'key' => env('APP_KEY'),
     'cipher' => 'AES-256-CBC',
     'providers' => [
