@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz'),
     'env' => env('APP_ENV', 'production'),
     'debug' => (bool) env('APP_DEBUG', false),
     'url' => env('APP_URL', 'http://localhost'),

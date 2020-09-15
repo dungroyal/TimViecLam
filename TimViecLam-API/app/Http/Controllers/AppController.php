@@ -6,18 +6,18 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         // $this->middleware('auth');
     }
     
-    public function index()
+    public function employer()
     {
-        return view('index');
+        return view('employer.employer');
+    }
+
+    public function job_seeker()
+    {
+        return view('job_seeker.job_seeker');
     }
 }
