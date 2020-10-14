@@ -1,0 +1,138 @@
+|--------------------------------------------------------------------------
+
+|===================== CODEJ chia sẻ kiến thức miến phí (VSCODE test) ᴖᴥᴖ
+
+|--------------------------------------------------------------------------
+
+
+                                                ▷==PHÍM TẮT CHỈNH SỬA VĂN BẢN==◁
+
+➤ Ctrl + Shift + K	            Xóa dòng
+Đoạn văn bản 1
+Hãy xoá đoạn bản này
+đoạn văn bản 2
+
+
+-------------------
+➤ Ctrl + Enter	                Chèn dòng bên dưới
+➤ Ctrl + Shift + Enter	        Chèn dòng trên
+Đoạn văn bản 1
+Hãy chèn 1 đoạn văn bản "this is bottom" bên dưới và bên trên là :"this is top"
+đoạn văn bản 2
+
+
+
+--------------------
+➤ Ctrl +  ⇓             	    cuộn xuống
+➤ Ctrl +  ⇑	                    cuộn lên
+đừng động đến chuột mà cuộn nội dung lên xuống bằng phím nhé
+
+
+
+-------------------
+➤ Ctrl + Shift + Alt + ⇓ 	    Thêm con trỏ chuột xuống dưới ngay con trỏ hiện tại
+➤ Ctrl + Shift + Alt + ⇑	    Thêm con trỏ chuột lên trên ngay con trỏ hiện tại
+mẹo: Giữ Alt + con trỏ chuột kích trái vào từng vị trí
+đoạn văn bản 1
+đoạn văn bản 2
+đoạn văn bản 3
+đoạn văn bản 4
+không dùng chuột chuyển tất cả các số thành sô 1
+
+
+
+-------------------
+➤ Shift + Alt +  ⇓ 	            Copy nội dung dòng hiện tại xuống dưới
+➤ Shift + Alt +  ⇑              Copy nội dung dòng hiện tại lên trên
+
+Xin chào mọi người (hãy lặp lại nội dung này xuống dưới)
+
+
+-------------------
+➤ Ctrl + D	                    Chọn văn bản giống văn bản bôi đen hiện tại
+xin chào các ban đến với codej chia sẻ kiến thức free các bạn đã viết đến codej chưa
+chưa đúng đúng không ^^. vì mình mới mà hehe các bạn nhớ ủng hộ mình nha để mình có 
+thêm động lực ra nhiều video lập trình để các bạn có đủ kiến thức đi làm nha ahihi. 
+và nếu thấy video bổ ích đừng tiếc 1 like, share để kênh CODEJ được tiếp cận với nhiều 
+học sinh sinh viên đã đang và sẽ theo ngành lập trình viên web nha ^^.
+
+
+
+-------------------
+➤ Ctrl + U	                    Hoàn tác thao tác phần tử chọn cuối cùng
+codeJ xin chào các bạn codeJ chào mọi người codeJ chia sẻ kiến thức vscode nè.
+bối đen "codeJ" nhấn ctrl + D sau đó ctrl + U
+
+
+
+-------------------
+➤ Ctrl + Shift + L	            Chọn tất cả đoạn văn bản giống hiện tại ( không phân biệt hoa thường )
+xin chào các ban đến với codej chia sẻ kiến thức free các bạn đã viết đến codej chưa
+chưa đúng đúng không ^^. vì mình mới mà hehe các bạn nhớ ủng hộ mình nha để mình có 
+thêm động lực ra nhiều video lập trình để các bạn có đủ kiến thức đi làm nha ahihi. 
+và nếu thấy video bổ ích đừng tiếc 1 like, share để kênh CODEJ được tiếp cận với nhiều 
+học sinh sinh viên đã đang và sẽ theo ngành lập trình viên web nha ^^.
+
+
+
+-------------------
+➤ Ctrl + ]	    đẩy dòng sang phải
+➤ Ctrl + [	    đẩy dòng sang trái
+dòng 1
+    dòng 2
+        dòng 3
+ dòng 4
+
+
+
+-------------------
+➤ home         Đi đến đầu dòng
+➤ end	       Đi đến cuối dòng
+đây là 1 dòng văn bản khá dài đó hehe.
+
+
+
+-------------------
+➤ Ctrl + End	Đi đến cuối file
+➤ Ctrl + home	Chuyển đến đầu file
+
+
+-------------------
+➤ Ctrl + /	    comment code
+-------------------
+
+
+
+➤ Ctrl + F	    tìm kiến nội dung
+➤ Ctrl + H	    Thay thế nội dung
+➤ F3	        Tìm tiếp theo
+
+
+                                                ▷==PHÍM TẮT KHÁC==◁
+➤ Ctrl + Z	           quay lại thao tác nội dung trước đó
+➤ Ctrl + Y	           Lặp lại thao tác tiếp theo
+➤ Ctrl + [cách]        Gợi ý khi code các ngôn ngữ
+➤ Ctrl + w             Đóng tab hiện tại
+➤ Ctrl + [cộng,trừ]    To nhỏ font chữ khi code
+
+
+
+                                                ▷==PHÍM HAY SỬ DỤNG==◁
+➤ Ctrl + [cách]        Gợi ý khi code các ngôn ngữ
+➤ Ctrl + /	           comment code
+
+➤ Ctrl + Z	           quay lại thao tác nội dung trước đó
+➤ Ctrl + Y	           Lặp lại thao tác tiếp theo
+
+➤ Shift + Alt +  ⇓ 	   Copy nội dung dòng hiện tại xuống dưới
+➤ Shift + Alt + ⇑      Copy nội dung dòng hiện tại lên trên
+
+➤ Ctrl + ]	           đẩy dòng sang phải
+➤ Ctrl + [	           đẩy dòng sang trái
+➤ Ctrl + D	           Chọn văn bản giống văn bản bôi đen hiện tại
+➤ Ctrl + Shift + L	   Chọn tất cả đoạn văn bản giống hiện tại ( không phân biệt hoa thường )
+
+➤ Ctrl + F	           tìm kiến nội dung
+
+➤ Ctrl + w             Đóng tab hiện tại
+➤ Ctrl + [cộng,trừ]    To nhỏ font chữ khi code

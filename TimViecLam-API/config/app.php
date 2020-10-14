@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz'),
     'env' => env('APP_ENV', 'production'),
     'debug' => (bool) env('APP_DEBUG', false),
     'url' => env('APP_URL', 'http://localhost'),
@@ -10,7 +9,7 @@ return [
     'timezone' => 'Asia/Ho_Chi_Minh',
     'locale' => 'vi',
     'fallback_locale' => 'en',
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'vi',
     'key' => env('APP_KEY'),
     'cipher' => 'AES-256-CBC',
     'providers' => [
