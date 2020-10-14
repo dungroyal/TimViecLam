@@ -6,24 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCareerTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('career', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name', 100);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('career');
