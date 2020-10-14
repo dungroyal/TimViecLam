@@ -12,18 +12,18 @@ return [
             'driver' => 'jwt',
             'provider' => 'admin',
         ],
-        'job_seeker' => [
+        'ungvien' => [
             'driver' => 'jwt',
-            'provider' => 'job_seeker',
+            'provider' => 'ungvien',
         ],
-        'employer' => [
+        'nhatuyendung' => [
             'driver' => 'jwt',
-            'provider' => 'employer',
+            'provider' => 'nhatuyendung',
         ],
 
         'api' => [
             'driver' => 'jwt',
-            'provider' => 'job_seeker',
+            'provider' => 'ungvien',
             'hash' => false,
         ],
     ],
@@ -33,13 +33,13 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
-        'job_seeker' => [
+        'ungvien' => [
             'driver' => 'eloquent',
-            'model' => App\Models\JobSeeker::class,
+            'model' => App\Models\UngVien::class,
         ],
-        'employer' => [
+        'nhatuyendung' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Employer::class,
+            'model' => App\Models\NhaTuyenDung::class,
         ],
     ],
 

@@ -15,8 +15,10 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('slogan');
             $table->text('description');
-            $table->string('website',200);
+            $table->string('website');
+            $table->string('fax');
             $table->string('business_license');
+            $table->tinyInteger('marital_status');
             $table->string('logo');
             $table->string('cover_photo');
         });

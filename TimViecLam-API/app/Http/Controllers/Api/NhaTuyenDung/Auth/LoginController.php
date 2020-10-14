@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\JobSeeker\Auth;
+namespace App\Http\Controllers\Api\NhaTuyenDung\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Facades\JWTFactory;
 use JWTAuthException;
-use App\Models\JobSeeker;
+use App\Models\NhaTuyenDung;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -17,8 +17,8 @@ class LoginController extends Controller
 {
         public function __construct()
     {
-        Auth::shouldUse('job_seeker');
-        $this->job_seeker = new JobSeeker;
+        Auth::shouldUse('nhatuyendung');
+        $this->nhatuyendung = new NhaTuyenDung;
     }
     
     public function login(Request $request)
@@ -35,12 +35,12 @@ class LoginController extends Controller
         } catch (JWTException $e) {
             return response()->json(['error' => 'Không thể tạo mã'], 500);
         }
-        
+
         return response()->json([
 		    'response' => 'success',
 		    'result' => [
                 'msg'=>"Đăng nhập thành công",
-                'permission'=>"Ứng viên",
+                'permission'=>"Nhà tuyển dụng",
                 'status' => true,
                 'token' => $token,
                 'info' => Auth::user(),
@@ -54,7 +54,7 @@ class LoginController extends Controller
             JWTAuth::invalidate($request->token);
             return response()->json([
                 'status' => true,
-                'message' => 'Đăng xuất ứng viên thành công!'
+                'message' => 'Đăng xuất nhà tuyển dụng thành công!'
             ]);
         } catch (JWTException $exception) {
             return response()->json([
@@ -63,5 +63,6 @@ class LoginController extends Controller
             ], 500);
         }
     }
+
 
 }
