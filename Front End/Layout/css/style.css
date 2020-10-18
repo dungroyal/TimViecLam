@@ -1,0 +1,177 @@
+/* Thịnh */
+/* header {
+    width: 100%;
+    height: 80px;
+}
+.logo{
+width: 250px;
+float: left;
+margin: 20px 20px 20px 10px;
+} */
+/* Thịnh */
+
+/* Huy */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+.text-uppercase {
+    font-family: 'Noto Serif', serif;
+}
+
+
+.navbar {
+    background-color: #B0E2FF;
+}
+.nav-item {
+    border-radius: 4px;
+}
+section{
+    padding:60px 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-size:13px;
+}
+.img-fluid.img-thumbnail {
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.row-business--top img {
+    max-width: 100px;
+}
+.row-business--between img {
+    max-width: 100px;
+}
+.row-business--bottom img {
+    max-width: 100px;
+}
+/* card */
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  overflow: hidden;
+
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .9s ease;
+  width: 100%;
+  height: 180px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  -webkit-transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  margin-top: 50px;
+}
+
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+}
+
+.text-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.card__image-avt {
+    margin-right: 270px;
+    max-width: 45px;
+    border-radius: 50%;
+    
+}
+.btn.btn--primary {
+    right: 200px;
+    position: absolute;
+    color: 	#b8ae9f;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.btn.btn--secondary {
+    position: absolute;
+    left: 260px;
+    color: orange;
+    font-size: 13px;
+    margin-top: 5px;
+
+}
+.btn.btn--secondary:hover {
+    color:rgb(206, 204, 199);
+    font-weight:bold;
+}
+/* card */
+
+
+.page-footer {
+    background-color: #1c375d;
+}
+.page-footer__bottom {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.footer-img {
+    max-width: 243px;
+    margin-top: 80px;
+    
+}
+.text__info a {
+    
+    color: #fff;
+    text-decoration: none;
+}
+.text__info a:hover {
+    color: #1b82f8;
+    /* font-weight:bold; */
+}
+.text__info--address {
+    color : orange;
+}
+
+.btn-floating--fb:hover {
+    color: #ffffff;
+    background-color: #1b82f8;
+}
+.btn-floating--tw:hover {
+    color: #ffffff;
+    background-color: #1bf8db;
+}
+.btn-floating--gg:hover {
+    color: #ffffff;
+    background-color: rgb(228, 74, 74);
+}
+.btn-floating--link:hover {
+    color: #ffffff;
+    background-color: rgb(74, 205, 228);
+}
+
+.fas {
+    color: orange;
+}
+
+/* Huy */

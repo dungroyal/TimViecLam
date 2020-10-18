@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="node_modules/hover.css/css/hover-min.css" />
+    <link rel="stylesheet" href="css/css.css">
+    <title>Tìm Việc Làm</title>
+
+</head>
+
+<body>
+
+    <header class="container">
+        <a href="fb.com/me" target="_blank">THINH</a>
+        <a href="index.html"><img class="logo" src="images/Logo.png" alt=""></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Trang Chủ</a>
+                </li>
+                <li>
+                    <a href="#">Giới Thiệu</a>
+                </li>
+                <li>
+                    <a href="#">Góc Nghề Nghiệp</a>
+                </li>
+                <li>
+                    <a href="contact.html">Liên Hệ</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-button">Tài Khoản</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Tìm Kiếm Việc Làm -->
+    <div class="background-search-job">
+        <div class="box container">
+            <div class="row search-job ml-1">
+                <div class="col-4 mt-2 my-0 px-1">
+                    <span class="ctn-icon"> <i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                    <input class="form-control search-job__input-name ui-autocomplete-input" value=""
+                        placeholder="Tên công việc, vị trí bạn muốn..." id="keyword" autocomplete="off">
+                </div>
+                <div class="col-3 mt-2 px-1">
+                    <span class="ctn-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <select class="form-control search-job__input-location">
+                        <option value="">&nbsp;Tất cả địa điểm</option>
+                        <option value="1">&nbsp;Hà Nội</option>
+                        <option value="2">&nbsp;Hồ Chí Minh</option>
+                        <option value="3">&nbsp;Bình Dương</option>
+                        <option value="4">&nbsp;Bắc Ninh</option>
+                        <option value="5">&nbsp;Đồng Nai</option>
+                        <option value="6">&nbsp;Hưng Yên</option>
+                        <option value="7">&nbsp;Hải Dương</option>
+                        <option value="8">&nbsp;Đà Nẵng</option>
+                        <option value="9">&nbsp;Hải Phòng</option>
+                        <option value="10">&nbsp;An Giang</option>
+                        <option value="11">&nbsp;Bà Rịa-Vũng Tàu</option>
+                        <option value="12">&nbsp;Bắc Giang</option>
+                        <option value="13">&nbsp;Bắc Kạn</option>
+                        <option value="14">&nbsp;Bạc Liêu</option>
+                        <option value="15">&nbsp;Bến Tre</option>
+                        <option value="16">&nbsp;Bình Định</option>
+                        <option value="17">&nbsp;Bình Phước</option>
+                        <option value="18">&nbsp;Bình Thuận</option>
+                        <option value="19">&nbsp;Cà Mau</option>
+                        <option value="20">&nbsp;Cần Thơ</option>
+                        <option value="21">&nbsp;Cao Bằng</option>
+                        <option value="22">&nbsp;Cửu Long</option>
+                        <option value="23">&nbsp;Đắc Lắc</option>
+                        <option value="24">&nbsp;Đắc Nông</option>
+                        <option value="25">&nbsp;Điện Biên</option>
+                        <option value="26">&nbsp;Đồng Tháp</option>
+                        <option value="27">&nbsp;Gia Lai</option>
+                        <option value="28">&nbsp;Hà Giang</option>
+                        <option value="29">&nbsp;Hà Nam</option>
+                        <option value="30">&nbsp;Hà Tĩnh</option>
+                        <option value="31">&nbsp;Hậu Giang</option>
+                        <option value="32">&nbsp;Hoà Bình</option>
+                        <option value="33">&nbsp;Khánh Hoà</option>
+                        <option value="34">&nbsp;Kiên Giang</option>
+                        <option value="35">&nbsp;Kon Tum</option>
+                        <option value="36">&nbsp;Lai Châu</option>
+                        <option value="37">&nbsp;Lâm Đồng</option>
+                        <option value="38">&nbsp;Lạng Sơn</option>
+                        <option value="39">&nbsp;Lào Cai</option>
+                        <option value="40">&nbsp;Long An</option>
+                        <option value="41">&nbsp;Miền Bắc</option>
+                        <option value="42">&nbsp;Miền Nam</option>
+                        <option value="43">&nbsp;Miền Trung</option>
+                        <option value="44">&nbsp;Nam Định</option>
+                        <option value="45">&nbsp;Nghệ An</option>
+                        <option value="46">&nbsp;Ninh Bình</option>
+                        <option value="47">&nbsp;Ninh Thuận</option>
+                        <option value="48">&nbsp;Phú Thọ</option>
+                        <option value="49">&nbsp;Phú Yên</option>
+                        <option value="50">&nbsp;Quảng Bình</option>
+                        <option value="51">&nbsp;Quảng Nam</option>
+                        <option value="52">&nbsp;Quảng Ngãi</option>
+                        <option value="53">&nbsp;Quảng Ninh</option>
+                        <option value="54">&nbsp;Quảng Trị</option>
+                        <option value="55">&nbsp;Sóc Trăng</option>
+                        <option value="56">&nbsp;Sơn La</option>
+                        <option value="57">&nbsp;Tây Ninh</option>
+                        <option value="58">&nbsp;Thái Bình</option>
+                        <option value="59">&nbsp;Thái Nguyên</option>
+                        <option value="60">&nbsp;Thanh Hoá</option>
+                        <option value="61">&nbsp;Thừa Thiên Huế</option>
+                        <option value="62">&nbsp;Tiền Giang</option>
+                        <option value="63">&nbsp;Toàn Quốc</option>
+                        <option value="64">&nbsp;Trà Vinh</option>
+                        <option value="65">&nbsp;Tuyên Quang</option>
+                        <option value="66">&nbsp;Vĩnh Long</option>
+                        <option value="67">&nbsp;Vĩnh Phúc</option>
+                        <option value="68">&nbsp;Yên Bái</option>
+                        <option value="100">&nbsp;Nước Ngoài</option>
+                    </select>
+                </div>
+                <div class="col-3 mt-2 px-1">
+                    <span class="ctn-icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
+                    <select id="category" class="form-control search-job__input-categories chosen">
+                        <option value="">&nbsp;Tất cả ngành nghề</option>
+                        <option value="10101">&nbsp;An toàn lao động</option>
+                        <option value="10102">&nbsp;Bán hàng kỹ thuật</option>
+                        <option value="10103">&nbsp;Bán lẻ / bán sỉ</option>
+                        <option value="10004">&nbsp;Báo chí / Truyền hình</option>
+                    </select>
+                </div>
+                <div class="col-2 mt-2 px-1">
+                    <span class="ctn-icon text-white pl-2 search-job--input"><i class="fa fa-search"
+                            aria-hidden="true"></i></span>
+                    <button type="submit" class="form-control search-job__input-submit btn btn-block btn-warning">Tìm
+                        Kiếm</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tìm Kiếm Nâng Cao -->
+        <div class="tittle-search">
+            <span id="btn-show-advanced-search" data-toggle="collapse" data-target="#emoji">
+                <i class="fa fa-angle-down"></i>
+                &nbsp;Chọn tìm kiếm nâng cao
+            </span>
+        </div>
+        <div class="box collapse container" id="emoji">
+            <div class="row search-job ml-1">
+                <div class="col-3 mt-2 mb-3 px-1">
+                    <span class="ctn-icon"><i class="fas fa-money-bill"></i></span>
+                    <select class="form-control search-job__input-location chosen" id="city">
+                        <option value="">&nbsp;Tất cả mức lương</option>
+                        <option value="1">&nbsp;Dưới 3 triệu</option>
+                        <option value="2">&nbsp;3 - 5 triệu</option>
+                        <option value="3">&nbsp;5 - 7 Triệu</option>
+                        <option value="4">&nbsp;7 - 10 Triệu</option>
+                        <option value="5">&nbsp;12 - 15 Triệu</option>
+                        <option value="6">&nbsp;15 - 20 Triệu</option>
+                        <option value="7">&nbsp;20 - 30 Triệu</option>
+                        <option value="8">&nbsp;Trên 30 Triệu</option>
+                        <option value="9">&nbsp;Thỏa thuận</option>
+                    </select>
+                </div>
+                <div class="col-3 mt-2 mb-3 px-1">
+                    <span class="ctn-icon"><i class="far fa-chart-bar"></i></span>
+                    <select class="form-control search-job__input-location" id="city">
+                        <option value="">&nbsp;Tất cả kinh nghiệm</option>
+                        <option value="1">&nbsp;Chưa có</option>
+                        <option value="2">&nbsp;Dưới 1 năm</option>
+                        <option value="3">&nbsp; 1 năm </option>
+                        <option value="4">&nbsp; 2 năm </option>
+                        <option value="5">&nbsp; 3 năm </option>
+                        <option value="6">&nbsp; 4 năm </option>
+                        <option value="7">&nbsp; 5 năm </option>
+                        <option value="8">&nbsp; Trên 5 năm </option>
+                    </select>
+                </div>
+                <div class="col-3 mt-2 mb-3 px-1">
+                    <span class="ctn-icon"><i class="fas fa-user-clock"></i></span>
+                    <select id="category" class="form-control search-job__input-categories">
+                        <option value="">&nbsp;Hình thức làm việc</option>
+                        <option value="10101">&nbsp; Toàn thời gian </option>
+                        <option value="10102">&nbsp; Bán thời gian </option>
+                        <option value="10103">&nbsp; Thực tập sinh </option>
+                        <option value="10004">&nbsp; Remote - Làm việc từ xa </option>
+                    </select>
+                </div>
+                <div class="col-3 mt-2 mb-3 px-1">
+                    <span class="ctn-icon"><i class="fas fa-city"></i></span>
+                    <select id="category" class="form-control search-job__input-categories">
+                        <option value="">&nbsp;Tất cả lĩnh vực</option>
+                        <option value="10101">&nbsp; Agency (Design/Development) </option>
+                        <option value="10102">&nbsp; Agency (Marketing/Advertising) </option>
+                        <option value="10103">&nbsp; Bán lẻ - Hàng tiêu dùng - FMCG </option>
+                        <option value="10004">&nbsp; Bât động sản </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vị trí -->
+    <section>
+        <div class="container">
+            <div class="box__tittle-job">
+                <div class="row">
+                    <div class="col-7">
+                        <h1 class="bold">Tìm việc làm mới nhất tại Hồ Chí Minh</h1>
+                    </div>
+                    <div class="col-2 text-center">
+                        <span class="big-number bold">7,576</span> việc phù hợp
+                    </div>
+                    <div class="col-2 text-center">
+                        <span class="big-number bold">0</span> việc đã lưu
+                    </div>
+                    <div class="col-1 font-icon">
+                        <span class="mr"><i class="fa fa-th-large" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-th" aria-hidden="true"></i></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <!-- Việc làm -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-xl-4">
+                <div class="side-wrapper">
+                    <div class="job-found">
+                        <div class="job-found-amout">
+                            <p>17,961 việc làm</p>
+                        </div>
+                        <div class="job-found-sort"><span class="sort-title dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Sắp xếp theo<em
+                                    class="fa fa-chevron-down font-job2"></em>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul>
+                                        <li> <a title="Cập nhật" class="active"
+                                                href="#">Cập nhật</a></li>
+                                        <li><a title="Mức lương"
+                                                href="#">Mức lương</a></li>
+                                    </ul>
+                                </div>
+                            </span></div>
+                    </div>
+                </div>
+                <!-- List job -->
+                <section class="jobs-side-list">
+                    <div class="jobs-list" id="jobs-list">
+                        <!-- job 1 -->
+                        <div class="job-item active" id="job-item-35B4B2E2">
+                            <div class="figure">
+                                <div class="image">
+                                    <a href="#" target="_blank" title="CÔNG TY TNHH NATURE ORIGIN">
+                                        <img class="lazy-img" src="images/job2.png" alt="CÔNG TY TNHH NATURE ORIGIN">
+                                    </a>
+                                </div>
+                                <div class="figcaption">
+                                    <div class="timeago"> <span class="new">
+                                            <font color="FF0000">(Mới)</font>
+                                        </span> </div>
+                                    <div class="title ">
+                                        <a class="job_link" data-id="35B4B2E2" href="detail.html" target="_blank"
+                                            title="Trưởng nhóm Telesales">
+                                            Trưởng nhóm Telesales
+                                        </a>
+                                    </div>
+                                    <div class="caption">
+                                        <a class="company-name" target="_blank" href="detail.html" title="CÔNG TY TNHH NATURE ORIGIN">CÔNG TY TNHH NATURE ORIGIN</a>
+                                        <div class="salary">
+                                            <span><i class="icon-job fas fa-dollar-sign"></i></i>Lương: Cạnh
+                                                tranh</span>
+                                        </div>
+                                        <div class="location">
+                                            <span><i class="fas fa-map-marker-alt"></i> Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="time"><time>13/09/2020</time></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+             
+                        <!-- job 2 -->
+                        
+                        <div class="job-item" id="job-item-35B4B2DE">
+
+                            <div class="figure">
+                                <div class="image">
+                                    <a href="detail.html" target="_blank" title="Hanoi Branch - Reeracoen Vietnam Co., Ltd">
+                                        <img class="lazy-img" src="images/job1.png"
+                                            alt="Hanoi Branch - Reeracoen Vietnam Co., Ltd" style="">
+                                    </a>
+                                </div>
+                                <div class="figcaption">
+                                    <div class="timeago"> <span class="new">
+                                            <font color="FF0000">(Mới)</font>
+                                        </span> </div>
+                                    <div class="title ">
+                                        <a class="job_link" data-id="35B4B2DE" href="detail.html" target="_blank"
+                                            title="[HOT] SALES MANAGER KHÍ GAS CÔNG NGHIỆP (17743)">
+                                            [HOT] SALES MANAGER KHÍ GAS CÔNG NGHIỆP (17743)
+                                        </a>
+                                    </div>
+                                    <div class="caption">
+                                        <a class="company-name" target="_blank" href="detail.html"
+                                            title="Hanoi Branch - Reeracoen Vietnam Co., Ltd">Hanoi Branch - Reeracoen Vietnam Co., Ltd</a>
+                                        <div class="salary">
+                                            <span><i class="icon-job fas fa-dollar-sign"></i></i>Lương: Cạnh tranh</span>
+                                        </div>
+                                        <div class="location">
+                                            <span><i class="fas fa-map-marker-alt"></i> Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="time"><time>13/09/2020</time></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- job 3 -->
+                        <div class="job-item active" id="job-item-35B4B2E2">
+                            <div class="figure">
+                                <div class="image">
+                                    <a href="#" target="_blank" title="CÔNG TY TNHH NATURE ORIGIN">
+                                        <img class="lazy-img" src="images/job3.jpg" alt="CÔNG TY TNHH NATURE ORIGIN">
+                                    </a>
+                                </div>
+                                <div class="figcaption">
+                                    <div class="timeago"> <span class="new">
+                                            <font color="FF0000">(Mới)</font>
+                                        </span> </div>
+                                    <div class="title ">
+                                        <a class="job_link" data-id="35B4B2E2" href="#" target="_blank"
+                                            title="Trưởng nhóm Telesales">
+                                            [HOT] SALES MANAGER KHÍ GAS CÔNG NGHIỆP (17743)
+                                        </a>
+                                    </div>
+                                    <div class="caption">
+                                        <a class="company-name" target="_blank" href="#"
+                                            title="CÔNG TY TNHH NATURE ORIGIN">CÔNG TY TNHH NATURE ORIGIN</a>
+                                        <div class="salary">
+                                            <span><i class="icon-job fas fa-dollar-sign"></i></i>Lương: Cạnh
+                                                tranh</span>
+                                        </div>
+                                        <div class="location">
+                                            <span><i class="fas fa-map-marker-alt"></i> Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="time"><time>13/09/2020</time></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- job 4 -->
+                        <div class="job-item active" id="job-item-35B4B2E4">
+
+                            <div class="figure">
+                                <div class="image">
+                                    <a href="#" target="_blank" title="Dalat Hasfarm">
+                                        <img class="lazy-img" src="images/job4.gif" alt="Dalat Hasfarm" style="">
+                                    </a>
+                                </div>
+                                <div class="figcaption">
+                                    <div class="timeago"> <span class="new">
+                                            <font color="FF0000">(Mới)</font>
+                                        </span> </div>
+                                    <div class="title ">
+                                        <a class="job_link" data-id="35B4B2E4" href="#" target="_blank" title="[ HCM] Nhân Viên Bán Hàng"> [ HCM] Nhân Viên Bán Hàng</a>
+                                    </div>
+                                    <div class="caption">
+                                        <a class="company-name" target="_blank" href="#" title="Dalat Hasfarm">Dalat Hasfarm</a>
+                                        <div class="salary">
+                                            <span><i class="icon-job fas fa-dollar-sign"></i></i>Lương: Cạnh tranh</span>
+                                        </div>
+                                        <div class="location">
+                                            <span><i class="fas fa-map-marker-alt"></i> Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="time"><time>13/09/2020</time></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-7 col-xl-8">
+                <section class="apply-now-banner">
+                    <div class="image"><img src="images/banner-job.jpg" alt=""></div>
+                    <div class="apply-now-content">
+                        <div class="job-desc">
+                            <p class="title">Trưởng nhóm Telesales</p>
+                            <a class="employer job-company-name" href="#">CÔNG TY TNHH NATURE ORIGIN</a>
+                        </div>
+                        <div class="apply-now-btn "><a href="#" class="btn-gradient btnApplyClick"> Nộp Đơn Ứng
+                                Tuyển </a></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row my-2">
+                        <div class="col-lg-12 order-lg-2">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a href="" data-target="#profile" data-toggle="tab"
+                                        class="nav-link active text-botton">Chi tiết công việc</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" data-target="#company" data-toggle="tab"
+                                        class="nav-link text-botton">Tổng quan công ty</a>
+                                </li>
+                                <span class="icon-button"><i class="fas fa-share-alt"></i></span>
+
+                            </ul>
+                            <div class="tab-content mt-3">
+                                <div class="tab-pane active" id="profile">
+                                    <div class="bg-blue">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-6 item-blue">
+                                                <div class="detail-box">
+                                                    <div class="map">
+                                                        <strong><span class="icon-job"><i
+                                                                    class="fas fa-map-marker-alt"></i></span>Địa
+                                                            điểm</strong>
+                                                        <p><a href="#">Hồ Chí Minh</a></p>
+                                                        <a href="#"><img class="img-maps"
+                                                                src="images/icon-map-disable.svg"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6 item-blue">
+                                                <div class="detail-box has-background">
+                                                    <ul>
+                                                        <li> <strong><i class="fas fa-calendar-day icon-detail"></i>Ngày
+                                                                cập nhật</strong>
+                                                            <p>15/09/2020</p>
+                                                        </li>
+                                                        <li> <strong><i class="fas fa-briefcase icon-detail"></i>Ngành
+                                                                nghề</strong>
+                                                            <p> <a href="#"> Tiếp thị / Marketing </a>,
+                                                                <a href="#"> Mỹ thuật / Nghệ thuật / Thiết kế
+                                                                </a>,
+                                                                <a href="#"> Dệt may / Da giày / Thời trang</a>
+                                                            </p>
+                                                        </li>
+                                                        <li> <strong><i
+                                                                    class="fas fa-business-time icon-detail"></i>Hình
+                                                                thức</strong>
+                                                            <p>Nhân viên chính thức</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-sm-6 item-blue">
+                                                <div class="detail-box has-background">
+                                                    <ul>
+                                                        <li>
+                                                            <strong><i
+                                                                    class="fas fa-dollar-sign icon-detail"></i>Lương</strong>
+                                                            <p>7 - 10 Triệu</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong><i class="fas fa-chart-bar icon-detail"></i>Kinh
+                                                                nghiệm</strong>
+                                                            <p>2 - 3 Năm</p>
+                                                        </li>
+                                                        <li><strong><i class="fas fa-user icon-detail"></i></i>Cấp
+                                                                bậc</strong>
+                                                            <p>Nhân viên</p>
+                                                        </li>
+                                                        <li><strong><i class="fas fa-calendar-check icon-detail"></i>Hết
+                                                                hạn nộp</strong>
+                                                            <p>31/10/2020</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Phúc Lợi -->
+                                    <div class="detail-row">
+                                        <h3 class="detail-title">Phúc lợi </h3>
+                                        <ul class="welfare-list">
+                                            <li><span class="fa fa-medkit"></span> Chế độ bảo hiểm</li>
+                                            <li><span class="fa fa-plane"></span> Du Lịch</li>
+                                            <li><span class="fas fa-dollar-sign"></span> Chế độ thưởng</li>
+                                            <li><span class="fa fa-chart-line"></span> Tăng lương</li>
+                                            <li><span class="fas fa-briefcase"></span> Nghỉ phép năm</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Mô tả công việc -->
+                                    <div class="detail-row">
+                                        <h3 class="detail-title">Mô tả Công việc</h3>
+                                        <p>Kế hoạch Marketing:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Phụ trách hoạt động marketing của thương hiệu ngành thực phẩm và dịch
+                                                    vụ ăn uống</p>
+                                            </li>
+                                            <li>
+                                                <p>Lập kế hoạch triển khai các hoạt động marketing sản phẩm online,
+                                                    offline (Media planning, Digital activities, Event, PR, Promotion,
+                                                    POSM)</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Đề xuất và báo cáo ngân sách, tiến độ triển khai cho marketing team
+                                                    leader.</p>
+                                            </li>
+                                            <li>
+                                                <p>Đề xuất kế hoạch và triển khai nghiên cứu/ điều tra/ social listening
+                                                    và phân tích thị trường, đối thủ, khách hàng, sản phẩm.</p>
+                                            </li>
+                                            <li>
+                                                <p>Đề xuất ý tưởng marketing và chiến lược marketing</p>
+                                            </li>
+                                        </ul>
+                                        <p><strong>Triển khai marketing:</strong></p>
+                                        <ul>
+                                            <li>
+                                                <p>Phát triển các chiến dịch marketing cho thương hiệu theo từng giai
+                                                    đoạn</p>
+                                            </li>
+                                            <li>
+                                                <p>Giám sát triển khai các hoạt động marketing online: Truyền thông trên
+                                                    mạng xã hội Facebook, Google Ads, PR trang tin và báo điện tử, các
+                                                    kênh khác.</p>
+                                            </li>
+                                            <li>
+                                                <p>Phối hợp với các phòng ban khác trong hoạt động marketing nội bộ.</p>
+                                            </li>
+                                            <li>
+                                                <p>Điều phối công việc với các nhà cung cấp, agency, đối tác marketing.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Trợ lý công việc cho marketing team leader</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Và các công việc liên quan khác theo sự phân công của quản lý trực
+                                                    tiếp.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- yêu cầu CV -->
+                                    <div class="detail-row">
+                                        <h3 class="detail-title">Yêu Cầu Công Việc</h3>
+                                        <ul>
+                                            <li>
+                                                <p>Ít nhất 3 năm kinh nghiệm ở vị trí tương đương hoặc công việc liên
+                                                    quan trực tiếp.&nbsp;</p>
+                                            </li>
+                                            <li>
+                                                <p>Ưu tiên kinh nghiệm trong ngành F&amp;B, FMCG, hoặc làm ở các agency
+                                                    marketing&nbsp;</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Tốt nghiệp đại học trở lên ngành Marketing, hoặc Báo chí, kinh doanh,
+                                                    nghiên cứu, các ngành khác liên quan.&nbsp;&nbsp;</p>
+                                            </li>
+                                            <li>
+                                                <p>Có trách nhiệm cao trong công việc, làm việc tích cực&nbsp;</p>
+                                            </li>
+                                            <li>
+                                                <p>Có khả năng nhạy bén, cập nhật xu hướng nhanh&nbsp;&nbsp;</p>
+                                            </li>
+                                            <li>
+                                                <p>Sẵn sàng đi công tác tỉnh nếu được phân công&nbsp;</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Thông tin khác -->
+                                    <div class="detail-row">
+                                        <h3 class="detail-title">Thông tin khác</h3>
+                                        <div class="content_fck">
+                                            <ul>
+                                                <li> Bằng cấp:
+                                                    Đại học
+                                                </li>
+                                                <li> Độ tuổi:
+                                                    18 - 35
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- share -->
+                                    <!-- Nộp ứng tuyển -->
+                                    <div class="job-detail-bottom sticky">
+                                        <div class="job-detail-bottom-wrapper">
+                                            <div class="apply-now-content">
+                                                <div class="job-desc">
+                                                    <a href="#"><i class="far fa-envelope-open icon-detail"></i><span
+                                                            class="text">Gửi tôi việc làm tương tự</span></a>
+                                                </div>
+                                                <div class="apply-now-right">
+                                                    <div class="apply-now-btn"> <a href="#" class="btn-gradient k"> Nộp
+                                                            Đơn Ứng Tuyển </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="company">
+                                    <section class="company-overview">
+                                        <div class="company-introduction">
+                                            <div class="company-info">
+                                                <div class="info">
+                                                    <div class="img"><a class="logo-company" href="#"
+                                                            title="CÔNG TY CỔ PHẦN TMORE"><img src="images/cty1.png"
+                                                                alt="CÔNG TY CỔ PHẦN TMORE"></a>
+                                                        <div class="title-company"><a class="name"
+                                                                title="CÔNG TY CỔ PHẦN TMORE" href="#">CÔNG TY CỔ PHẦN
+                                                                TMORE</a></div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <strong>Địa điểm</strong>đường Trần Đại Nghĩa, quận Hai Bà
+                                                        Trưng, TP Hà Nội
+                                                        <hr>
+                                                        <strong>Thông tin công ty</strong>
+                                                        <ul>
+                                                            <li> <span class="fas fa-user icon-company"></span> Người
+                                                                liên hệ: Phòng Nhân sự</li>
+                                                            <li> <span class="fas fa-gavel icon-company"></span> Loại
+                                                                hình hoạt động: Cổ phần </li>
+                                                        </ul>
+
+                                                        <div class="company-follow">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company-jobs-opening">
+                                            <h3 class="company-heading-title">Việc làm đang tuyển</h3>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="job-item">
+                                                        <div class="figure">
+                                                            <div class="figcaption">
+                                                                <div class="timeago"><span> <em
+                                                                            class="set_jobnew">(Mới)</em></span></div>
+                                                                <div class="title"> <a
+                                                                        href="https://careerbuilder.vn/vi/tim-viec-lam/marketing-executive.35B4B7D4.html"
+                                                                        title="Marketing Executive">Marketing
+                                                                        Executive</a> </div>
+                                                                <div class="caption">
+                                                                    <p class="company-name">CÔNG TY CỔ PHẦN TMORE</p>
+                                                                    <p class="salary">$ 10 Tr - 14 Tr
+                                                                        VND
+                                                                    </p>
+                                                                    <div class="location">
+                                                                        <p>Hà Nội</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="job-item">
+                                                        <div class="figure">
+                                                            <div class="figcaption">
+                                                                <div class="timeago"><span> <em
+                                                                            class="set_jobnew">(Mới)</em></span></div>
+                                                                <div class="title"> <a
+                                                                        href="https://careerbuilder.vn/vi/tim-viec-lam/graphic-designer.35B4B7D3.html"
+                                                                        title="Graphic Designer">Graphic Designer</a>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <p class="company-name">CÔNG TY CỔ PHẦN TMORE</p>
+                                                                    <p class="salary">$ 7 Tr - 12 Tr
+                                                                        VND
+                                                                    </p>
+                                                                    <div class="location">
+                                                                        <p>Hà Nội</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="job-item">
+                                                        <div class="figure">
+                                                            <div class="figcaption">
+                                                                <div class="timeago"><span></span></div>
+                                                                <div class="title"> <a
+                                                                        href="https://careerbuilder.vn/vi/tim-viec-lam/nhan-vien-thi-truong.35B4A750.html"
+                                                                        title="Nhân Viên Thị Trường">Nhân Viên Thị
+                                                                        Trường</a> </div>
+                                                                <div class="caption">
+                                                                    <p class="company-name">CÔNG TY CỔ PHẦN TMORE</p>
+                                                                    <p class="salary">$ 6 Tr - 10 Tr
+                                                                        VND
+                                                                    </p>
+                                                                    <div class="location">
+                                                                        <p>Hà Nội</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="job-item">
+                                                        <div class="figure">
+                                                            <div class="figcaption">
+                                                                <div class="timeago"><span></span></div>
+                                                                <div class="title"> <a
+                                                                        href="https://careerbuilder.vn/vi/tim-viec-lam/ke-toan-kho-kiem-hanh-chinh.35B4B0BA.html"
+                                                                        title="Kế toán kho kiêm hành chính">Kế toán kho
+                                                                        kiêm hành chính</a> </div>
+                                                                <div class="caption">
+                                                                    <p class="company-name">CÔNG TY CỔ PHẦN TMORE</p>
+                                                                    <p class="salary">$ 6 Tr - 7 Tr
+                                                                        VND
+                                                                    </p>
+                                                                    <div class="location">
+                                                                        <p>Hà Nội</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="job-item">
+                                                        <div class="figure">
+                                                            <div class="figcaption">
+                                                                <div class="timeago"><span></span></div>
+                                                                <div class="title"> <a
+                                                                        href="https://careerbuilder.vn/vi/tim-viec-lam/nhan-vien-ban-hang-thuc-pham.35B4816A.html"
+                                                                        title="Nhân viên bán hàng thực phẩm">Nhân viên
+                                                                        bán hàng thực phẩm</a> </div>
+                                                                <div class="caption">
+                                                                    <p class="company-name">CÔNG TY CỔ PHẦN TMORE</p>
+                                                                    <p class="salary">$ 6 Tr - 10 Tr
+                                                                        VND
+                                                                    </p>
+                                                                    <div class="location">
+                                                                        <p>Hà Nội</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="job-item">
+                                                        <div class="figure">
+                                                            <div class="figcaption">
+                                                                <div class="timeago"><span></span></div>
+                                                                <div class="title"> <a
+                                                                        href="https://careerbuilder.vn/vi/tim-viec-lam/nhan-vien-cham-soc-khach-hang-kiem-giam-sat.35B4A754.html"
+                                                                        title="Nhân Viên Chăm Sóc Khách Hàng Kiêm Giám Sát">Nhân
+                                                                        Viên Chăm Sóc Khách Hàng Kiêm Giám Sát</a>
+                                                                </div>
+                                                                <div class="caption">
+                                                                    <p class="company-name">CÔNG TY CỔ PHẦN TMORE</p>
+                                                                    <p class="salary">$ 7 Tr - 9 Tr
+                                                                        VND
+                                                                    </p>
+                                                                    <div class="location">
+                                                                        <p>Hà Nội</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="company-content">
+                                            <h3 class="company-heading-title">Giới thiệu về công ty</h3>
+                                            <p>Tmore - Tiệm Trà Chanh \"Mỗi người sẽ có một Tmore gần nhà\" - Đó chính
+                                                là \"phương châm\" để Tiệm Trà Chanh không ngừng nỗ lực mang thương hiệu
+                                                của mình phủ sóng khắp cả nước. - Tính tới thời điểm hiện tại, Tmore đã
+                                                đạt tới con số hơn 175 cơ sở trên toàn quốc, trải dài từ Bắc vào Nam,
+                                                với những tỉnh, thành phố lớn: Hà Nội, Hải Phòng, Sài Gòn, Huế, Nha
+                                                Trang, Hội An, Đà Nẵng...</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Việc làm 2  -->
+        <div class="container"   style="display: none;">
+            <div class="row">
+                <div class="col-lg-9 col-custom-xxl-12">
+                    <div class="job-found">
+                        <div class="job-found-amout">
+                            <p>18,334 việc làm</p>
+                        </div>
+                        <div class="job-found-sort"><span class="sort-title dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Sắp xếp theo<em
+                                    class="fa fa-chevron-down font-job2"></em>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul>
+                                        <li> <a title="Cập nhật" class="active"
+                                                href="#">Cập nhật</a></li>
+                                        <li><a title="Mức lương"
+                                                href="#">Mức lương</a></li>
+                                    </ul>
+                                </div>
+                            </span></div>
+                    </div>
+                    <div class="main-slide">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="jobs-side-list">
+                                        <div class="job-item">
+                                            <div class="figure">
+                                                <div class="image-company">
+                                                    <a href="#" target="_blank" title="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                        <img class="lazy-img" src="images/cty2.png" alt="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                    </a>
+                                                </div>
+                                                <div class="figcaption-company">
+                                                    <div class="title">
+                                                        <a class="job_link" href="#" target="_blank" title="Trưởng ca xưởng sản xuất"> Trưởng ca xưởng sản xuất
+                                                            <span class="new">
+                                                                <font color="ff0000">
+                                                                    <font color="FF0000">(Mới)</font>
+                                                                </font>
+                                                            </span> </a>
+                                                    </div>
+                                                    <div class="caption">
+                                                        <a class="company-name" target="_blank" href="#" title="Cty CP Dược Phẩm Vĩnh Phúc">Cty CP Dược Phẩm Vĩnh Phúc</a>
+                                                        <div class="salary">
+                                                            <p><em class="fas fa-dollar-sign icon-caption"></em>Lương: Cạnh tranh</p>
+                                                        </div>
+                                                        <div class="location">
+                                                          <p><em class="fa fa-map-marker icon-caption"></em>Vĩnh Phúc </p> 
+                                                            
+                                                        </div>
+                                       
+                                                    </div>
+                                                    <div class="bottom-right-icon">
+                                                        <ul>
+                                                            <li><a class="toollips save-job chk_save_35B4B9E9 "
+                                                                    href="#"
+                                                                    >
+                                                                    <i class="far fa-heart icon-caption"></i>
+                                                                    <span class="text">Lưu việc làm</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="time"> <em class="fas fa-calendar-alt icon-caption"></em>
+                                                            <time>16/09/2020</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- job 2 -->
+                                        <div class="job-item">
+                                            <div class="figure">
+                                                <div class="image-company">
+                                                    <a href="#" target="_blank" title="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                        <img class="lazy-img" src="images/cty2.png" alt="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                    </a>
+                                                </div>
+                                                <div class="figcaption-company">
+                                                    <div class="title">
+                                                        <a class="job_link" href="#" target="_blank" title="Trưởng ca xưởng sản xuất"> Trưởng ca xưởng sản xuất
+                                                            <span class="new">
+                                                                <font color="ff0000">
+                                                                    <font color="FF0000">(Mới)</font>
+                                                                </font>
+                                                            </span> </a>
+                                                    </div>
+                                                    <div class="caption">
+                                                        <a class="company-name" target="_blank" href="#" title="Cty CP Dược Phẩm Vĩnh Phúc">Cty CP Dược Phẩm Vĩnh Phúc</a>
+                                                        <div class="salary">
+                                                            <p><em class="fas fa-dollar-sign icon-caption"></em>Lương: Cạnh tranh</p>
+                                                        </div>
+                                                        <div class="location">
+                                                          <p><em class="fa fa-map-marker icon-caption"></em>Vĩnh Phúc </p> 
+                                                            
+                                                        </div>
+                                                        <ul class="welfare">
+                                                            <li><span class="fa fa-medkit icon-caption"></span>Chế độ bảo hiểm</li>
+                                                            <li><span class="fa fa-plane icon-caption"></span>Du Lịch</li>
+                                                            <li><span class="fas fa-dollar-sign icon-caption"></span>Chế độ thưởng</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="bottom-right-icon">
+                                                        <ul>
+                                                            <li><a class="toollips save-job chk_save_35B4B9E9 "
+                                                                    href="#"
+                                                                    >
+                                                                    <i class="far fa-heart icon-caption"></i>
+                                                                    <span class="text">Lưu việc làm</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="time"> <em class="fas fa-calendar-alt icon-caption"></em>
+                                                            <time>16/09/2020</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- job 3 -->
+                                        <div class="job-item">
+                                            <div class="figure">
+                                                <div class="image-company">
+                                                    <a href="#" target="_blank" title="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                        <img class="lazy-img" src="images/cty2.png" alt="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                    </a>
+                                                </div>
+                                                <div class="figcaption-company">
+                                                    <div class="title">
+                                                        <a class="job_link" href="#" target="_blank" title="Trưởng ca xưởng sản xuất"> Trưởng ca xưởng sản xuất
+                                                            <span class="new">
+                                                                <font color="ff0000">
+                                                                    <font color="FF0000">(Mới)</font>
+                                                                </font>
+                                                            </span> </a>
+                                                    </div>
+                                                    <div class="caption">
+                                                        <a class="company-name" target="_blank" href="#" title="Cty CP Dược Phẩm Vĩnh Phúc">Cty CP Dược Phẩm Vĩnh Phúc</a>
+                                                        <div class="salary">
+                                                            <p><em class="fas fa-dollar-sign icon-caption"></em>Lương: Cạnh tranh</p>
+                                                        </div>
+                                                        <div class="location">
+                                                          <p><em class="fa fa-map-marker icon-caption"></em>Vĩnh Phúc </p> 
+                                                            
+                                                        </div>
+                                                        <ul class="welfare">
+                                                            <li><span class="fa fa-medkit icon-caption"></span>Chế độ bảo hiểm</li>
+                                                            <li><span class="fa fa-plane icon-caption"></span>Du Lịch</li>
+                                                            <li><span class="fas fa-dollar-sign icon-caption"></span>Chế độ thưởng</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="bottom-right-icon">
+                                                        <ul>
+                                                            <li><a class="toollips save-job chk_save_35B4B9E9 "
+                                                                    href="#"
+                                                                    >
+                                                                    <i class="far fa-heart icon-caption"></i>
+                                                                    <span class="text">Lưu việc làm</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="time"> <em class="fas fa-calendar-alt icon-caption"></em>
+                                                            <time>16/09/2020</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- job4 -->
+                                        <div class="job-item">
+                                            <div class="figure">
+                                                <div class="image-company">
+                                                    <a href="#" target="_blank" title="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                        <img class="lazy-img" src="images/cty2.png" alt="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                    </a>
+                                                </div>
+                                                <div class="figcaption-company">
+                                                    <div class="title">
+                                                        <a class="job_link" href="#" target="_blank" title="Trưởng ca xưởng sản xuất"> Trưởng ca xưởng sản xuất
+                                                            <span class="new">
+                                                                <font color="ff0000">
+                                                                    <font color="FF0000">(Mới)</font>
+                                                                </font>
+                                                            </span> </a>
+                                                    </div>
+                                                    <div class="caption">
+                                                        <a class="company-name" target="_blank" href="#" title="Cty CP Dược Phẩm Vĩnh Phúc">Cty CP Dược Phẩm Vĩnh Phúc</a>
+                                                        <div class="salary">
+                                                            <p><em class="fas fa-dollar-sign icon-caption"></em>Lương: Cạnh tranh</p>
+                                                        </div>
+                                                        <div class="location">
+                                                          <p><em class="fa fa-map-marker icon-caption"></em>Vĩnh Phúc </p> 
+                                                            
+                                                        </div>
+                                                        <ul class="welfare">
+                                                            <li><span class="fa fa-medkit icon-caption"></span>Chế độ bảo hiểm</li>
+                                                            <li><span class="fa fa-plane icon-caption"></span>Du Lịch</li>
+                                                            <li><span class="fas fa-dollar-sign icon-caption"></span>Chế độ thưởng</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="bottom-right-icon">
+                                                        <ul>
+                                                            <li><a class="toollips save-job chk_save_35B4B9E9 "
+                                                                    href="#"
+                                                                    >
+                                                                    <i class="far fa-heart icon-caption"></i>
+                                                                    <span class="text">Lưu việc làm</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="time"> <em class="fas fa-calendar-alt icon-caption"></em>
+                                                            <time>16/09/2020</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- job5 -->
+                                        <div class="job-item">
+                                            <div class="figure">
+                                                <div class="image-company">
+                                                    <a href="#" target="_blank" title="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                        <img class="lazy-img" src="images/cty2.png" alt="Cty CP Dược Phẩm Vĩnh Phúc">
+                                                    </a>
+                                                </div>
+                                                <div class="figcaption-company">
+                                                    <div class="title">
+                                                        <a class="job_link" href="#" target="_blank" title="Trưởng ca xưởng sản xuất"> Trưởng ca xưởng sản xuất
+                                                            <span class="new">
+                                                                <font color="ff0000">
+                                                                    <font color="FF0000">(Mới)</font>
+                                                                </font>
+                                                            </span> </a>
+                                                    </div>
+                                                    <div class="caption">
+                                                        <a class="company-name" target="_blank" href="#" title="Cty CP Dược Phẩm Vĩnh Phúc">Cty CP Dược Phẩm Vĩnh Phúc</a>
+                                                        <div class="salary">
+                                                            <p><em class="fas fa-dollar-sign icon-caption"></em>Lương: Cạnh tranh</p>
+                                                        </div>
+                                                        <div class="location">
+                                                          <p><em class="fa fa-map-marker icon-caption"></em>Vĩnh Phúc </p> 
+                                                            
+                                                        </div>
+                                                        <ul class="welfare">
+                                                            <li><span class="fa fa-medkit icon-caption"></span>Chế độ bảo hiểm</li>
+                                                            <li><span class="fa fa-plane icon-caption"></span>Du Lịch</li>
+                                                            <li><span class="fas fa-dollar-sign icon-caption"></span>Chế độ thưởng</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="bottom-right-icon">
+                                                        <ul>
+                                                            <li><a class="toollips save-job chk_save_35B4B9E9 "
+                                                                    href="#"
+                                                                    >
+                                                                    <i class="far fa-heart icon-caption"></i>
+                                                                    <span class="text">Lưu việc làm</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="time"> <em class="fas fa-calendar-alt icon-caption"></em>
+                                                            <time>16/09/2020</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Phân trang -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         
+                    <div class="job-bottom-banner" style="text-align:center;">
+                    </div>
+                </div>
+                <div class="col-3">
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="page-footer font-small mdb-color pt-4 mt-3">
+
+    
+            <div class="container page-footer__bottom text-center text-md-left text-primary">
+          
+              
+              <div class="row text-center text-md-left mt-3 pb-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <img src="images/Logo.png" alt="" class="footer-img">    
+                </div>
+        
+                <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">VỀ CHÚNG TÔI</h6>
+                    <div class="text__info--title">
+                      <p>
+                        <a href="#!">Về Timvieclam.xyz</a>
+                      </p>
+                      <p>
+                        <a href="#!">Quy Chế</a>
+                      </p>
+                      <p>
+                        <a href="#!">Quy Định Bảo Mật</a>
+                      </p>
+                      <p>
+                        <a href="#!">Điều Khoản Xử Dụng</a>
+                      </p>
+                      <p>
+                        <a href="#!">Sơ Đồ Trang Web</a>
+                      </p>
+                  </div>
+                </div>
+          
+                <hr class="w-100 clearfix d-md-none">
+        
+                <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">CÔNG CỤ</h6>
+                    <div class="text__info--title">
+                      <p>
+                        <a href="#!">Cổng Tra Cứu Lương</a>
+                      </p>
+                      <p>
+                        <a href="#!">Góc Nghề Nghiệp</a>
+                      </p>
+                      <p>
+                        <a href="#!">Báo Giá</a>
+                      </p>
+                      <p>
+                        <a href="#!">Liên Hệ Tài Trợ Sự Kiện</a>
+                      </p>
+                  </div>
+                </div>
+                <hr class="w-100 clearfix d-md-none">
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">Liên Hệ</h6>
+                    <div class="text__info--address">
+                      <p>
+                        <i class="fas fa-home mr-3"></i> Tô Ký, Phường Tân Chánh Hiệp, Q12
+                      </p>
+                      <p>
+                        <i class="fas fa-envelope mr-3"></i> huynq156@gmail.com
+                      </p>
+                      <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+                      </p>
+                      <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89
+                      </p>
+                  </div>
+                </div>
+              </div>
+              <hr class="w-100 clearfix d-md-none">
+              
+              <div class="row page_footer--category">
+                <div class="col-md-3 text__info col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white">Việc Làm Theo Ngành Nghề</h6>
+                    <div class="text__info--title">
+                      <p>
+                        <a href="#!">Việc Làm Kinh Doanh</a>
+                      </p>
+                      <p>
+                        <a href="#!">Việc Làm Bán Hàng</a>
+                      </p>
+                      <p>
+                        <a href="#!">Việc Làm Kế Toán</a>
+                      </p>
+                      <p>
+                        <a href="#!">Chăm Sóc Khách Hàng</a>
+                      </p>
+                      <div class="text__info--all">
+                        <p>
+                          <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i class="fa fa-angle-double-right"></i>
+                        </p>
+                      </div>
+                  </div> 
+                </div>
+                <hr class="w-100 clearfix d-md-none">
+                <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">Việc Làm Công Ty</h6>
+                    <div class="text__info--title">
+                      <p>
+                        <a href="#!">VinFast Tuyển Dụng</a>
+                      </p>
+                      <p>
+                        <a href="#!">Timvieclam.xyz Tuyển Dụng</a>
+                      </p>
+                      <p>
+                        <a href="#!">Family Tuyển Dụng</a>
+                      </p>
+                      <p>
+                        <a href="#!">Nhà Tao Tuyển Dụng</a>
+                      </p>
+                      <div class="text__info--all">
+                        <p>
+                          <a class="text-primary"  href="#!">Xem Tất Cả</a>&nbsp;<i class="fa fa-angle-double-right"></i>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+                <hr class="w-100 clearfix d-md-none">
+                <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">VIỆC LÀM THEO TỈNH</h6>
+                    <div class="text__info--title">
+                      <p>
+                        <a href="#!">Việc Làm TPHCM</a>
+                      </p>
+                      <p>
+                        <a href="#!">Việc Làm Hà Nội</a>
+                      </p>
+                      <p>
+                        <a href="#!">Việc Làm Quảng Ngãi</a>
+                      </p>
+                      <p>
+                        <a href="#!">Việc Làm Vũng Tàu</a>
+                      </p>
+                      <div class="text__info--all">
+                        <p>
+                          <a class="text-primary"  href="#!">Xem Tất Cả</a>&nbsp;<i class="fa fa-angle-double-right"></i>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+                <hr class="w-100 clearfix d-md-none">
+                <div class="col-md-4 text__info col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white"> Việc Làm Hấp Dẫn</h6>
+                  
+                  <div class="text__info--title">
+                    <p>
+                      <a href="#!">Tìm Việc Làm</a>
+                    </p>
+                    <p>
+                      <a href="#!">Việc Làm Thêm</a>
+                    </p>
+                    <p>
+                      <a href="#!">Lao Động Phổ Thong</a>
+                    </p>
+                    <p>
+                      <a href="#!">Thực Tập Sinh</a>
+                    </p>
+                    <div class="text__info--all">
+                      <p>
+                        <a class="text-primary"  href="#!">Xem Tất Cả</a>&nbsp;<i class="fa fa-angle-double-right"></i>
+                      </p>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row d-flex align-items-center">
+                <div class="col-md-7 col-lg-8">
+                  <p class="text-center text-md-left">© 2020 Copyright:
+                    <a href="timvieclam.xyz">
+                      <strong> Timvieclam.xyz</strong>
+                    </a>
+                  </p>
+          
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0">
+        
+                  <div class="text-center text-md-right">
+                    <ul class="list-unstyled list-inline">
+                      <li class="list-inline-item">
+                        <a class="btn-floating--fb btn-sm rgba-white-slight mx-1">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="btn-floating--tw btn-sm rgba-white-slight mx-1">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="btn-floating--gg btn-sm rgba-white-slight mx-1">
+                          <i class="fab fa-google-plus-g"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="btn-floating--link btn-sm rgba-white-slight mx-1">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+
+
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+    $(".chosen").chosen();
+</script>
+</html>

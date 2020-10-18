@@ -1,0 +1,463 @@
+/* Thịnh */
+header {
+    width: 100%;
+    height: 80px;
+}
+.logo{
+width: 250px;
+float: left;
+margin: 20px 20px 20px 10px;
+}
+nav {
+  float: right;
+  margin: 20px 0px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  padding: 10px 7px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+nav ul li a:hover{
+  text-decoration: none;
+  width: 100%;
+}
+.fas.fa-user-plus {
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+}
+.menu-button--ntd{
+  border-radius: 4px;
+  background-color: #006caa;
+  font-weight: bold;
+  color: white;
+}
+/* Thịnh */
+
+/* Huy */
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    box-sizing: border-box;
+    position: relative;
+    
+  }
+  
+/* catalog */
+.container-catalog--top {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.container-catalog--top a {
+ text-decoration: none;
+ color: rgb(5, 58, 128);
+ font-weight: bold;
+ font-size: 15px;
+}
+.card-text--catalog {
+  font-style: italic;
+}
+
+.card.promoting-card {
+  width: 250px;
+}
+.rounded-circle {
+  height: 50px;
+  width: 50px;
+}
+.rounded-circle--bottom {
+  margin: 1px;
+  margin-top: 10px;
+  margin-left: -10px;
+  height: 30px;
+  width: 30px;
+}
+.card.promoting-card-bottom {
+  width: 50px;
+}
+/* kết thúc catalog */
+
+/* tìm kiếm công việc */
+
+
+
+.search_jobs .search_box{
+	position: relative;
+	width: 500px;
+  height: 55px;
+  
+}
+
+.search_jobs .search_box .input{
+	margin-top: 8px;	
+	width: 92%;
+	height: 80%;
+	padding: 10px 20px;
+	border-radius: 3px;
+  font-size: 18px;
+  border-radius: 14px;
+	outline: none;
+	color: #8b7d77;
+}
+
+.search_jobs .search_box .btn{
+	position: absolute;
+	width: 60px;
+	height: 100px;
+  background: #7690da;
+  border-radius: 14px;  
+}
+
+.search_jobs .search_box .btn:hover{
+	background: #166ef1;	
+}
+
+.search_jobs.search_jobs_top .search_box .btn{
+	width: 125px;
+	height: 45px;
+	top: 7px;
+	left: 93%;
+	color: #fff;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  
+}
+/* kết thúc tìm kiếm công việc */
+
+  /* content */
+  .content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color: #232d60;
+  }
+  .content p {
+    font-size: 15px;
+    
+    color: #6a7199;
+  }
+
+  .feature-img {
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+  }
+
+  /* search */
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.form-control {
+    max-width: 550px;
+}
+
+.future-img {
+  
+  left: 600px;
+  position: absolute;
+  bottom: 0;
+}
+.fas {
+  color: rgb(245, 180, 83);
+}
+.fas.fa-city {
+  color: black;
+}
+.fas.fa-chevron-down {
+  padding-left: 200px;
+}
+.fas.fa-angle-down {
+  padding-left: 80px;
+}
+
+.form-group--option {
+  padding-top: 15px;
+  
+}
+.form-control--left {
+  border-radius: 5px;
+  border-width: 2.5px;
+  border: 3px solid #00B4CC;
+  width: 300px;
+  height: 34px;
+  color: #9DBFAF;
+  padding-left: 30px;
+}
+.form-control--right {
+  border-radius: 5px;
+  border-width: 2.5px;
+  border: 3px solid #00B4CC;
+  width: 286px;
+  height: 34px;
+  color: #9DBFAF;
+  padding-left: 30px;
+}
+.search-dvanced a {
+  color: orange;
+  text-decoration: none;
+  padding-left: 220px;
+  font-style: italic;
+}
+
+/* box congviec */
+
+.box{
+  display: flex;
+  width: 100%;
+  height: 90px;
+  align-items:center;
+  justify-content:space-between;
+  margin: 0 auto ;
+  background-color: rgb(255, 255, 255);
+  border: #e7e7e7 solid 1px;
+  
+}
+.box a {
+  text-decoration: none;
+  color: rgb(12, 67, 129);
+}
+.box a:hover {
+  color: rgb(66, 114, 247);
+}
+.box-title {
+  width: 100%;
+  height: 50px;
+}
+.box.box_title--bottom {
+  border-radius: 5px;
+  padding-bottom: 7px;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(28, 159, 235);
+}
+.fas.fa-plus {
+  padding-left: 22px;
+  padding-top: 10px;
+  color: white;
+}
+.fas.fa-briefcase {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: black;
+} 
+ .box.box_title--bottom:hover {
+  background-color: rgb(10, 134, 107);
+ }
+
+/* kết thúc box congviec */
+
+/* việc làm hấp dẫn */
+
+.logo-doanh_nghiep {
+  max-width: 20%;
+  max-height: 100%;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  margin: 6px;
+}
+
+
+.card-body.card-body--uv {
+  padding-left: 130px;
+  height: 120px;
+}
+.card-body.card-body--uv h4 {
+  color: rgb(0, 102, 255);
+  font-size: 22px; 
+}
+.card-body.card-body--uv a {
+  font-family: Helvetica ;
+  text-decoration: none;
+  color: #1790d4;
+  font-size: 15px;
+}
+.card-body.card-body--uv a:hover {
+  text-decoration: none;
+  color: #23527c;
+}
+.card-body.card-body--uv p {
+  font-size: 14px;
+  line-height: 30px;
+}
+.card-jobs-uv:hover {
+  background-color: rgb(244, 255, 255);
+}
+
+
+/* kết thúc việc làm hấp dẫn */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+.text-uppercase {
+    font-family: 'Noto Serif', serif;
+}
+/* doanh nghiệp nổi bật */
+
+section{
+    padding:60px 0px;
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-size:13px;
+}
+
+.row-business--top img {
+    padding-left: 30px;
+    max-width: 120px;
+}
+.row-business--between img {
+    padding-left: 30px;
+    max-width: 120px;
+}
+
+/* kết thúc doanh nghiệp nổi bật */
+
+
+/* card */
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  overflow: hidden;
+  border-radius: 5px;
+
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .5s ease;
+  width: 100%;
+  height: 180px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  -webkit-transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
+  margin-top: 50px;
+}
+
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+}
+
+.text-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.card__image-avt {
+    margin-right: 270px;
+    max-width: 45px;
+    border-radius: 50%;
+    
+}
+.btn.btn--primary {
+    right: 200px;
+    position: absolute;
+    color: 	#b8ae9f;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.btn.btn--secondary {
+    position: absolute;
+    left: 260px;
+    color: orange;
+    font-size: 13px;
+    margin-top: 5px;
+
+}
+.btn.btn--secondary:hover {
+    color:rgb(206, 204, 199);
+    font-weight:bold;
+}
+/* card */
+
+
+.page-footer {
+    background-color: #1c375d;
+}
+.page-footer__bottom {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.footer-img {
+    max-width: 243px;
+    margin-top: 80px;
+    
+}
+.text__info a {
+    
+    color: #fff;
+    text-decoration: none;
+}
+.text__info a:hover {
+    color: #1b82f8;
+    /* font-weight:bold; */
+}
+.text__info--address {
+    color : orange;
+}
+
+.btn-floating--fb:hover {
+    color: #ffffff;
+    background-color: #1b82f8;
+}
+.btn-floating--tw:hover {
+    color: #ffffff;
+    background-color: #1bf8db;
+}
+.btn-floating--gg:hover {
+    color: #ffffff;
+    background-color: rgb(228, 74, 74);
+}
+.btn-floating--link:hover {
+    color: #ffffff;
+    background-color: rgb(74, 205, 228);
+}
+
+.fas {
+    color: orange;
+}
+
+/* Huy */
