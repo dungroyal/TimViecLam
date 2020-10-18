@@ -1,0 +1,58 @@
+
+  .logo-doanh_nghiep {
+    max-width: 20%;
+    max-height: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    margin: 6px;
+  }
+
+
+  .card-body.card-body--uv {
+    padding-left: 130px;
+    height: 120px;
+  }
+  .card-body.card-body--uv h4 {
+    color: rgb(0, 102, 255);
+    font-size: 22px; 
+  }
+  .card-body.card-body--uv a {
+    font-family: Helvetica ;
+    text-decoration: none;
+    color: #1790d4;
+    font-size: 15px;
+  }
+  .card-body.card-body--uv a:hover {
+    text-decoration: none;
+    color: #23527c;
+  }
+  .btn-login_uv {
+    background-color: rgb(0, 102, 255);
+  }
+  .card-body.card-body--uv p {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .card-uv:hover{
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
+  }
+  
+  
+  
+   /* thống kê */
+   .row-signup {
+    padding: 20px;
+    margin: 15px;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(250, 174, 61);
+}
+.row-signup h3 {
+    color: white;
+}
+.row-signup p {
+    color: white;
+}
