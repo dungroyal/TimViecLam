@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['assign.guard:admin', 'jwt.a
 });
 
 // Route dành cho ứng viên
-Route::group(['prefix' => 'ung-vien', 'middleware' => ['assign.guard:ungvien', 'jwt.auth']], function () {
+Route::group(['prefix' => 'ung-vien', 'middleware' => ['assign.guard:job_seeker', 'jwt.auth']], function () {
     Route::get('/me', function () {
         return response()->json([
             'guard' => 'Ứng viên',
@@ -42,11 +42,12 @@ Route::group(['prefix' => 'ung-vien', 'middleware' => ['assign.guard:ungvien', '
         ]);
     });
 
-    Route::post('logout', 'Api\UngVien\Auth\LoginController@logout');
+    Route::post('logout', 'Api\JobSeeker\Auth\LoginController@logout');
+    Route::get('job', 'Api\JobSeeker\JobController@index');
 });
 
 // Route dành Nhà tuyển dụng
-Route::group(['prefix' => 'nha-tuyen-dung', 'middleware' => ['assign.guard:nhatuyendung', 'jwt.auth']], function () {
+Route::group(['prefix' => 'nha-tuyen-dung', 'middleware' => ['assign.guard:employer', 'jwt.auth']], function () {
     Route::get('/me', function () {
         return response()->json([
             'guard' => 'Nhà tuyển dụng',
@@ -60,6 +61,6 @@ Route::group(['prefix' => 'nha-tuyen-dung', 'middleware' => ['assign.guard:nhatu
 
 
 // Test
+    Route::get('job', 'Api\JobSeeker\JobController@index');
 
-Route::get('data/search', 'SearchController@index');
 
