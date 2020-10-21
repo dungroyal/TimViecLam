@@ -4,7 +4,7 @@
   <img align="center" src="https://github.com/rajput2107/rajput2107/blob/master/Assets/Handshake.gif"height="33px" /></h3> 
 </div>
 
-<div align="center">Website tìm kiếm việc làm siêu siêu nhỏ do những chàng trai tốt bụng thực hiện, không phải dạng vừa đâu nha :v</div>
+<div align="center">Website Môi Giới Việc Làm, lấy tên là: “TìmViệcLàm.xyz”. Với mong muốn mang lại sự kết nối giữa nhà tuyển dụng và người tìm việc làm chặt chẽ hơn. Nhà tuyển dụng có thể tìm được ứng viên phù hợp nhất với yêu cầu đề ra, người tìm việc tìm được công việc yêu thích, phù hợp với mong muốn lẫn chuyên môn của mình. </div>
 
 ## Thành viên nhóm:
 
