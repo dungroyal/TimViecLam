@@ -1,5 +1,5 @@
 <div align="center">
-  <img align="center" src="Data\Design Logo\Logo.png"height="33px" /></h3> 
+  <img align="center" src="Data\images\Logo.png"height="33px" /></h3> 
   <h3 align="center">Project Tìm Việc Làm <br>
   <img align="center" src="https://github.com/rajput2107/rajput2107/blob/master/Assets/Handshake.gif"height="33px" /></h3> 
 </div>
@@ -12,6 +12,12 @@
     2️⃣ Nguyễn Quang Huy (Front End)
     3️⃣ Trần Quang Chánh (Front End)
     4️⃣ Nguyễn Quốc Thịnh (Front End)
+
+## Công nghệ được sử dụng
+
+<div align="center">
+  <img align="center" src="Data\images\TechnologyUsed.png"height="100%" />
+</div>
 
 ## Cài đặt project
 
