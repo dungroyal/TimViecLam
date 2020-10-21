@@ -1,13 +1,14 @@
-# TimViecLam
+## TimViecLam
 Website tìm kiếm việc làm siêu siêu nhỏ do những chàng trai tốt bụng thực hiện, không phải dạng vừa đâu nha :v
+### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50">
 
-# Thành viên nhóm:
+## Thành viên nhóm:
     1. Đoàn Quốc Dũng - doanquocdung55@gmail.com (Trưởng nhóm)
     2. Nguyễn Quang Huy
     3. Trần Quang Chánh
     4. Nguyễn Quốc Thịnh
-    
-# Cài đặt project
+
+## Cài đặt project
 Mở Terminal và thực hiện: 
     1. git clone https://github.com/dungroyal/TimViecLam.git || Bỏ qua nếu bạn đã dowload source code.
     2. composer install
