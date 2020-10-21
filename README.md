@@ -23,6 +23,6 @@
     6. Tạo databse với tên: db_timvieclam 
     7. php artisan migrate 
     8. php artisan db:seed 
-    9. php artisans serve
+    9. php artisan serve
 
 <div align="center">Thank You For Watching <3</div>
