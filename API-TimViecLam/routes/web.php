@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 |--------------------------------------------------------------------------
 */
 
-Auth::routes();
+// Auth::routes();
 // Router Home Page -----------------------------------------------------------------
-Route::get('/', 'home\HomeController@index');
+// Route::get('/', 'home\HomeController@index');
 
 // Router Single Page ---------------------------------------------------------------
-Route::get('nha-tuyen-dung/{any?}', 'AppController@employer')->where('any', '.*');
-Route::get('trang-ca-nhan/{any?}', 'AppController@job_seeker')->where('any', '.*');
+// Route::get('nha-tuyen-dung/{any?}', 'AppController@employer')->where('any', '.*');
+// Route::get('trang-ca-nhan/{any?}', 'AppController@job_seeker')->where('any', '.*');
