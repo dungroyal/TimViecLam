@@ -16,7 +16,7 @@
 ## Công nghệ được sử dụng
 
 <div align="center">
-  <img align="center" src="Data\images\TechnologyUsed.png"height="100%" />
+  <img align="center" src="Data\images\TechnologyUsed.png"/>
 </div>
 
 ## Cài đặt project
