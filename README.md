@@ -8,10 +8,10 @@
 
 ## Thành viên nhóm:
 
-    1️⃣ Đoàn Quốc Dũng - doanquocdung55@gmail.com (Trưởng nhóm)
-    2️⃣ Nguyễn Quang Huy
-    3️⃣ Trần Quang Chánh
-    4️⃣ Nguyễn Quốc Thịnh
+    1️⃣ Đoàn Quốc Dũng (Project Manager - Full Stack)
+    2️⃣ Nguyễn Quang Huy (Front End)
+    3️⃣ Trần Quang Chánh (Front End)
+    4️⃣ Nguyễn Quốc Thịnh (Front End)
 
 ## Cài đặt project
 
