@@ -34,6 +34,9 @@ class uvController extends Controller
 
     function ho_so_ung_vien()
     {
-        return view('ungvien.page.hoSoUngVien');
+        $info_uv=DB::table('hosoungvien')
+            ->where('hosoungvien.idUngVien','=',Auth::guard('ungvien')->user()->id)
+            ->get();
+        return view('ungvien.page.hoSoUngVien',['info_uv'=>$info_uv ]);
     }
 }

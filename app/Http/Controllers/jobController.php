@@ -23,7 +23,8 @@ class jobController extends Controller
         ->join('hosocongty', 'nhatuyendung.id', '=', 'hosocongty.idNhaTuyenDung')
         ->select('congviec.*', 'nhatuyendung.tenCty', 'nhatuyendung.id AS idNTD', 'hosocongty.logoCty')
         ->get();
-        return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
+        return $job;
+        // return view('home.job',['list_job'=>$job,'Nghanhnghe'=>$this->nganhnghe,'tinhThanhPho'=>$this->tinh]);
     }
 
     function job_by_congviec($id)
