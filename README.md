@@ -3,7 +3,7 @@ Website tìm kiếm việc làm siêu siêu nhỏ do những chàng trai tốt b
 
 # Cách cài đặt
 ==> Mở Terminal và thực hiện: 
-  1. git clone https://github.com/dungroyal/TimViecLam.git
+  1. git clone https://github.com/dungroyal/TimViecLam.git || Bỏ qua nếu bạn đã dowload source code.
   2. composer install
   3. npm install
   4. cp .env.example .env
