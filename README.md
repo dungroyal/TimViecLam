@@ -5,7 +5,6 @@
 </div>
 
 <div align="center">Website tìm kiếm việc làm siêu siêu nhỏ do những chàng trai tốt bụng thực hiện, không phải dạng vừa đâu nha :v</div>
-### <img src="Data\Design Logo\Logo.png" width="200">
 
 ## Thành viên nhóm:
 
