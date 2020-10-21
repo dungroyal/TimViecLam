@@ -24,3 +24,5 @@
     7. php artisan migrate 
     8. php artisan db:seed 
     9. php artisans serve
+
+<div align="center">Thank You For Watching <3</div>
