@@ -1,5 +1,6 @@
 <div align="center">
-  <h3 align="center">Project Tìm Việc Làm<img align="center" src="https://github.com/rajput2107/rajput2107/blob/master/Assets/Handshake.gif" height="33px" /></h3> 
+  <h3 align="center">Project Tìm Việc Làm <br>
+  <img align="center" src="https://github.com/rajput2107/rajput2107/blob/master/Assets/Handshake.gif"height="33px" /></h3> 
 </div>
 
 Website tìm kiếm việc làm siêu siêu nhỏ do những chàng trai tốt bụng thực hiện, không phải dạng vừa đâu nha :v
