@@ -1,4 +1,7 @@
-## TimViecLam
+<div align="center">
+  <h3 align="center">Connect with me<img align="center" src="https://github.com/rajput2107/rajput2107/blob/master/Assets/Handshake.gif" height="33px" /></h3> 
+</div>
+
 Website tìm kiếm việc làm siêu siêu nhỏ do những chàng trai tốt bụng thực hiện, không phải dạng vừa đâu nha :v
 ### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50">
 
