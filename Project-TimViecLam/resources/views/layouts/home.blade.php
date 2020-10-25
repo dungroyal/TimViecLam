@@ -13,18 +13,19 @@
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
     <!-- Style -->
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('home/css/t_style.css') }}" rel="stylesheet">
   </head>
 </head>
 <body>
   <header class="container">
-    <a href="index.html"><img class="logo" src="{{ asset('home/images/Logo.png') }}" alt=""></a>
+    <a href="/"><img class="logo" src="{{ asset('home/images/Logo.png') }}" alt=""></a>
     <nav>
         <ul>
             <li>
-                <a href="#">Việc Làm</a>
+                <a href="/job">Việc Làm</a>
             </li>
             <li>
-              <a href="#">Góc Nghề Nghiệp</a>
+              <a href="/blog">Góc Nghề Nghiệp</a>
           </li>
             <li>
               <a href="taikhoan-uv.html"class="menu-button--dk">Tài khoản</a>
@@ -245,8 +246,8 @@
     </div>
   </footer>
 
-  <script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="plugin/jquery/jquery-3.5.1.min.js"></script>
+  <script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

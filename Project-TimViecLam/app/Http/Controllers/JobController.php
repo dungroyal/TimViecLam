@@ -14,6 +14,6 @@ class JobController extends Controller
 
     public function index()
     {
-        return "JOB";
+        return view('home/job');
     }    
 }

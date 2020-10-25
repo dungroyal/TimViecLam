@@ -15,20 +15,18 @@
             </div>
         </div>
         <div class="form-group--option">
-            <select class="form-control--left">
-                <option>Ngành Nghề</option>
-                <option>Bơm Bánh Xe Lửa</option>
-                <option>Đánh Răng Cho Sư Tử</option>
-                <option>Thiết Kế Website</option>
-                <option>Cơ Khí</option>
+            <select name="careers" id="careers" class="form-control--left">
+                <option value="0">Chọn nghành nghề</option>
+                @foreach ($careers as $career)
+                    <option value="{{$career->id}}">{{$career->name}}</option>
+                @endforeach
             </select>
 
             <select class="form-control--right">
-                <option>Vị Trí</option>
-                <option>TP Hồ Chí Minh</option>
-                <option>Hà Nội</option>
-                <option>Quảng Ngãi</option>
-                <option>Đà Nẳng</option>
+                <option  value="0">Vị Trí</option>
+                @foreach ($db_city as $db_city)
+                    <option value="{{$db_city->matp}}">{{$db_city->name}}</option>
+                @endforeach
             </select>
         </div>
         <div class="search-dvanced">
@@ -36,68 +34,31 @@
         </div>
         <img src="https://www.openthenews.com/wp-content/uploads/2020/07/AI-aggregator.png" class="feature-img">
     </div>
-    <div class="bg-light">
-        <br>
-        <br>
-        <br>
+    <div class="bg-light mt-2 py-5">
         <h4 class="mb-4" style="text-align: center;"><i class="fas fa-city">&nbsp; TOP NGÀNH NGHỀ PHỔ BIẾN</i></h4>
         <div class="container container-catalog--top">
+            @foreach ($careers as $careers)
+            @continue($loop->index == 0)
             <div class="card promoting-card mr-3">
                 <div class="card-body d-flex">
                     <img src="{{ asset('home/images/catalog.png') }}" class="rounded-circle mr-3" alt="avatar">
                     <div>
-                        <a href="">Tư vấn và chăm sóc</a>
+                        <a href="">{{$careers->name}}</a>
                         <p class="card-text card-text--catalog ">(1111 việc đang tuyển)</p>
                     </div>
                 </div>
             </div>
-
-            <div class="card promoting-card mr-3">
-                <div class="card-body d-flex">
-                    <img src="{{ asset('home/images/catalog.png') }}" class="rounded-circle mr-3" alt="avatar">
-                    <div>
-                        <a href="">Tư vấn và chăm sóc</a>
-                        <p class="card-text card-text--catalog">(1111 việc đang tuyển)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card promoting-card mr-2">
-                <div class="card-body d-flex">
-                    <img src="{{ asset('home/images/catalog.png') }}" class="rounded-circle mr-3" alt="avatar">
-                    <div>
-                        <a href="">Tư vấn và chăm sóc</a>
-                        <p class="card-text card-text--catalog">(1111 việc đang tuyển)</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="card promoting-card mr-2">
-                <div class="card-body d-flex">
-                    <img src="{{ asset('home/images/catalog.png') }}" class="rounded-circle mr-3" alt="avatar">
-                    <div>
-                        <a href="">Tư vấn và chăm sóc</a>
-                        <p class="card-text card-text--catalog">(1111 việc đang tuyển)</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
+            @break($loop->index == 3)
+            @endforeach
             <div class="card promoting-card-bottom mr-2">
                 <div class="card-body d-flex">
-
                     <a href="">
                         <img src="{{ asset('home/images/plus.png') }}" class="rounded-circle--bottom" alt="avatar">
                     </a>
-
                 </div>
-
             </div>
-
         </div>
+    </div>
 
 
         <div class="container header header-bottom">
