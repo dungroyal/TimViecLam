@@ -72,7 +72,9 @@ nav ul li a:hover{
     position: relative;
     
   }
-  
+/* test */
+
+/* end */
 /* catalog */
 
 .container-catalog--top {
@@ -89,7 +91,22 @@ nav ul li a:hover{
 .card-text--catalog {
   font-style: italic;
 }
-
+.background-color-container{
+  background: #eff3f6;
+}
+.title-catalog-top{
+    font-family: fontlinear!important;
+    speak-as: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .card.promoting-card {
   width: 250px;
 }
@@ -123,7 +140,7 @@ nav ul li a:hover{
 /* tìm kiếm công việc */
 .search_jobs .search_box{
 	position: relative;
-	width: 500px;
+	width: 530px;
   height: 55px;
 }
 .search_jobs .search_box .input{
@@ -222,28 +239,26 @@ nav ul li a:hover{
 .fas.fa-angle-down {
   padding-left: 80px;
 }
-
 .form-group--option {
   padding-top: 15px;
-  
 }
 .form-control--left {
-  border-radius: 5px;
+  border-radius: 10px;
   border-width: 2.5px;
   border: 3px solid #00B4CC;
   width: 300px;
-  height: 34px;
+  height: 40px;
   color: #9DBFAF;
-  padding-left: 30px;
+
 }
 .form-control--right {
-  border-radius: 5px;
+  border-radius: 10px;
   border-width: 2.5px;
   border: 3px solid #00B4CC;
   width: 286px;
-  height: 34px;
+  height: 40px;
   color: #9DBFAF;
-  padding-left: 30px;
+
 }
 .search-dvanced a {
   color: orange;
