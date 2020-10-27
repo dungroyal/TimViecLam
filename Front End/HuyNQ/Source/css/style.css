@@ -832,4 +832,50 @@ background-color: #076d9c;
         _||_|| _||_||
        (__|__|(__|__| */
 
+/* Thỏa thuận sử dụng */
+.ttsd__tvl {
+  background-color: white;
+}
+.ttsd__tvl h5 {
+  font-size: 17px;
+}
+.ttsd__tvl p {
+  font-size: 14px;
+  font-style: inherit;
+}
+.title-ttsd_tvl h5 {
+  font-size: 25px;
+}
+
+/* Kết thúc Thỏa thuận sử dụng */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+       
+/* Quy định bảo mật */
+.security__tvl {
+  background-color: white;
+}
+.security__tvl h5 {
+  font-size: 20px;
+}
+.security__tvl p {
+  font-size: 14px;
+  font-style: inherit;
+}
+.title-security_tvl h5 {
+  font-size: 25px;
+}
+/* Kết thúc quy định bảo mật */
+
+
+
 /* Huydeptrai */
