@@ -1,0 +1,881 @@
+/* Thịnh */
+:root{
+  --while: #ffffff;
+  --Blue: #006CAA;
+  --Blue-While: #18A3E8;
+  --Orange: #F38121;
+}
+header {
+    width: 100%;
+    height: 80px;
+}
+.logo{
+width: 250px;
+float: left;
+margin: 20px 20px 20px 10px;
+}
+nav {
+  float: right;
+  margin: 20px 0px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  padding: 10px 7px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+nav ul li a:hover{
+  text-decoration: none;
+  width: 100%;
+}
+.fas.fa-user-plus {
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+}
+.menu-button--ntd{
+  border-radius: 4px;
+  background-color: #006caa;
+  font-weight: bold;
+  color: white;
+}
+/* Thịnh */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* Huy */
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    box-sizing: border-box;
+    position: relative;
+    
+  }
+/* test */
+
+.items {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 100px
+}
+
+.slick-slide {
+  margin: 10px
+}
+
+.slick-slide img {
+  width: 100%;
+  border: 0px solid #fff
+}
+
+/* end */
+/* catalog */
+
+.container-catalog--top {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.container-catalog--top a {
+ text-decoration: none;
+ color: rgb(5, 58, 128);
+ font-weight: bold;
+ font-size: 15px;
+}
+.card-text--catalog {
+  font-style: italic;
+}
+.background-color-container{
+  background: #eff3f6;
+}
+.title-catalog-top{
+    font-family: fontlinear!important;
+    speak-as: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.card.promoting-card {
+  width: 250px;
+}
+.rounded-circle {
+  height: 50px;
+  width: 50px;
+}
+.rounded-circle--bottom {
+  margin: 1px;
+  margin-top: 10px;
+  margin-left: -10px;
+  height: 30px;
+  width: 30px;
+}
+.card.promoting-card-bottom {
+  width: 50px;
+}
+/* kết thúc catalog */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* tìm kiếm công việc */
+.search_jobs .search_box{
+	position: relative;
+	width: 530px;
+  height: 55px;
+}
+.search_jobs .search_box .input{
+	margin-top: 8px;	
+	width: 92%;
+	height: 80%;
+	padding: 10px 20px;
+	border-radius: 3px;
+  font-size: 18px;
+  border-radius: 14px;
+	outline: none;
+	color: #8b7d77;
+}
+
+.search_jobs .search_box .btn{
+	position: absolute;
+	width: 60px;
+	height: 100px;
+  background: #7690da;
+  border-radius: 14px;  
+}
+
+.search_jobs .search_box .btn:hover{
+	background: #166ef1;	
+}
+
+.search_jobs.search_jobs_top .search_box .btn{
+	width: 125px;
+	height: 45px;
+	top: 7px;
+	left: 93%;
+	color: #fff;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  
+}
+/* kết thúc tìm kiếm công việc */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+       
+
+  /* content */
+  .content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color: #232d60;
+  }
+  .content p {
+    font-size: 15px;
+    
+    color: #6a7199;
+  }
+
+  .feature-img {
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+  }
+
+  /* search */
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.form-control {
+    max-width: 550px;
+}
+
+.future-img {
+  
+  left: 600px;
+  position: absolute;
+  bottom: 0;
+}
+.fas {
+  color: rgb(245, 180, 83);
+}
+.fas.fa-city {
+  color: black;
+}
+.fas.fa-chevron-down {
+  padding-left: 200px;
+}
+.fas.fa-angle-down {
+  padding-left: 80px;
+}
+.form-group--option {
+  padding-top: 15px;
+}
+.form-control--left {
+  border-radius: 10px;
+  border-width: 2.5px;
+  border: 3px solid #00B4CC;
+  width: 300px;
+  height: 40px;
+  color: #9DBFAF;
+
+}
+.form-control--right {
+  border-radius: 10px;
+  border-width: 2.5px;
+  border: 3px solid #00B4CC;
+  width: 286px;
+  height: 40px;
+  color: #9DBFAF;
+
+}
+.search-dvanced a {
+  color: orange;
+  text-decoration: none;
+  padding-left: 220px;
+  font-style: italic;
+}
+
+/* box congviec */
+
+.box{
+  display: flex;
+  width: 100%;
+  height: 90px;
+  align-items:center;
+  justify-content:space-between;
+  margin: 0 auto ;
+  background-color: rgb(255, 255, 255);
+  border: #e7e7e7 solid 1px;
+  
+}
+.box a {
+  text-decoration: none;
+  color: rgb(12, 67, 129);
+}
+.box a:hover {
+  color: rgb(66, 114, 247);
+}
+.box-title {
+  width: 100%;
+  height: 50px;
+}
+.box.box_title--bottom {
+  border-radius: 5px;
+  padding-bottom: 7px;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(28, 159, 235);
+}
+.fas.fa-plus {
+  padding-left: 22px;
+  padding-top: 10px;
+  color: white;
+}
+.fas.fa-briefcase {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: black;
+} 
+ .box.box_title--bottom:hover {
+  background-color: rgb(10, 134, 107);
+ }
+
+/* kết thúc box congviec */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* việc làm hấp dẫn */
+
+.logo-doanh_nghiep {
+  max-width: 20%;
+  max-height: 100%;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  margin: 6px;
+}
+
+
+.card-body.card-body--uv {
+  padding-left: 130px;
+  height: 120px;
+}
+.card-body.card-body--uv h4 {
+  color: rgb(0, 102, 255);
+  font-size: 22px; 
+}
+.card-body.card-body--uv a {
+  font-family: Helvetica ;
+  text-decoration: none;
+  color: #1790d4;
+  font-size: 15px;
+}
+.card-body.card-body--uv a:hover {
+  text-decoration: none;
+  color: #23527c;
+}
+.card-body.card-body--uv p {
+  font-size: 14px;
+  line-height: 30px;
+}
+.card-jobs-uv:hover {
+  background-color: rgb(244, 255, 255);
+}
+/* kết thúc việc làm hấp dẫn */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+.text-uppercase {
+    font-family: 'Noto Serif', serif;
+}
+/* doanh nghiệp nổi bật */
+
+section{
+    padding:60px 0px;
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-size:13px;
+}
+
+.row-business--top img {
+    padding-left: 30px;
+    max-width: 120px;
+}
+.row-business--between img {
+    padding-left: 30px;
+    max-width: 120px;
+}
+
+/* kết thúc doanh nghiệp nổi bật */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* card tin tức */
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  overflow: hidden;
+  border-radius: 5px;
+
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .5s ease;
+  width: 100%;
+  height: 180px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  -webkit-transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
+  margin-top: 50px;
+}
+
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+}
+
+.text-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.card__image-avt {
+    margin-right: 270px;
+    max-width: 45px;
+    border-radius: 50%;
+    
+}
+.btn.btn--primary {
+    right: 200px;
+    position: absolute;
+    color: 	#b8ae9f;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.btn.btn--secondary {
+    position: absolute;
+    left: 260px;
+    color: orange;
+    font-size: 13px;
+    margin-top: 5px;
+
+}
+.btn.btn--secondary:hover {
+    color:rgb(206, 204, 199);
+    font-weight:bold;
+}
+/* kết thúc card tin tức */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* footer */
+
+.page-footer {
+    background-color: #1c375d;
+}
+.page-footer__bottom {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.footer-img {
+    max-width: 243px;
+    margin-top: 80px;
+    
+}
+.text__info a {
+    
+    color: #fff;
+    text-decoration: none;
+}
+.text__info a:hover {
+    color: #1b82f8;
+    /* font-weight:bold; */
+}
+.text__info--address {
+    color : orange;
+}
+
+.btn-floating--fb:hover {
+    color: #ffffff;
+    background-color: #1b82f8;
+}
+.btn-floating--tw:hover {
+    color: #ffffff;
+    background-color: #1bf8db;
+}
+.btn-floating--gg:hover {
+    color: #ffffff;
+    background-color: rgb(228, 74, 74);
+}
+.btn-floating--link:hover {
+    color: #ffffff;
+    background-color: rgb(74, 205, 228);
+}
+
+.fas {
+    color: orange;
+}
+/* kết thúc footer */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+
+/* Tài khoản ứng viên */
+.card-img-top {
+  width: 170px;
+  height: 170px;
+  padding: 20px;
+  position: absolute;
+}
+.card-body.card-body--uvien {
+  padding-left: 180px; 
+}
+.card-body.card-body--uvien h4 {
+  color: rgb(0, 102, 255);
+  font-size: 22px; 
+}
+.card-body.card-body--uvien a {
+  text-decoration: none;
+  color: white;
+}
+.btn-login_uvien {
+  background-color: rgb(0, 102, 255);
+}
+.card-body.card-body--uvien p {
+  font-size: 14px;
+  line-height: 15px;
+}
+.btn-login_uvien:hover {
+  background-color: rgb(2, 74, 182);
+}
+.card-uvien:hover{
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(7, 51, 197, 0.5);
+}
+.card-body.card-body--ntd {
+  padding-left: 180px; 
+}
+.card-body.card-body--ntd h4 {
+  color: rgb(241, 55, 55);
+  font-size: 22px; 
+}
+.card-body.card-body--ntd p {
+  font-size: 14px;
+  line-height: 15px;
+}
+.far.fa-check-circle {
+  margin-right: 5px;
+  color: rgb(122, 255, 173);
+}
+.card-body.card-body--ntd a {
+  text-decoration: none;
+  color: white;
+}
+.btn-login_ntd {
+  background-color: rgb(224, 104, 35);
+}
+.btn-login_ntd:hover {
+  background-color: rgb(182, 67, 1);
+}
+.card-ntd:hover{
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(7, 51, 197, 0.5);
+}
+
+/* Kết Thúc Tài khoản ứng viên */
+
+/* WWWWWW||WWWWWW
+    W W W||W W W
+          ||
+        ( OO )__________
+        /  |           \
+        /o o| TIMVIECLAM \
+        \___/||_||__||_|| *
+            || ||  || ||
+            _||_|| _||_||
+          (__|__|(__|__| */
+
+/* đăng ký tài khoản ứng viên */
+.card-body__signup-uv {
+  border-radius: 1%;
+}
+.logo__tvl-signup--uv img {
+  width: 40%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+}
+
+.submit__signup-uv {
+  margin-top: 5%;
+  background-color: #076d9c;
+  color: white;
+}
+.submit__signup-uv:hover {
+  background-color: #03425f;
+  color: white;
+}
+.submit__signup-uv--btn-facebook {
+  background-color: rgb(26, 95, 223);
+  color: white;
+}
+.submit__signup-uv--btn-facebook:hover {
+  background-color: rgb(17, 68, 163);
+  color: white;
+}
+.submit__signup-uv--btn-google {
+  background-color: red;
+  color: white;
+}
+.submit__signup-uv--btn-google:hover {
+  background-color: rgb(182, 11, 11);
+  color: white;
+}
+
+
+
+/* Kết thúc đăng ký ứng viên */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* Đăng nhập ứng viên */
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+.bg_login-uv {
+/* background: rgb(57,174,231);
+background: linear-gradient(90deg, rgba(57,174,231,1) 11%, rgba(25,199,235,1) 38%, rgba(33,194,236,1) 59%, rgba(101,177,237,1) 100%); */
+background-image: url(https://cdn.pixabay.com/photo/2016/04/07/17/49/aircraft-1314333_1280.png);
+max-width: 100%;
+height: 700px;
+
+}
+.card-title__signup-uv {
+  margin-bottom: 70%;
+  color: #fff;
+}
+.card-title__signup-uv p {
+  font-size: 18px;
+}
+.card-title--uv {
+    margin-left: 5%;
+    margin-top: 5%;
+    color: rgb(250, 250, 250);
+}
+.card-title--uv p {
+  font-size: 17px;
+}
+.card_login-uv {
+  border: 0;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.card_login-uv .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card_login-uv .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+.logo__tvl-login--uv img {
+max-width: 50%;
+margin-left: 25%;
+margin-bottom: 7%;
+}
+.form-signin__login-uv {
+height: 40%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+
+.card_login-uv{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 10%;
+width: 33%;
+/* background-color: rgba(255, 255, 255, 0.5) !important; */
+background-color: #ffff;
+}
+
+.input-group-prepend span{
+background-color: rgb(255, 255, 255);
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.login_btn{
+color: white;
+background-color: #04a4ee;
+width: 100%;
+}
+
+.login_btn:hover{
+color: white;
+background-color: #076d9c;
+}
+
+.fas.fa-user {
+  color: rgb(9, 137, 201);
+}
+.fas.fa-key {
+  color: rgb(9, 137, 201);
+}
+.forgotpassword__login-uv a {
+  text-decoration: none;
+  color: rgb(132, 134, 136);
+}
+
+.card__login-uv--bottom {
+  margin-top: -3%;
+  margin-left: 58.7%;
+  width: 33%;
+}
+.text__login-uv--bottom a {
+  text-decoration: none;
+  color: rgb(2, 146, 241);
+}
+/* Kết thúc đăng nhập ứng viên */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+
+/* Thỏa thuận sử dụng */
+.ttsd__tvl {
+  background-color: white;
+}
+.ttsd__tvl h5 {
+  font-size: 17px;
+}
+.ttsd__tvl p {
+  font-size: 14px;
+  font-style: inherit;
+}
+.title-ttsd_tvl h5 {
+  font-size: 25px;
+}
+
+/* Kết thúc Thỏa thuận sử dụng */
+
+/* WWWWWW||WWWWWW
+ W W W||W W W
+      ||
+    ( OO )__________
+     /  |           \
+    /o o| TIMVIECLAM \
+    \___/||_||__||_|| *
+         || ||  || ||
+        _||_|| _||_||
+       (__|__|(__|__| */
+       
+/* Quy định bảo mật */
+.security__tvl {
+  background-color: white;
+}
+.security__tvl h5 {
+  font-size: 20px;
+}
+.security__tvl p {
+  font-size: 14px;
+  font-style: inherit;
+}
+.title-security_tvl h5 {
+  font-size: 25px;
+}
+/* Kết thúc quy định bảo mật */
+
+
+
+/* Huydeptrai */
