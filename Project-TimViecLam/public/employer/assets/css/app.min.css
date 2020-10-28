@@ -409,8 +409,8 @@ body[data-sidebar=dark] .logo-light {
 }
 
 #sidebar-menu .has-arrow:after {
-    content: "\F0140";
-    font-family: 'Material Design Icons';
+    content: "\ec89";
+    font-family: 'boxicons';
     display: block;
     float: right;
     -webkit-transition: -webkit-transform .2s;
@@ -1111,26 +1111,26 @@ body[data-sidebar=dark] .menu-title {
 }
 
 #preloader {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: #fff;
-    z-index: 9999
+    z-index: 50;
 }
 
 #status {
     width: 40px;
     height: 40px;
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     margin: -20px 0 0 -20px
 }
 
 .spinner-chase {
-    margin: 0 auto;
+    margin: -250px auto;
     width: 40px;
     height: 40px;
     position: relative;
@@ -4146,3 +4146,4 @@ input[switch=dark]:checked+label {
     right: 0;
     top: 12px
 }
+

@@ -489,3 +489,7 @@ button {
 .custom-progess .progress-icon .avatar-title {
     background: #fff
 }
+
+.main-content{
+    position: relative;
+}

@@ -11,12 +11,14 @@
 
         <!-- BootStrap 4 -->
         <link href="plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
 
         <!-- CSS -->
         <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\custom.min.css" rel="stylesheet" type="text/css">
-
+        <link href="assets\css\style.css" rel="stylesheet" type="text/css">
+        
+        <!-- Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body data-sidebar="dark">
         <div id="layout-wrapper">
@@ -35,7 +37,7 @@
                             </a>
                         </div>
                         <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
-                            <i class="fa fa-fw fa-bars"></i>
+                            <i class="bx bxs-dock-left font-weight-bold"></i>
                         </button>
 
                     </div>
@@ -248,7 +250,18 @@
             <!-- Start right Content here -->
             <!-- ============================================================== -->
             <div class="main-content">
-
+                <div id="preloader">
+                    <div id="status">
+                        <div class="spinner-chase">
+                            <img src="../images/logo/favicon.png" id="preloader-logo__spinder" alt="Logo" height="30">
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="page-content">
                     <div class="container-fluid">
 
@@ -256,7 +269,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Quản lý chung</h4>
+                                    <h4 class="mb-0 font-size-18">Quản lý chung <i class="fal fa-address-card"></i></h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
