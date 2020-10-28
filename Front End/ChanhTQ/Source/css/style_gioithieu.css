@@ -1,0 +1,89 @@
+/* phần trong hệ thống */
+<style type="text/css">body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    }
+    a:link {text-decoration:none}
+    a:visited {text-decoration:none}
+    a:hover {text-decoration:none}
+
+
+    .serviceBox {
+    padding: 15px 15px 25px;
+    margin:40px auto 0;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background:#fff;
+    border:1px solid #008b8b;
+    border-bottom-width:3px ;
+    position:relative;
+    }
+
+    .serviceBox .service-icon{
+    width:70px;
+    height:70px;
+    line-height:70px;
+    border-radius:4px;
+    border:1px solid #008b8b;
+    background:#fff;
+    color:#008b8b;
+    margin:-48px auto 20px;
+    }
+    .serviceBox .service-icon i {
+    display: inline-block;
+    font-size:3em;
+    line-height:70px;
+    }
+    .serviceBox:hover .service-icon{
+    background:#008b8b;
+    color:#fff;
+    }
+    .serviceBox h3 {
+    font-size: 20px;
+    font-weight:normal;
+    letter-spacing:0.7px;
+    position: relative;
+    margin:20px 0 10px 0;
+    padding:10px 0;
+    background:none;
+    overflow:hidden;
+    color:#555;
+    }
+
+    .serviceBox h3:before{
+    content:&quot;&quot;;
+    background:#008b8b;
+    width:0;
+    height:2px;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    }
+    .serviceBox h3:after{
+    content:&quot;&quot;;
+    background:#008b8b;
+    width:0;
+    height:2px;
+    position:absolute;
+    bottom:0;
+    right:50%;
+    }
+    .serviceBox:hover h3:after,.serviceBox:hover h3:before{
+    width:100%;
+    }
+    .serviceBox,.service-icon,.serviceBox .service-icon i,.serviceBox h3:before,.serviceBox h3:after,.serviceBox .read{
+    transition: all 0.5s ease-in-out;
+    }
+    .serviceBox p {
+    font-size: 14px;
+    margin:0 0 15px;
+    }
+    .serviceBox .read{
+    color:#008b8b;
+    }
+    @media screen and (max-width: 990px){
+    .serviceBox{
+    margin:60px auto 0;
+    }
+    }</style>
