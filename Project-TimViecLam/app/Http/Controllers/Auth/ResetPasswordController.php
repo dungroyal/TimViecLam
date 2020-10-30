@@ -20,11 +20,18 @@ class ResetPasswordController extends Controller
     */
 
     use ResetsPasswords;
-
     /**
      * Where to redirect users after resetting their password.
      *
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+    
+
+    public function showResetForm(Request $request, $token = null)
+    {
+        return view('auth.job_seeker.passwords.reset')->with(
+            ['token' => $token, 'email' => $request->email]
+        );
+    }
 }

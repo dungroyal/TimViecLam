@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
+
 // Router Home Page -----------------------------------------------------------------
 // Route::get('/', 'home\HomeController@index');
 
@@ -19,6 +20,13 @@ Auth::routes();
 // Route::get('trang-ca-nhan/{any?}', 'AppController@job_seeker')->where('any', '.*');
 
 
-// ====================== HOME ======================
+// Route::group(['prefix' => '/'], function () {
+//     Route::get('login','Auth\Job_Seeker\LoginController@showLoginForm');
+//     Route::post('login','Auth\Job_Seeker\LoginController@login');
+//     Route::post('register','Auth\Job_Seeker\LoginController@login');
+// });
+
 Route::get('/', 'HomeController@index');
 Route::get('/job', 'JobController@index');
+
+Route::get('/home', 'HomeController@index')->name('home');

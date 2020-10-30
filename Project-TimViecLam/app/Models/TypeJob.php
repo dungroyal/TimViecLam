@@ -14,5 +14,4 @@ class TypeJob extends Model
     protected $fillable = [
         'name',
     ];
-
 }

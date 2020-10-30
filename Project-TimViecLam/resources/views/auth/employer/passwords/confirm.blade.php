@@ -1,4 +1,5 @@
 @extends('layouts.home')
+@section('title', 'Xác nhận mật khẩu - ')
 
 @section('content')
 <div class="container">
