@@ -1,4 +1,4 @@
-@extends('layouts.employer')
+@extends('layouts.admin')
 
 @section('content')
         <div class="container text-center m-0-auto">

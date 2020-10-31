@@ -1,15 +1,15 @@
 @extends('layouts.home')
-@section('title', 'Đăng nhập - ')
+@section('title', 'Đăng nhập nhà tuyển dụng - ')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">Đăng nhập nhà tuyển dụng</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('employer.login.submit') }}">
                         @csrf
 
                         <div class="form-group row">

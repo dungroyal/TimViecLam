@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 class ResetPasswordController extends Controller
 {
     /*
@@ -34,4 +35,9 @@ class ResetPasswordController extends Controller
             ['token' => $token, 'email' => $request->email]
         );
     }
+
+    protected function guard()
+    {
+        return Auth::guard('job_seeker');
+    }  
 }

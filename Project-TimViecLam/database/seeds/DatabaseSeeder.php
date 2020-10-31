@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\JobSeeker;
-use App\Models\Employer;
+use App\JobSeeker;
+use App\Employer;
 use App\Models\TypeJob;
 use App\Models\Career;
 use App\Models\Grade;
@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-    	factory('App\Models\JobSeeker',15)->create();
-        factory('App\Models\Employer',15)->create();
+    	factory('App\JobSeeker',15)->create();
+        factory('App\Employer',15)->create();
 
          // Thêm dữ liệu bảng TypeJob
          $TypeJobs = [            

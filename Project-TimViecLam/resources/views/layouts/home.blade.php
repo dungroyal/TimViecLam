@@ -4,10 +4,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
-    <!-- BootStrap4 -->
+    
     <link href="{{ asset('plugin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Fontawesome 4.7 -->
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">

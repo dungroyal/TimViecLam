@@ -13,7 +13,7 @@ class Employer extends Authenticatable
     protected $guard = 'employer';
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email'
     ];
     
     protected $hidden = [

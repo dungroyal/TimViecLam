@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Đặt Lại Mật Khẩu - ')
+@section('title', 'Reset - ')
 
 @section('content')
 <div class="container">

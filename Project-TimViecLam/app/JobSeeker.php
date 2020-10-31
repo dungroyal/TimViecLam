@@ -13,7 +13,7 @@ class JobSeeker extends Authenticatable
     protected $guard = 'job_seeker';
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','phone',
     ];
 
     protected $hidden = [
