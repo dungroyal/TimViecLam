@@ -23,15 +23,36 @@
             <li>
                 <a href="/job">Việc Làm</a>
             </li>
-            {{-- <li>
+            <li>
               <a href="/blog">Góc Nghề Nghiệp</a>
-            </li> --}}
+            </li>
+            @guest
             <li>
               <a href="/login"class="menu-button--dk">Đăng nhập</a>
             </li>
+            @if (Route::has('register'))
             <li>
               <a href="/register"class="menu-button--dk">Đăng kí</a>
             </li>
+            @endif
+            @else
+                <li>
+                    <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+      
             <li>
                 <a href="#" class="menu-button--ntd">Nhà tuyển dụng</a>
             </li>
