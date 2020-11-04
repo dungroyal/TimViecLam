@@ -12,36 +12,77 @@
     <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 </head>
 
 <body>
   <!-- Thịnh -->
-  <header class="container">
-    <a href="index.html"><img class="logo" src="images/Logo.png" alt="" /></a>
-    <nav>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" width="250" height="35" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto font-header">
+    
+        <li class="nav-item mr-3 ml-5">
+          <a class="nav-link" href="#">TRANG CHỦ</a>
+        </li>
 
-      <ul>
-        <li>
-          <a href="#">Việc Làm</a>
-        </li>
-        <li>
-          <a href="#">Góc Nghề Nghiệp</a>
-        </li>
-        <li>
-          <!-- <i class="fas fa-user-plus"></i> -->
-          <a href="taikhoan-uv.html" class="menu-button--dk">Tài khoản</a>
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="#">GIỚI THIỆU</a>
         </li>
 
-        <li>
-          <a href="#" class="menu-button--ntd">Nhà tuyển dụng</a>
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="#">GÓC NGHỀ NGHIỆP</a>
         </li>
+        
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="#">LIÊN HỆ</a>
+        </li>
+     
       </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
+            <li class="nav-item">
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-lock mr-2 icon-menu"></i>  ĐĂNG NHẬP </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user mr-2 icon-menu"></i> ĐĂNG KÝ  </a> 
+            </li>
+            <div class="dropdown-menu-top">
+              <li class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3">
+                <a class="nav-link dropdown-toggle dropdown-font" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  NHÀ TUYỂN DỤNG
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Đăng Nhập</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Đăng Tuyển Dụng</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Tìm Ứng Viên</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Sản Phẩm Dịch Vụ</a>
+                </div>
+              </li>
+            </div>
 
-    </nav>
-  </header>
+          </div>
+      </form>
+    </div>
+  </nav>
+</header>
   <div class="background-color-container">
     <!-- Thịnh-->
     <div class="container">
@@ -49,7 +90,7 @@
         <img src="images/AI-aggregator.png" class="feature-img" />
       </div>
       <div class="row">
-        <div class="content col-lg-6">
+        <div class="content col-lg-6 col-sm-6">
           <h1>
             Tìm Việc Khó?<br />
             Đã Có Timvieclam.xyz
@@ -58,7 +99,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="search_jobs search_jobs_top col-lg-12">
+        <div class="search_jobs search_jobs_top col-lg-12 col-sm-6">
           <div class="search_box">
             <input type="text" class="input input__searchjobs-top" placeholder="Nhập công việc bạn đang tìm..." />
             <button class="btn">Tìm Kiếm</button>
@@ -66,7 +107,7 @@
         </div>
       </div>
 
-      
+
       <div class="row mt-1">
         <div class="form-group--option mb-3 mr-4 col-lg-3">
           <select class="form-control--left px-3">
@@ -90,19 +131,19 @@
           <a href="#">Tìm kiếm nâng cao.</a>
         </div>
       </div>
+      
     </div>
 
     <!-- Card-catalog--top -->
 
     <div class="container">
-
       <div class="row">
         <div class="col-md-12 text-center mt-5 title-catalog-top">
           <h3><i class="fas fa-city"></i> TOP NGÀNH NGHỀ PHỔ BIẾN</h3>
         </div>
       </div>
       <!--  -->
-      <div class="wp-slider mt-3">
+      <div class="wp-slider mt-5">
         <div class="owl-carousel owl-theme">
           <!--  -->
           <div class="item-top-field">
@@ -340,312 +381,468 @@
         </div>
       </div>
       <!-- việc làm tuyển gấp -->
-      <div class="row">
-      
-          <div class="box_general">
-            <h2 data-v-ebebb8de="" class="text_ellipsis uppercase"><i class="fas fa-briefcase"></i> &nbsp;Việc làm tuyển gấp </h2>
-            <!-- wp slider list job -->
-            
-            <div class="col-lg-12 col-md-12 mt-3">
-              <!--  -->
-              <div class="row">
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
+      <div class="box_general mt-5">
+        <h2 data-v-ebebb8de="" class="text_ellipsis uppercase"><i class="fas fa-briefcase"></i> &nbsp;Việc làm tuyển gấp
+        </h2>
+        <!-- wp slider list job -->
+        <div class="col-lg-12 col-md-12 mt-3">
+          <!--  -->
+          <div class="row">
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
-                  <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
-                    <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
-                      <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
-                          title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                          <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
-                              src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                              lazy="loaded"></div>
-                        </a></div>
-                      <div data-v-0e092c0b="" class="company_name">
-                        <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
-                            class="el-tooltip item" id="vieclamtuyengap"
-                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                            <!---->
-                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
-                                Tiền Mua Nhà)</strong></span></a></p>
-                        <div data-v-0e092c0b="" class="j_company">
-                          <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
-                              title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
-                          <div data-v-0e092c0b="" class="viewed">
-                            <!---->
-                          </div>
-                        </div>
-                        <div data-v-0e092c0b="" class="table-item">
-                          <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
-                            24 triệu</div>
-                          <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis"
-                            style="padding-left: 90px;"><i class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
-                            Minh, Bình Dương
-                          </div>
-                        </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>  
-      
-
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+              <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                  <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                      title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                      <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b="" class="lazy-load"
+                          src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                          lazy="loaded"></div>
+                    </a></div>
+                  <div data-v-0e092c0b="" class="company_name">
+                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b="" href="#"
+                        class="el-tooltip item" id="vieclamtuyengap"
+                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                        <!---->
+                        <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan Processor (hỗ Trợ Cho Vay
+                            Tiền Mua Nhà)</strong></span></a></p>
+                    <div data-v-0e092c0b="" class="j_company">
+                      <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#" target="_blank"
+                          title="Cali-land, Inc tuyển dụng"><span data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                      <div data-v-0e092c0b="" class="viewed">
+                        <!---->
+                      </div>
+                    </div>
+                    <div data-v-0e092c0b="" class="table-item">
+                      <div data-v-0e092c0b="" class="dollar"><i class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                        24 triệu</div>
+                      <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
+                          class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                        Minh, Bình Dương
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
+        <div class="header mt-5">
+      <div class="box box_title--bottom">
+        <a href=""><i class="fas fa-plus">&nbsp; Xem thêm</i></a>
+      </div>
+
+      <!-- việc làm hấp dẫn -->
+
+
+
+      <!-- DOANH NGHIỆP TUYỂN DỤNG -->
+      <h1 class="font-weight-light text-center mt-5 font-weight-bold" style="font-size: 26px">
+        DOANH NGHIỆP TUYỂN DỤNG
+      </h1>
+      <p class="text-center">
+        Hàng nghìn doanh nghiệp uy tín đang tìm kiếm ứng viên trên
+        Timvieclam.xyz
+      </p>
+
+      <!-- <hr class="mt-2 mb-5"> -->
+
+      <div class="row row-business--top">
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img src="https://static.mservice.io/img/logo-momo.png" class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://brasol.vn/public/uploads/1521190718-brasol.vn-he-thong-nhan-dien-thuong-hieu-bitis-bestplus-vn-logo-bitis.jpg"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e8/Logo_Viettel.svg/1200px-Logo_Viettel.svg.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img src="https://www.freepnglogos.com/uploads/samsung-logo-text-png-1.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://upload.wikimedia.org/wikipedia/vi/thumb/8/80/FPT_New_Logo.png/1200px-FPT_New_Logo.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://brasol.vn/public/ckeditor/uploads/thiet-ke-logo-tin-tuc/logo-tiki-png.png"
+              class="my-3" /></a>
+        </div>
+      </div>
+
+      <div class="row row-business--between">
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://upload.wikimedia.org/wikipedia/vi/thumb/8/80/FPT_New_Logo.png/1200px-FPT_New_Logo.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://brasol.vn/public/uploads/1521190718-brasol.vn-he-thong-nhan-dien-thuong-hieu-bitis-bestplus-vn-logo-bitis.jpg"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e8/Logo_Viettel.svg/1200px-Logo_Viettel.svg.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img src="https://www.freepnglogos.com/uploads/samsung-logo-text-png-1.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://upload.wikimedia.org/wikipedia/vi/thumb/8/80/FPT_New_Logo.png/1200px-FPT_New_Logo.png"
+              class="my-3" /></a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <a href="#lightbox"><img
+              src="https://brasol.vn/public/ckeditor/uploads/thiet-ke-logo-tin-tuc/logo-tiki-png.png"
+              class="my-3" /></a>
+        </div>
+      </div>
+
+      <h1 class="font-weight-light text-center mt-5 font-weight-bold" style="font-size: 26px">
+        Our Latest Blog
+      </h1>
+      <hr class="mt-2 mb-1" />
+      <section class="blog">
+        <div id="cards_landscape_wrap-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <a href="">
+                  <div class="card-flyer">
+                    <div class="text-box">
+                      <div class="image-box">
+                        <img src="https://cdn.tgdd.vn/Files/2020/09/14/1290013/unpacked-for-fan_800x450-600x400.gif"
+                          alt="" />
+                      </div>
+                      <div class="text-title">
+                        <h6>AORUS | Enthusiasts' Choice for PC gaming</h6>
+                        <div class="card__content">
+                          <img src="https://avatarfiles.alphacoders.com/118/thumb-118867.jpg" alt=""
+                            class="card__image-avt" />
+                          <a href="#" class="btn btn--primary">Huy Nguyễn</a>
+                          <a href="#" class="btn btn--secondary">Đọc Tiếp <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <a href="">
+                  <div class="card-flyer">
+                    <div class="text-box">
+                      <div class="image-box">
+                        <img src="https://cdn.tgdd.vn/Files/2020/04/22/1251114/ip12._640x320-600x400.gif" alt="" />
+                      </div>
+                      <div class="text-title">
+                        <h6>AORUS | Enthusiasts' Choice for PC gaming</h6>
+                          <div class="card__content">
+                            <img src="https://avatarfiles.alphacoders.com/118/thumb-118867.jpg" alt=""
+                              class="card__image-avt" />
+                            <a href="#" class="btn btn--primary">Huy Nguyễn</a>
+                            <a href="#" class="btn btn--secondary">Đọc Tiếp <i class="fa fa-angle-double-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <a href="">
+                    <div class="card-flyer">
+                      <div class="text-box">
+                        <div class="image-box">
+                          <img
+                            src="https://cdn.tgdd.vn/Files/2020/09/14/1289973/3615291-xbox-series-x-main-1_800x450-300x200.jpg"
+                            alt="" />
+                        </div>
+                        <div class="text-title">
+                          <h6>AORUS | Enthusiasts' Choice for PC gaming</h6>
+                          <div class="card__content">
+                            <img src="https://avatarfiles.alphacoders.com/118/thumb-118867.jpg" alt=""
+                              class="card__image-avt" />
+                            <a href="#" class="btn btn--primary">Huy Nguyễn</a>
+                            <a href="#" class="btn btn--secondary">Đọc Tiếp <i class="fa fa-angle-double-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="box box_title--bottom">
+          <a href=""><i class="fas fa-plus">&nbsp; Xem thêm</i></a>
+        </div>
 
     </div>
-
+    </div>
+    
+  </div>
   </div>
   <footer class="page-footer font-small mdb-color pt-4">
     <div class="container page-footer__bottom text-center text-md-left text-primary">

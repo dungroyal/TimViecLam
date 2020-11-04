@@ -10,51 +10,8 @@ body{
   --Blue-While: #18A3E8;
   --Orange: #F38121;
 }
-header {
-    width: 100%;
-    height: 80px;
-}
-.logo{
-width: 250px;
-float: left;
-margin: 20px 20px 20px 10px;
-}
-nav {
-  float: right;
-  margin: 20px 0px;
-}
 
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  padding: 10px 7px;
-  color: black;
-  font-weight: bold;
-  position: relative;
-}
-nav ul li a:hover{
-  text-decoration: none;
-  width: 100%;
-}
-.fas.fa-user-plus {
-  font-size: 20px;
-  color: black;
-  padding: 10px;
-}
-.menu-button--ntd{
-  border-radius: 4px;
-  background-color: #006caa;
-  font-weight: bold;
-  color: white;
-}
 /* Thịnh */
-
 *{
     margin: 0;
     padding: 0;
@@ -66,6 +23,56 @@ nav ul li a:hover{
     
   }
 /* test */
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+.font-header .nav-item .nav-link{
+ color: black;
+ font-weight: bold;
+ font-size: 14px;
+}
+.font-header .nav-item .nav-link:hover{
+  color: var(--Orange);
+}
+.dropdown-menu-top .nav-item .nav-link:hover{
+  color: var(--while);
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.btn-bd-submit{
+  background-color: var(--Blue);
+  font-weight: 800;
+  color: var(--while);
+  border-color: var(--Blue-While);
+}
+.dropdown-menu{
+  background-color: var(--Blue-While);
+}
+.dropdown-menu a{
+  font-weight: 600;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: var(--Blue-Whil);
+}
+.btn-bd-submit:active, .btn-bd-submit:hover {
+  color: var(--Blue);
+  background-color: var(--Blue);
+  border-color: var(--Blue);
+}
+.company_name strong{
+  font-size: 16px;
+}
+.pd-map{
+  padding-left: 90px;
+  font-size: 14px;
+}
 .image-header img {
   display: block;
   max-width: 520px;
@@ -109,7 +116,7 @@ img[lazy=error], img[lazy=loaded] {
   opacity: 1;
 }
 .text_bold {
-  font-weight: 500;
+  font-weight: 600;
 }
 .item-top-field>div .top-field-name p {
   margin-bottom: 0!important;
@@ -152,6 +159,7 @@ img[lazy=error], img[lazy=loaded] {
 .box_general .job-over-item[data-v-ebebb8de] {
   padding: 0 15px;
   margin-bottom: -5px;
+
 }
 .job-item[data-v-0e092c0b] {
   background-color: #fff;
@@ -163,6 +171,7 @@ img[lazy=error], img[lazy=loaded] {
 }
 .job-item .job_info[data-v-0e092c0b] {
   padding: 0 10px;
+  cursor: pointer;
 }
 .job-item .job_info .company_logo[data-v-0e092c0b] {
   float: left;
