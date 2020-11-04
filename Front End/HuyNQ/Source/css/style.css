@@ -955,13 +955,60 @@ background-color: #076d9c;
   font-size: 20px;
 }
 .security__tvl p {
-  font-size: 14px;
+  font-size: 15px;
   font-style: inherit;
 }
 .title-security_tvl h5 {
+  
   font-size: 25px;
 }
 /* Kết thúc quy định bảo mật */
+
+/* Gioi thiệu Timvieclam.xyz */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.body {
+  font-family: 'Lato', sans-serif;
+}
+.logo__intro-top img {
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+.title__intro img {
+  border-radius: 3px;
+  width: 100%;
+}
+.title__intro-top p {
+  font-size: 18px;
+  margin-top: 1%;
+}
+.row__intro-top {
+  margin-top: 5%;
+}
+.row__intro-top p {
+  font-size: 17px;
+}
+.title__intro-top h3 {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(3, 41, 90);
+}
+.row__intro-bottom {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.title__intro-bottom h3 {
+  font-weight: bold;
+  color: rgb(3, 41, 90);
+}
+.title__intro-bottom p {
+  font-size: 17px;
+}
+.funfact__intro-icon img {
+  width: 30%;
+  float: left;
+}
+/* kết thúc giới thiệu timvieclam.xyz */
 
 
 .owl-nav .owl-next {
@@ -976,6 +1023,5 @@ background-color: #076d9c;
   left: -30px;
   padding:2px;
 }
-
 
 

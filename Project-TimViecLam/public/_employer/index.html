@@ -1,0 +1,796 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Trang quản lý | Tìm Việc Làm</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Tìm việc làm nhanh" name="description">
+        <meta content="Royal Team" name="author">
+
+        <link rel="shortcut icon" href="../favicon.ico">
+        <!-- BootStrap 4 -->
+        <link href="plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+        <!-- CSS -->
+        <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+        <link href="assets\css\custom.min.css" rel="stylesheet" type="text/css">
+        <link href="assets\css\style.css" rel="stylesheet" type="text/css">
+        
+        <!-- Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body data-sidebar="dark">
+        <div id="layout-wrapper">
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="../images/logo/icon_white.png" alt="" height="30">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="../images/logo/logo_white.png" alt="" height="25">
+                                </span>
+                            </a>
+                        </div>
+                        <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="bx bxs-dock-left font-weight-bold"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="d-flex">
+
+                        <div class="dropdown d-inline-block d-lg-none ml-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" aria-labelledby="page-header-search-dropdown">
+                    
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-none d-lg-inline-block ml-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-customize"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                <div class="px-lg-2">
+                                    <div class="row no-gutters">
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img src="assets\images\house-icon.png" alt="Trang chủ">
+                                                <span>Trang chủ</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img src="assets\images\recruitment-icon.png" alt="Tuyển dụng">
+                                                <span>Tìm ứng viên</span>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="dropdown-icon-item" href="#">
+                                                <img src="assets\images\orders.png" alt="Hỗ trợ">
+                                                <span>Bảng giá</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-none d-lg-inline-block ml-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell bx-tada"></i>
+                                <span class="badge badge-danger badge-pill">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0"> Thông báo </h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small"> Xem tất cả</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar="" style="max-height: 230px;">
+                                    <a href="" class="text-reset notification-item">
+                                        <div class="media">
+                                            <div class="avatar-xs mr-3">
+                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
+                                                </span>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">If several languages coalesce the grammar</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="text-reset notification-item">
+                                        <div class="media">
+                                            <img src="assets\images\users\avatar-3.jpg" class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="media-body">
+                                                <h6 class="mt-0 mb-1">James Lemire</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">It will seem like simplified English.</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="text-reset notification-item">
+                                        <div class="media">
+                                            <div class="avatar-xs mr-3">
+                                                <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
+                                                </span>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="mt-0 mb-1">Your item is shipped</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">If several languages coalesce the grammar</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="" class="text-reset notification-item">
+                                        <div class="media">
+                                            <img src="assets\images\users\avatar-4.jpg" class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="media-body">
+                                                <h6 class="mt-0 mb-1">Salena Layfield</h6>
+                                                <div class="font-size-12 text-muted">
+                                                    <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
+                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-2 border-top">
+                                    <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+                                        <i class="mdi mdi-arrow-right-circle mr-1"></i> Xem thêm..
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name=Đoàn Quốc Dũng" alt="Đoàn Quốc Dũng">
+                                <span class="d-none d-xl-inline-block ml-1">Đoàn Quốc Dũng</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i> Hồ sơ công ty</a>
+                                <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">5</span><i class="bx bx-wrench font-size-16 align-middle mr-1"></i> Cài đặt</a>
+                                <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Khóa màn hình</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+<div class="vertical-menu">
+    <div data-simplebar="" class="h-100">
+        <div id="sidebar-menu">
+            <ul class="metismenu list-unstyled" id="side-menu">
+                
+                <li class="menu-title text-center text-white-50">Trang quản lý</li>
+                <li>
+                    <a href="calendar.html" class="waves-effect">
+                        <i class="bx bxs-dashboard"></i>
+                        <span>Quản lý chung</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect">
+                        <i class="bx bx-search-alt"></i>
+                        <span>Tìm kiếm ứng viên</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-briefcase"></i>
+                        <span>Tuyển dụng</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Đăng tuyển dụng mới</a></li>
+                        <li><a href="#">Tất cả tin tuyển dụng</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user-pin"></i>
+                        <span>Quản lý hồ sơ</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Hồ sơ đã lưu</a></li>
+                        <li><a href="#">Hồ sơ đã xem</a></li>
+                        <li><a href="#">Hồ sơ ứng tuyển</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-info-circle"></i>
+                        <span>Thông tin công ty</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Cập nhật thông tin</a></li>
+                        <li><a href="#">Đổi mật khẩu</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+                <div id="preloader">
+                    <div id="status">
+                        <div class="spinner-chase">
+                            <img src="../images/logo/favicon.png" id="preloader-logo__spinder" alt="Logo" height="30">
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                            <div class="chase-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">Quản lý chung</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Trang quản lý</a></li>
+                                            <li class="breadcrumb-item active">Quản lý chung</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="card mini-stats-wid">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="text-muted font-weight-bold">Việc làm phù hợp</p>
+                                                        <h4 class="mb-0">5</h4>
+                                                    </div>
+
+                                                    <div class="mini-stat-icon avatar-sm rounded-circle bg-primary align-self-center">
+                                                        <span class="avatar-title">
+                                                            <i class="bx bx-briefcase font-size-24"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card mini-stats-wid">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="text-muted font-weight-bold">Lượt xem hồ sơ</p>
+                                                        <h4 class="mb-0">360</h4>
+                                                    </div>
+
+                                                    <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
+                                                        <span class="avatar-title rounded-circle bg-primary">
+                                                            <i class="bx bx-search-alt font-size-24"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card mini-stats-wid">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="text-muted font-weight-bold">NTD xem hồ sơ</p>
+                                                        <h4 class="mb-0">5</h4>
+                                                    </div>
+
+                                                    <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
+                                                        <span class="avatar-title rounded-circle bg-primary">
+                                                            <i class="dripicons-preview font-size-24"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card mini-stats-wid">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <p class="text-muted font-weight-bold">NTD lưu hồ sơ</p>
+                                                        <h4 class="mb-0">5</h4>
+                                                    </div>
+
+                                                    <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
+                                                        <span class="avatar-title rounded-circle bg-primary">
+                                                            <i class="bx bx-save font-size-24"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Việc làm đã lưu mới nhất</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered table-nowrap mb-0">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th style="width: 20px;">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                <label class="custom-control-label" for="customCheck1">&nbsp;</label>
+                                                            </div>
+                                                        </th>
+                                                        <th>Order ID</th>
+                                                        <th>Billing Name</th>
+                                                        <th>Date</th>
+                                                        <th>Total</th>
+                                                        <th>Payment Status</th>
+                                                        <th>Payment Method</th>
+                                                        <th>View Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                <label class="custom-control-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2540</a> </td>
+                                                        <td>Neal Matthews</td>
+                                                        <td>
+                                                            07 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $400
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                <label class="custom-control-label" for="customCheck3">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2541</a> </td>
+                                                        <td>Jamal Burnett</td>
+                                                        <td>
+                                                            07 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $380
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-danger font-size-12">Chargeback</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-visa mr-1"></i> Visa
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                <label class="custom-control-label" for="customCheck4">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2542</a> </td>
+                                                        <td>Juan Mitchell</td>
+                                                        <td>
+                                                            06 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $384
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-paypal mr-1"></i> Paypal
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                                <label class="custom-control-label" for="customCheck7">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2545</a> </td>
+                                                        <td>Jacob Hunter</td>
+                                                        <td>
+                                                            04 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $392
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-paypal mr-1"></i> Paypal
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- end table-responsive -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Việc làm đã ứng tuyển mới nhất</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered table-nowrap mb-0">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th style="width: 20px;">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                <label class="custom-control-label" for="customCheck1">&nbsp;</label>
+                                                            </div>
+                                                        </th>
+                                                        <th>Order ID</th>
+                                                        <th>Billing Name</th>
+                                                        <th>Date</th>
+                                                        <th>Total</th>
+                                                        <th>Payment Status</th>
+                                                        <th>Payment Method</th>
+                                                        <th>View Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                <label class="custom-control-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2540</a> </td>
+                                                        <td>Neal Matthews</td>
+                                                        <td>
+                                                            07 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $400
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                <label class="custom-control-label" for="customCheck3">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2541</a> </td>
+                                                        <td>Jamal Burnett</td>
+                                                        <td>
+                                                            07 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $380
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-danger font-size-12">Chargeback</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-visa mr-1"></i> Visa
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                <label class="custom-control-label" for="customCheck4">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2542</a> </td>
+                                                        <td>Juan Mitchell</td>
+                                                        <td>
+                                                            06 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $384
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-paypal mr-1"></i> Paypal
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                                <label class="custom-control-label" for="customCheck7">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body font-weight-bold">#SK2545</a> </td>
+                                                        <td>Jacob Hunter</td>
+                                                        <td>
+                                                            04 Oct, 2019
+                                                        </td>
+                                                        <td>
+                                                            $392
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-paypal mr-1"></i> Paypal
+                                                        </td>
+                                                        <td>
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-toggle="modal" data-target=".exampleModal">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- end table-responsive -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                <!-- Modal -->
+                <div class="modal fade exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
+                                <p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-centered table-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">Product Name</th>
+                                                <th scope="col">Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div>
+                                                        <img src="assets\images\product\img-7.png" alt="" class="avatar-sm">
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    <div>
+                                                        <h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
+                                                        <p class="text-muted mb-0">$ 225 x 1</p>
+                                                    </div>
+                                                </td>
+                                                <td>$ 255</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div>
+                                                        <img src="assets\images\product\img-4.png" alt="" class="avatar-sm">
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    <div>
+                                                        <h5 class="text-truncate font-size-14">Phone patterned cases</h5>
+                                                        <p class="text-muted mb-0">$ 145 x 1</p>
+                                                    </div>
+                                                </td>
+                                                <td>$ 145</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h6 class="m-0 text-right">Sub Total:</h6>
+                                                </td>
+                                                <td>
+                                                    $ 400
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h6 class="m-0 text-right">Shipping:</h6>
+                                                </td>
+                                                <td>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h6 class="m-0 text-right">Total:</h6>
+                                                </td>
+                                                <td>
+                                                    $ 400
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © TimViecLam.xyz
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-right d-none d-sm-block">
+                                    Design & Develop by <a href="https://www.facebook.com/Quocdungroyal/"> Royal Team.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="plugin/jquery/jquery-3.5.1.min.js"></script>
+        <script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets\libs\metismenu\metisMenu.min.js"></script>
+        <script src="assets\libs\simplebar\simplebar.min.js"></script>
+        <script src="assets\js\app.js"></script>
+    </body>
+
+</html>

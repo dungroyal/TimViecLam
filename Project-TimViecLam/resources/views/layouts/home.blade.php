@@ -4,10 +4,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
-    <!-- BootStrap4 -->
+    <title>@yield('title')Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
+    
     <link href="{{ asset('plugin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Fontawesome 4.7 -->
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
@@ -26,11 +25,34 @@
             </li>
             <li>
               <a href="/blog">Góc Nghề Nghiệp</a>
-          </li>
-            <li>
-              <a href="taikhoan-uv.html"class="menu-button--dk">Tài khoản</a>
             </li>
-            
+            @guest
+            <li>
+              <a href="/login"class="menu-button--dk">Đăng nhập</a>
+            </li>
+            @if (Route::has('register'))
+            <li>
+              <a href="/register"class="menu-button--dk">Đăng kí</a>
+            </li>
+            @endif
+            @else
+                <li>
+                    <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+      
             <li>
                 <a href="#" class="menu-button--ntd">Nhà tuyển dụng</a>
             </li>
@@ -41,8 +63,6 @@
 <main class="py-4">
   @yield('content')
 </main>
-
-
   <footer class="page-footer font-small mdb-color pt-4 ">
 
     
@@ -248,6 +268,6 @@
 
   <script src="plugin/jquery/jquery-3.5.1.min.js"></script>
   <script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  {{-- <script src="js/main.js"></script> --}}
 </body>
 </html>

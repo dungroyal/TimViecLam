@@ -2,56 +2,136 @@
 
 return [
 
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication Defaults
+    |--------------------------------------------------------------------------
+    |
+    | This option controls the default authentication "guard" and password
+    | reset options for your application. You may change these defaults
+    | as required, but they're a perfect start for most applications.
+    |
+    */
+
     'defaults' => [
-        'guard' => 'api',
-        'passwords' => 'users',
+        'guard' => 'job_seeker',
+        'passwords' => 'job_seeker',
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication Guards
+    |--------------------------------------------------------------------------
+    |
+    | Next, you may define every authentication guard for your application.
+    | Of course, a great default configuration has been defined for you
+    | here which uses session storage and the Eloquent user provider.
+    |
+    | All authentication drivers have a user provider. This defines how the
+    | users are actually retrieved out of your database or other storage
+    | mechanisms used by this application to persist your user's data.
+    |
+    | Supported: "session", "token"
+    |
+    */
+
     'guards' => [
-        'admin' => [
-            'driver' => 'jwt',
-            'provider' => 'admin',
-        ],
         'job_seeker' => [
-            'driver' => 'jwt',
+            'driver' => 'session',
             'provider' => 'job_seeker',
         ],
-        'employer' => [
-            'driver' => 'jwt',
-            'provider' => 'employer',
+        
+        'job_seeker-api' => [
+            'driver' => 'token',
+            'provider' => 'job_seeker',
+            'hash' => false,
         ],
 
-        'api' => [
-            'driver' => 'jwt',
-            'provider' => 'job_seeker',
+        'employer' => [
+            'driver' => 'session',
+            'provider' => 'employer',
+        ],
+        
+        'employer-api' => [
+            'driver' => 'token',
+            'provider' => 'employer',
+            'hash' => false,
+        ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+        
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admin',
             'hash' => false,
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | User Providers
+    |--------------------------------------------------------------------------
+    |
+    | All authentication drivers have a user provider. This defines how the
+    | users are actually retrieved out of your database or other storage
+    | mechanisms used by this application to persist your user's data.
+    |
+    | If you have multiple user tables or models you may configure multiple
+    | sources which represent each model / table. These sources may then
+    | be assigned to any extra authentication guards you have defined.
+    |
+    | Supported: "database", "eloquent"
+    |
+    */
+
     'providers' => [
-        'admin' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
-        ],
         'job_seeker' => [
             'driver' => 'eloquent',
-            'model' => App\Models\JobSeeker::class,
+            'model' => App\JobSeeker::class,
         ],
         'employer' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Employer::class,
+            'model' => App\Employer::class,
         ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ]
     ],
 
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
     |--------------------------------------------------------------------------
+    |
+    | You may specify multiple password reset configurations if you have more
+    | than one user table or model in the application and you want to have
+    | separate password reset settings based on the specific user types.
+    |
+    | The expire time is the number of minutes that the reset token should be
+    | considered valid. This security feature keeps tokens short-lived so
+    | they have less time to be guessed. You may change this as needed.
+    |
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'job_seeker' => [
+            'provider' => 'job_seeker',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'employer' => [
+            'provider' => 'employer',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'admins' => [
+            'provider' => 'admin',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
@@ -62,6 +142,11 @@ return [
     |--------------------------------------------------------------------------
     | Password Confirmation Timeout
     |--------------------------------------------------------------------------
+    |
+    | Here you may define the amount of seconds before a password confirmation
+    | times out and the user is prompted to re-enter their password via the
+    | confirmation screen. By default, the timeout lasts for three hours.
+    |
     */
 
     'password_timeout' => 10800,
