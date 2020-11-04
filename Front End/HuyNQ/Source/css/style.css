@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* Thịnh */
 :root{
   --while: #ffffff;
@@ -50,18 +55,6 @@ nav ul li a:hover{
 }
 /* Thịnh */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
-
-/* Huy */
 *{
     margin: 0;
     padding: 0;
@@ -73,22 +66,219 @@ nav ul li a:hover{
     
   }
 /* test */
-
-.items {
-  width: 90%;
-  margin: 0px auto;
-  margin-top: 100px
+.image-header img {
+  display: block;
+  max-width: 520px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  margin-bottom: 50px;
+  padding: 15px 5px;
+  margin-top: 21px;
 }
 
-.slick-slide {
-  margin: 10px
+.item-top-field>div {
+  background: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  overflow: hidden;
+}
+.item-top-field>div .icon-top-field {
+  float: left;
+  max-width: 65px!important;
+  width: 65px;
+  margin-right: 0!important;
+}
+.item-top-field>div .icon-top-field img {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+img[lazy=error], img[lazy=loaded] {
+  opacity: 1;
+}
+.text_bold {
+  font-weight: 500;
+}
+.item-top-field>div .top-field-name p {
+  margin-bottom: 0!important;
 }
 
-.slick-slide img {
+.item-top-field>div .top-field-name .text_ellipsis {
+  font-size: 13px;
+}
+
+.text_italic {
+  font-style: italic;
+  color: #353535!important;
+}
+.text_ellipsis {
+  white-space: nowrap!important;
+  overflow: hidden!important;
+  text-overflow: ellipsis!important;
+}
+/* Viec lam tuyen gap */
+.box_general {
+  background: #fff;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  overflow: hidden;
+  /* margin-bottom: 20px; */
+}
+.box_general>h2, .box_general>h3 {
+  font-size: 18px;
+  margin: auto;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.text_ellipsis {
+  white-space: nowrap!important;
+  overflow: hidden!important;
+  text-overflow: ellipsis!important;
+}
+.box_general .job-over-item[data-v-ebebb8de] {
+  padding: 0 15px;
+  margin-bottom: -5px;
+}
+.job-item[data-v-0e092c0b] {
+  background-color: #fff;
+  border-radius: 2px;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+}
+.job-item .job_info[data-v-0e092c0b] {
+  padding: 0 10px;
+}
+.job-item .job_info .company_logo[data-v-0e092c0b] {
+  float: left;
+  max-width: 65px!important;
+  width: 65px;
+  margin-right: 0!important;
+}
+a, a:active, a:focus, a:hover, a:visited {
+  text-decoration: none;
+}
+.job-item .job_info .company_logo .logo_box[data-v-0e092c0b] {
+  width: 55px;
+  height: 55px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.company_logo .logo_box {
+  width: 75px;
+  height: 75px;
+  margin-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.job-item .job_info .company_logo .logo_box img[data-v-0e092c0b] {
+  max-width: 100%;
+  background-color: #fff;
+}
+.company_logo .logo_box img {
   width: 100%;
-  border: 0px solid #fff
 }
-
+img[lazy=error], img[lazy=loaded] {
+  opacity: 1;
+}
+.job-item .job_info .company_name[data-v-0e092c0b] {
+  float: left;
+  max-width: calc(100% - 65px)!important;
+  width: calc(100% - 65px);
+  padding-left: 5px;
+  line-height: 24px;
+}
+.job-item p[data-v-0e092c0b] {
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.job-item .job_info .company_name .j_title a[data-v-0e092c0b] {
+  display: inline-block;
+  max-width: 110%;
+  text-transform: capitalize;
+}
+.job-item .job_info .company_name .j_title a strong[data-v-0e092c0b] {
+  font-weight: 500;
+}
+b, label, strong {
+  font-weight: 500;
+}
+b, strong {
+  font-weight: 700;
+}
+.job-item .j_company[data-v-0e092c0b] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.job-item .j_company .name[data-v-0e092c0b] {
+  white-space: nowrap!important;
+  overflow: hidden!important;
+  text-overflow: ellipsis!important;
+}
+.job-item .job_info .company_name .j_company a[data-v-0e092c0b] {
+  color: #333;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.job-item .j_company .viewed[data-v-0e092c0b] {
+  margin-left: 4px;
+}
+.job-item .job_info .company_name .table-item[data-v-0e092c0b] {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.job-item .job_info .company_name .table-item .dollar[data-v-0e092c0b] {
+  float: left;
+  width: 140px;
+  font-size: 13px;
+}
+.job-item{
+  background: #ffffff;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+.job-over-item .job-item:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 /* end */
 /* catalog */
 
@@ -96,6 +286,7 @@ nav ul li a:hover{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+ 
 }
 .container-catalog--top a {
  text-decoration: none;
@@ -112,7 +303,7 @@ nav ul li a:hover{
 .title-catalog-top{
     font-family: fontlinear!important;
     speak-as: none;
-    font-style: normal;
+    font-style: 18px;
     font-weight: 400;
     -webkit-font-feature-settings: normal;
     font-feature-settings: normal;
@@ -122,6 +313,10 @@ nav ul li a:hover{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.title-catalog-top h3{
+  font-size: 24px;
+}
+
 .card.promoting-card {
   width: 250px;
 }
@@ -141,16 +336,6 @@ nav ul li a:hover{
 }
 /* kết thúc catalog */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 /* tìm kiếm công việc */
 .search_jobs .search_box{
@@ -195,17 +380,6 @@ nav ul li a:hover{
 }
 /* kết thúc tìm kiếm công việc */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
-       
 
   /* content */
   .content h1 {
@@ -261,7 +435,7 @@ nav ul li a:hover{
   border-radius: 10px;
   border-width: 2.5px;
   border: 3px solid #00B4CC;
-  width: 300px;
+  width: 308px;
   height: 40px;
   color: #9DBFAF;
 
@@ -270,7 +444,7 @@ nav ul li a:hover{
   border-radius: 10px;
   border-width: 2.5px;
   border: 3px solid #00B4CC;
-  width: 286px;
+  width: 308px;
   height: 40px;
   color: #9DBFAF;
 
@@ -292,7 +466,6 @@ nav ul li a:hover{
   justify-content:space-between;
   margin: 0 auto ;
   background-color: rgb(255, 255, 255);
-  border: #e7e7e7 solid 1px;
   
 }
 .box a {
@@ -307,7 +480,7 @@ nav ul li a:hover{
   height: 50px;
 }
 .box.box_title--bottom {
-  border-radius: 5px;
+
   padding-bottom: 7px;
   width: 150px;
   height: 40px;
@@ -328,17 +501,6 @@ nav ul li a:hover{
  }
 
 /* kết thúc box congviec */
-
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 /* việc làm hấp dẫn */
 
@@ -379,16 +541,6 @@ nav ul li a:hover{
 }
 /* kết thúc việc làm hấp dẫn */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 .text-uppercase {
@@ -507,16 +659,6 @@ p{
 }
 /* kết thúc card tin tức */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 /* footer */
 
@@ -568,17 +710,6 @@ p{
     color: orange;
 }
 /* kết thúc footer */
-
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 
 /* Tài khoản ứng viên */
@@ -645,17 +776,6 @@ p{
 
 /* Kết Thúc Tài khoản ứng viên */
 
-/* WWWWWW||WWWWWW
-    W W W||W W W
-          ||
-        ( OO )__________
-        /  |           \
-        /o o| TIMVIECLAM \
-        \___/||_||__||_|| *
-            || ||  || ||
-            _||_|| _||_||
-          (__|__|(__|__| */
-
 /* đăng ký tài khoản ứng viên */
 .card-body__signup-uv {
   border-radius: 1%;
@@ -696,16 +816,6 @@ p{
 
 /* Kết thúc đăng ký ứng viên */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 /* Đăng nhập ứng viên */
 
@@ -819,18 +929,7 @@ background-color: #076d9c;
   text-decoration: none;
   color: rgb(2, 146, 241);
 }
-/* Kết thúc đăng nhập ứng viên */
 
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
 
 /* Thỏa thuận sử dụng */
 .ttsd__tvl {
@@ -847,18 +946,6 @@ background-color: #076d9c;
   font-size: 25px;
 }
 
-/* Kết thúc Thỏa thuận sử dụng */
-
-/* WWWWWW||WWWWWW
- W W W||W W W
-      ||
-    ( OO )__________
-     /  |           \
-    /o o| TIMVIECLAM \
-    \___/||_||__||_|| *
-         || ||  || ||
-        _||_|| _||_||
-       (__|__|(__|__| */
        
 /* Quy định bảo mật */
 .security__tvl {
@@ -877,5 +964,18 @@ background-color: #076d9c;
 /* Kết thúc quy định bảo mật */
 
 
+.owl-nav .owl-next {
+  position: absolute;
+  top: 2rem;
+  right: -30px;
+  padding:2px;
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  top: 2rem;
+  left: -30px;
+  padding:2px;
+}
 
-/* Huydeptrai */
+
+
