@@ -23,6 +23,38 @@ body{
     
   }
 /* test */
+.item[data-v-3fada5e5] {
+  margin-bottom: 3px;
+  display: inline-block;
+  padding-left: 15px;
+}
+.search-job-city .box_general .box-body .location_rut_gon a{
+  font-size: 14px;
+}
+.box_general .box-body {
+  padding: 15px;
+  margin-top: 15px;
+}
+.box_general .item a[data-v-0aaecb84]:hover {
+  color: #1790d4;
+}
+.box_general .item a[data-v-0aaecb84] {
+  color: #000;
+  display: block;
+}
+.item[data-v-0aaecb84]{
+  margin-bottom: 3px;
+  display: inline-block;
+  padding-left: 15px;
+}
+.box_general .location_full[data-v-0aaecb84] {
+  color: #1790d4;
+  cursor: pointer;
+}
+.box_general .location_rut_gon[data-v-0aaecb84] {
+  color: #1790d4;
+  cursor: pointer;
+}
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
