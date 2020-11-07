@@ -5,7 +5,6 @@
     autoplay:true,
     margin:20,
     nav:true,
-
     dots: false,
     navElement:'div',
     responsive:{
@@ -21,26 +20,18 @@
     }
 })
   });
-  $(document).ready(function(){
-    $('.owl-carousel1').owlCarousel({
-    // loop:true,
-    autoplay:true,
-    nav:true,
-    mergeFit: true,
-    dots: false,
-    navElement:'div',
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
+
+const readMoreBtn = document.querySelector('.read-more-btn');
+const text = document.querySelector('.box-body');
+readMoreBtn.addEventListener('click',(e)=>{
+    text.classList.toggle('show-more');
+    if(readMoreBtn.innerText === 'Rút gọn'){
+        readMoreBtn.innerText = 'Xem Thêm';
+    }else{
+        readMoreBtn.innerText = 'Rút gọn';
     }
 })
-  });
+
+
 
 
