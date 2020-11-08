@@ -268,7 +268,7 @@ body[data-sidebar=dark] .logo-light {
     position: absolute;
     right: 0;
     color: #74788d;
-    left: 250px;
+    left: 0;
     height: 60px;
     background-color: #f2f2f5
 }

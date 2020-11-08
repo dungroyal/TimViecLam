@@ -16,9 +16,9 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
 
 
-Route::get('/haha', 'Auth\LoginController@haha');
-
-
+Route::prefix('job-seeker')->group(function() {
+    Route::get('/', 'JobSeeker\HomeController@index')->name('employer.dashboard');
+});
 
 Route::prefix('employer')->group(function() {
     Route::get('/', 'Employer\HomeController@index')->name('employer.dashboard');

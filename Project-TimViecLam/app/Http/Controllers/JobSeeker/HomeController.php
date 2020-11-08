@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Employer;
+namespace App\Http\Controllers\JobSeeker;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,6 +16,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('employer.dashboard');
+        return view('job_seeker.dashboard');
     }
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
-    
+
     <link href="{{ asset('plugin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Fontawesome 4.7 -->
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
@@ -52,7 +52,7 @@
                     </div>
                 </li>
             @endguest
-      
+
             <li>
                 <a href="#" class="menu-button--ntd">Nhà tuyển dụng</a>
             </li>
@@ -65,11 +65,11 @@
 </main>
   <footer class="page-footer font-small mdb-color pt-4 ">
 
-    
+
     <div class="container page-footer__bottom text-center text-md-left text-primary">
       <div class="row text-center text-md-left mt-3 pb-3">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="{{ asset('home/images/Logo_White.png') }}" alt="" class="footer-img">    
+          <img src="{{ asset('home/images/Logo_White.png') }}" alt="" class="footer-img">
         </div>
 
         <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
@@ -87,10 +87,10 @@
               <p>
                 <a href="#!">Điều Khoản Sử Dụng</a>
               </p>
-           
+
           </div>
         </div>
-  
+
         <hr class="w-100 clearfix d-md-none">
 
         <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
@@ -130,7 +130,7 @@
         </div>
       </div>
       <hr class="w-100 clearfix d-md-none">
-      
+
       <div class="row page_footer--category">
         <div class="col-md-3 text__info col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold text-white">Việc Làm Theo Ngành Nghề</h6>
@@ -152,7 +152,7 @@
                   <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i class="fa fa-angle-double-right"></i>
                 </p>
               </div>
-          </div> 
+          </div>
         </div>
         <hr class="w-100 clearfix d-md-none">
         <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
@@ -203,7 +203,7 @@
         <hr class="w-100 clearfix d-md-none">
         <div class="col-md-4 text__info col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold text-white"> Việc Làm Hấp Dẫn</h6>
-          
+
           <div class="text__info--title">
             <p>
               <a href="#!">Tìm Việc Làm</a>
@@ -233,7 +233,7 @@
               <strong> Timvieclam.xyz</strong>
             </a>
           </p>
-  
+
         </div>
         <div class="col-md-5 col-lg-4 ml-lg-0">
 
