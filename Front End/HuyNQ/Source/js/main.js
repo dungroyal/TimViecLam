@@ -40,11 +40,6 @@
   const text = document.querySelector('.box-body');
   readMoreBtn.addEventListener('click', (e) => {
       text.classList.toggle('show-more');
-      if (readMoreBtn.innerText === 'Rút gọn') {
-          readMoreBtn.innerText = 'Xem Thêm';
-      } else {
-          readMoreBtn.innerText = 'Rút gọn';
-      }
   })
 
 
