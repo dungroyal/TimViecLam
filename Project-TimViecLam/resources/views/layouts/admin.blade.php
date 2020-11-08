@@ -15,9 +15,9 @@
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
     <!-- CSS -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -68,7 +68,7 @@
     <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('plugin/metisMenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('js/admin.js') }}"></script>
+    <script src="{{ asset('admin/js/admin.js') }}"></script>
 </body>
 
 </html>
