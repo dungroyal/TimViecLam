@@ -172,9 +172,9 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
-                        src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name=Đoàn Quốc Dũng"
-                        alt="Đoàn Quốc Dũng">
-                    <span class="d-none d-xl-inline-block ml-1">Đoàn Quốc Dũng</span>
+                        src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name={{ Auth::guard('employer')->user()->name }}"
+                        alt="{{ Auth::guard('employer')->user()->name }}">
+                        <span class="d-none d-xl-inline-block ml-1"> {{ Auth::guard('employer')->user()->name }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">

@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
+// Route::get('/password/email', 'Auth\ForgotPasswordController@showLinkRequestForm');
+
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
@@ -22,13 +24,14 @@ Route::prefix('job-seeker')->group(function() {
 
 Route::prefix('employer')->group(function() {
     Route::get('/', 'Employer\HomeController@index')->name('employer.dashboard');
+    Route::get('/company-information', 'Employer\CompanyController@index')->name('employer.company_info');
     Route::get('/home', 'Employer\HomeController@show')->name('employer.home');
 
     // Login Logout Routes
     Route::get('/login', 'Auth\Employer\LoginController@showLoginForm')->name('employer.login');
     Route::post('/login', 'Auth\Employer\LoginController@login')->name('employer.login.submit');
     Route::post('/logout', 'Auth\Employer\LoginController@logout')->name('employer.logout');
-    Route::get('/register', 'Auth\Employer\RegisterController@showRegistrationForm');
+    Route::get('/register', 'Auth\Employer\RegisterController@showRegistrationForm')->name('employer.register');
     // Password Resets Routes
     Route::post('password/email', 'Auth\Employer\ForgotPasswordController@sendResetLinkEmail')->name('employer.password.email');
     Route::get('password/reset', 'Auth\Employer\ForgotPasswordController@showLinkRequestForm')->name('employer.password.request');

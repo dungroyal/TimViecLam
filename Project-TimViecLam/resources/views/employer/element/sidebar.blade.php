@@ -5,7 +5,7 @@
 
                 <li class="menu-title text-center text-white-50">Trang quản lý</li>
                 <li>
-                    <a href="calendar.html" class="waves-effect">
+                    <a href="{{ Route('employer.dashboard') }}" class="waves-effect">
                         <i class="bx bxs-dashboard"></i>
                         <span>Quản lý chung</span>
                     </a>
@@ -43,7 +43,7 @@
                         <span>Thông tin công ty</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">Cập nhật thông tin</a></li>
+                    <li><a href="{{ Route('employer.company_info') }}">Cập nhật thông tin</a></li>
                         <li><a href="#">Đổi mật khẩu</a></li>
                     </ul>
                 </li>

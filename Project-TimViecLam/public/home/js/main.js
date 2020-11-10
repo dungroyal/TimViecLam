@@ -35,6 +35,9 @@
           }, 400);
           return false;
       });
+      $(".select2").select2({
+        maximumSelectionLength: 10
+    })
   });
   const readMoreBtn = document.querySelector('.read-more-btn');
   const text = document.querySelector('.box-body');
@@ -48,3 +51,4 @@
   })
 
 
+  $("img.lazy").lazyload();

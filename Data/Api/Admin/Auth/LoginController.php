@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\Admin\Auth;
+// namespace App\Http\Controllers\Api\Admin\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Facades\JWTAuth;
-use Illuminate\Support\Facades\Validator;
-use Tymon\JWTAuth\Facades\JWTFactory;
-use JWTAuthException;
-use App\Models\Admin;
+// use Illuminate\Http\Request;
+// use Tymon\JWTAuth\Exceptions\JWTException;
+// use Tymon\JWTAuth\Facades\JWTAuth;
+// use Illuminate\Support\Facades\Validator;
+// use Tymon\JWTAuth\Facades\JWTFactory;
+// use JWTAuthException;
+// use App\Models\Admin;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -18,9 +18,9 @@ class LoginController extends Controller
     public function __construct()
     {
         Auth::shouldUse('admin');
-        $this->admin = new Admin;
+        // $this->admin = new Admin;
     }
-    
+
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -44,7 +44,7 @@ class LoginController extends Controller
         } catch (JWTException $e) {
             return response()->json(['error' => 'Không thể tạo mã'], 500);
         }
-        
+
         return response()->json([
 		    'response' => 'success',
 		    'result' => [

@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\JobSeeker;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
+use App\JobSeeker;
 
 class RegisterController extends Controller
 {
@@ -24,7 +26,7 @@ class RegisterController extends Controller
     {
         return view('auth.job_seeker.register');
     }
-    
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -44,10 +46,15 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    
+
+    // protected function registered(Request $request, $user)
+    // {
+    //     dd($request->input('name'));
+    // }
+
     protected function guard()
     {
         return Auth::guard('job_seeker');
-    }  
-    
+    }
+
 }

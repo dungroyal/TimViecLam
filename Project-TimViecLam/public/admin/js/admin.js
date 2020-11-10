@@ -6,6 +6,7 @@
             (console.log("pressed"),
             t("body").removeClass("fullscreen-enable"));
     }
+
     var n;
     t("#side-menu").metisMenu(),
         t("#vertical-menu-btn").on("click", function(e) {
@@ -132,5 +133,7 @@
                 t("#preloader")
                     .delay(100)
                     .fadeOut("slow");
-        });
+        }),t(".select2").select2({
+          maximumSelectionLength: 10
+      });
 })(jQuery);

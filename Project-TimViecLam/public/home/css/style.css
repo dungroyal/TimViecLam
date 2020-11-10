@@ -551,11 +551,6 @@ strong {
 /* search */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-
-.form-control {
-    max-width: 550px;
-}
-
 .form-group--option {
     padding-top: 15px;
 }
@@ -622,17 +617,6 @@ strong {
     background-color: rgb(28, 159, 235);
 }
 
-.fas.fa-plus {
-    padding-left: 22px;
-    padding-top: 10px;
-    color: white;
-}
-
-.fas.fa-briefcase {
-    padding-top: 10px;
-    padding-left: 10px;
-    color: black;
-}
 
 .box.box_title--bottom:hover {
     background-color: rgb(10, 134, 107);
@@ -861,9 +845,6 @@ p {
     background-color: rgb(74, 205, 228);
 }
 
-.fas {
-    color: orange;
-}
 
 /* kết thúc footer */
 
@@ -1006,7 +987,7 @@ p {
 background: linear-gradient(90deg, rgba(57,174,231,1) 11%, rgba(25,199,235,1) 38%, rgba(33,194,236,1) 59%, rgba(101,177,237,1) 100%); */
     background-image: url(https://cdn.pixabay.com/photo/2016/04/07/17/49/aircraft-1314333_1280.png);
     max-width: 100%;
-    height: 700px;
+    min-height: 100px;
 
 }
 
@@ -1019,14 +1000,20 @@ background: linear-gradient(90deg, rgba(57,174,231,1) 11%, rgba(25,199,235,1) 38
     font-size: 18px;
 }
 
-.card-title--uv {
-    margin-left: 5%;
-    margin-top: 5%;
-    color: rgb(250, 250, 250);
-}
 
+.el-form-item__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: #48576a;
+    line-height: 1;
+    padding: 11px 12px 11px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 .card-title--uv p {
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 .card_login-uv {
@@ -1048,16 +1035,6 @@ background: linear-gradient(90deg, rgba(57,174,231,1) 11%, rgba(25,199,235,1) 38
 
 .form-signin {
     width: 100%;
-}
-
-.logo__tvl-login--uv img {
-    max-width: 50%;
-    margin-left: 25%;
-    margin-bottom: 7%;
-}
-
-.form-signin__login-uv {
-    height: 40%;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
@@ -1093,23 +1070,11 @@ input:focus {
     background-color: #076d9c;
 }
 
-.fas.fa-user {
-    color: rgb(9, 137, 201);
-}
 
-.fas.fa-key {
-    color: rgb(9, 137, 201);
-}
 
 .forgotpassword__login-uv a {
     text-decoration: none;
     color: rgb(132, 134, 136);
-}
-
-.card__login-uv--bottom {
-    margin-top: -3%;
-    margin-left: 58.7%;
-    width: 33%;
 }
 
 .text__login-uv--bottom a {
@@ -1450,4 +1415,51 @@ input:focus {
     color: var(--while);
 }
 
+/*  -----------------  */
+.fieldset_custom{
+    border: 1px solid #eee;
+    padding: 15px 15px 15px 8px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    background-color: #fbfbfb;
+}
 
+.fieldset_custom legend{
+    display: inline;
+    width: auto;
+    padding: 0 5px;
+    font-size: 1.1rem;
+    line-height: inherit;
+    border: 0;
+    border-bottom: none;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #4f5d66;
+}
+
+/* Custom Select2 */
+.select2-container .select2-selection--single{
+    height: 38px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #495057 !important;
+    line-height: 37px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 38px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 12px !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+    padding: 0px 15px !important;
+    /* margin: 2px 0px !important; */
+}
+
+.select2-container--default .select2-results>.select2-results__options{
+    max-height: 300px!important;
+}
+/* End Custom Select2 */

@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth\Employer;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Employer;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+
+use App\Employer;
 
 class RegisterController extends Controller
 {
@@ -22,7 +24,7 @@ class RegisterController extends Controller
     |
     */
 
-    // use RegistersUsers;
+    use RegistersUsers;
 
     /**
      * Where to redirect users after registration.
@@ -40,7 +42,7 @@ class RegisterController extends Controller
     {
         return view('auth.employer.register');
     }
-    
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -56,12 +58,6 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
     protected function create(array $data)
     {
         return Employer::create([
@@ -70,5 +66,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    
+
+    // protected function registered(Request $request, $user)
+    // {
+    //     dd($request->input('name'));
+    // }
+
 }

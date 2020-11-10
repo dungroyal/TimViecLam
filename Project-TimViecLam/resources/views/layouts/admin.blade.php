@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Tìm việc làm nhanh" name="description">
     <meta content="Royal Team" name="author">
 
@@ -15,6 +14,7 @@
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
     <!-- CSS -->
+    <link href="{{ asset('plugin/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
@@ -41,7 +41,9 @@
                 </div>
             </div>
 
+        <div class="page-content">
             @yield('content')
+        </div>
 
             <footer class="footer">
                 <div class="container-fluid">
@@ -68,6 +70,7 @@
     <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('plugin/metisMenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('plugin/select2/js/select2.min.js') }}"></script>
     <script src="{{ asset('admin/js/admin.js') }}"></script>
 </body>
 

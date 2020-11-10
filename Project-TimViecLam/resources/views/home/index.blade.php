@@ -1,381 +1,745 @@
 @extends('layouts.home')
 
 @section('content')
+<div class="background-color-container">
+    <div class="home-header bg-white">
+        <div class="container w-100">
+            <div class="content text-center pt-4">
+                <h1>Tìm Việc Khó? Đã Có Timvieclam.xyz</h1>
+                <p>Hơn +100.000 việc làm hấp dẫn đang tuyển dụng hôm nay.</p>
+            </div>
+        </div>
+        <div class="w-100 progressive-image">
+            <img alt="65x12" class="w-100" src="{{ asset('images/All_Job.png') }}"/>
+        </div>
+        <div class="container my-0 search_group_header pb-5">
+            <form>
+                <div class="inner-form">
+                    <div class="input-field first-wrap">
+                        <div class="icon-wrap">
+                            <i class="fab fa-searchengin"></i>
+                        </div>
+                        <input id="search" type="text" placeholder="Tiêu đề công việc, vị trí công việc, ... " />
+                    </div>
+                    <div class="input-field second-wrap">
+                        <div class="icon-wrap">
+                            <i class="fas fa-list mr-2"></i>
+                        </div>
+                        <select name="" title="Select a number">
+                            <option >Ngành nghề</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                        </select>
+                    </div>
+                    <div class="input-field third-wrap">
+                        <div class="icon-wrap">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                        </div>
+                        <select name="" title="Select a number">
+                            <option>Địa điểm</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="1">Option 1</option>
+                        </select>
+                    </div>
+                    <div class="input-field fifth-wrap">
+                        <button class="btn-search" type="button">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="container">
-        <div class="content">
-            <h1>Tìm Việc Khó?<br>
-                Đã Có Timvieclam.xyz</h1>
-            <p>Hơn +100.000 việc làm hấp dẫn đang tuyển dụng hôm nay.</p>
-        </div>
-
-        <div class="search_jobs search_jobs_top">
-            <div class="search_box">
-                <input type="text" class="input input__searchjobs-top" placeholder="Nhập công việc bạn đang tìm...">
-                <button class="btn">Tìm Kiếm</button>
+        <div class="row">
+            <div class="col-md-12 text-center mt-5 title-catalog-top ">
+                <h3 class="font-weight-bold"><i class="fas fa-city"></i> TOP NGÀNH NGHỀ PHỔ BIẾN</h3>
             </div>
         </div>
-        <div class="form-group--option">
-            <select name="careers" id="careers" class="form-control--left">
-                <option value="0">Chọn nghành nghề</option>
-                @foreach ($careers as $career)
-                    <option value="{{$career->id}}">{{$career->name}}</option>
-                @endforeach
-            </select>
-
-            <select class="form-control--right">
-                <option  value="0">Vị Trí</option>
-                @foreach ($db_city as $db_city)
-                    <option value="{{$db_city->matp}}">{{$db_city->name}}</option>
-                @endforeach
-            </select>
+        <div class="wp-slider mt-3">
+            <div class="owl-carousel owl-theme">
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">Bán Hàng</p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Hành chính - Văn phòng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">Dịch vụ</p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">Nhân viên kinh doanh</p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">Lao động phổ thông</p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item-top-field">
+                    <div class="box_shadow_slider">
+                        <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
+                            <div class="icon-top-field">
+                                <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
+                            </div>
+                            <div class="top-field-name">
+                                <span class="text_bold">
+                                    <p class="el-tooltip item">
+                                        Tư vấn/ Chăm sóc khách hàng
+                                    </p>
+                                </span>
+                                <p class="text_ellipsis text_italic">
+                                    (3038 việc làm đang tuyển)
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
         </div>
-        <div class="search-dvanced">
-            <a href="">Tìm kiếm nâng cao.</a>
+        <!-- việc làm tuyển gấp -->
+        <div class="box_general mt-5">
+            <h2 data-v-ebebb8de="" class="text_ellipsis uppercase"><i class="fas fa-briefcase"></i> &nbsp;Việc làm
+                tuyển
+                gấp
+            </h2>
+            <!-- wp slider list job -->
+            <div class="col-lg-12 col-md-12 mt-3">
+                <!--  -->
+                <div class="row">
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div data-v-ebebb8de="" class="col-md-6 col-lg-6 job-over-item">
+                        <div data-v-0e092c0b="" data-v-ebebb8de="" class="row job-item">
+                            <div data-v-0e092c0b="" class="col-md-12 col-lg-12 job_info">
+                                <div data-v-0e092c0b="" class="company_logo"><a data-v-0e092c0b="" href="#" class=""
+                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                        <div data-v-0e092c0b="" class="logo_box"><img data-v-0e092c0b=""
+                                                class="lazy-load"
+                                                src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
+                                                lazy="loaded"></div>
+                                    </a></div>
+                                <div data-v-0e092c0b="" class="company_name">
+                                    <p data-v-0e092c0b="" class="j_title text_ellipsis"><a data-v-0e092c0b=""
+                                            href="#" class="el-tooltip item" id="vieclamtuyengap"
+                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <!---->
+                                            <!----><span data-v-0e092c0b=""><strong data-v-0e092c0b="">Loan
+                                                    Processor
+                                                    (hỗ Trợ Cho Vay
+                                                    Tiền Mua Nhà)</strong></span></a></p>
+                                    <div data-v-0e092c0b="" class="j_company">
+                                        <div data-v-0e092c0b="" class="name"><a data-v-0e092c0b="" href="#"
+                                                target="_blank" title="Cali-land, Inc tuyển dụng"><span
+                                                    data-v-0e092c0b="">Cali-land, Inc</span></a></div>
+                                        <div data-v-0e092c0b="" class="viewed">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div data-v-0e092c0b="" class="table-item">
+                                        <div data-v-0e092c0b="" class="dollar"><i
+                                                class="far fa-money-bill-alt"></i>&nbsp;11 triệu -
+                                            24 triệu</div>
+                                        <div data-v-0e092c0b="" title="Hồ Chí Minh, Bình Dương"
+                                            class="location text_ellipsis pd-map"><i
+                                                class="fas fa-map-marker-alt"></i>&nbsp;Hồ Chí
+                                            Minh, Bình Dương
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <img src="https://www.openthenews.com/wp-content/uploads/2020/07/AI-aggregator.png" class="feature-img">
-    </div>
-    <div class="bg-light mt-2 py-5">
-        <h4 class="mb-4" style="text-align: center;"><i class="fas fa-city">&nbsp; TOP NGÀNH NGHỀ PHỔ BIẾN</i></h4>
-        <div class="container container-catalog--top">
-            @foreach ($careers as $careers)
-            @continue($loop->index == 0)
-            <div class="card promoting-card mr-3">
-                <div class="card-body d-flex">
-                    <img src="{{ asset('home/images/catalog.png') }}" class="rounded-circle mr-3" alt="avatar">
-                    <div>
-                        <a href="">{{$careers->name}}</a>
-                        <p class="card-text card-text--catalog ">(1111 việc đang tuyển)</p>
-                    </div>
-                </div>
-            </div>
-            @break($loop->index == 3)
-            @endforeach
-            <div class="card promoting-card-bottom mr-2">
-                <div class="card-body d-flex">
-                    <a href="">
-                        <img src="{{ asset('home/images/plus.png') }}" class="rounded-circle--bottom" alt="avatar">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
+        <div class="header mt-5">
 
-        <div class="container header header-bottom">
-            <!-- việc làm tuyển gấp -->
-            <br><br><br>
-            <div class="box box-title">
-                <h4><i class="fas fa-briefcase">&nbsp; VIỆC LÀM TUYỂN GẤP</i></h4>
-            </div>
-            <div class="row">
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://static.wixstatic.com/media/9d8ed5_847c5475fe8c43f899c98fea24fd4ca1~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/vi/d/dc/Vinfast-logo.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"
-                                alt="Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://image.freepik.com/free-vector/camera-photography-logo-badges_32991-120.jpg"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://thaitrien.com/wp-content/uploads/2020/05/logo-hoi-sinh-vien-vn.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/ITunes_12.2_logo.png/768px-ITunes_12.2_logo.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-            </div><br> <br>
-            <div class="box box_title--bottom">
-                <a href=""><i class="fas fa-plus">&nbsp; Xem thêm</i></a>
-            </div>
 
             <!-- việc làm hấp dẫn -->
 
-            <br><br>
-
-            <div class="box box-title">
-                <h4><i class="fas fa-briefcase">&nbsp; VIỆC LÀM HẤP DẪN</i></h4>
-            </div>
-            <div class="row">
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://static.wixstatic.com/media/9d8ed5_847c5475fe8c43f899c98fea24fd4ca1~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/vi/d/dc/Vinfast-logo.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://image.freepik.com/free-vector/camera-photography-logo-badges_32991-120.jpg"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://thaitrien.com/wp-content/uploads/2020/05/logo-hoi-sinh-vien-vn.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-12 col-lg-6 col-md-12 col-sm-12 mb-1 ">
-                    <div class="card card-jobs-uv">
-                        <div class="logo-doanh_nghiep">
-                            <img class="card-img-top"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/ITunes_12.2_logo.png/768px-ITunes_12.2_logo.png"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body card-body--uv">
-                            <a href="">Nhân Viên Kinh Doanh Lĩnh Vực Thức Ăn Thủy Sản</a>
-                            <br>
-                            <a href="">Công Ty TNHH Công Nghệ Cao 3D Việt Nam </a>
-                            <p><i class="fas fa-dollar-sign"></i> 15 triệu - 20 triệu
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Hồ
-                                Chí Minh </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <br><br>
-            <div class="box box_title--bottom">
-                <a href=""><i class="fas fa-plus">&nbsp; Xem thêm</i></a>
-            </div>
 
 
             <!-- DOANH NGHIỆP TUYỂN DỤNG -->
-            <h1 class="font-weight-light text-center mt-5 font-weight-bold" style="font-size: 26px;">DOANH NGHIỆP TUYỂN DỤNG
+            <h1 class="font-weight-light text-center mt-5 font-weight-bold" style="font-size: 26px">
+                DOANH NGHIỆP TUYỂN DỤNG
             </h1>
-            <p class="text-center">Hàng nghìn doanh nghiệp uy tín đang tìm kiếm ứng viên trên Timvieclam.xyz</p>
+            <p class="text-center">
+                Hàng nghìn doanh nghiệp uy tín đang tìm kiếm ứng viên trên
+                Timvieclam.xyz
+            </p>
 
             <!-- <hr class="mt-2 mb-5"> -->
 
             <div class="row row-business--top">
                 <div class="col-lg-2 col-md-4 col-sm-6">
-                    <a href="#lightbox"><img src="https://static.mservice.io/img/logo-momo.png" class="my-3"></a>
+                    <a href="#lightbox"><img src="https://static.mservice.io/img/logo-momo.png" class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://brasol.vn/public/uploads/1521190718-brasol.vn-he-thong-nhan-dien-thuong-hieu-bitis-bestplus-vn-logo-bitis.jpg"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e8/Logo_Viettel.svg/1200px-Logo_Viettel.svg.png"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img src="https://www.freepnglogos.com/uploads/samsung-logo-text-png-1.png"
-                            class=" my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://upload.wikimedia.org/wikipedia/vi/thumb/8/80/FPT_New_Logo.png/1200px-FPT_New_Logo.png"
-                            class=" my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://brasol.vn/public/ckeditor/uploads/thiet-ke-logo-tin-tuc/logo-tiki-png.png"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
             </div>
-
-
 
             <div class="row row-business--between">
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://upload.wikimedia.org/wikipedia/vi/thumb/8/80/FPT_New_Logo.png/1200px-FPT_New_Logo.png"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://brasol.vn/public/uploads/1521190718-brasol.vn-he-thong-nhan-dien-thuong-hieu-bitis-bestplus-vn-logo-bitis.jpg"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e8/Logo_Viettel.svg/1200px-Logo_Viettel.svg.png"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img src="https://www.freepnglogos.com/uploads/samsung-logo-text-png-1.png"
-                            class=" my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://upload.wikimedia.org/wikipedia/vi/thumb/8/80/FPT_New_Logo.png/1200px-FPT_New_Logo.png"
-                            class=" my-3"></a>
+                            class="my-3" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <a href="#lightbox"><img
                             src="https://brasol.vn/public/ckeditor/uploads/thiet-ke-logo-tin-tuc/logo-tiki-png.png"
-                            class="my-3"></a>
+                            class="my-3" /></a>
                 </div>
             </div>
 
-            <h1 class="font-weight-light text-center mt-5 font-weight-bold" style="font-size: 26px;">Our Latest Blog</h1>
-            <hr class="mt-2 mb-1">
+            <h1 class="font-weight-light text-center mt-5 font-weight-bold" style="font-size: 26px">
+                Our Latest Blog
+            </h1>
+            <hr class="mt-2 mb-1" />
             <section class="blog">
                 <div id="cards_landscape_wrap-2">
                     <div class="container">
@@ -392,9 +756,10 @@
                                                 <h6>AORUS | Enthusiasts' Choice for PC gaming</h6>
                                                 <div class="card__content">
                                                     <img src="https://avatarfiles.alphacoders.com/118/thumb-118867.jpg"
-                                                        alt="" class="card__image-avt">
-                                                    <a href="#" class="btn btn--primary">Huy Nguyễn</a>
-                                                    <a href="#" class="btn btn--secondary">Đọc Tiếp <i class="fa fa-angle-double-right"></i></a>
+                                                        alt="" class="card__image-avt" />
+                                                    <a href="#" class="btn btn--primary">Quốc Thịnh</a>
+                                                    <a href="#" class="btn btn--secondary">Đọc Tiếp <i
+                                                            class="fa fa-angle-double-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -413,8 +778,8 @@
                                                 <h6>AORUS | Enthusiasts' Choice for PC gaming</h6>
                                                 <div class="card__content">
                                                     <img src="https://avatarfiles.alphacoders.com/118/thumb-118867.jpg"
-                                                        alt="" class="card__image-avt">
-                                                    <a href="#" class="btn btn--primary">Huy Nguyễn</a>
+                                                        alt="" class="card__image-avt" />
+                                                    <a href="#" class="btn btn--primary">Quốc Thịnh</a>
                                                     <a href="#" class="btn btn--secondary">Đọc Tiếp <i
                                                             class="fa fa-angle-double-right"></i></a>
                                                 </div>
@@ -435,8 +800,8 @@
                                                 <h6>AORUS | Enthusiasts' Choice for PC gaming</h6>
                                                 <div class="card__content">
                                                     <img src="https://avatarfiles.alphacoders.com/118/thumb-118867.jpg"
-                                                        alt="" class="card__image-avt">
-                                                    <a href="#" class="btn btn--primary">Huy Nguyễn</a>
+                                                        alt="" class="card__image-avt" />
+                                                    <a href="#" class="btn btn--primary">Quốc Thịnh</a>
                                                     <a href="#" class="btn btn--secondary">Đọc Tiếp <i
                                                             class="fa fa-angle-double-right"></i></a>
                                                 </div>
@@ -449,11 +814,287 @@
                     </div>
                 </div>
             </section>
-            <div class="box box_title--bottom">
-                <a href=""><i class="fas fa-plus">&nbsp; Xem thêm</i></a>
-            </div>
-            <br> <br> <br> <br>
-        </div>
-    </div>
 
+
+        </div>
+        <!-- Tim viec theo tinh -->
+        <div class="col-lg-12 col-md-12">
+            <div class="search-job-city">
+                <div class="box_general mt-5">
+                    <h2 data-v-ebebb8de="" class="text_ellipsis uppercase text-center"> &nbsp;TÌM VIỆC LÀM THEO TỈNH
+                        THÀNH </h2>
+                    <div class="box-body" data-v-0aaecb84="">
+                        <div class="row" data-v-0aaecb84="">
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Hà Nội
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Hồ Chí Minh
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại An Giang
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bạc Liêu
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bà Rịa - Vũng Tàu
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bắc Cạn
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bắc Giang
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bắc Ninh
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bến Tre
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bình Dương
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bình Định
+                                </a></div>
+                            <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                    class="item" data-v-0aaecb84="">
+                                    Việc làm tại Bình Phước
+                                </a></div>
+                        </div>
+                        <!-- read more -->
+                        <span class="moreText">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><span
+                                        class="more-location"><a href="#" class="item" data-v-0aaecb84="">
+                                            Việc làm tại Bình Thuận
+                                        </a></div>
+
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Cao Bằng
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Cà Mau
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Cần Thơ
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Đà Nẵng
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Đắc Lắc
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Đắc Nông
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Điện Biên
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Đồng Nai
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Đồng Tháp
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Gia Lai
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hà Giang
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hà Nam
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hà Tây
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hà Tĩnh
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href=#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hải Dương
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hải Phòng
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hậu Giang
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hòa Bình
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Hưng Yên
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Khánh Hòa
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Kiên Giang
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Kon Tum
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Lai Châu
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Lạng Sơn
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Lào Cai
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Lâm Đồng
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Long An
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Nam Định
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Nghệ An
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Ninh Bình
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Ninh Thuận
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Phú Thọ
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Phú Yên
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Quảng Bình
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Quảng Nam
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Quảng Ngãi
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Quảng Ninh
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Quảng Trị
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Sóc Trăng
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Sơn La
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Tây Ninh
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Thái Bình
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Thái Nguyên
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Thanh Hóa
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Thừa Thiên Huê
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Tiền Giang
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Trà Vinh
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Tuyên Quang
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Vĩnh Long
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Vĩnh Phúc
+                                    </a></div>
+                                <div class="col-lg-3 col-md-3 item location_rut_gon" data-v-0aaecb84=""><a href="#"
+                                        class="item" data-v-0aaecb84="">
+                                        Việc làm tại Yên Bái
+                                    </a></div>
+
+                            </div>
+                        </span>
+                        <div class="read-more-btn">Xem thêm <i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br> <br>
+    </div>
+</div>
 @endsection
