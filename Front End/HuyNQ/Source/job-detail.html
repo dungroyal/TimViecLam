@@ -8,198 +8,48 @@
     <link rel="shortcut icon" href="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" type="image/x-icon">
     <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/t_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header class="container">
-        <a href="index.html"><img class="logo" src="images/Logo.png" alt=""></a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Trang Chủ</a>
-                </li>
-                <li>
-                    <a href="#">Giới Thiệu</a>
-                </li>
-                <li>
-                    <a href="#">Góc Nghề Nghiệp</a>
-                </li>
-                <li>
-                    <a href="contact.html">Liên Hệ</a>
-                </li>
-                <li>
-                    <a href="#" class="menu-button">Tài Khoản</a>
-                </li>
-            </ul>
+    <header>
+        <nav class="container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="250" alt="Logo Tìm Việc Làm">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline ml-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
+                            <li class="nav-item">
+                                <a class="nav-link" href="job.html"><i class="fas fa-blog mr-2 icon-menu"></i> GÓC NGHỀ NGHIỆP
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-lock mr-2 icon-menu"></i> ĐĂNG NHẬP </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-user mr-2 icon-menu"></i> ĐĂNG KÝ </a>
+                            </li>
+                            <div class="dropdown-menu-top">
+                                <li class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3">
+                                    <a class="text-white p-2" href="#">NHÀ TUYỂN DỤNG</a>
+                                </li>
+                            </div>
+                        </div>
+                </form>
+            </div>
         </nav>
     </header>
 
     
     <!-- Tìm Kiếm Việc Làm -->
-    <div class="background-search-job">
-        <div class="box container">
-            <div class="row search-job ml-1">
-                <div class="col-4 mt-2 my-0 px-1">
-                    <span class="ctn-icon"> <i class="fa fa-briefcase" aria-hidden="true"></i></span>
-                    <input class="form-control search-job__input-name ui-autocomplete-input" value=""
-                        placeholder="Tên công việc, vị trí bạn muốn..." id="keyword" autocomplete="off">
-                </div>
-                <div class="col-3 mt-2 px-1">
-                    <span class="ctn-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                    <select class="form-control search-job__input-location" id="city">
-                        <option value="">&nbsp;Tất cả địa điểm</option>
-                        <option value="1">&nbsp;Hà Nội</option>
-                        <option value="2">&nbsp;Hồ Chí Minh</option>
-                        <option value="3">&nbsp;Bình Dương</option>
-                        <option value="4">&nbsp;Bắc Ninh</option>
-                        <option value="5">&nbsp;Đồng Nai</option>
-                        <option value="6">&nbsp;Hưng Yên</option>
-                        <option value="7">&nbsp;Hải Dương</option>
-                        <option value="8">&nbsp;Đà Nẵng</option>
-                        <option value="9">&nbsp;Hải Phòng</option>
-                        <option value="10">&nbsp;An Giang</option>
-                        <option value="11">&nbsp;Bà Rịa-Vũng Tàu</option>
-                        <option value="12">&nbsp;Bắc Giang</option>
-                        <option value="13">&nbsp;Bắc Kạn</option>
-                        <option value="14">&nbsp;Bạc Liêu</option>
-                        <option value="15">&nbsp;Bến Tre</option>
-                        <option value="16">&nbsp;Bình Định</option>
-                        <option value="17">&nbsp;Bình Phước</option>
-                        <option value="18">&nbsp;Bình Thuận</option>
-                        <option value="19">&nbsp;Cà Mau</option>
-                        <option value="20">&nbsp;Cần Thơ</option>
-                        <option value="21">&nbsp;Cao Bằng</option>
-                        <option value="22">&nbsp;Cửu Long</option>
-                        <option value="23">&nbsp;Đắc Lắc</option>
-                        <option value="24">&nbsp;Đắc Nông</option>
-                        <option value="25">&nbsp;Điện Biên</option>
-                        <option value="26">&nbsp;Đồng Tháp</option>
-                        <option value="27">&nbsp;Gia Lai</option>
-                        <option value="28">&nbsp;Hà Giang</option>
-                        <option value="29">&nbsp;Hà Nam</option>
-                        <option value="30">&nbsp;Hà Tĩnh</option>
-                        <option value="31">&nbsp;Hậu Giang</option>
-                        <option value="32">&nbsp;Hoà Bình</option>
-                        <option value="33">&nbsp;Khánh Hoà</option>
-                        <option value="34">&nbsp;Kiên Giang</option>
-                        <option value="35">&nbsp;Kon Tum</option>
-                        <option value="36">&nbsp;Lai Châu</option>
-                        <option value="37">&nbsp;Lâm Đồng</option>
-                        <option value="38">&nbsp;Lạng Sơn</option>
-                        <option value="39">&nbsp;Lào Cai</option>
-                        <option value="40">&nbsp;Long An</option>
-                        <option value="41">&nbsp;Miền Bắc</option>
-                        <option value="42">&nbsp;Miền Nam</option>
-                        <option value="43">&nbsp;Miền Trung</option>
-                        <option value="44">&nbsp;Nam Định</option>
-                        <option value="45">&nbsp;Nghệ An</option>
-                        <option value="46">&nbsp;Ninh Bình</option>
-                        <option value="47">&nbsp;Ninh Thuận</option>
-                        <option value="48">&nbsp;Phú Thọ</option>
-                        <option value="49">&nbsp;Phú Yên</option>
-                        <option value="50">&nbsp;Quảng Bình</option>
-                        <option value="51">&nbsp;Quảng Nam</option>
-                        <option value="52">&nbsp;Quảng Ngãi</option>
-                        <option value="53">&nbsp;Quảng Ninh</option>
-                        <option value="54">&nbsp;Quảng Trị</option>
-                        <option value="55">&nbsp;Sóc Trăng</option>
-                        <option value="56">&nbsp;Sơn La</option>
-                        <option value="57">&nbsp;Tây Ninh</option>
-                        <option value="58">&nbsp;Thái Bình</option>
-                        <option value="59">&nbsp;Thái Nguyên</option>
-                        <option value="60">&nbsp;Thanh Hoá</option>
-                        <option value="61">&nbsp;Thừa Thiên Huế</option>
-                        <option value="62">&nbsp;Tiền Giang</option>
-                        <option value="63">&nbsp;Toàn Quốc</option>
-                        <option value="64">&nbsp;Trà Vinh</option>
-                        <option value="65">&nbsp;Tuyên Quang</option>
-                        <option value="66">&nbsp;Vĩnh Long</option>
-                        <option value="67">&nbsp;Vĩnh Phúc</option>
-                        <option value="68">&nbsp;Yên Bái</option>
-                        <option value="100">&nbsp;Nước Ngoài</option>
-                    </select>
-                </div>
-                <div class="col-3 mt-2 px-1">
-                    <span class="ctn-icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
-                    <select id="category" class="form-control search-job__input-categories">
-                        <option value="">&nbsp;Tất cả ngành nghề</option>
-                        <option value="10101">&nbsp;An toàn lao động</option>
-                        <option value="10102">&nbsp;Bán hàng kỹ thuật</option>
-                        <option value="10103">&nbsp;Bán lẻ / bán sỉ</option>
-                        <option value="10004">&nbsp;Báo chí / Truyền hình</option>
-                    </select>
-                </div>
-                <div class="col-2 mt-2 px-1">
-                    <span class="ctn-icon text-white pl-2 search-job--input"><i class="fa fa-search"
-                            aria-hidden="true"></i></span>
-                    <button type="submit" class="form-control search-job__input-submit btn btn-block btn-warning">Tìm Kiếm</button>
-                </div>
-            </div>
-        </div>
 
-        <!-- Tìm Kiếm Nâng Cao -->
-        <div class="tittle-search">
-            <span id="btn-show-advanced-search" data-toggle="collapse" data-target="#emoji">
-                <i class="fa fa-angle-down"></i>
-                &nbsp;Chọn tìm kiếm nâng cao
-            </span>
-        </div>
-        <div class="box collapse container" id="emoji">
-            <div class="row search-job ml-1">
-                <div class="col-3 mt-2 mb-3 px-1">
-                    <span class="ctn-icon"><i class="fas fa-money-bill"></i></span>
-                    <select class="form-control search-job__input-location" id="city">
-                        <option value="">&nbsp;Tất cả mức lương</option>
-                        <option value="1">&nbsp;Dưới 3 triệu</option>
-                        <option value="2">&nbsp;3 - 5 triệu</option>
-                        <option value="3">&nbsp;5 - 7 Triệu</option>
-                        <option value="4">&nbsp;7 - 10 Triệu</option>
-                        <option value="5">&nbsp;12 - 15 Triệu</option>
-                        <option value="6">&nbsp;15 - 20 Triệu</option>
-                        <option value="7">&nbsp;20 - 30 Triệu</option>
-                        <option value="8">&nbsp;Trên 30 Triệu</option>
-                        <option value="9">&nbsp;Thỏa thuận</option>
-                    </select>
-                </div>
-                <div class="col-3 mt-2 mb-3 px-1">
-                    <span class="ctn-icon"><i class="far fa-chart-bar"></i></span>
-                    <select class="form-control search-job__input-location" id="city">
-                        <option value="">&nbsp;Tất cả kinh nghiệm</option>
-                        <option value="1">&nbsp;Chưa có</option>
-                        <option value="2">&nbsp;Dưới 1 năm</option>
-                        <option value="3">&nbsp; 1 năm </option>
-                        <option value="4">&nbsp; 2 năm </option>
-                        <option value="5">&nbsp; 3 năm </option>
-                        <option value="6">&nbsp; 4 năm </option>
-                        <option value="7">&nbsp; 5 năm </option>
-                        <option value="8">&nbsp; Trên 5 năm </option>
-                    </select>
-                </div>
-                <div class="col-3 mt-2 mb-3 px-1">
-                    <span class="ctn-icon"><i class="fas fa-user-clock"></i></span>
-                    <select id="category" class="form-control search-job__input-categories">
-                        <option value="">&nbsp;Hình thức làm việc</option>
-                        <option value="10101">&nbsp; Toàn thời gian </option>
-                        <option value="10102">&nbsp; Bán thời gian </option>
-                        <option value="10103">&nbsp; Thực tập sinh </option>
-                        <option value="10004">&nbsp; Remote - Làm việc từ xa </option>
-                    </select>
-                </div>
-                <div class="col-3 mt-2 mb-3 px-1">
-                    <span class="ctn-icon"><i class="fas fa-city"></i></span>
-                    <select id="category" class="form-control search-job__input-categories">
-                        <option value="">&nbsp;Tất cả lĩnh vực</option>
-                        <option value="10101">&nbsp; Agency (Design/Development) </option>
-                        <option value="10102">&nbsp; Agency (Marketing/Advertising) </option>
-                        <option value="10103">&nbsp; Bán lẻ - Hàng tiêu dùng - FMCG </option>
-                        <option value="10004">&nbsp; Bât động sản </option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Detail -->
     <section class="search-result-list-detail template-2">
         <div class="container">
@@ -213,8 +63,7 @@
                                 <a class="employer job-company-name" href="#">CÔNG TY TNHH ĐIỆN KHÍ QUỐC QUANG (VIỆT
                                     NAM)</a>
                             </div>
-                            <div class="apply-now-btn"> <a href="javascript:void(0);"
-                                    class="btn-gradient btnApplyClick"> Nộp Đơn Ứng Tuyển </a> </div>
+                            <div class="apply-now-btn "> <a href="javascript:void(0);" class="btn-gradient btnApplyClick"> Nộp Đơn Ứng Tuyển </a> </div>
                         </div>
                     </section>
                 </div>
