@@ -64,8 +64,46 @@
             <div class="w-100">
                 <img src="images/All_Job.png" alt="65x12" class="w-100">
             </div>
-            <div class="container my-0 search_group_header pb-5">
-                <form>
+            <div class="container my-0 search_group_header pb-5 bg-primary border rounded">
+                <div class="row search-job ml-1">
+                    <div class="col-4 mt-3 my-0 px-1">
+                        <span class="ctn-icon1"> <i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                        <input class="form-control search-job__input-name ui-autocomplete-input" value=""
+                            placeholder="Tên công việc, vị trí bạn muốn..." id="keyword" autocomplete="off">
+                    </div>
+                    <div class="col-3 mt-3 px-1">
+                        <span class="ctn-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+    
+                        <select class="form-control search-job__input-location" id="select-state">
+                            <option value="">Tất cả địa điểm</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">Hồ Chí Minh</option>
+                            <option value="3">Bình Dương</option>
+                            <option value="4">Bắc Ninh</option>
+                            <option value="5">Đồng Nai</option>
+                            <option value="6">Hưng Yên</option>
+                            <option value="7">Hải Dương</option>
+                            <option value="8">Đà Nẵng</option>
+                        </select>
+                    </div>
+                    <div class="col-3 mt-3 px-1">
+                        <span class="ctn-icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
+                        <select class="form-control search-job__input-categories">
+                            <option value="">Tất cả ngành nghề</option>
+                            <option value="">An toàn lao động</option>
+                            <option value="">Bán hàng kỹ thuật</option>
+                            <option value="">Bán lẻ / bán sỉ</option>
+                            <option value="">Báo chí / Truyền hình</option>
+                        </select>
+                    </div>
+                    <div class="col-2 mt-3 px-1">
+                        <span class="ctn-icon text-white pl-2 search-job--input"><i class="fa fa-search"
+                                aria-hidden="true"></i></span>
+                        <button type="submit" class="form-control search-job__input-submit btn btn-block btn-warning">Tìm
+                            Kiếm</button>
+                    </div>
+                </div>
+                <!-- <form>
                     <div class="inner-form">
                         <div class="input-field first-wrap">
                             <div class="icon-wrap">
@@ -115,7 +153,7 @@
                             <button class="btn-search" type="button">Tìm kiếm</button>
                         </div>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
         <div class="container">

@@ -13,6 +13,7 @@
     <!-- Plugin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
     <!-- Style -->
     <link href="{{ asset('plugin/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
@@ -31,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="form-inline ml-auto">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
+                    <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-bold font-header">
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-blog mr-2 icon-menu"></i> GÓC NGHỀ NGHIỆP
                             </a>
@@ -42,11 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ Route('register')}}"><i class="fas fa-user mr-2 icon-menu"></i> ĐĂNG KÝ </a>
                         </li>
-                        <div class="dropdown-menu-top">
-                            <li class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3">
-                                <a class="text-white p-2" href="/employer">NHÀ TUYỂN DỤNG</a>
-                            </li>
-                        </div>
+                        <li class="nav-item bg-primary btn mb-3 mb-md-0 ml-md-3">
+                            <a class="text-white p-2" href="/employer">NHÀ TUYỂN DỤNG</a>
+                        </li>
                     </div>
             </form>
         </div>
@@ -275,7 +274,7 @@
   <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-  <script src="{{ asset('plugin/select2/js/select2.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <script src="{{ asset('home/js/main.js') }}"></script>
 </body>
 </html>

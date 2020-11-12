@@ -1,3 +1,4 @@
+
   $(document).ready(function () {
 
       $('.owl-carousel').owlCarousel({
@@ -51,4 +52,6 @@
   })
 
 
-  $("img.lazy").lazyload();
+//   $("img.lazy").lazyload();
+
+$('.bootstrap-select-city__custom').selectpicker();

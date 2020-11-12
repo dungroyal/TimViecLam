@@ -627,12 +627,12 @@ strong {
     padding-top: 10px;
     color: white;
 }
-
+/* 
 .fas.fa-briefcase {
     padding-top: 10px;
     padding-left: 10px;
     color: black;
-}
+} */
 
 .box.box_title--bottom:hover {
     background-color: rgb(10, 134, 107);

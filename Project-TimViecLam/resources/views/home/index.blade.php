@@ -12,58 +12,68 @@
         <div class="w-100 progressive-image">
             <img alt="65x12" class="w-100" src="{{ asset('images/All_Job.png') }}"/>
         </div>
-        <div class="container my-0 search_group_header pb-5">
-            <form>
-                <div class="inner-form">
-                    <div class="input-field first-wrap">
-                        <div class="icon-wrap">
-                            <i class="fab fa-searchengin"></i>
+        <div class="container pb-5">
+        <div class="container main-search-bar">
+            <div class="w-100 text-center text-white pt-2"> Tìm kiếm <strong>409</strong> việc làm mới trong
+                <strong>6,509</strong> việc đang tuyển dụng</div>
+            <div class="forms-container">
+                <form action="" class="sign-in-form">
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-sm-12 col-lg-4 pr-lg-1">
+                            <div class="input-field  mb-sm-0">
+                                <i class="fas fa-briefcase"></i>
+                                <input type="text" placeholder="Tiêu đề công việc, vị trí, ...">
+                            </div>
                         </div>
-                        <input id="search" type="text" placeholder="Tiêu đề công việc, vị trí công việc, ... " />
-                    </div>
-                    <div class="input-field second-wrap">
-                        <div class="icon-wrap">
-                            <i class="fas fa-list mr-2"></i>
+                        <div class="col-sm-12 col-lg-3 px-lg-1">
+                            <div class="form-group m-0 p-0">
+                                <span class="bootstrap-select__icon"><i class="fas fa-tools"></i></span>
+                                <select class="bootstrap-select-city__custom w-100" data-live-search="true"
+                                    title="Tất cả ngành nghề">
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                    <option class="py-2">Mustard</option>
+                                </select>
+                            </div>
                         </div>
-                        <select name="" title="Select a number">
-                            <option >Ngành nghề</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                        </select>
-                    </div>
-                    <div class="input-field third-wrap">
-                        <div class="icon-wrap">
-                            <i class="fas fa-map-marked-alt mr-2"></i>
+
+                        <div class="col-sm-12 col-lg-3 px-lg-1">
+                            <div class="form-group m-0 p-0">
+                                <span class="bootstrap-select__icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <select class="bootstrap-select-city__custom w-100" data-live-search="true"
+                                    title="Địa điểm làm việc">
+                                    <option class="py-2" value="12">Bắc Giang</option>
+                                    <option class="py-2" value="13">Bắc Kạn</option>
+                                    <option class="py-2" value="14">Bạc Liêu</option>
+                                    <option class="py-2" value="15">Bến Tre</option>
+                                    <option class="py-2" value="16">Bình Định</option>
+                                    <option class="py-2" value="17">Bình Phước</option>
+                                    <option class="py-2" value="18">Bình Thuận</option>
+                                    <option class="py-2" value="19">Cà Mau</option>
+                                    <option class="py-2" value="20">Cần Thơ</option>
+                                    <option class="py-2" value="21">Cao Bằng</option>
+                                    <option class="py-2" value="62">Tiền Giang</option>
+                                    <option class="py-2" value="63">Toàn Quốc</option>
+                                    <option class="py-2" value="64">Trà Vinh</option>
+                                    <option class="py-2" value="65">Tuyên Quang</option>
+                                </select>
+                            </div>
                         </div>
-                        <select name="" title="Select a number">
-                            <option>Địa điểm</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                            <option value="1">Option 1</option>
-                        </select>
+                        <div class="col-sm-12 col-lg-2 w-100 pl-lg-1">
+                            <button type="submit" class="search-custom__btn"><i
+                                    class="fas fa-search mr-1 font-weight-bold"></i> Tìm kiếm</button>
+                        </div>
                     </div>
-                    <div class="input-field fifth-wrap">
-                        <button class="btn-search" type="button">Tìm kiếm</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+        </div>
         </div>
     </div>
     <div class="container">
