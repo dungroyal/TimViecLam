@@ -282,9 +282,11 @@ button {
 }
 
 .card-title {
-    font-size: 15px;
+    font-size: 17px;
     margin: 0 0 7px 0;
-    font-weight: 600
+    font-weight: bold;
+    text-transform: uppercase;
+    color:rgb(0, 121, 190);
 }
 
 .card-title-desc {

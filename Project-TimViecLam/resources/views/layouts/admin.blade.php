@@ -14,9 +14,10 @@
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
     <!-- CSS -->
-    <link href="{{ asset('plugin/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
     <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('plugin/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -70,7 +71,9 @@
     <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('plugin/metisMenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('plugin/select2/js/select2.min.js') }}"></script>
+    <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.vi.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <script src="{{ asset('admin/js/admin.js') }}"></script>
 </body>
 

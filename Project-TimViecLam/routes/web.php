@@ -21,14 +21,14 @@ Route::prefix('job-seeker')->group(function() {
 });
 
 Route::prefix('employer')->group(function() {
-    Route::get('/', 'Employer\HomeController@index')->name('employer.dashboard');
-    Route::get('/company-information', 'Employer\CompanyController@index')->name('employer.company_info');
-    Route::get('/home', 'Employer\HomeController@show')->name('employer.home');
+    Route::get('/', 'Employer\EmployerController@index')->name('employer.dashboard');
+    Route::get('/company-information', 'Employer\EmployerController@company')->name('employer.company_info');
+    Route::get('/create-job-post', 'Employer\EmployerController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
 
     // Login Logout Routes
     Route::get('/login', 'Auth\Employer\LoginController@showLoginForm')->name('employer.login');
     Route::post('/login', 'Auth\Employer\LoginController@login')->name('employer.login.submit');
-    Route::post('/logout', 'Auth\Employer\LoginController@logout')->name('employer.logout');
+    Route::get('/logout', 'Auth\Employer\LoginController@logout')->name('employer.logout');
     Route::get('/register', 'Auth\Employer\RegisterController@showRegistrationForm')->name('employer.register');
     Route::post('/register', 'Auth\Employer\RegisterController@register')->name('employer.register.submit');
     // Password Resets Routes

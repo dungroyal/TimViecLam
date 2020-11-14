@@ -133,7 +133,14 @@
                 t("#preloader")
                     .delay(100)
                     .fadeOut("slow");
-        }),t(".select2").select2({
-          maximumSelectionLength: 10
-      });
+        }),
+        t('.selectpicker').selectpicker(),
+        t('.datepicker').datepicker({
+            format:'dd/mm/yyyy',
+            todayBtn:'true',
+            language:'vi',
+            autoclose:'true',
+            todayHighlight:'true',
+        });
 })(jQuery);
+

@@ -12,13 +12,22 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('employer_id')->unsigned();
-            $table->string('name');
-            $table->string('slogan');
-            $table->text('description');
-            $table->string('website',200);
-            $table->string('business_license');
-            $table->string('logo');
-            $table->string('cover_photo');
+            $table->string('name_company');
+            $table->tinyInteger('personnel_size')->nullable();
+            $table->string('career')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->text('description')->nullable();
+            $table->string('website')->nullable();
+            $table->string('fax')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('business_license')->nullable();
+            $table->string('name_contact')->nullable();
+            $table->string('phone_contact')->nullable();
+            $table->string('email_contact')->nullable();
+            $table->string('address_contact')->nullable();
+            $table->integer('status')->nullable();
         });
         
         // Tạo khóa ngoại

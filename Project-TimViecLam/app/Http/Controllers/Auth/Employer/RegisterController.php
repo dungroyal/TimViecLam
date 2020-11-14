@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use App\Employer;
 
@@ -32,7 +33,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::EMPLOYER_HOME;
 
     public function __construct()
     {
@@ -71,20 +72,25 @@ class RegisterController extends Controller
         return Employer::create([
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'name_company' => $data['name_company'],
-            'name_contact' => $data['name_contact'],
-            'phone' => $data['phone'],
-            'career' => $data['career'],
-            'address' => $data['address'],
-            'city' => $data['city'],
-            'personnel_size' => $data['personnel_size'],
-            'address' => $data['address'],
         ]);
     }
 
     protected function registered(Request $request, $user)
     {
-        return "Tạo bảng công ty";
+        DB::table('companies')->insert([
+            ['employer_id' => $user->id,
+            'name_company' => $request->name_company,
+            'personnel_size' => $request->personnel_size,
+            'career' => $request->career,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'city' => $request->city,
+            'name_contact' => $request->name_contact,
+            'phone_contact' => $request->phone,
+            'email_contact' => $request->email,
+            'address_contact' => $request->address,
+            ]
+        ]);
     }
 
     protected function guard()

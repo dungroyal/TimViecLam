@@ -18,9 +18,86 @@
     </head>
 </head>
 
+<style>
+    
+ .dropdown-btn-custom {
+    --primary: #1386d3;
+    --secondary: #01ccff;
+    width: 100%;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: 3px;
+ }
+ .dropdown-btn-custom__select {
+    border-radius: inherit;
+ }
+ .dropdown-btn-custom__list {    
+    margin-top: 0.6rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 10;
+ }
+ .dropdown-btn-custom__list:before {
+    content: "";
+    height: 2.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-100%);
+ }
+ .dropdown-btn-custom:hover .dropdown-btn-custom__list {
+    display: block;
+ }
+ .dropdown-btn-custom__select,
+ .dropdown-btn-custom__item {
+    width: 100%;
+    padding: .8rem;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+ }
+ .dropdown-btn-custom__item {
+    transition: background-color 0.2s linear;
+ }
+ .dropdown-btn-custom__item:first-child {
+    border-radius: 4px 4px 0 0;
+    position: relative;
+ }
+ .dropdown-btn-custom__item:first-child:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--primary);
+    transform: translateY(-100%);
+    transition: border-color 0.2s linear;
+ }
+ .dropdown-btn-custom__item:first-child:hover:before {
+    border-bottom-color: var(--secondary);
+ }
+ .dropdown-btn-custom__item:last-child {
+    border-radius: 0 0 4px 4px;
+ }
+ .dropdown-btn-custom__item:hover {
+    background-color: var(--secondary);
+ }
+ 
+</style>
+
 <body>
     <header>
-        <nav class="container navbar navbar-expand-lg navbar-light">
+        <nav class="container-fluid navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.png" width="250" alt="Logo Tìm Việc Làm">
             </a>
@@ -43,11 +120,37 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-user mr-2 icon-menu"></i> ĐĂNG KÝ </a>
                             </li>
-                            <div class="dropdown-menu-top">
-                                <li class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3">
-                                    <a class="text-white p-2" href="#">NHÀ TUYỂN DỤNG</a>
-                                </li>
-                            </div>
+                
+                            <li class="nav-item" style="width: 200px;">
+                                <div class="dropdown-btn-custom">
+                                    <div class="dropdown-btn-custom__select">
+                                        <span class="dropdown-btn-custom__selected">Call to action</span>
+                                        <i class="fa fa-caret-down dropdown-btn-custom__caret"></i>
+                                    </div>
+                                    <ul class="dropdown-btn-custom__list">
+                                        <li class="dropdown-btn-custom__item">
+                                            <span class="dropdown-btn-custom__text">Trang quản lý</span>
+                                            <i class="fas fa-tachometer-alt dropdown-btn-custom__icon"></i>
+                                        </li>
+                                        <li class="dropdown-btn-custom__item">
+                                            <span class="dropdown-btn-custom__text">Đăng tin mới</span>
+                                            <i class="fa fa-plus-circle dropdown-btn-custom__icon"></i>
+                                        </li>
+                                        <li class="dropdown-btn-custom__item">
+                                            <span class="dropdown-btn-custom__text">Tin đã đăng</span>
+                                            <i class="fa fa-cog dropdown-btn-custom__icon"></i>
+                                        </li>
+                                        <li class="dropdown-btn-custom__item">
+                                            <span class="dropdown-btn-custom__text">Hồ sơ ứng tuyển</span>
+                                            <i class="fa fa-cog dropdown-btn-custom__icon"></i>
+                                        </li>
+                                        <li class="dropdown-btn-custom__item">
+                                            <span class="dropdown-btn-custom__text">Thoát</span>
+                                            <i class="fas fa-sign-out-alt dropdown-btn-custom__icon"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                         </div>
                 </form>
             </div>

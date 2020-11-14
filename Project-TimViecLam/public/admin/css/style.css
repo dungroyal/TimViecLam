@@ -7,3 +7,33 @@
     transform: translate(-50%, -50%);
 }
 
+
+.selectpicker + button {
+    background-color: white !important;
+    border: 1px solid #ced4da !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+    color: #495057!important;
+}
+
+.selectpicker + .dropdown-toggle:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.selectpicker + .dropdown-menu li a:hover {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: #000000 !important;
+}
+
+.datepicker {
+    border: 1px solid #ced4da !important;
+}
+
+.datepicker table{
+    margin: 0px 5px !important;
+}
+
+.datepicker table tr td.today{
+    background-image: linear-gradient(to bottom,#0156a5,#3dc8ff) !important;
+}

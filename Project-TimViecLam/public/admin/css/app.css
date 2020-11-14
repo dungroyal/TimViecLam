@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
 body {
-    font-family: 'Noto Sans', sans-serif !important
+    font-family: 'Noto Sans', sans-serif !important;
+    font-size: 15px;
 }
 
 #page-topbar {
@@ -101,7 +102,7 @@ body {
 }
 
 .page-content {
-    padding: calc(70px + 24px) calc(24px / 2) 60px calc(24px / 2)
+    padding: calc(60px + 24px) calc(15px / 2) 60px calc(15px / 2);
 }
 
 .header-item {
@@ -248,7 +249,7 @@ body[data-sidebar=dark] .logo-light {
 }
 
 .page-title-box {
-    padding-bottom: 24px
+    padding-bottom: 13px
 }
 
 .page-title-box .breadcrumb {

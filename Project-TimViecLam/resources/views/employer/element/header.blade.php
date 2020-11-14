@@ -171,23 +171,29 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user"
-                        src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name={{ Auth::guard('employer')->user()->name }}"
-                        alt="{{ Auth::guard('employer')->user()->name }}">
-                        <span class="d-none d-xl-inline-block ml-1"> {{ Auth::guard('employer')->user()->name }}</span>
+                    @if ($company->logo=="")
+                        <img class="rounded-circle header-profile-user"
+                        src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name={{ $company->name_company }}"
+                        alt="{{$company->name_company}}">
+                    @else
+                        <img class="rounded-circle header-profile-user"
+                        src="{{$company->logo}}"
+                        alt="{{$company->name_company}}">
+                    @endif
+                    <span class="d-none d-xl-inline-block ml-1"> {{ $company->name_company }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
-                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i>
+                    <a class="dropdown-item" href="{{ Route('employer.company_info') }}"><i class="bx bx-user font-size-16 align-middle mr-1"></i>
                         Hồ sơ công ty</a>
-                    <a class="dropdown-item d-block" href="#"><span
+                    {{-- <a class="dropdown-item d-block" href="#"><span
                             class="badge badge-success float-right">5</span><i
-                            class="bx bx-wrench font-size-16 align-middle mr-1"></i> Cài đặt</a>
-                    <a class="dropdown-item" href="#"><i
-                            class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Khóa màn hình</a>
+                            class="bx bx-wrench font-size-16 align-middle mr-1"></i> Cài đặt</a> --}}
+                    {{-- <a class="dropdown-item" href="#"><i
+                            class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Khóa màn hình</a> --}}
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i
+                    <a class="dropdown-item text-danger" href="{{ route('employer.logout') }}"><i
                             class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Đăng
                         xuất</a>
                 </div>
