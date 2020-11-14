@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d46cbba951aed8a0a6bd8483ee6eb901",
+    "content-hash": "e7676b1e17b87e2979f5a213b37bb5c1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -109,63 +109,6 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
-        },
-        {
-            "name": "buihuycuong/vnfaker",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/BuiHuyCuong/VNFaker.git",
-                "reference": "9427dc74f00d3734d1894e6069adc2bb43c8c026"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/BuiHuyCuong/VNFaker/zipball/9427dc74f00d3734d1894e6069adc2bb43c8c026",
-                "reference": "9427dc74f00d3734d1894e6069adc2bb43c8c026",
-                "shasum": ""
-            },
-            "type": "package",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Buihuycuong\\Vnfaker\\VNFakerServiceProvider"
-                    ],
-                    "aliases": {
-                        "VNFaker": "Buihuycuong\\Vnfaker\\Facades\\VNFaker"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Buihuycuong\\Vnfaker\\": "src"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bui Huy Cuong",
-                    "email": "buihuycuong1510@gmail.com"
-                }
-            ],
-            "description": "VNFaker is a Laravel package that generates fake data about name, city, address, phone,... in Viet Nam",
-            "homepage": "https://github.com/BuiHuyCuong/VNFaker",
-            "keywords": [
-                "Bui Huy Cuong",
-                "Richard Bui",
-                "data",
-                "laravel",
-                "laravel faker",
-                "php",
-                "viet nam",
-                "vnfaker"
-            ],
-            "time": "2018-12-27T06:51:21+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -4438,16 +4381,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "1.5.4",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "87dc337d4200b32717dd3849fea846319e897658"
+                "reference": "80953678b19901e5165c56752d087fc11526017c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/87dc337d4200b32717dd3849fea846319e897658",
-                "reference": "87dc337d4200b32717dd3849fea846319e897658",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/80953678b19901e5165c56752d087fc11526017c",
+                "reference": "80953678b19901e5165c56752d087fc11526017c",
                 "shasum": ""
             },
             "require": {
@@ -4504,7 +4447,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-08T21:15:15+00:00"
+            "time": "2020-11-12T00:07:28+00:00"
         }
     ],
     "packages-dev": [
@@ -4647,16 +4590,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.0",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "81698c5e32837c74abf9bb764ff0c1b3e001afb3"
+                "reference": "3b3403f18bbdc0aeadf1ffaddf11a1588b12ec7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/81698c5e32837c74abf9bb764ff0c1b3e001afb3",
-                "reference": "81698c5e32837c74abf9bb764ff0c1b3e001afb3",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/3b3403f18bbdc0aeadf1ffaddf11a1588b12ec7a",
+                "reference": "3b3403f18bbdc0aeadf1ffaddf11a1588b12ec7a",
                 "shasum": ""
             },
             "require": {
@@ -4714,7 +4657,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2020-10-27T13:02:22+00:00"
+            "time": "2020-11-13T13:36:24+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -5206,9 +5149,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "buihuycuong/vnfaker": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

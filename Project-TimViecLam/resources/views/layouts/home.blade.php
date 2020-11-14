@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
     <!-- Style -->
-    <link href="{{ asset('plugin/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
   </head>
 </head>
-<body><header>
-    <nav class="container navbar navbar-expand-lg navbar-light">
+<body>
+    <header>
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light px-3">
         <a class="navbar-brand" href="/">
             <img src="{{ asset('images/logo/logo.png') }}" width="250" alt="Logo Tìm Việc Làm">
         </a>
@@ -33,17 +33,21 @@
             <form class="form-inline ml-auto">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-bold font-header">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-blog mr-2 icon-menu"></i> GÓC NGHỀ NGHIỆP
+                        <li class="nav-item ml-3">
+                            <a class="nav-link" href="/job"><i class="fas fa-tools mr-2 icon-menu"></i> TẤT CẢ VIỆC LÀM
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
+                            <a class="nav-link" href="/blog"><i class="fas fa-blog mr-2 icon-menu"></i> GÓC NGHỀ NGHIỆP
+                            </a>
+                        </li>
+                        <li class="nav-item ml-3">
                             <a class="nav-link" href="{{ Route('login')}}"><i class="fas fa-lock mr-2 icon-menu"></i> ĐĂNG NHẬP </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <a class="nav-link" href="{{ Route('register')}}"><i class="fas fa-user mr-2 icon-menu"></i> ĐĂNG KÝ </a>
                         </li>
-                        <li class="nav-item bg-primary btn mb-3 mb-md-0 ml-md-3">
+                        <li class="nav-item ml-3 bg-primary btn mb-3 mb-md-0 ml-md-3">
                             <a class="text-white p-2" href="/employer">NHÀ TUYỂN DỤNG</a>
                         </li>
                     </div>
@@ -51,14 +55,13 @@
         </div>
     </nav>
 </header>
-
 @yield('content')
 
 <footer class="page-footer font-small mdb-color pt-4">
     <div class="container page-footer__bottom text-center text-md-left text-primary">
         <div class="row text-center text-md-left mt-3 pb-3">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <img src="images/Logo_White.png" alt="" class="footer-img" />
+                <img src="images/logo/Logo_White.png" alt="" class="footer-img" />
             </div>
 
             <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
@@ -69,9 +72,6 @@
                     <p>
                         <a href="intro.html">Về Timvieclam.xyz</a>
                     </p>
-                    <!-- <p>
-          <a href="#!">Quy Chế</a>
-        </p> -->
                     <p>
                         <a href="security.html">Quy Định Bảo Mật</a>
                     </p>
@@ -273,7 +273,6 @@
   <script src="{{ asset('plugin/jquery/jquery-3.5.1.min.js') }}"></script>
   <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <script src="{{ asset('home/js/main.js') }}"></script>
 </body>

@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
-class TypeJob extends Model
+class Company extends Model
 {
     use Notifiable;
-    protected $table='type_job';
+    protected $table='companies';
     public $timestamps = false;
 
     protected $fillable = [

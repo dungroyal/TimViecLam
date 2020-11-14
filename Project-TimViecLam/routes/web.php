@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
-// Route::get('/password/email', 'Auth\ForgotPasswordController@showLinkRequestForm');
-
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
@@ -32,6 +30,7 @@ Route::prefix('employer')->group(function() {
     Route::post('/login', 'Auth\Employer\LoginController@login')->name('employer.login.submit');
     Route::post('/logout', 'Auth\Employer\LoginController@logout')->name('employer.logout');
     Route::get('/register', 'Auth\Employer\RegisterController@showRegistrationForm')->name('employer.register');
+    Route::post('/register', 'Auth\Employer\RegisterController@register')->name('employer.register.submit');
     // Password Resets Routes
     Route::post('password/email', 'Auth\Employer\ForgotPasswordController@sendResetLinkEmail')->name('employer.password.email');
     Route::get('password/reset', 'Auth\Employer\ForgotPasswordController@showLinkRequestForm')->name('employer.password.request');
@@ -39,17 +38,17 @@ Route::prefix('employer')->group(function() {
     Route::get('/password/reset/{token}', 'Auth\Employer\ResetPasswordController@showResetForm')->name('employer.password.reset');
 });
 
-Route::prefix('admin')->group(function() {
-    Route::get('/', 'admin\HomeController@index')->name('admin.dashboard');
+// Route::prefix('admin')->group(function() {
+//     Route::get('/', 'admin\HomeController@index')->name('admin.dashboard');
 
-    // Login Logout Routes
-    Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
-    Route::post('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
+//     // Login Logout Routes
+//     Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
+//     Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
+//     Route::post('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
 
-    // Password Resets Routes
-    Route::post('password/email', 'Auth\Admin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
-    Route::get('password/reset', 'Auth\Admin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
-    Route::post('password/reset', 'Auth\Admin\ResetPasswordController@reset')->name('admin.password.update');
-    Route::get('/password/reset/{token}', 'Auth\Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
-});
+//     // Password Resets Routes
+//     Route::post('password/email', 'Auth\Admin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
+//     Route::get('password/reset', 'Auth\Admin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
+//     Route::post('password/reset', 'Auth\Admin\ResetPasswordController@reset')->name('admin.password.update');
+//     Route::get('/password/reset/{token}', 'Auth\Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
+// });

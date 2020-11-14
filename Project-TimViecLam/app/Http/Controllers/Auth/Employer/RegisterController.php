@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Employer;
 
@@ -52,24 +53,43 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name_company' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:employer'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'name_contact' => ['required', 'string', 'min:8', 'max:255'],
+            'phone' => ['required'],
+            'name_contact' => ['required', 'string', 'min:8'],
+            'personnel_size' => ['required'],
+            'career' => ['required'],
+            'address' => ['required', 'string'],
+            'city' => ['required'],
         ]);
     }
 
     protected function create(array $data)
     {
         return Employer::create([
-            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'name_company' => $data['name_company'],
+            'name_contact' => $data['name_contact'],
+            'phone' => $data['phone'],
+            'career' => $data['career'],
+            'address' => $data['address'],
+            'city' => $data['city'],
+            'personnel_size' => $data['personnel_size'],
+            'address' => $data['address'],
         ]);
     }
 
-    // protected function registered(Request $request, $user)
-    // {
-    //     dd($request->input('name'));
-    // }
+    protected function registered(Request $request, $user)
+    {
+        return "Tạo bảng công ty";
+    }
+
+    protected function guard()
+    {
+        return Auth::guard('employer');
+    }
 
 }

@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
     	factory('App\JobSeeker',15)->create();
-        factory('App\Employer',15)->create();
+        // factory('App\Employer',15)->create();
 
          // Thêm dữ liệu bảng TypeJob
          $TypeJobs = [            

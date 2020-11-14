@@ -16,7 +16,6 @@
                 <p class="card-text"><i class="far fa-check-circle"></i> Nhận bản tin công việc phù hợp định kỳ</p>
                 <p class="card-text"><i class="far fa-check-circle"></i> Nâng cao cơ hội tìm việc với chương trình ứng
                     viên năng động</p>
-
             </div>
 
             <div class="col-sm-12 col-lg-7 my-5">
@@ -26,7 +25,7 @@
                             <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" width="30%" class="my-2">
                         </div>
 
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('employer.register.submit') }}">
                             @csrf
                             <fieldset class="fieldset_custom">
                                 <legend>Thông tin tài khoản</legend>
@@ -82,17 +81,17 @@
                             <fieldset class="fieldset_custom">
                                 <legend>Thông tin công ty</legend>
                                 <div class="form-group row text-lg-left text-lg-right">
-                                    <label for="email" class="col-sm-4 col-form-label"> <span class="text-danger">*</span> Tên người liên hệ</label>
+                                    <label for="name_contact" class="col-sm-4 col-form-label"> <span class="text-danger">*</span> Tên người liên hệ</label>
                                     <div class="col-sm-8">
-                                        <input id="email" type="email"
-                                            class="form-control @error('email') is-invalid @enderror"
-                                            name="email"
-                                            value="{{ old('email') }}"
+                                        <input id="name_contact" type="text"
+                                            class="form-control @error('name_contact') is-invalid @enderror"
+                                            name="name_contact"
+                                            value="{{ old('name_contact') }}"
                                             required
                                             placeholder="Nhập tên người liên hệ"
-                                            autocomplete="email">
+                                            autocomplete="name_contact">
 
-                                        @error('email')
+                                        @error('name_contact')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -100,26 +99,26 @@
                                     </div>
                                 </div>
                                 <div class="form-group row text-lg-left text-lg-right">
-                                    <label for="email" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Số điện thoại liên hệ
+                                    <label for="phone" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Số điện thoại liên hệ
                                     </label>
                                     <div class="col-sm-8">
-                                        <input id="email" type="email"
-                                            class="form-control @error('email') is-invalid @enderror"
-                                            name="email"
-                                            value="{{ old('email') }}"
+                                        <input id="phone" type="text"
+                                            class="form-control @error('phone') is-invalid @enderror"
+                                            name="phone"
+                                            value="{{ old('phone') }}"
                                             required
                                             placeholder="Nhập số điện thoại người liên hệ"
-                                            autocomplete="email">
+                                            autocomplete="phone">
 
-                                        @error('email')
+                                        @error('phone')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group row text-lg-left text-lg-right">
-                                    <label for="email" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Tên công ty</label>
+                                <div class="form-group row text-sm-left text-lg-right">
+                                    <label for="name_company" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Tên công ty</label>
                                     <div class="col-sm-8">
                                         <input id="name_company" type="text"
                                             class="form-control @error('name_company') is-invalid @enderror"
@@ -136,79 +135,101 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="city" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Quy mô nhân sự</label>
+                                <div class="form-group row text-sm-left text-lg-right">
+                                    <label for="personnel_size" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Quy mô nhân sự</label>
                                     <div class="col-sm-8">
-                                        <select class="form-control">
-                                            <option value="AK">Chọn quy mô nhân sự</option>
-                                            <option value="AK">10 người </option>
-                                            <option value="AK">20 người </option>
-                                            <option value="AK">30 người </option>
-                                            <option value="AK">40 người </option>
+                                        <select name="personnel_size" id="personnel_size" class="form-control selectpicker @error('personnel_size') is-invalid @enderror">
+                                            <option>Chọn quy mô nhân sự</option>
+                                            <option value="0">10 người </option>
+                                            <option value="1">20 người </option>
+                                            <option value="2">30 người </option>
+                                            <option value="3">40 người </option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row text-lg-left text-lg-right">
-                                    <label for="email" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Lĩnh vực hoạt động</label>
-                                    <div class="col-sm-8">
-                                        <select class="select2 form-control select2-multiple" name="operation"
-                                        id="operation" multiple="multiple" data-placeholder="Choose ...">
-                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                            <option value="AK">Alaska</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="MD">Maryland</option>
-                                            <option value="MA">Massachusetts</option>
-                                        </optgroup>
-                                        <optgroup>
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                        <option value="IN">Indiana</option>
-                                        <option value="ME">Maine</option>
-                                        <option value="MD">Maryland</option>
-                                        <option value="MA">Massachusetts</option>
-                                        <option value="MI">Michigan</option>
-                                        </optgroup>
-                                    </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row text-lg-left text-lg-right">
-                                    <label for="email" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Địa chỉ công ty</label>
-                                    <div class="col-sm-8">
-                                        <input id="email" type="email"
-                                            class="form-control @error('email') is-invalid @enderror"
-                                            name="email"
-                                            value="{{ old('email') }}"
-                                            required
-                                            placeholder="Nhập địa chỉ công ty"
-                                            autocomplete="email">
-
-                                        @error('email')
+                                        @error('personnel_size')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row text-lg-left text-lg-right">
+                                    <label for="career" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Lĩnh vực hoạt động</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control select-career w-100  @error('career') is-invalid @enderror" 
+                                            id="career"
+                                            name="career"
+                                            data-size="5" 
+                                            data-live-search="true"
+                                            title="Địa điểm làm việc" 
+                                            {{-- multiple --}}
+                                            >
+                                            <option class="py-2" value="12">Bắc Giang</option>
+                                            <option class="py-2" value="13">Bắc Kạn</option>
+                                            <option class="py-2" value="14">Bạc Liêu</option>
+                                            <option class="py-2" value="15">Bến Tre</option>
+                                            <option class="py-2" value="16">Bình Định</option>
+                                            <option class="py-2" value="17">Bình Phước</option>
+                                            <option class="py-2" value="18">Bình Thuận</option>
+                                            <option class="py-2" value="19">Cà Mau</option>
+                                            <option class="py-2" value="20">Cần Thơ</option>
+                                            <option class="py-2" value="21">Cao Bằng</option>
+                                            <option class="py-2" value="62">Tiền Giang</option>
+                                            <option class="py-2" value="63">Toàn Quốc</option>
+                                            <option class="py-2" value="64">Trà Vinh</option>
+                                            <option class="py-2" value="65">Tuyên Quang</option>
+                                        </select>
+                                        @error('career')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group row text-lg-left text-lg-right">
+                                    <label for="address" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Địa chỉ công ty</label>
+                                    <div class="col-sm-8">
+                                        <input id="address" type="text"
+                                            class="form-control @error('address') is-invalid @enderror"
+                                            name="address"
+                                            value="{{ old('address') }}"
+                                            required
+                                            placeholder="Nhập địa chỉ công ty"
+                                            autocomplete="address">
+                                        @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group row text-sm-left text-lg-right">
                                     <label for="city" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Tỉnh/thành phố</label>
                                     <div class="col-sm-8">
-                                        <select class="form-control select2">
-                                            <optgroup>
-                                            <option value="AK">Chọn tỉnh thành phố</option>
-                                            <option value="AK">Hồ Chí Minh </option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="CT">Connecticut</option>
-                                            <option value="DE">Delaware</option>
-                                            <option value="FL">Florida</option>
-                                            <option value="GA">Georgia</option>
-                                            <option value="IN">Indiana</option>
-                                            <option value="ME">Maine</option>
-                                            <option value="MD">Maryland</option>
-                                            <option value="MA">Massachusetts</option>
-                                        </optgroup>
+                                        <select class="form-control select-city w-100  @error('city') is-invalid @enderror" 
+                                        name="city"
+                                        id="city"
+                                        data-size="5" data-live-search="true"
+                                        title="Địa điểm làm việc">
+                                            <option class="py-2" value="12">Bắc Giang</option>
+                                            <option class="py-2" value="13">Bắc Kạn</option>
+                                            <option class="py-2" value="14">Bạc Liêu</option>
+                                            <option class="py-2" value="15">Bến Tre</option>
+                                            <option class="py-2" value="16">Bình Định</option>
+                                            <option class="py-2" value="17">Bình Phước</option>
+                                            <option class="py-2" value="18">Bình Thuận</option>
+                                            <option class="py-2" value="19">Cà Mau</option>
+                                            <option class="py-2" value="20">Cần Thơ</option>
+                                            <option class="py-2" value="21">Cao Bằng</option>
+                                            <option class="py-2" value="62">Tiền Giang</option>
+                                            <option class="py-2" value="63">Toàn Quốc</option>
+                                            <option class="py-2" value="64">Trà Vinh</option>
+                                            <option class="py-2" value="65">Tuyên Quang</option>
                                         </select>
+                                        @error('city')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row mb-n3">
@@ -216,25 +237,24 @@
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <div class="form-check">
-                                                <input class="form-check-input is-invalid" type="checkbox" value=""
-                                                    id="invalidCheck3" required>
-                                                <label class="form-check-label" for="invalidCheck3">
-                                                    Đồng ý với các <a href=""><strong>Quy định bảo mật</strong></a> & <a
-                                                        href=""><strong>Thỏa thuận sử dụng</strong></a> của <strong>Tìm
-                                                        Việc Làm</strong>
+                                                <input class="form-check-input is-invalid" type="checkbox" value="1"
+                                                    id="confirm" name="confirm" required>
+                                                <label class="form-check-label" for="confirm"> Đồng ý với các 
+                                                    <a href=""><strong>Quy định bảo mật</strong></a> & 
+                                                    <a href=""><strong>Thỏa thuận sử dụng</strong></a> của <strong>Tìm Việc Làm</strong>
                                                 </label>
-                                                {{-- <div class="invalid-feedback">
-                                                    Bạn phải đồng ý trước khi gửi.
-                                                  </div> --}}
+                                                @error('confirm')
+                                                    <div class="invalid-feedback">
+                                                        Bạn phải đồng ý trước khi gửi.
+                                                    </div>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
                             <div class="form-group text-center">
-                                <button type="submit"
-                                    class="btn float-right login_btn text-uppercase font-weight-bold">Đăng ký nhà tuyển
-                                    dụng</button>
+                                <button type="submit" class="btn float-right login_btn text-uppercase font-weight-bold">Đăng ký nhà tuyển dụng</button>
                             </div>
                         </form>
                     </div>
