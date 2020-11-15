@@ -11,13 +11,12 @@ class HomeController extends Controller
     public function __construct()
     {
         // $this->middleware('guar:api');
-        $this->careers = DB::table('career')->get();
-        $this->top_careers = DB::table('career')->limit(4)->get();
-        // $this->db_city = DB::table('db_city')->get();
     }
 
     public function index()
     {
-        return view('home/index', ['careers' => $this->careers,'top_careers' => $this->top_careers]);
+        $anotherData = "DUNGDQ";
+
+        return view('home/index', compact('anotherData'));
     } 
 }

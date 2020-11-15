@@ -2,35 +2,36 @@
 
 @section('content')
 
-<div class="container">
-    <div class="container main-search-bar">
+<div class="container container-max">
+    <div class="container container-max main-search-bar">
         <div class="w-100 text-center text-white pt-2"> Tìm kiếm <strong>409</strong> việc làm mới trong
             <strong>6,509</strong> việc đang tuyển dụng
         </div>
         <div class="forms-container">
-            <form action="" class="sign-in-form">
+            <form method="POST" action="" class="sign-in-form">
                 <div class="row d-flex justify-content-around">
                     <div class="col-sm-12 col-lg-4 pr-lg-1">
                         <div class="input-field  mb-sm-0">
                             <i class="fas fa-briefcase"></i>
-                            <input type="text" placeholder="Tiêu đề công việc, vị trí, ...">
+                            <input 
+                            type="text" 
+                            name="keyword" 
+                            value="{{ old('keyword') }}" 
+                            placeholder="Tiêu đề công việc, vị trí, ...">
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-3 px-lg-1">
                         <div class="form-group m-0 p-0">
                             <span class="bootstrap-select__icon"><i class="fas fa-tools"></i></span>
-                            <select class="bootstrap-select-city__custom w-100" data-live-search="true"
+                            <select  
+                                name="career"
+                                class="bootstrap-select-city__custom w-100" 
+                                data-size="7" 
+                                data-live-search="true"
                                 title="Tất cả ngành nghề">
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
-                                <option class="py-2">Mustard</option>
+                                @foreach ($careers as $item)
+                                    <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -38,22 +39,16 @@
                     <div class="col-sm-12 col-lg-3 px-lg-1">
                         <div class="form-group m-0 p-0">
                             <span class="bootstrap-select__icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <select class="bootstrap-select-city__custom w-100" data-live-search="true"
+                            <select 
+                                name="city"
+                                class="bootstrap-select-city__custom w-100" 
+                                data-selected-text-format="count > 5"
+                                data-size="7" 
+                                data-live-search="true"
                                 title="Địa điểm làm việc">
-                                <option class="py-2" value="12">Bắc Giang</option>
-                                <option class="py-2" value="13">Bắc Kạn</option>
-                                <option class="py-2" value="14">Bạc Liêu</option>
-                                <option class="py-2" value="15">Bến Tre</option>
-                                <option class="py-2" value="16">Bình Định</option>
-                                <option class="py-2" value="17">Bình Phước</option>
-                                <option class="py-2" value="18">Bình Thuận</option>
-                                <option class="py-2" value="19">Cà Mau</option>
-                                <option class="py-2" value="20">Cần Thơ</option>
-                                <option class="py-2" value="21">Cao Bằng</option>
-                                <option class="py-2" value="62">Tiền Giang</option>
-                                <option class="py-2" value="63">Toàn Quốc</option>
-                                <option class="py-2" value="64">Trà Vinh</option>
-                                <option class="py-2" value="65">Tuyên Quang</option>
+                                @foreach ($city as $item)
+                                    <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -69,7 +64,7 @@
     
     <!-- Vị trí -->
     <section>
-        <div class="container">
+        <div class="container container-max">
             <div class="box__tittle-job">
                 <div class="row">
                     <div class="title-location-job box__tittle-job-ml">
@@ -91,14 +86,14 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="container container-max">
         <hr>
     </div>
 
     <!-- Việc làm -->
-    <div class="container">
+    <div class="container container-max">
         <div class="row">
-            <div class="col-lg-5 col-xl-4">
+            <div class="col-lg-5 col-xl-5">
                 <div class="side-wrapper">
                     <div class="job-found">
                         <div class="job-found-amout ml-1">
@@ -262,7 +257,7 @@
                     </div>
                 </section>
             </div>
-            <div class="col-lg-7 col-xl-8">
+            <div class="col-lg-7 col-xl-7">
                 <section class="apply-now-banner">
                     <div class="image"><img src="images/banner-job.jpg" alt=""></div>
                     <div class="apply-now-content">

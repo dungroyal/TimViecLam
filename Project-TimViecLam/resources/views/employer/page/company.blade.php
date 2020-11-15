@@ -63,18 +63,10 @@
                                             data-live-search="true" 
                                             data-size="5"
                                             value="{{ $company->city }}"
-                                            title="Choose one of the following...">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                        <option value="IN">Indiana</option>
-                                        <option value="ME">Maine</option>
-                                        <option value="MD">Maryland</option>
-                                        <option value="MA">Massachusetts</option>
-                                        <option value="MI">Michigan</option>
-                                        <option value="NH">New Hampshire</option>
-                                        </optgroup>
+                                            title="Chọn tỉnh thành phố">
+                                            @foreach ($city as $item)
+                                                <option value="{{ $item->id }}"> {{ $item->name }}</option>
+                                            @endforeach
                                     </select>
                                     </div>
                                 </div>
@@ -106,18 +98,11 @@
                                             data-live-search="true" 
                                             data-size="5"
                                             value="{{ $company->career }}"
-                                            title="Choose one of the following...">
-                                        <option value="CA">California</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="WA">Washington</option>
-                                        <option value="IN">Indiana</option>
-                                        <option value="ME">Maine</option>
-                                        <option value="MD">Maryland</option>
-                                        <option value="MA">Massachusetts</option>
-                                        <option value="MI">Michigan</option>
-                                        <option value="NH">New Hampshire</option>
-                                        </optgroup>
+                                            title="Chọn lĩnh vực hoạt động">
+
+                                            @foreach ($careers as $item)
+                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                            @endforeach
                                     </select>
 
                                     <div class="form-group mt-2">

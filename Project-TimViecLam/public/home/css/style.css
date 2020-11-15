@@ -17,6 +17,10 @@ body {
 }
 
 
+.container-max{
+    max-width: 1300px!important;
+}
+
 .moreText {
     display: none;
 }
@@ -48,19 +52,6 @@ body {
 }
 
 
-.box_general .box-body {
-    padding: 15px;
-    margin-top: 15px;
-}
-
-.box_general .item a:hover {
-    color: #1790d4;
-}
-
-.box_general .item a {
-    color: #000;
-    display: block;
-}
 
 .item {
     margin-bottom: 3px;
@@ -2987,6 +2978,7 @@ a:hover {
     font-weight: 500;
     margin: 10px 0;
     transition: 0.5s;
+    overflow: hidden !important;
 }
 
 .selectpicker + button,

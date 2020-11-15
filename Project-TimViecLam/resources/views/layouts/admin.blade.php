@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title')Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
+    <title>@yield('title') Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
     <meta content="Tìm việc làm nhanh" name="description">
     <meta content="Royal Team" name="author">
 

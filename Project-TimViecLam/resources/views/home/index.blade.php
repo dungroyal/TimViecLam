@@ -5,7 +5,7 @@
         <div class="home-header bg-white">
             <div class="container w-100">
                 <div class="content text-center pt-4">
-                    <h1>Tìm Việc Khó? Đã Có Timvieclam.xyz</h1>
+                <h1>Tìm Việc Khó? Đã Có Timvieclam.xyz</h1>
                     <p>Hơn +100.000 việc làm hấp dẫn đang tuyển dụng hôm nay.</p>
                 </div>
             </div>
@@ -18,54 +18,37 @@
                         <strong>6,509</strong> việc đang tuyển dụng
                     </div>
                     <div class="forms-container">
-                        <form action="" class="sign-in-form">
+                        <form method="GET" action="/job" class="sign-in-form">
                             <div class="row d-flex justify-content-around">
                                 <div class="col-sm-12 col-lg-4 pr-lg-1">
                                     <div class="input-field  mb-sm-0">
                                         <i class="fas fa-briefcase"></i>
-                                        <input type="text" class="bootstrap-select-city__custom" placeholder="Tiêu đề công việc, vị trí, ...">
+                                        <input type="text" name="keyword" class="bootstrap-select-city__custom"
+                                            placeholder="Tiêu đề công việc, vị trí, ...">
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-lg-3 px-lg-1">
                                     <div class="form-group m-0 p-0">
                                         <span class="bootstrap-select__icon"><i class="fas fa-tools"></i></span>
-                                        <select class="bootstrap-select-city__custom w-100" data-size="5" data-live-search="true"
-                                            title="Tất cả ngành nghề">
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
-                                            <option class="py-2">Mustard</option>
+                                        <select name="career" class="bootstrap-select-city__custom w-100" data-size="7"
+                                            data-live-search="true" title="Tất cả ngành nghề">
+                                            @foreach ($careers as $item)
+                                                <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
 
+
                                 <div class="col-sm-12 col-lg-3 px-lg-1">
                                     <div class="form-group m-0 p-0">
                                         <span class="bootstrap-select__icon"><i class="fas fa-map-marker-alt"></i></span>
-                                        <select class="bootstrap-select-city__custom w-100" 
-                                            multiple data-selected-text-format="count > 5"
-                                            data-size="5" data-live-search="true"
+                                        <select name="city" class="bootstrap-select-city__custom w-100"
+                                            data-selected-text-format="count > 5" data-size="7" data-live-search="true"
                                             title="Địa điểm làm việc">
-                                            <option class="py-2" value="12">Bắc Giang</option>
-                                            <option class="py-2" value="13">Bắc Kạn</option>
-                                            <option class="py-2" value="14">Bạc Liêu</option>
-                                            <option class="py-2" value="15">Bến Tre</option>
-                                            <option class="py-2" value="16">Bình Định</option>
-                                            <option class="py-2" value="17">Bình Phước</option>
-                                            <option class="py-2" value="18">Bình Thuận</option>
-                                            <option class="py-2" value="19">Cà Mau</option>
-                                            <option class="py-2" value="20">Cần Thơ</option>
-                                            <option class="py-2" value="21">Cao Bằng</option>
-                                            <option class="py-2" value="62">Tiền Giang</option>
-                                            <option class="py-2" value="63">Toàn Quốc</option>
-                                            <option class="py-2" value="64">Trà Vinh</option>
-                                            <option class="py-2" value="65">Tuyên Quang</option>
+                                            @foreach ($city as $item)
+                                                <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -813,95 +796,43 @@
                         </div>
                     </div>
                 </section>
-
-
             </div>
             <!-- Tim viec theo tinh -->
-            <div class="col-lg-12 col-md-12">
-                <div class="search-job-city">
-                    <div class="box_general mt-5">
-                        <h2 class="text_ellipsis uppercase text-center"> TÌM VIỆC LÀM THEO TỈNH
-                            THÀNH </h2>
-                        <div class="box-body">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Hà Nội
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Hồ Chí Minh
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại An Giang
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bạc Liêu
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bà Rịa - Vũng Tàu
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bắc Cạn
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bắc Giang
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bắc Ninh
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bến Tre
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bình Dương
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bình Định
-                                    </a></div>
-                                <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                        Việc làm tại Bình Phước
-                                    </a></div>
-                            </div>
-                            <!-- read more -->
-                            <span class="moreText">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><span class="more-location"><a
-                                                href="#" class="item">
-                                                Việc làm tại Bình Thuận
-                                            </a></div>
-
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Cao Bằng
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Cà Mau
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Cần Thơ
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Đà Nẵng
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Đắc Lắc
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Đắc Nông
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Điện Biên
-                                        </a></div>
-                                    <div class="col-lg-3 col-md-3 item location_rut_gon"><a href="#" class="item">
-                                            Việc làm tại Đồng Nai
-                                        </a></div>
-
+            <div class="col-lg-12 col-md-12 my-5">
+                <div class="box_general my-1">
+                    <h2 class="text_ellipsis uppercase text-center my-3"> TÌM VIỆC LÀM THEO NGHÀNH NGHỀ </h2>
+                    <div class="box-body">
+                        <div class="row">
+                            @foreach ($careers as $item)
+                                <div class="col-lg-3 col-md-3 item location_rut_gon">
+                                    <a href="job/keyword=&career=&city={{ $item->id }}" class="item">
+                                        Việc làm tại {{ $item->name }}
+                                    </a>
                                 </div>
-                            </span>
-                            <div class="read-more-btn">Xem thêm <i class="fas fa-angle-down"></i></div>
-                            <!---->
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-12 col-md-12 my-5">
+                <div class="box_general my-1">
+                    <h2 class="text_ellipsis uppercase text-center my-3"> TÌM VIỆC LÀM THEO TỈNH
+                        THÀNH </h2>
+                    <div class="box-body">
+                        <div class="row">
+                            @foreach ($city as $item)
+                                <div class="col-lg-3 col-md-3 item location_rut_gon">
+                                    <a href="job/keyword=&career=&city={{ $item->id }}" class="item">
+                                        Việc làm theo {{ $item->name }}
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 @endsection
