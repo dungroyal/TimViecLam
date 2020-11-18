@@ -15,8 +15,11 @@ class HomeController extends Controller
 
     public function index()
     {
-        $anotherData = "DUNGDQ";
+        return view('home/index');
+    } 
 
-        return view('home/index', compact('anotherData'));
+    public function landingPageEmployer()
+    {
+        return view('home/landingPageEmployer');
     } 
 }

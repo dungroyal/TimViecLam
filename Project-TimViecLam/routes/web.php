@@ -14,16 +14,19 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
+Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
 
 
 Route::prefix('job-seeker')->group(function() {
-    Route::get('/', 'JobSeeker\HomeController@index')->name('employer.dashboard');
+    Route::get('/', 'JobSeeker\HomeController@index')->name('job-seeker.dashboard');
 });
 
 Route::prefix('employer')->group(function() {
     Route::get('/', 'Employer\EmployerController@index')->name('employer.dashboard');
     Route::get('/company-information', 'Employer\EmployerController@company')->name('employer.company_info');
-    Route::get('/create-job-post', 'Employer\EmployerController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
+
+    Route::get('/create-job-post', 'Employer\JobController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
+    Route::post('/create_job_post', 'Employer\JobController@store')->name('employer.createJobPost');
 
     // Login Logout Routes
     Route::get('/login', 'Auth\Employer\LoginController@showLoginForm')->name('employer.login');

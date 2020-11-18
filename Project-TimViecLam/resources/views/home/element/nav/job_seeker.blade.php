@@ -20,7 +20,7 @@
                 </li>
 
                 <li class="nav-item ml-3 bg-primary btn mb-3 mb-md-0 ml-md-3">
-                    <a class="text-white p-2" href="/employer">NHÀ TUYỂN DỤNG</a>
+                    <a class="text-white p-2" href="{{ route('employer.landingPage') }}">NHÀ TUYỂN DỤNG</a>
                 </li>
             </div>
     </form>

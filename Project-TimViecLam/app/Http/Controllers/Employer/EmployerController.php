@@ -12,14 +12,15 @@ class EmployerController extends Controller
     public function __construct()
     {
         $this->middleware('auth:employer');
-        $this->middleware(function ($request, $next) {
-            $this->id = Auth::guard('employer')->user()->id;
-            return $next($request);
-        });
+        // $this->middleware(function ($request, $next) {
+        //     $this->id = Auth::guard('employer')->user()->id;
+        //     return $next($request);
+        // });
     }
 
     public function index()
     {
+        $this->id = Auth::guard('employer')->user()->id;
         return view('
         employer.dashboard', [
             'employer' => Auth::guard('employer')->user(),
@@ -31,24 +32,6 @@ class EmployerController extends Controller
     {
         return view('
             employer.page.company',[
-                'employer' => Auth::guard('employer')->user(),
-                'company' => DB::table('companies')->where('employer_id', $this->id)->first()
-        ]);
-    }
-
-    public function showCreateJobPostForm()
-    {
-        return view('
-            employer.page.create_job',[
-                'employer' => Auth::guard('employer')->user(),
-                'company' => DB::table('companies')->where('employer_id', $this->id)->first()
-        ]);
-    }
-
-    public function CreateJobPost()
-    {
-        return view('
-            employer.page.create_job',[
                 'employer' => Auth::guard('employer')->user(),
                 'company' => DB::table('companies')->where('employer_id', $this->id)->first()
         ]);

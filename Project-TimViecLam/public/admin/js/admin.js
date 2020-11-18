@@ -141,6 +141,6 @@
             language:'vi',
             autoclose:'true',
             todayHighlight:'true',
-        });
+        }),
+        t('[data-toggle="tooltip"]').tooltip();
 })(jQuery);
-
