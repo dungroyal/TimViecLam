@@ -53,12 +53,6 @@ body {
 
 
 
-.item {
-    margin-bottom: 3px;
-    display: inline-block;
-    padding-left: 15px;
-}
-
 .box_general .location_full {
     color: #1790d4;
     cursor: pointer;
@@ -77,14 +71,6 @@ body {
     border-color: var(--Blue);
 }
 
-.company_name strong {
-    font-size: 16px;
-}
-
-.pd-map {
-    padding-left: 90px;
-    font-size: 14px;
-}
 
 .item-top-field>div {
     background: #fff;
@@ -93,37 +79,9 @@ body {
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     overflow: hidden;
+    height: 100px;
 }
 
-.item-top-field>div .icon-top-field {
-    float: left;
-    max-width: 65px !important;
-    width: 65px;
-    margin-right: 0 !important;
-}
-
-.item-top-field>div .icon-top-field img {
-    width: 55px;
-    height: 55px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.item-top-field>div .top-field-name p {
-    margin-bottom: 0 !important;
-}
-
-.item-top-field>div .top-field-name .text_ellipsis {
-    font-size: 13px;
-}
 
 .text_italic {
     font-style: italic;
@@ -183,75 +141,9 @@ body {
     text-overflow: ellipsis !important;
 }
 
-.box_general .job-over-item {
-    padding: 0 15px;
-    margin-bottom: -5px;
 
-}
-
-.job-item-show {
-    background-color: #fff;
-    border-radius: 2px;
-    -webkit-transition: -webkit-box-shadow .2s;
-    transition: -webkit-box-shadow .2s;
-    transition: box-shadow .2s;
-    transition: box-shadow .2s, -webkit-box-shadow .2s;
-}
-
-.job-item-show .job_info {
-    padding: 0 10px;
-    cursor: pointer;
-}
-
-.job-item-show .job_info .company_logo {
-    float: left;
-    max-width: 65px !important;
-    width: 65px;
-    margin-right: 0 !important;
-}
-
-.job-item-show .job_info .company_logo .logo_box {
-    width: 55px;
-    height: 55px;
-    margin-top: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.company_logo .logo_box {
-    width: 75px;
-    height: 75px;
-    margin-top: 3px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.job-item-show .job_info .company_logo .logo_box img {
-    max-width: 100%;
-    background-color: #fff;
-}
-
-.company_logo .logo_box img {
-    width: 100%;
-}
-
-.job-item-show .job_info .company_name {
+/* job-item */
+.job-item-show .company_name {
     float: left;
     max-width: calc(100% - 65px) !important;
     width: calc(100% - 65px);
@@ -265,51 +157,43 @@ body {
     margin-bottom: 0;
 }
 
-.job-item-show .job_info .company_name .j_title a {
+.job-item-show .company_name .job_title a {
     display: inline-block;
     max-width: 110%;
     text-transform: capitalize;
 }
 
-.job-item-show .job_info .company_name .j_title a strong {
-    font-weight: 500;
-}
-
-.job-item-show .j_company {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.job-item-show__logo{
+    width: 20%;
+    padding: 5px;
     display: flex;
-}
-
-.job-item-show .j_company .name {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-}
-
-.job-item-show .job_info .company_name .j_company a {
-    color: #333;
-    text-transform: capitalize;
-    font-size: 13px;
-}
-
-.job-item-show .j_company .viewed {
-    margin-left: 4px;
-}
-
-.job-item-show .job_info .company_name .table-item {
-    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     overflow: hidden;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    cursor: pointer;
+}
+.job-item-show__logo img{
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    vertical-align: middle;
 }
 
-.job-item-show .job_info .company_name .table-item .dollar {
-    float: left;
-    width: 140px;
-    font-size: 13px;
+.job-item-show .company_name {
+    width: 80%;
 }
 
+.job-item-show .company_name .job_title a strong {
+    font-weight: 600;
+}
+
+.job_info{
+    font-size: .9rem;
+}
 .job-item-show {
     background: #ffffff;
     border: 1px solid #ececec;
@@ -317,11 +201,20 @@ body {
     margin-right: 0px;
     margin-bottom: 15px;
     margin-left: 0px;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-transition: -webkit-box-shadow .2s;
+    transition: -webkit-box-shadow .2s;
+    transition: box-shadow .2s;
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
 }
 
 .job-over-item .job-item-show:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px rgb(7 161 255 / 54%);
+    border-radius: 2px;
 }
+
+/* job-item */
 
 .container-catalog--top {
     display: flex;
@@ -1129,28 +1022,6 @@ section {
 .search-result .job-item .figure .caption .salary em {
     padding-right: 5px;
     padding-left: 3px;
-}
-
-.search-result .job-item .figure .figcaption .caption .location {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.search-result-page .job-item .figure .caption .location {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.search-result .job-item .figure .figcaption .caption .location em {
-    padding-right: 2px;
-    line-height: 1.3;
-}
-
-.search-result-page .job-item .figure .caption .location em {
-    padding-right: 2px;
-    line-height: 1.5;
 }
 
 .job-item .figure .caption {
@@ -3108,3 +2979,9 @@ a:hover {
  }
 
  /* dropdown-btn-custom */
+
+ /* Cusstom tooltop bootstrap */
+ .tooltip-inner {
+    background-color: #007c9b;
+}
+ /* Cusstom tooltop bootstrap */

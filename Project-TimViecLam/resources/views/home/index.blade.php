@@ -68,570 +68,82 @@
                     <h3 class="font-weight-bold"><i class="fas fa-city"></i> TOP NGÀNH NGHỀ PHỔ BIẾN</h3>
                 </div>
             </div>
-            <div class="wp-slider mt-3">
+            <div class="mt-3">
                 <div class="owl-carousel owl-theme">
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
+                    @foreach ($careers as $item)
+                        <div class="item-top-field">
+                            <div class="box_shadow_slider">
+                                <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
+                                <div class="row">
+                                    <div class="col-3 icon-top-field p-0 pl-1">
+                                        <img alt="item" class="w-100" src="images/catalog.png" lazy="loaded" />
+                                    </div>
+                                    <div class="col-9 top-field-name pl-0">
+                                        <span class="text_bold">
+                                            <p class="el-tooltip ml-3 font-weight-medium">
+                                                {{$item->name}}
+                                            </p>
+                                        </span>
+                                        <p class="text_ellipsis text_italic text-center">
+                                            (15 việc làm đang tuyển)
                                         </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
+                                    </div>
                                 </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="item-top-field">
-                        <div class="box_shadow_slider">
-                            <a href="/tuyen-dung/63/tu-van-cham-soc-khach-hang.html" target="_blank" class="">
-                                <div class="icon-top-field">
-                                    <img alt="item" class="lazy-load" src="images/catalog.png" lazy="loaded" />
-                                </div>
-                                <div class="top-field-name">
-                                    <span class="text_bold">
-                                        <p class="el-tooltip item">
-                                            Tư vấn/ Chăm sóc khách hàng
-                                        </p>
-                                    </span>
-                                    <p class="text_ellipsis text_italic">
-                                        (3038 việc làm đang tuyển)
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--  -->
+                    @endforeach
                 </div>
             </div>
             <!-- việc làm tuyển gấp -->
             <div class="box_general mt-5">
-                <h2 class="text_ellipsis uppercase"><i class="fas fa-briefcase"></i> Việc làm
-                    tuyển
-                    gấp
+                <h2 class="text_ellipsis uppercase"><i class="fas fa-briefcase"></i> 
+                    Việc làm tuyển gấp
                 </h2>
                 <!-- wp slider list job -->
                 <div class="col-lg-12 col-md-12 mt-3">
                     <!--  -->
-                    <div class="row">
+                    <div class="row d-flex justify-content-around">
+                        @foreach ($careers as $item)
                         <div class="col-md-6 col-lg-6 job-over-item">
                             <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
+                                    <a href="#" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
+                                        <img src="{{ asset('images/job1.png') }}" />
+                                    </a>
+                                    <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
+                                        <p class="job_title text_ellipsis mt-1">
+                                            <a href="#" data-toggle="tooltip" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                                <span>
+                                                    <strong>Loan Processor (hỗ Trợ Cho Vay Tiền Mua Nhà)</strong>
+                                                </span>
                                             </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
+                                        <div class="job_company">
+                                            <div class="name">
+                                                <a href="#" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
+                                                    <span>Cali-land, Inc</span>
+                                                </a>
                                             </div>
                                         </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
+                                        <div class="row mb-1 job_info" >
+                                            <div class="col-5 text_ellipsis">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash-stack mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"/>
+                                                    <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"/>
+                                                    <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                                  </svg> 
+                                                11 triệu - 24 triệu
+                                            </div>
+                                            <div title="Hồ Chí Minh, Bình Dương" class="col-7 text_ellipsis">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+                                                  </svg>
+                                                Hồ Chí Minh, Bình Dương
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <div class="col-md-12 col-lg-12 job_info">
-                                    <div class="company_logo"><a href="#" class=""
-                                            title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                            <div class="logo_box"><img class="lazy-load"
-                                                    src="https://cdn1.mywork.com.vn/company-logo-small/102020/MOO49WsEi8by2e0nudVlI6XBpHdtZhjP1Y7ONaWp.png"
-                                                    lazy="loaded"></div>
-                                        </a></div>
-                                    <div class="company_name">
-                                        <p class="j_title text_ellipsis"><a href="#" class="el-tooltip item"
-                                                id="vieclamtuyengap" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                                target="_blank">
-                                                <!---->
-                                                <!----><span><strong>Loan
-                                                        Processor
-                                                        (hỗ Trợ Cho Vay
-                                                        Tiền Mua Nhà)</strong></span>
-                                            </a></p>
-                                        <div class="j_company">
-                                            <div class="name"><a href="#" target="_blank"
-                                                    title="Cali-land, Inc tuyển dụng"><span>Cali-land, Inc</span></a></div>
-                                            <div class="viewed">
-                                                <!---->
-                                            </div>
-                                        </div>
-                                        <div class="table-item">
-                                            <div class="dollar"><i class="far fa-money-bill-alt"></i>11 triệu -
-                                                24 triệu</div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="location text_ellipsis pd-map"><i
-                                                    class="fas fa-map-marker-alt"></i>Hồ Chí
-                                                Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

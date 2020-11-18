@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        loop: true,
-        autoplay: true,
+        // loop: true,
+        // autoplay: true,
         margin: 20,
         nav: true,
         dots: false,
@@ -35,6 +35,7 @@ $(document).ready(function () {
     });
 
     $('.bootstrap-select-city__custom, .select-city, .select-career').selectpicker();
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 
