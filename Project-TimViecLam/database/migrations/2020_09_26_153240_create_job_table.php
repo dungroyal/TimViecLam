@@ -48,7 +48,7 @@ class CreateJobTable extends Migration
             $table->foreign('salary_id')->references('id')->on('salary');
             $table->foreign('degree_id')->references('id')->on('degree');
             $table->foreign('experience_id')->references('id')->on('experience');
-            $table->foreign('city_id')->references('id')->on('city');
+            // $table->foreign('city_id')->references('id')->on('city');
         });
     }
     

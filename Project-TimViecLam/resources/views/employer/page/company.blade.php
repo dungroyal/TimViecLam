@@ -77,14 +77,34 @@
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-4 text-center">
-                                <h4 class="card-title mb-3">Logo công ty</h4>
-                                    <div class="fallback mb-5">
-                                        <input name="file" type="file" multiple="">
+                                <h4 class="card-title">Logo công ty</h4>
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type='file' name="avatar" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload" class="imageUpload"> <i class="bx bxs-cloud-upload"></i></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview"
+                                                @if ($company->logo != null)
+                                                    style="background-image: url({{ asset('images/'.$company->logo) }});"
+                                                @else
+                                                    style="background-image: url('https://ui-avatars.com/api/?size=250&bold=true&background=0091cf&color=fffff&name={{ $company->name_company }}');"
+                                                @endif
+                                            ></div>
+                                        </div>
                                     </div>
-                                <h4 class="card-title mb-3">Giấy phép kinh doanh</h4>
-                                    <div class="fallback mb-5">
-                                        <input name="file" type="file" multiple="">
+                                    <hr>
+                                <h4 class="card-title mt-4">Giấy phép kinh doanh</h4>
+                                {{-- <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                        <label for="imageUpload"> <i class="bx bxs-cloud-upload"></i></label>
                                     </div>
+                                    <div class="avatar-preview">
+                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                        </div>
+                                    </div>
+                                </div> --}}
                             </div>
 
                         </div>

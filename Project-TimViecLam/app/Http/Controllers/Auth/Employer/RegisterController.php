@@ -77,6 +77,10 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user)
     {
+        
+        $career = $request['career'];
+        $request['career'] = implode(',', $career);
+
         DB::table('companies')->insert([
             ['employer_id' => $user->id,
             'name_company' => $request->name_company,
@@ -89,6 +93,7 @@ class RegisterController extends Controller
             'phone_contact' => $request->phone,
             'email_contact' => $request->email,
             'address_contact' => $request->address,
+            'status' => 0,
             ]
         ]);
     }

@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share( 'dungdq', 'this is a cool shared variable' );
+        //
     }
 }

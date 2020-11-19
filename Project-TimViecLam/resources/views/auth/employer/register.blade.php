@@ -140,10 +140,10 @@
                                     <div class="col-sm-8">
                                         <select name="personnel_size" id="personnel_size" class="form-control selectpicker @error('personnel_size') is-invalid @enderror">
                                             <option>Chọn quy mô nhân sự</option>
-                                            <option value="0">10 người </option>
-                                            <option value="1">20 người </option>
-                                            <option value="2">30 người </option>
-                                            <option value="3">40 người </option>
+                                            <option value="0">Dưới 20 người</option>
+                                            <option value="1">20 - 150 người </option>
+                                            <option value="2">150 - 300 người </option>
+                                            <option value="3">Trên 300 người</option>
                                         </select>
                                         @error('personnel_size')
                                         <span class="invalid-feedback" role="alert">
@@ -153,32 +153,20 @@
                                     </div>
                                 </div>
                                 <div class="form-group row text-lg-left text-lg-right">
-                                    <label for="career" class="col-sm-4 col-form-label"><span class="text-danger">*</span> Lĩnh vực hoạt động</label>
+                                    <label class="col-sm-4 col-form-label"><span class="text-danger">*</span> Lĩnh vực hoạt động</label>
                                     <div class="col-sm-8">
-                                        <select class="form-control select-career w-100  @error('career') is-invalid @enderror" 
-                                            id="career"
-                                            name="career"
-                                            data-size="5" 
+                                        <select class="form-control select-career w-100  @error('career[]') is-invalid @enderror"
+                                            name="career[]"
+                                            data-size="7" 
                                             data-live-search="true"
-                                            title="Địa điểm làm việc" 
-                                            {{-- multiple --}}
+                                            title="Chọn lĩnh vực hoạt động" 
+                                            multiple
                                             >
-                                            <option class="py-2" value="12">Bắc Giang</option>
-                                            <option class="py-2" value="13">Bắc Kạn</option>
-                                            <option class="py-2" value="14">Bạc Liêu</option>
-                                            <option class="py-2" value="15">Bến Tre</option>
-                                            <option class="py-2" value="16">Bình Định</option>
-                                            <option class="py-2" value="17">Bình Phước</option>
-                                            <option class="py-2" value="18">Bình Thuận</option>
-                                            <option class="py-2" value="19">Cà Mau</option>
-                                            <option class="py-2" value="20">Cần Thơ</option>
-                                            <option class="py-2" value="21">Cao Bằng</option>
-                                            <option class="py-2" value="62">Tiền Giang</option>
-                                            <option class="py-2" value="63">Toàn Quốc</option>
-                                            <option class="py-2" value="64">Trà Vinh</option>
-                                            <option class="py-2" value="65">Tuyên Quang</option>
+                                            @foreach ($careers as $item)
+                                                <option class="py-2" value="{{ $item->id }}">{{ $item->name }}</option>
+                                            @endforeach
                                         </select>
-                                        @error('career')
+                                        @error('career[]')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -208,22 +196,11 @@
                                         <select class="form-control select-city w-100  @error('city') is-invalid @enderror" 
                                         name="city"
                                         id="city"
-                                        data-size="5" data-live-search="true"
+                                        data-size="7" data-live-search="true"
                                         title="Địa điểm làm việc">
-                                            <option class="py-2" value="12">Bắc Giang</option>
-                                            <option class="py-2" value="13">Bắc Kạn</option>
-                                            <option class="py-2" value="14">Bạc Liêu</option>
-                                            <option class="py-2" value="15">Bến Tre</option>
-                                            <option class="py-2" value="16">Bình Định</option>
-                                            <option class="py-2" value="17">Bình Phước</option>
-                                            <option class="py-2" value="18">Bình Thuận</option>
-                                            <option class="py-2" value="19">Cà Mau</option>
-                                            <option class="py-2" value="20">Cần Thơ</option>
-                                            <option class="py-2" value="21">Cao Bằng</option>
-                                            <option class="py-2" value="62">Tiền Giang</option>
-                                            <option class="py-2" value="63">Toàn Quốc</option>
-                                            <option class="py-2" value="64">Trà Vinh</option>
-                                            <option class="py-2" value="65">Tuyên Quang</option>
+                                            @foreach ($city as $item)
+                                                <option class="py-2" value="{{ $item->id }}">{{ $item->name }}</option>
+                                            @endforeach
                                         </select>
                                         @error('city')
                                         <span class="invalid-feedback" role="alert">
@@ -237,7 +214,8 @@
                                     <div class="col-sm-8">
                                         <div class="form-group">
                                             <div class="form-check">
-                                                <input class="form-check-input is-invalid" type="checkbox" value="1"
+                                                <input class="form-check-input  @error('confirm') is-invalid @enderror" 
+                                                    type="checkbox" value="1"
                                                     id="confirm" name="confirm" required>
                                                 <label class="form-check-label" for="confirm"> Đồng ý với các 
                                                     <a href=""><strong>Quy định bảo mật</strong></a> & 
