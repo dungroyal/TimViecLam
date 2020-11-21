@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Hồ sơ | ')
+@section('title', 'Hồ sơ công ty| ')
 
 @section('header')
 @include('employer.element.header')
@@ -35,7 +35,7 @@
                             <div class="col-sm-6 col-lg-8">
                                 <div class="form-group">
                                     <label for="email">Địa chỉ email</label>
-                                    <input id="email" value="{{ $employer->email }}" type="text" class="form-control"
+                                    <input id="email" value="{{ $info_company['email'] }}" type="text" class="form-control"
                                         disabled>
                                 </div>
                                 <div class="form-group">
@@ -47,12 +47,12 @@
                                 <div class="form-group">
                                     <label for="name-company">Tên công ty</label>
                                     <input id="name-company" name="name-company"
-                                        value="{{ $company->name_company }}" type="text" class="form-control"
+                                        value="{{ $info_company['name_company'] }}" type="text" class="form-control"
                                         disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Địa chỉ công ty <span class="text-danger">*</span></label>
-                                    <input id="address" name="address" value="{{ $company->address }}" type="text"
+                                    <input id="address" name="address" value="{{ $info_company['address'] }}" type="text"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
@@ -62,7 +62,7 @@
                                             name="operation"
                                             data-live-search="true" 
                                             data-size="5"
-                                            value="{{ $company->city }}"
+                                            value="{{ $info_company['city'] }}"
                                             title="Chọn tỉnh thành phố">
                                             @foreach ($city as $item)
                                                 <option value="{{ $item->id }}"> {{ $item->name }}</option>
@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="personnel_size">Quy mô nhân sự</label>
-                                    <input id="personnel_size" value="{{ $company->personnel_size }}" type="text" class="form-control"
+                                    <input id="personnel_size" value="{{ $info_company['personnel_size'] }}" type="text" class="form-control"
                                         disabled>
                                 </div>
                             </div>
@@ -85,10 +85,10 @@
                                         </div>
                                         <div class="avatar-preview">
                                             <div id="imagePreview"
-                                                @if ($company->logo != null)
-                                                    style="background-image: url({{ asset('images/'.$company->logo) }});"
+                                                @if ($info_company['logo'] != null)
+                                                    style="background-image: url({{ asset('images/'.$info_company['logo']) }});"
                                                 @else
-                                                    style="background-image: url('https://ui-avatars.com/api/?size=250&bold=true&background=0091cf&color=fffff&name={{ $company->name_company }}');"
+                                                    style="background-image: url('https://ui-avatars.com/api/?size=250&bold=true&background=0091cf&color=fffff&name={{ $info_company['name_company'] }}');"
                                                 @endif
                                             ></div>
                                         </div>
@@ -117,7 +117,7 @@
                                             multiple 
                                             data-live-search="true" 
                                             data-size="5"
-                                            value="{{ $company->career }}"
+                                            value="{{ $info_company['career'] }}"
                                             title="Chọn lĩnh vực hoạt động">
 
                                             @foreach ($careers as $item)
@@ -128,7 +128,7 @@
                                     <div class="form-group mt-2">
                                         <label for="productdesc">Mô tả sơ lược về công ty <span
                                                 class="text-danger">*</span></label>
-                                        <textarea class="form-control" value="{{ $company->description }}" id="productdesc" rows="5"></textarea>
+                                        <textarea class="form-control" value="{{ $info_company['description'] }}" id="productdesc" rows="5"></textarea>
                                     </div>
 
                                     <div class="row">
@@ -137,21 +137,21 @@
                                                 <div class="col-sm-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="personnel_size">Website</label>
-                                                        <input id="personnel_size" value="{{ $company->website }}" type="text"
+                                                        <input id="personnel_size" value="{{ $info_company['website'] }}" type="text"
                                                             class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="personnel_size">Số điện thoại công ty</label>
-                                                        <input id="personnel_size" value="{{ $company->phone }}" type="text"
+                                                        <input id="personnel_size" value="{{ $info_company['phone'] }}" type="text"
                                                             class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-lg-4">
                                                     <div class="form-group">
                                                         <label for="personnel_size">Fax công ty</label>
-                                                        <input id="personnel_size" value="{{ $company->fax }}" type="text"
+                                                        <input id="personnel_size" value="{{ $info_company['fax'] }}" type="text"
                                                             class="form-control">
                                                     </div>
                                                 </div>
@@ -167,28 +167,28 @@
                                             <div class="col-sm-12 col-lg-6">
                                                 <div class="form-group">
                                                     <label for="personnel_size">Người liên hệ</label>
-                                                    <input id="personnel_size" value="{{ $company->name_contact }}" type="text"
+                                                    <input id="personnel_size" value="{{ $info_company['name_contact'] }}" type="text"
                                                         class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-lg-6">
                                                 <div class="form-group">
                                                     <label for="personnel_size">Số điện thoại liên hệ</label>
-                                                    <input id="personnel_size" value="{{ $company->phone_contact }}" type="text"
+                                                    <input id="personnel_size" value="{{ $info_company['phone_contact'] }}" type="text"
                                                         class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-lg-6">
                                                 <div class="form-group">
                                                     <label for="personnel_size">Địa chỉ người liên hệ</label>
-                                                    <input id="personnel_size" value="{{ $company->address_contact }}" type="text"
+                                                    <input id="personnel_size" value="{{ $info_company['address_contact'] }}" type="text"
                                                         class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-lg-6">
                                                 <div class="form-group">
                                                     <label for="personnel_size">Email liên hệ</label>
-                                                    <input id="personnel_size" value="{{ $company->email_contact }}" type="text"
+                                                    <input id="personnel_size" value="{{ $info_company['email_contact'] }}" type="text"
                                                         class="form-control">
                                                 </div>
                                             </div>

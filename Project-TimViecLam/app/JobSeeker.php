@@ -6,14 +6,14 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class JobSeeker extends Authenticatable
+class JobSeeker extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     protected $table='job_seeker';
     protected $guard = 'job_seeker';
 
     protected $fillable = [
-        'name', 'email', 'password','phone',
+        'name', 'email', 'email_verified_at', 'password', 'phone'
     ];
 
     protected $hidden = [

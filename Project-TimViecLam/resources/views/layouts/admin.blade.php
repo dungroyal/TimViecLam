@@ -15,6 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
     <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('plugin/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css">
@@ -73,6 +74,7 @@
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
     <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.vi.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <script src="{{ asset('admin/js/admin.js') }}"></script>
 </body>

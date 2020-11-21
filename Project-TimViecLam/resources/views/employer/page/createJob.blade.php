@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Thêm công việc | ')
+@section('title', 'Thêm mới tin | ')
 
 @section('header')
 @include('employer.element.header')
@@ -144,7 +144,7 @@
                                     <label for="address">Địa điểm làm việc <span class="text-danger">*</span></label>
                                     <input id="address" 
                                         name="address" 
-                                        value="{{ (old('address')!= null) ? old('address') : $company->address }}" 
+                                        value="{{ (old('address')!= null) ? old('address') : $info_company['address'] }}" 
                                         type="text"
                                         class="form-control @error('address') is-invalid @enderror"/>
                                         @error('address')
@@ -160,7 +160,7 @@
                                             name="city"
                                             data-live-search="true" 
                                             data-size="8" 
-                                            value="{{ $company->city }}"
+                                            value="{{ $info_company['city'] }}"
                                             title="Chọn tỉnh/thành phố.">
                                             @foreach ($city as $item)
                                                 <option value="{{ $item->id }}" {{ old('city') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
@@ -225,7 +225,7 @@
                                         <label for="degree_id">Bằng cấp</label>
                                         <select class="selectpicker form-control @error('degree_id') is-invalid @enderror" 
                                             name="degree_id" data-size="5"
-                                            value="{{ $company->city }}" 
+                                            value="{{ $info_company['city'] }}" 
                                             title="Chọn bằng cấp">
                                             @foreach ($degree as $item)
                                                 <option value="{{ $item->id }}" {{ old('degree_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
@@ -256,8 +256,7 @@
                                         <label for="sex_requirements">Giới tính</label>
                                         <select class="selectpicker form-control @error('sex_requirements') is-invalid @enderror" 
                                             name="sex_requirements" 
-                                            data-size="5"
-                                            value="{{ $company->city }}" title="Chọn cấp bậc">
+                                            data-size="5" title="Chọn cấp bậc">
                                             <option value="0" {{old('sex_requirements') == 0 ? "Selected" :""}}>Không yêu cầu</option>
                                             <option value="1" {{old('sex_requirements') == 1 ? "Selected" :""}}>Nam</option>
                                             <option value="2" {{old('sex_requirements') == 2 ? "Selected" :""}}>Nữ</option>
@@ -286,10 +285,10 @@
                                         <textarea class="form-control  @error('profile_request') is-invalid @enderror" 
                                             name="profile_request"
                                             rows="5">
-                                            {{ old('profile_request')!=null ? old('profile_request') : '- Đơn xin việc.
-                                            - Sơ yếu lý lịch.
-                                            - Hộ khẩu, chứng minh nhân dân và giấy khám sức khỏe.
-                                            - Các bằng cấp có liên quan.' }}</textarea>
+{{ old('profile_request')!=null ? old('profile_request') :'- Đơn xin việc.
+- Sơ yếu lý lịch.
+- Hộ khẩu, chứng minh nhân dân và giấy khám sức khỏe.
+- Các bằng cấp có liên quan.' }}</textarea>
                                         @error('profile_request')
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -309,7 +308,7 @@
                                         <div class="form-group">
                                             <label for="name_contact">Người liên hệ</label>
                                             <input name="name_contact" 
-                                                value="{{ (old('name_contact')!= null) ? old('name_contact') : $company->name_contact }}" 
+                                                value="{{ (old('name_contact')!= null) ? old('name_contact') : $info_company['name_contact'] }}" 
                                                 type="text"
                                                 class="form-control @error('name_contact') is-invalid @enderror">
                                                 @error('name_contact')
@@ -323,7 +322,7 @@
                                         <div class="form-group">
                                             <label for="phone_contact">Số điện thoại liên hệ</label>
                                             <input  name="phone_contact" 
-                                                value="{{ (old('phone_contact')!= null) ? old('phone_contact') : $company->phone_contact }}" 
+                                                value="{{ (old('phone_contact')!= null) ? old('phone_contact') : $info_company['phone_contact'] }}" 
                                                 type="text"
                                                 class="form-control  @error('phone_contact') is-invalid @enderror">
                                                 @error('phone_contact')
@@ -336,7 +335,7 @@
                                     <div class="col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <label for="address_contact">Địa chỉ người liên hệ</label>
-                                            <input name="address_contact" value="{{ (old('address_contact')!= null) ? old('address_contact') : $company->address_contact }}"
+                                            <input name="address_contact" value="{{ (old('address_contact')!= null) ? old('address_contact') : $info_company['address_contact'] }}"
                                                 type="text" class="form-control  @error('address_contact') is-invalid @enderror">
                                                 @error('address_contact')
                                                     <span class="invalid-feedback d-block" role="alert">
@@ -348,7 +347,7 @@
                                     <div class="col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <label for="email_contact">Email liên hệ</label>
-                                            <input name="email_contact" value="{{ (old('email_contact')!= null) ? old('email_contact') : $company->email_contact }}" type="text"
+                                            <input name="email_contact" value="{{ (old('email_contact')!= null) ? old('email_contact') : $info_company['email_contact'] }}" type="text"
                                                 class="form-control @error('email_contact') is-invalid @enderror">
                                                 @error('email_contact')
                                                     <span class="invalid-feedback d-block" role="alert">

@@ -93,7 +93,6 @@
                         </form>
                     </div>
                 </div>
-                {{dd($city)}}
                 <div class="card mt-2">
                     <div class="card-body">
                         <div class="text-center text__login-uv--bottom">

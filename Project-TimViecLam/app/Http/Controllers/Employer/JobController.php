@@ -17,8 +17,14 @@ class JobController extends Controller
     public function __construct()
     {
         $this->middleware('auth:employer');
-        $this->middleware(function ($request, $next) {
-            $this->id = Auth::guard('employer')->user()->id;
+        $this->middleware(function ($request, $next) { 
+            // Get all data of Employer and Company
+            $this->idEmployer = Auth::guard('employer')->user()->id;
+            $company = DB::table('companies')->where('employer_id', $this->idEmployer)->first();
+            $employer = Auth::guard('employer')->user();
+            $collection = collect($company);
+            $data = $collection->merge($employer);
+            $this->data_company =  $data->all();
             return $next($request);
         });
         }
@@ -26,20 +32,16 @@ class JobController extends Controller
     
     public function showCreateJobPostForm()
     {
-        return view('
-            employer.page.create_job',[
-                'employer' => Auth::guard('employer')->user(),
-                'company' => DB::table('companies')->where('employer_id', $this->id)->first()
-        ]);
+        $info_company = $this->data_company;
+        return view('employer.page.createJob',compact('info_company'));
     }
     
     public function store(JobPostRequest $request)
     {   
-        $company = Company::where('employer_id',$this->id)->first();
         Job::create([
             'job_code'=>request('job_code'), request('job_code'),
-            'company_id'=>$company->id,
-            'employer_id'=>$this->id,
+            'company_id'=>$this->data_company['employer_id'],
+            'employer_id'=>$this->data_company['id'],
             'name_job'=>$name_job = request('name_job'),
             'type_job_id'=>request('type_job_id'),
             'amount'=>request('amount'),

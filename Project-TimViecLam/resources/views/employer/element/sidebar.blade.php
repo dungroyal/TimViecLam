@@ -23,7 +23,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ Route('employer.showCreateJobPostForm')}}">Đăng tuyển dụng mới</a></li>
-                        <li><a href="#">Tất cả tin tuyển dụng</a></li>
+                        <li><a href="{{ Route('employer.listJobPost') }}">Tất cả tin tuyển dụng</a></li>
                     </ul>
                 </li>
                 <li>

@@ -107,3 +107,19 @@
         background-position: center;
     }
 /* Avatar Upload and Preview */
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b8b9bb !important;
+    font-style: italic !important;
+    opacity: 1 !important;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #b8b9bb !important;
+    font-style: italic !important;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #b8b9bb !important;
+    font-style: italic !important;
+}

@@ -10,11 +10,18 @@ use Illuminate\Support\Facades\Auth;
 |--------------------------------------------------------------------------
 */
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
+
+
+// Datatables
+Route::controller('datatables', 'DatatablesController', [
+    'anyData'  => 'datatables.data',
+    'getIndex' => 'datatables',
+]);
 
 
 Route::prefix('job-seeker')->group(function() {
@@ -24,6 +31,7 @@ Route::prefix('job-seeker')->group(function() {
 Route::prefix('employer')->group(function() {
     Route::get('/', 'Employer\EmployerController@index')->name('employer.dashboard');
     Route::get('/company-information', 'Employer\EmployerController@company')->name('employer.company_info');
+    Route::get('/list-job-post', 'Employer\EmployerController@listJobPost')->name('employer.listJobPost');
 
     Route::get('/create-job-post', 'Employer\JobController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
     Route::post('/create_job_post', 'Employer\JobController@store')->name('employer.createJobPost');

@@ -24,7 +24,7 @@ class JobPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'job_code'=>['required', 'unique:App\Models\Job,job_code', 'max:5'],
+            'job_code'=>['required', 'unique:App\Models\Job,job_code', 'max:10'],
             'name_job'=>['required', 'string', 'max:255'],
             'type_job_id'=> ['required'],
             'amount'=> ['required'],

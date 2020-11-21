@@ -13,27 +13,33 @@ class EmployerController extends Controller
     {
         $this->middleware('auth:employer');
         $this->middleware(function ($request, $next) {
+            // Get all data of Employer and Company
             $this->idEmployer = Auth::guard('employer')->user()->id;
+            $company = DB::table('companies')->where('employer_id', $this->idEmployer)->first();
+            $employer = Auth::guard('employer')->user();
+            $collection = collect($company);
+            $data = $collection->merge($employer);
+            $this->data_company =  $data->all();
+
             return $next($request);
         });
     }
 
     public function index()
     {
-        $this->id = Auth::guard('employer')->user()->id;
-        return view('
-        employer.dashboard', [
-            'employer' => Auth::guard('employer')->user(),
-            'company' => DB::table('companies')->select('name_company', 'logo')->where('employer_id', $this->idEmployer)->first()
-        ]);
+        $info_company = $this->data_company;
+        return view(' employer.dashboard',compact('info_company'));
     }
 
     public function company()
     {
-        return view('
-            employer.page.company',[
-                'employer' => Auth::guard('employer')->user(),
-                'company' => DB::table('companies')->where('employer_id', $this->idEmployer)->first()
-        ]);
+        $info_company = $this->data_company;
+        return view('employer.page.company',compact('info_company'));
+    }
+
+    public function listJobPost()
+    {
+        $info_company = $this->data_company;
+        return view('employer.page.listJobPost',compact('info_company'));
     }
 }
