@@ -5,13 +5,13 @@
 
                 <li class="menu-title text-center text-white-50">Trang cá nhân</li>
                 <li>
-                    <a href="calendar.html" class="waves-effect">
+                    <a href="{{ Route('job-seeker.dashboard') }}" class="waves-effect">
                         <i class="bx bxs-dashboard"></i>
                         <span>Quản lý chung</span>
                     </a>
                 </li>
                 <li>
-                    <a href="calendar.html" class="waves-effect ">
+                    <a href="#" class="waves-effect ">
                         <i class="bx bx-user-pin"></i>
                         <span>Quản lý hồ sơ</span>
                     </a>

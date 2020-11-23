@@ -14,15 +14,8 @@ Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
+Route::get('/job-detail', 'JobController@job_detail');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
-
-
-// Datatables
-Route::controller('datatables', 'DatatablesController', [
-    'anyData'  => 'datatables.data',
-    'getIndex' => 'datatables',
-]);
-
 
 Route::prefix('job-seeker')->group(function() {
     Route::get('/', 'JobSeeker\HomeController@index')->name('job-seeker.dashboard');
@@ -48,18 +41,3 @@ Route::prefix('employer')->group(function() {
     Route::post('password/reset', 'Auth\Employer\ResetPasswordController@reset')->name('employer.password.update');
     Route::get('/password/reset/{token}', 'Auth\Employer\ResetPasswordController@showResetForm')->name('employer.password.reset');
 });
-
-// Route::prefix('admin')->group(function() {
-//     Route::get('/', 'admin\HomeController@index')->name('admin.dashboard');
-
-//     // Login Logout Routes
-//     Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
-//     Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
-//     Route::post('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
-
-//     // Password Resets Routes
-//     Route::post('password/email', 'Auth\Admin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
-//     Route::get('password/reset', 'Auth\Admin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
-//     Route::post('password/reset', 'Auth\Admin\ResetPasswordController@reset')->name('admin.password.update');
-//     Route::get('/password/reset/{token}', 'Auth\Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
-// });

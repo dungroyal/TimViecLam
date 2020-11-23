@@ -31,9 +31,6 @@ body {
     padding: 0 calc(24px / 2) 0 0
 }
 
-.navbar-header .dropdown.show .header-item {
-    background-color: #f8f9fa
-}
 
 .navbar-brand-box {
     padding: 0 1.5rem;

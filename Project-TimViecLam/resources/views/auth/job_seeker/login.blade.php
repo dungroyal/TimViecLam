@@ -2,17 +2,17 @@
 @section('title', 'Đăng nhập - ')
 
 @section('content')
-<div class="bg_login-uv">
+<div class="bg_login-uv margin-header">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-lg-7 card-title--uv text-white mt-5 mr-5 pl-5">
                 <h1 class="card-title">Đăng nhập ứng viên</h1>
                 <br>
-                <p class="card-text"><i class="far fa-check-circle"></i> Tiếp cận hàng triệu công việc hoàn toàn miễn
+                <p class="card-text mb-2"><i class="far fa-check-circle"></i> Tiếp cận hàng triệu công việc hoàn toàn miễn
                     phí</p>
-                <p class="card-text"><i class="far fa-check-circle"></i> Ứng tuyển nhanh chóng, dễ dàng</p>
-                <p class="card-text"><i class="far fa-check-circle"></i> Nhận bản tin công việc phù hợp định kỳ</p>
-                <p class="card-text"><i class="far fa-check-circle"></i> Nâng cao cơ hội tìm việc với chương trình ứng
+                <p class="card-text mb-2"><i class="far fa-check-circle"></i> Ứng tuyển nhanh chóng, dễ dàng</p>
+                <p class="card-text mb-2"><i class="far fa-check-circle"></i> Nhận bản tin công việc phù hợp định kỳ</p>
+                <p class="card-text mb-2"><i class="far fa-check-circle"></i> Nâng cao cơ hội tìm việc với chương trình ứng
                     viên năng động</p>
 
             </div>
