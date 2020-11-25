@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Job;
 
 class Career extends Model
 {
@@ -15,4 +16,8 @@ class Career extends Model
         'name'
     ];
 
+    
+    public function Job(){
+    	return $this->hasMany(Job::class);
+    }
 }

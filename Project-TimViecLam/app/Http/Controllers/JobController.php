@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use App\Models\Job;
+use Yajra\Datatables\Datatables;
 
 class JobController extends Controller
 {
@@ -20,5 +22,5 @@ class JobController extends Controller
     public function job_detail()
     {
         return view('home/Job_detail');
-    }      
+    }
 }

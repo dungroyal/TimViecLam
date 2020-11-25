@@ -36,10 +36,4 @@ class EmployerController extends Controller
         $info_company = $this->data_company;
         return view('employer.page.company',compact('info_company'));
     }
-
-    public function listJobPost()
-    {
-        $info_company = $this->data_company;
-        return view('employer.page.listJobPost',compact('info_company'));
-    }
 }

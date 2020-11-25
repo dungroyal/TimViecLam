@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Job extends Model
 {
@@ -38,4 +39,8 @@ class Job extends Model
         'slug',
         'status'
     ];
+
+    public function company(){
+    	return $this->belongsTo('App\Models\Company');
+    }
 }

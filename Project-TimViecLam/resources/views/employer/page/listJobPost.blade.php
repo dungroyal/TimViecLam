@@ -33,11 +33,14 @@
                 <table class="table table-bordered" id="users-table">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Created At</th>
-                            <th>Updated At</th>
+                            <th>STT</th>
+                            <th>Mã bài đăng</th>
+                            <th>Tên công việc</th>
+                            <th>Ngành nghề</th>
+                            <th>Lược xem</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày cập nhật</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                 </table>
@@ -52,19 +55,31 @@
 
 @push('scripts')
 <script>
-$(function() {
-    $('#users-table').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: '{!! route('datatables.data') !!}',
-        columns: [
-            { data: 'id', name: 'id' },
-            { data: 'name', name: 'name' },
-            { data: 'email', name: 'email' },
-            { data: 'created_at', name: 'created_at' },
-            { data: 'updated_at', name: 'updated_at' }
-        ]
+    $(function() {
+        $('#users-table').DataTable({
+            "language": {"url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Vietnamese.json"},
+            "processing": true,
+            "retrieve": true,
+            "serverSide": true,
+            'paginate': true,
+            'searchDelay': 700,
+            "bDeferRender": true,
+            "responsive": true,
+            "autoWidth": true,
+            "pageLength": 5,
+            "lengthMenu": [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
+            ajax: '{!! route('jobs.anyData') !!}',
+            columns: [
+                { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: true, searchable: false},
+                { data: 'job_code', name: 'job_code' },
+                { data: 'name_job', name: 'name_job' },
+                { data: 'career', name: 'career'},
+                { data: 'views', name: 'views', searchable: false},
+                { data: 'status', name: 'status', orderable: false, searchable: false},
+                { data: 'update_at', name: 'update_at', orderable: true, searchable: false},
+                { data: 'action', name: 'action', orderable: false, searchable: false }
+            ]
+        });
     });
-});
 </script>
 @endpush

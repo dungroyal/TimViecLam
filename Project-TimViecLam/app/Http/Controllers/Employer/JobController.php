@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\JobPostRequest;
 use App\Models\Job;
-use App\Models\Company;
+use App\Models\Career;
+use App\Models\City;
 use Carbon\Carbon;
+use Yajra\Datatables\Datatables;
 
 class JobController extends Controller
 {
@@ -80,18 +82,52 @@ class JobController extends Controller
         return redirect('/employer')->with('message','Thêm tin tuyển dụng thành công');
     }
 
-    public function show(JobController $test)
+    public function editJobPostForm($id)
     {
-        //
+        $info_company = $this->data_company;
+        $infoJob = Job::findOrFail($id);
+        return view('employer.page.editJobPost',compact('infoJob','info_company'));
     }
+
+    public function listJobPost()
+    {
+        $info_company = $this->data_company;
+        return view('employer.page.listJobPost',compact('info_company'));
+    }
+
+    public function anyData(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = Job::latest()->where('employer_id',$this->data_company['id'])->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('update_at', function($row){
+                    return date_format($row->updated_at,"d/m/Y");
+                })
+                ->addColumn('career', function($row){
+                    return Career::find($row->career_id)->name;
+                })
+                ->addColumn('status', function($row){
+                    if ($row->status == 0) {
+                        $status = '<span class="badge badge-pill badge-danger">Đã tắt</span>';
+                    }else{
+                        $status = '<span class="badge badge-pill badge-success">Đang chạy</span>';
+                    }
+                    return $status;
+                })
+                ->addColumn('views', function($row){
+                    return 150;
+                })
+                ->addColumn('action', function($row){
+                    $actionBtn = '
+                        <a href=" '. Route("employer.editJobPost",["id" =>$row->id]).' " class="edit btn btn-success btn-sm"><i class="far fa-edit"></i></a>
+                        <a href=" '. Route("employer.delJobPost",["id" =>$row->id]).' " class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action','status'])
+                ->make(true);
+        }
+    }
+
     
-    public function update(Request $request, JobController $test)
-    {
-        //
-    }
-    
-    public function destroy(JobController $test)
-    {
-        //
-    }
 }

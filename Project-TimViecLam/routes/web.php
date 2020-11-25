@@ -24,8 +24,10 @@ Route::prefix('job-seeker')->group(function() {
 Route::prefix('employer')->group(function() {
     Route::get('/', 'Employer\EmployerController@index')->name('employer.dashboard');
     Route::get('/company-information', 'Employer\EmployerController@company')->name('employer.company_info');
-    Route::get('/list-job-post', 'Employer\EmployerController@listJobPost')->name('employer.listJobPost');
-
+    Route::get('/list-job-post', 'Employer\JobController@listJobPost')->name('employer.listJobPost');
+    Route::get('/edit-job-post/{id}', 'Employer\JobController@editJobPostForm')->name('employer.editJobPost');
+    Route::get('/del-job-post/{id}', 'Employer\JobController@delJobPost')->name('employer.delJobPost');
+    Route::get('/anyData', 'Employer\JobController@anyData')->name('jobs.anyData');
     Route::get('/create-job-post', 'Employer\JobController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
     Route::post('/create_job_post', 'Employer\JobController@store')->name('employer.createJobPost');
 
