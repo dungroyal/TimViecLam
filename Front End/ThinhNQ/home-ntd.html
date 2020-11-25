@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" type="image/x-icon" />
   <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -20,7 +20,7 @@
   <header>
     <nav class="container navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">
-        <img src="images/logo.png" width="250" alt="Logo Tìm Việc Làm">
+        <img src="images/logo.png" width="250" alt="Logo Tìm Việc Làm" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,25 +28,97 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline ml-auto">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
-              <li class="nav-item">
-                <a class="nav-link" href="job.html"><i class="fas fa-blog mr-2 icon-menu"></i> GÓC NGHỀ NGHIỆP
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-lock mr-2 icon-menu"></i> ĐĂNG NHẬP </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user mr-2 icon-menu"></i> ĐĂNG KÝ </a>
-              </li>
-              <div class="dropdown-menu-top">
-                <li class="nav-item dropdown bg-info btn btn-bd-submit mb-3 mb-md-0 ml-md-3 header-menu-bottom">
-                  <a class="text-white p-2" href="#">NHÀ TUYỂN DỤNG</a>
-                </li>
+        <ul class="navbar-nav mr-auto">
+          <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
+            <li class="nav-item">
+              <a class="nav-link" href="banggia.html"><i class="fas fa-blog mr-2 icon-menu"></i> BẢNG GIÁ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-lock mr-2 icon-menu"></i> ĐĂNG TIN
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user mr-2 icon-menu"></i>LỌC HỒ SƠ</a>
+            </li>
+          </div>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="dropdown-menu-top">
+            <li class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3 header-menu-bottom bg-info">
+              <a class="text-white p-1" href="#" data-toggle="modal" data-target="#exampleModal"><i class="far fa-hand-pointer mr-1"></i> ĐĂNG KÝ DỊCH VỤ</a>
+            </li>
+            <!-- modal title -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content modal-content-width">
+                  <div class="modal-header">
+                    <h5 class="modal-title el-dialog__header" id="exampleModalLabel">
+                      Đăng ký tư vấn dịch vụ
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!--  -->
+                    <div class="el-dialog__body">
+                      <p class="el-dialog-modal-title mb-3">
+                        Mời quý công ty điền các thông tin dưới đây để đăng ký
+                        dịch vụ:
+                      </p>
+                      <div class="mw_form">
+                        <div class="mb-3">
+                          <label class="el-dialog-title-section">Người liên hệ <span>(*)</span></label>
+                          <div class="form-item-modal">
+                            <i class="fas fa-user icon-modal"></i><input class="form-control" />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="el-dialog-title-section">Số điện thoại <span>(*)</span></label>
+                          <div class="form-item-modal">
+                            <i class="fas fa-phone fa-rotate-90 icon-modal-phone"></i><input class="form-control" />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="el-dialog-title-section">Địa chỉ email <span>(*)</span></label>
+                          <div class="form-item-modal">
+                            <i class="fas fa-envelope icon-modal-email"></i><input class="form-control" />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="el-dialog-title-section">Tên công ty
+                            <!----></label>
+                          <div class="form-item-modal">
+                            <i class="fas fa-building icon-modal-building"></i><input class="form-control" />
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="el-dialog-title-section">Yêu cầu thêm
+                            <!----></label>
+                          <div class="form-item-modal">
+                            <textarea class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      Bỏ qua
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Đăng ký ngay
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
+            <!--  -->
+          </div>
         </form>
       </div>
     </nav>
@@ -58,7 +130,9 @@
       <div class="row justify-content-center">
         <div class="col-xs-12 hidden-xs col-sm-8 mt-4">
           <h1 class="txc text-white">
-            <b>Tuyển dụng nhanh chóng, dễ dàng và hiệu quả hơn cùng Tìm Việc Làm </b>
+            <b>Tuyển dụng nhanh chóng, dễ dàng và hiệu quả hơn cùng Tìm Việc
+              Làm
+            </b>
           </h1>
           <div class="row">
             <div class="col-xs-12 col-sm-4 txc text-white">
@@ -85,7 +159,9 @@
                 <i class="icon-num-ut"></i>
               </div>
               <h3>
-                <div class="title-note-banner-ntd text-white">12.000.000 +</div>
+                <div class="title-note-banner-ntd text-white">
+                  12.000.000 +
+                </div>
                 <div class="note-banner-ntd">Lượt ứng tuyển</div>
               </h3>
             </div>
@@ -97,12 +173,14 @@
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 txr">
           <a href="banggia.html" class="">
             <button type="button" class="el-button btn-block mb-n mt-10 post-news">
-              <span>Đăng Tin tuyển dụng</span></button></a>
+              <span>Đăng Tin tuyển dụng</span>
+            </button></a>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <a href="banggia.html" class=""><button type="button"
               class="el-button btn-block mb-n mt-10 el-button--primary selective-uv">
-              <span>Lọc hồ sơ ứng viên</span></button></a>
+              <span>Lọc hồ sơ ứng viên</span>
+            </button></a>
         </div>
       </div>
     </div>
@@ -116,22 +194,22 @@
         <i class="fas fa-chevron-right next"></i>
         <div class="post-wrapper">
           <div class="post">
-            <img src="images/ct1.png" class="slider-image" alt="">
+            <img src="images/ct5.png" class="slider-image" alt="" />
           </div>
           <div class="post">
-            <img src="images/ct2.jpg" class="slider-image" alt="">
+            <img src="images/ct5.png" class="slider-image" alt="" />
           </div>
           <div class="post">
-            <img src="images/ct3.png" class="slider-image" alt="">
+            <img src="images/ct5.png" class="slider-image" alt="" />
           </div>
           <div class="post">
-            <img src="images/ct4.png" class="slider-image" alt="">
+            <img src="images/ct5.png" class="slider-image" alt="" />
           </div>
           <div class="post">
-            <img src="images/ct5.png" class="slider-image" alt="">
+            <img src="images/ct5.png" class="slider-image" alt="" />
           </div>
           <div class="post">
-            <img src="images/ct4.png" class="slider-image" alt="">
+            <img src="images/ct5.png" class="slider-image" alt="" />
           </div>
         </div>
       </div>
@@ -159,14 +237,13 @@
             </li>
           </ul>
           <div>
-            <a target="_blank" href="#" class="btn btn-orange-48">ĐĂNG TUYỂN NGAY <i
-                class="fas fa-arrow-right icon-sprite-new icon-next-white"></i></a>
+            <a target="_blank" href="#" class="btn btn-orange-48">ĐĂNG TUYỂN NGAY
+              <i class="fas fa-arrow-right icon-sprite-new icon-next-white"></i></a>
           </div>
-
         </div>
 
         <div class="col-xs-12 col-sm-7">
-          <h4><img src="images/home-offer.png" class="pst-img-big"></h4>
+          <h4><img src="images/home-offer.png" class="pst-img-big" /></h4>
         </div>
       </div>
     </div>
@@ -177,22 +254,25 @@
         <div class="col-md-4">
           <div class="col-section3-data">
             <div class="cycle-white"><i class="icon-hs-ntd"></i></div>
-            <div class="col-section3-title"><strong class="col-section3-font">1.000.000+</strong><br><span>Hồ sơ ứng
-                tuyển</span></div>
+            <div class="col-section3-title">
+              <strong class="col-section3-font">1.000.000+</strong><br /><span>Hồ sơ ứng tuyển</span>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="col-section3-data">
             <div class="cycle-white"><i class="icon-ntv-ntd"></i></div>
-            <div class="col-section3-title"><strong class="col-section3-font">500.000+</strong><br><span>Ứng viên tiềm
-                năng</span></div>
+            <div class="col-section3-title">
+              <strong class="col-section3-font">500.000+</strong><br /><span>Ứng viên tiềm năng</span>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="col-section3-data">
             <div class="cycle-white"><i class="icon-num-ut"></i></div>
-            <div class="col-section3-title"><strong class="col-section3-font">12.000.000+</strong><br><span>Lượt ứng
-                tuyển</span></div>
+            <div class="col-section3-title">
+              <strong class="col-section3-font">12.000.000+</strong><br /><span>Lượt ứng tuyển</span>
+            </div>
           </div>
         </div>
       </div>
@@ -202,7 +282,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-7">
-          <h4><img src="images/home-offer-2.png" class="mar-img"></h4>
+          <h4><img src="images/home-offer-2.png" class="mar-img" /></h4>
         </div>
 
         <div class="col-xs-12 col-sm-5">
@@ -215,7 +295,8 @@
             </li>
             <li>
               <span class="cycle-green">2</span>
-              <span class="text-note-char">Truy cập không giới hạn, dữ liệu hồ sơ người tìm việc chi tiết, chất lượng</span>
+              <span class="text-note-char">Truy cập không giới hạn, dữ liệu hồ sơ người tìm việc chi
+                tiết, chất lượng</span>
             </li>
             <li>
               <span class="cycle-green">3</span>
@@ -223,10 +304,9 @@
             </li>
           </ul>
           <div class="paddingTop10">
-            <a target="_blank" href="#" class="btn btn-orange-48">LỌC HỒ SƠ ỨNG VIÊN NGAY <i
-                class="fas fa-arrow-right icon-sprite-new icon-next-white"></i></a>
+            <a target="_blank" href="#" class="btn btn-orange-48">LỌC HỒ SƠ ỨNG VIÊN NGAY
+              <i class="fas fa-arrow-right icon-sprite-new icon-next-white"></i></a>
           </div>
-
         </div>
       </div>
     </div>
@@ -241,34 +321,36 @@
             </div>
 
             <div class="col-xs-12 col-sm-8">
-              <div class="fontSize16 txt-36 txc-mb ">hoặc vui lòng liên hệ với chúng tôi qua Hotline Hỗ
-                trợ:</div>
-              <div class="fontSize24 text-red txc-mb">(028) 7109 1111 <span
-                  class="hidden-xs">|</span> <br class="visible-xs">(024) 7308 3879 </div>
+              <div class="fontSize16 txt-36 txc-mb">
+                hoặc vui lòng liên hệ với chúng tôi qua Hotline Hỗ trợ:
+              </div>
+              <div class="fontSize24 text-red txc-mb">
+                (028) 7109 1111 <span class="hidden-xs">|</span>
+                <br class="visible-xs" />(024) 7308 3879
+              </div>
             </div>
             <div class="icon-telephone-ntd div-icon-gd">
               <i class="icon-goi-dien"></i>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
+  <!--  -->
+
+  <!--  -->
   <footer class="page-footer font-small mdb-color pt-4">
-
-
     <div class="container page-footer__bottom text-center text-md-left text-primary">
-
-
       <div class="row text-center text-md-left mt-3 pb-3">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="images/Logo_White.png" alt="" class="footer-img">
+          <img src="images/Logo_White.png" alt="" class="footer-img" />
         </div>
 
         <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white">VỀ CHÚNG TÔI</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            VỀ CHÚNG TÔI
+          </h6>
           <div class="text__info--title">
             <p>
               <a href="intro.html">Về Timvieclam.xyz</a>
@@ -285,14 +367,15 @@
             <p>
               <a href="bvtt.html">Chính Sách BV Thông Tin Cá Nhân</a>
             </p>
-
           </div>
         </div>
 
-        <hr class="w-100 clearfix d-md-none">
+        <hr class="w-100 clearfix d-md-none" />
 
         <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white">CÔNG CỤ</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            CÔNG CỤ
+          </h6>
           <div class="text__info--title">
             <p>
               <a href="#!">Quản Lý Tuyển Dụng</a>
@@ -308,30 +391,29 @@
             </p>
           </div>
         </div>
-        <hr class="w-100 clearfix d-md-none">
+        <hr class="w-100 clearfix d-md-none" />
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white">Liên Hệ</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            Liên Hệ
+          </h6>
           <div class="text__info--address">
             <p>
-              <i class="fas fa-home mr-3"></i> Tô Ký, Phường Tân Chánh Hiệp, Q12
+              <i class="fas fa-home mr-3"></i> Tô Ký, Phường Tân Chánh Hiệp,
+              Q12
             </p>
-            <p>
-              <i class="fas fa-envelope mr-3"></i> huynq156@gmail.com
-            </p>
-            <p>
-              <i class="fas fa-phone mr-3"></i> + 01 234 567 88
-            </p>
-            <p>
-              <i class="fas fa-print mr-3"></i> + 01 234 567 89
-            </p>
+            <p><i class="fas fa-envelope mr-3"></i> huynq156@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
           </div>
         </div>
       </div>
-      <hr class="w-100 clearfix d-md-none">
+      <hr class="w-100 clearfix d-md-none" />
 
       <div class="row page_footer--category">
         <div class="col-md-3 text__info col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white">Việc Làm Theo Ngành Nghề</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            Việc Làm Theo Ngành Nghề
+          </h6>
           <div class="text__info--title">
             <p>
               <a href="#!">Việc Làm Kinh Doanh</a>
@@ -352,9 +434,11 @@
             </div>
           </div>
         </div>
-        <hr class="w-100 clearfix d-md-none">
+        <hr class="w-100 clearfix d-md-none" />
         <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white">Việc Làm Công Ty</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            Việc Làm Công Ty
+          </h6>
           <div class="text__info--title">
             <p>
               <a href="#!">VinFast Tuyển Dụng</a>
@@ -375,9 +459,11 @@
             </div>
           </div>
         </div>
-        <hr class="w-100 clearfix d-md-none">
+        <hr class="w-100 clearfix d-md-none" />
         <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white">VIỆC LÀM THEO TỈNH</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            VIỆC LÀM THEO TỈNH
+          </h6>
           <div class="text__info--title">
             <p>
               <a href="#!">Việc Làm TPHCM</a>
@@ -398,9 +484,11 @@
             </div>
           </div>
         </div>
-        <hr class="w-100 clearfix d-md-none">
+        <hr class="w-100 clearfix d-md-none" />
         <div class="col-md-4 text__info col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold text-white"> Việc Làm Hấp Dẫn</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+            Việc Làm Hấp Dẫn
+          </h6>
 
           <div class="text__info--title">
             <p>
@@ -423,18 +511,17 @@
           </div>
         </div>
       </div>
-      <hr>
+      <hr />
       <div class="row d-flex align-items-center">
         <div class="col-md-7 col-lg-8">
-          <p class="text-center text-md-left">© 2020 Copyright:
+          <p class="text-center text-md-left">
+            © 2020 Copyright:
             <a href="timvieclam.xyz">
               <strong> Timvieclam.xyz</strong>
             </a>
           </p>
-
         </div>
         <div class="col-md-5 col-lg-4 ml-lg-0">
-
           <div class="text-center text-md-right">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
@@ -469,3 +556,6 @@
   <script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+</body>
+
+</html>
