@@ -1,0 +1,47 @@
+          :root {
+             --White: #fafafa;
+             --Origan: #f38121;
+             --Blue-white: #006caa;
+         }
+         
+         .box-lg {
+             padding: 48px;
+         }
+         
+         .box {
+             background: #fff;
+             margin-bottom: 15px;
+             padding: 30px;
+             border: 0;
+             box-shadow: 0 0.5px 0 rgba(0, 0, 0, .1);
+         }
+         
+         .page-title {
+             color: #f7941d;
+             text-transform: capitalize;
+             font-size: 35px;
+             margin-bottom: 15px;
+             display: block;
+             text-align: center;
+         }
+         
+         .form-group .btn.btn-primary {
+             background: #206dfb !important;
+             border: 1px solid #206dfb !important;
+             color: #fff !important;
+         }
+         
+         .col-localmap {
+             display: table-cell;
+             width: 50%;
+             padding: 0;
+             background-color: #ebf8ff;
+             border-right: 1px solid #eee;
+             vertical-align: top;
+         }
+         
+         .localmap-list {
+             float: left;
+             width: 100%;
+             padding: 5px 40px;
+         }
