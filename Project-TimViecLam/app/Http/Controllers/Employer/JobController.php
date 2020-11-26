@@ -82,6 +82,22 @@ class JobController extends Controller
         return redirect('/employer')->with('message','Thêm tin tuyển dụng thành công');
     }
 
+    public function delJobPost(Request $request)
+    {
+        $delete = Job::where('id', $request->id)->delete();
+        if ($delete == 1) {
+            $success = true;
+            $message = "Đã xóa thành công!";
+        } else {
+            $success = true;
+            $message = "Không tìm thấy bài đăng!";
+        }
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
+    }
+
     public function editJobPostForm($id)
     {
         $info_company = $this->data_company;
@@ -120,8 +136,9 @@ class JobController extends Controller
                 })
                 ->addColumn('action', function($row){
                     $actionBtn = '
-                        <a href=" '. Route("employer.editJobPost",["id" =>$row->id]).' " class="edit btn btn-success btn-sm"><i class="far fa-edit"></i></a>
-                        <a href=" '. Route("employer.delJobPost",["id" =>$row->id]).' " class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
+                    <button onclick="showModal('.$row->id.')" type="button" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target=".bs-example-modal-xl"><i class="far fa-eye"></i></button>
+                        <a href=" '. Route("employer.editJobPost",["id" =>$row->id]).' " class="edit btn btn-primary btn-sm"><i class="far fa-edit"></i></a>
+                        <a onclick="deleteConfirmation('.$row->id.')" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
                     return $actionBtn;
                 })
                 ->rawColumns(['action','status'])

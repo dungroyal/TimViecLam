@@ -18,4 +18,9 @@ class HomeController extends Controller
     {
         return view('job_seeker.dashboard');
     }
+
+    public function account()
+    {
+        return view('job_seeker.page.account');
+    }
 }

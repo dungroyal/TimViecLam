@@ -19,6 +19,14 @@ Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('emplo
 
 Route::prefix('job-seeker')->group(function() {
     Route::get('/', 'JobSeeker\HomeController@index')->name('job-seeker.dashboard');
+    Route::get('/account', 'JobSeeker\HomeController@account')->name('job-seeker.account');
+    Route::get('/profile-manager', 'JobSeeker\ProfileController@index')->name('job-seeker.profile_manager');
+    Route::get('/profile-attached', 'JobSeeker\ProfileController@profileAttached')->name('job-seeker.profile_attached');
+    Route::get('/complete-profile/step/1', 'JobSeeker\ProfileController@complete_profile1')->name('job-seeker.profile.step1');
+    Route::get('/complete-profile/step/2', 'JobSeeker\ProfileController@complete_profile2')->name('job-seeker.profile.step2');
+    Route::get('/complete-profile/step/3', 'JobSeeker\ProfileController@complete_profile3')->name('job-seeker.profile.step3');
+    Route::get('/complete-profile/step/4', 'JobSeeker\ProfileController@complete_profile4')->name('job-seeker.profile.step4');
+    Route::get('/complete-profile/step/5', 'JobSeeker\ProfileController@complete_profile5')->name('job-seeker.profile.step5');
 });
 
 Route::prefix('employer')->group(function() {
@@ -26,7 +34,7 @@ Route::prefix('employer')->group(function() {
     Route::get('/company-information', 'Employer\EmployerController@company')->name('employer.company_info');
     Route::get('/list-job-post', 'Employer\JobController@listJobPost')->name('employer.listJobPost');
     Route::get('/edit-job-post/{id}', 'Employer\JobController@editJobPostForm')->name('employer.editJobPost');
-    Route::get('/del-job-post/{id}', 'Employer\JobController@delJobPost')->name('employer.delJobPost');
+    Route::post('/del-job-post', 'Employer\JobController@delJobPost')->name('employer.delJobPost');
     Route::get('/anyData', 'Employer\JobController@anyData')->name('jobs.anyData');
     Route::get('/create-job-post', 'Employer\JobController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
     Route::post('/create_job_post', 'Employer\JobController@store')->name('employer.createJobPost');

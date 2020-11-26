@@ -142,7 +142,7 @@
             autoclose:'true',
             todayHighlight:'true',
         }),
-        t('[data-toggle="tooltip"]').tooltip();
+        t('[data-toggle="tooltip"]').tooltip()
 })(jQuery);
 
 function readURL(input) {
@@ -159,3 +159,4 @@ function readURL(input) {
 $("#imageUpload").change(function() {
     readURL(this);
 });
+

@@ -2,10 +2,9 @@
     <div data-simplebar="" class="h-100">
         <div id="sidebar-menu">
             <ul class="metismenu list-unstyled" id="side-menu">
-
                 <li class="menu-title text-center text-white-50">Trang quản lý</li>
                 <li>
-                    <a href="{{ Route('employer.dashboard') }}" class="waves-effect">
+                    <a data-pjax href="{{ Route('employer.dashboard') }}" class="waves-effect">
                         <i class="bx bxs-dashboard"></i>
                         <span>Quản lý chung</span>
                     </a>

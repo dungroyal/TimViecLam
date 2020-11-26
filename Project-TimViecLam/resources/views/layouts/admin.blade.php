@@ -13,6 +13,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    
     <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('plugin/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css">
@@ -26,10 +28,10 @@
         @section('header') @show
         @section('sidebar') @show
         <div class="main-content">
-            <div id="preloader">
+            {{-- <div id="preloader">
                 <div id="status">
                     <div class="spinner-chase">
-                        <img src="../images/logo/favicon.png" id="preloader-logo__spinder" alt="Logo" height="30">
+                        <img src="{{ asset('favicon.ico') }}" id="preloader-logo__spinder" alt="Logo" height="30">
                         <div class="chase-dot"></div>
                         <div class="chase-dot"></div>
                         <div class="chase-dot"></div>
@@ -37,7 +39,7 @@
                         <div class="chase-dot"></div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="page-content">
             @yield('content')
@@ -73,8 +75,32 @@
     <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.vi.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <script src="{{ asset('admin/js/jquery.pjax.js') }}"></script>
+    <script src="{{ asset('plugin/top-bar/topbar.min.js') }}"></script>
     <script src="{{ asset('admin/js/admin.js') }}"></script>
     @stack('scripts')
 </body>
 
+<script>
+    $(document).ready(function(){
+        $(document).pjax('[data-pjax] a, a[data-pjax]', '.page-content')
+        // $(document).on('pjax:start', function() { topbar.show(); });
+        // $(document).on('pjax:end',   function() { topbar.hide();  });
+        $.pjax.defaults.timeout = 1200;
+        topbar.config({
+        autoRun      : true,
+        barThickness : 2,
+        barColors    : {
+            '0'      : 'rgba(0, 138, 202, 0.808)',
+            '.25'    : 'rgba(0, 138, 202, 0.808)',
+            '.50'    : 'rgba(0, 138, 202, 0.808)',
+            '.75'    : 'rgba(0, 138, 202, 0.808)',
+            '1.0'    : 'rgba(0, 138, 202, 0.808)'
+        },
+        shadowBlur   : 10
+        })
+    });
+    
+</script>
 </html>
