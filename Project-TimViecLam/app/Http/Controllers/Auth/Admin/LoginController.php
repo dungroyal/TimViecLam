@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth\Employer;
+namespace App\Http\Controllers\Auth\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -12,20 +12,20 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = RouteServiceProvider::EMPLOYER_HOME;
+    protected $redirectTo = RouteServiceProvider::ADMIN_HOME;
 
     public function __construct()
     {
-        $this->middleware('guest:employer', ['except' => ['logout']]);
+        $this->middleware('guest:admin', ['except' => ['logout']]);
     }
     
     public function showLoginForm()
     {
-        return view('auth.employer.login');
+        return view('auth.admin.login');
     }
 
     protected function guard()
     {
-        return Auth::guard('employer');
+        return Auth::guard('admin');
     }
 }

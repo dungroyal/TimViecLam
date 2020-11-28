@@ -85,21 +85,9 @@
 <script>
     $(document).ready(function(){
         $(document).pjax('[data-pjax] a, a[data-pjax]', '.page-content')
-        // $(document).on('pjax:start', function() { topbar.show(); });
-        // $(document).on('pjax:end',   function() { topbar.hide();  });
-        $.pjax.defaults.timeout = 1200;
-        topbar.config({
-        autoRun      : true,
-        barThickness : 2,
-        barColors    : {
-            '0'      : 'rgba(0, 138, 202, 0.808)',
-            '.25'    : 'rgba(0, 138, 202, 0.808)',
-            '.50'    : 'rgba(0, 138, 202, 0.808)',
-            '.75'    : 'rgba(0, 138, 202, 0.808)',
-            '1.0'    : 'rgba(0, 138, 202, 0.808)'
-        },
-        shadowBlur   : 10
-        })
+        $(document).on('pjax:start', function() { topbar.show(); });
+        $(document).on('pjax:end',   function() { topbar.hide();  });
+        $.pjax.defaults.timeout = 500;
     });
     
 </script>

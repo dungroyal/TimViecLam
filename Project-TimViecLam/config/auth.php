@@ -40,33 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'job_seeker',
         ],
-        
-        'job_seeker-api' => [
-            'driver' => 'token',
-            'provider' => 'job_seeker',
-            'hash' => false,
-        ],
 
         'employer' => [
             'driver' => 'session',
             'provider' => 'employer',
         ],
         
-        'employer-api' => [
-            'driver' => 'token',
-            'provider' => 'employer',
-            'hash' => false,
-        ],
-
         'admin' => [
             'driver' => 'session',
             'provider' => 'admin',
-        ],
-        
-        'admin-api' => [
-            'driver' => 'token',
-            'provider' => 'admin',
-            'hash' => false,
         ],
     ],
 

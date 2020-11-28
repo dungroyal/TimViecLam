@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     public function __construct()
     {
@@ -16,6 +16,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        return dd(Auth::guard('admin')->user());
+        return view('admin.dashboard');
     }
 }

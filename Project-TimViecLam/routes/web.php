@@ -14,7 +14,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/job', 'JobController@index');
-Route::get('/job-detail', 'JobController@job_detail');
+Route::get('/job-detail/{id}', 'JobController@job_detail')->name('job-detail');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
 
 Route::prefix('job-seeker')->group(function() {
@@ -50,4 +50,13 @@ Route::prefix('employer')->group(function() {
     Route::get('password/reset', 'Auth\Employer\ForgotPasswordController@showLinkRequestForm')->name('employer.password.request');
     Route::post('password/reset', 'Auth\Employer\ResetPasswordController@reset')->name('employer.password.update');
     Route::get('/password/reset/{token}', 'Auth\Employer\ResetPasswordController@showResetForm')->name('employer.password.reset');
+});
+
+Route::prefix('tvl')->group(function() {
+    Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
+
+    
+    Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
+    Route::get('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
 });

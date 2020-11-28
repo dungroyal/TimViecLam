@@ -34,8 +34,7 @@ class CreateJobTable extends Migration
             $table->string('email_contact');
             $table->date('deadline');
             $table->string('slug');
-            $table->tinyInteger('status');
-            $table->softDeletes();
+            $table->tinyInteger('status'); //0: disable, 1 active, 2 viêc làm hot, 3 việc làm gấp
             $table->timestamps();
         });
         

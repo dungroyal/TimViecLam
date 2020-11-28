@@ -26,7 +26,7 @@
                                 data-size="7" 
                                 data-live-search="true"
                                 title="Tất cả ngành nghề">
-                                @foreach ($careers as $item)
+                                @foreach (App\Models\Career::all() as $item)
                                     <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
                                 @endforeach
                             </select>
@@ -43,7 +43,7 @@
                                 data-size="7" 
                                 data-live-search="true"
                                 title="Địa điểm làm việc">
-                                @foreach ($city as $item)
+                                @foreach (App\Models\City::all() as $item)
                                     <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
                                 @endforeach
                             </select>
@@ -80,20 +80,26 @@
     <div class="container-fluid my-5">
         <hr class="mt-n2">
     </div>
-
+    <?php $company =  App\Models\Company::find($jobs_detail->company_id) ?>
     <!-- Việc làm -->
     <div class="container px-5 mt-5">
         <div class="row">
             <div class="col-lg-12 col-xl-12">
                 <section class="apply-now-banner">
-                    <div class="image"><img src="images/banner-job.jpg" alt=""></div>
+                    <div class="image"><img src="{{ asset('images/banner-job.jpg')}}" alt=""></div>
                     <div class="apply-now-content">
                         <div class="job-desc">
-                            <p class="title">Trưởng nhóm Telesales</p>
-                            <a class="employer job-company-name" href="#">CÔNG TY TNHH NATURE ORIGIN</a>
+                            <p class="title">{{ $jobs_detail->name_job }}</p>
+                            <a class="employer job-company-name" href="#">{{ $company->name_company }}</a>
                         </div>
-                        <div class="apply-now-btn "><a href="#" class="btn-gradient btnApplyClick"> Nộp Đơn Ứng
-                                Tuyển </a></div>
+                        @auth
+                        <div class="apply-now-btn ">
+                            <a href="#" class="btn-gradient btnApplyClick">Nộp Đơn Ứng Tuyển </a>
+                        </div>
+                        @endauth
+                        <div class="apply-now-btn ">
+                            <a href="{{ Route('login') }}" class="btn-gradient btnApplyClick"> Đăng nhập ngay</a>
+                        </div>
                     </div>
                 </section>
                 <section>
@@ -126,16 +132,21 @@
                                                     <ul>
                                                         <li> <strong><i class="fas fa-calendar-day icon-detail"></i>Ngày
                                                                 cập nhật</strong>
-                                                            <p>15/09/2020</p>
+                                                            <p> {{date_format( $jobs_detail->updated_at,"d/m/Y")}}</p>
                                                         </li>
-                                                        <li> <strong><i class="fas fa-briefcase icon-detail"></i>Ngành
-                                                                nghề</strong>
-                                                            <p> <a href="#"> Tiếp thị / Marketing </a>
+                                                        <li> 
+                                                            <strong>
+                                                                <i class="fas fa-briefcase icon-detail"></i>
+                                                                Ngành nghề</strong>
+                                                            <p> 
+                                                                <a> {{App\Models\Career::find($jobs_detail->career_id)->name}}</a>
                                                             </p>
                                                         </li>
-                                                        <li> <strong><i class="fas fa-business-time icon-detail"></i>Hình
-                                                                thức</strong>
-                                                            <p>Nhân viên chính thức</p>
+                                                        <li> 
+                                                            <strong>
+                                                                <i class="fas fa-business-time icon-detail"></i>Hìnhthức
+                                                            </strong>
+                                                            <p>{{App\Models\TypeJob::find($jobs_detail->type_job_id)->name}}</p>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -146,16 +157,16 @@
                                                         <li>
                                                             <strong><i
                                                                     class="fas fa-dollar-sign icon-detail ml-1"></i>Lương</strong>
-                                                            <p>7 - 10 Triệu</p>
+                                                            <p>{{App\Models\Salary::find($jobs_detail->salary_id)->name}}</p>
                                                         </li>
                                                         <li>
-                                                            <strong><i class="fas fa-chart-bar icon-detail"></i>Kinh
-                                                                nghiệm</strong>
-                                                            <p>2 - 3 Năm</p>
+                                                            <strong><i class="fas fa-chart-bar icon-detail"></i>Kinh nghiệm</strong>
+                                                            <p>{{App\Models\Experience::find($jobs_detail->experience_id)->name}}</p>
                                                         </li>
-                                                        <li><strong><i class="fas fa-calendar-check icon-detail"></i>Hết
-                                                                hạn nộp</strong>
-                                                            <p>31/10/2020</p>
+                                                        <li><strong>
+                                                            <i class="fas fa-calendar-check icon-detail"></i>
+                                                            Hết nộp hồ sơ</strong>
+                                                            <p>{{$jobs_detail->deadline}}</p>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -164,18 +175,23 @@
                                                 <div class="detail-box has-background">
                                                     <ul>
                                                         <li>
-                                                            <strong><i class="fas fa-graduation-cap icon-detail"></i>Yêu
-                                                                cầu bằng cấp</strong>
-                                                            <p>Cao Đẳng</p>
+                                                            <strong><i class="fas fa-graduation-cap icon-detail"></i>
+                                                                Yêu cầu bằng cấp</strong>
+                                                            <p>{{App\Models\Degree::find($jobs_detail->degree_id)->name}}</p>
                                                         </li>
                                                         <li>
-                                                            <strong><i class="fa fa-transgender icon-detail"
-                                                                    aria-hidden="true"></i>Giới tính</strong>
-                                                            <p>Không</p>
+                                                            <strong>
+                                                                <i class="fa fa-transgender icon-detail" aria-hidden="true"></i>
+                                                                Giới tính
+                                                            </strong>
+                                                            <p>{{$jobs_detail->sex_requirements =1 ?"Nam":"Nữ"}}</p>
                                                         </li>
-                                                        <li><strong><i class="fa fa-map-marker icon-detail"
-                                                                    aria-hidden="true"></i>Địa điểm</strong>
-                                                            <p>TP. Hồ Chí Minh</p>
+                                                        <li>
+                                                            <strong>
+                                                                <i class="fa fa-map-marker icon-detail" aria-hidden="true"></i>
+                                                                Địa điểm làm việc
+                                                                </strong>
+                                                            <p>{{App\Models\City::find($jobs_detail->city)->name}}</p>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -184,62 +200,18 @@
                                     </div>
                                     <div class="detail-row mt-3">
                                         <h3 class="detail-title">Mô tả Công việc</h3>
-                                        <p>Kế hoạch Marketing:</p>
-                                        <ul>
-                                            <li>
-                                                <p>Phụ trách hoạt động marketing của thương hiệu ngành thực phẩm và dịch
-                                                    vụ ăn uống</p>
-                                            </li>
-                                            <li>
-                                                <p>Lập kế hoạch triển khai các hoạt động marketing sản phẩm online,
-                                                    offline (Media planning, Digital activities, Event, PR, Promotion,
-                                                    POSM)</p>
-                                            </li>
-                                        </ul>
+                                        {{ $jobs_detail->description }}
                                        
                                     </div>
                                     <!-- Quyền lợi -->
                                     <div class="detail-row mt-3">
                                         <h3 class="detail-title">Quyền lợi</h3>
-                                        <ul>
-                                            <li>
-                                                <p>Phụ trách hoạt động marketing của thương hiệu ngành thực phẩm và dịch
-                                                    vụ ăn uống</p>
-                                            </li>
-                                            <li>
-                                                <p>Lập kế hoạch triển khai các hoạt động marketing sản phẩm online,
-                                                    offline (Media planning, Digital activities, Event, PR, Promotion,
-                                                    POSM)</p>
-                                            </li>
-                                        </ul>
+                                        {{ $jobs_detail->benefits }}
                                     </div>
                                     <!-- yêu cầu CV -->
                                     <div class="detail-row">
                                         <h3 class="detail-title">Yêu Cầu Công Việc</h3>
-                                        <ul>
-                                            <li>
-                                                <p>Ít nhất 3 năm kinh nghiệm ở vị trí tương đương hoặc công việc liên
-                                                    quan trực tiếp.</p>
-                                            </li>
-                                            <li>
-                                                <p>Ưu tiên kinh nghiệm trong ngành F&amp;B, FMCG, hoặc làm ở các agency
-                                                    marketing</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- Thông tin khác -->
-                                    <div class="detail-row">
-                                        <h3 class="detail-title">Thông tin khác</h3>
-                                        <div class="content_fck">
-                                            <ul>
-                                                <li> Bằng cấp:
-                                                    Đại học
-                                                </li>
-                                                <li> Độ tuổi:
-                                                    18 - 35
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        {{ $jobs_detail->job_requirements }}
                                     </div>
                                     <!-- share -->
                                     <!-- Nộp ứng tuyển -->
@@ -247,8 +219,13 @@
                                         <div class="job-detail-bottom-wrapper">
                                             <div class="apply-now-content text-center">
                                                 <div class="apply-now-right">
-                                                    <div class="apply-now-btn"> <a href="#" class="btn-gradient k"> Nộp
-                                                            Đơn Ứng Tuyển </a>
+                                                    @auth
+                                                    <div class="apply-now-btn"> <a href="#" class="btn-gradient k"> 
+                                                        Nộp Đơn Ứng Tuyển </a>
+                                                    </div>
+                                                    @endauth
+                                                    <div class="apply-now-btn ">
+                                                        <a href="{{ Route('login') }}" class="btn-gradient k"> Đăng nhập ngay</a>
                                                     </div>
                                                 </div>
                                             </div>

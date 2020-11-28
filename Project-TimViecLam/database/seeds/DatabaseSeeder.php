@@ -15,11 +15,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-    	// factory('App\JobSeeker',50)->create();
-        // factory('App\Employer',15)->create();
-
          // Thêm dữ liệu bảng TypeJob
-         $TypeJobs = [            
+        $TypeJobs = [            
             ['name' => "Nhân viên chính thức"],
             ['name' => "Nhân viên thời vụ"],
             ['name' => "Bán thời gian"],
@@ -210,5 +207,11 @@ class DatabaseSeeder extends Seeder
         foreach ($City as $City) {
             City::create($City);
         }
+
+
+        factory(App\JobSeeker::class,20)->create();
+        factory(App\Employer::class,20)->create();
+        factory(App\Models\Company::class,20)->create();
+        factory(App\Models\Job::class,100)->create();
     }
 }

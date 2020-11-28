@@ -27,7 +27,7 @@ class CreateCompaniesTable extends Migration
             $table->string('phone_contact');
             $table->string('email_contact');
             $table->string('address_contact');
-            $table->integer('status')->nullable();
+            $table->tinyInteger('status')->nullable();
         });
         
         // Tạo khóa ngoại

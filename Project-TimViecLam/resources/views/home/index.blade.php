@@ -32,21 +32,19 @@
                                     <span class="bootstrap-select__icon"><i class="fas fa-tools"></i></span>
                                     <select name="career" class="bootstrap-select-city__custom w-100" data-size="7"
                                         data-live-search="true" title="Tất cả ngành nghề">
-                                        @foreach ($careers as $item)
-                                        <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
+                                        @foreach (App\Models\Career::all() as $career)
+                                            <option class="py-2" value="{{ $career->id }}"> {{ $career->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-
-
                             <div class="col-sm-12 col-lg-3 px-lg-1">
                                 <div class="form-group m-0 p-0">
                                     <span class="bootstrap-select__icon"><i class="fas fa-map-marker-alt"></i></span>
                                     <select name="city" class="bootstrap-select-city__custom w-100"
                                         data-selected-text-format="count > 5" data-size="7" data-live-search="true"
                                         title="Địa điểm làm việc">
-                                        @foreach ($city as $item)
+                                        @foreach (App\Models\City::all()  as $item)
                                         <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
                                         @endforeach
                                     </select>
@@ -70,7 +68,7 @@
         </div>
         <div class="mt-3">
             <div class="owl-carousel owl-theme">
-                @foreach ($careers as $item)
+                @foreach (App\Models\Career::all() as $career)
                 <div class="item-top-field">
                     <div class="box_shadow_slider">
                         <a href="#" target="_blank">
@@ -81,7 +79,7 @@
                                 <div class="col-9 top-field-name pl-0">
                                     <span class="text_bold">
                                         <p class="el-tooltip ml-3 font-weight-medium">
-                                            {{$item->name}}
+                                            {{$career->name}}
                                         </p>
                                     </span>
                                     <p class="text_ellipsis text_italic text-center">
@@ -106,24 +104,29 @@
             <div class="col-lg-12 col-md-12 mt-3">
                 <!--  -->
                 <div class="row d-flex justify-content-around">
-                    @for ($i = 0; $i < 8; $i++) <div class="col-md-6 col-lg-6 job-over-item">
+                    @foreach ($jobs_urgently as $job)
+                    <div class="col-md-6 col-lg-6 job-over-item">
                         <div class="row job-item-show">
-                            <a href="/job-detail" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
-                                <img src="{{ asset('images/job1.png') }}" />
+                            <a href="{{ Route('job-detail',['id' => $job->id]) }}" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
+                                @if ($job->logo != null)
+                                    <img @ src="{{ asset('images/)') }}{{$job->logo}}" />
+                                @else
+                            <img @ src="{{ asset('images/logo/icon-defaut.png') }}" />
+                                @endif
+                                
                             </a>
                             <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
                                 <p class="job_title text_ellipsis mt-1">
-                                    <a href="/job-detail" data-toggle="tooltip"
-                                        title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                    <a href="{{ Route('job-detail',['id' => $job->id]) }}" data-toggle="tooltip" title="{{$job->name_job}}"
+                                        target="_blank">
                                         <span>
-                                            <strong>Loan Processor (hỗ Trợ Cho Vay Tiền Mua Nhà)</strong>
+                                            <strong>{{$job->name_job}}</strong>
                                         </span>
                                     </a></p>
                                 <div class="job_company">
                                     <div class="name">
-                                        <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng"
-                                            data-toggle="tooltip">
-                                            <span>Cali-land, Inc</span>
+                                        <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
+                                            <span>{{$job->name_company}}</span>
                                         </a>
                                     </div>
                                 </div>
@@ -137,25 +140,27 @@
                                             <path
                                                 d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
                                         </svg>
-                                        11 triệu - 24 triệu
+                                        {{$job->salary}}
                                     </div>
-                                    <div title="Hồ Chí Minh, Bình Dương" class="col-7 text_ellipsis">
+                                    <div title="{{$job->city}}" class="col-7 text_ellipsis">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1"
                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
                                                 d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
                                         </svg>
-                                        Hồ Chí Minh, Bình Dương
+                                        {{$job->city}}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        @endforeach
+                        {{ $jobs_urgently->links() }}
+                    </div>
                 </div>
-                @endfor
             </div>
         </div>
-    </div>
-        </div>
+        
         <div class="w-100 bg-white">
             <div class="container pt-2">
                 <div class="page-wrapper">
@@ -198,51 +203,58 @@
                 <div class="col-lg-12 col-md-12 mt-3">
                     <!--  -->
                     <div class="row d-flex justify-content-around">
-                        @for ($i = 0; $i < 8; $i++) <div class="col-md-6 col-lg-6 job-over-item">
-                            <div class="row job-item-show">
-                                <a href="/job-detail" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
-                                    <img src="{{ asset('images/job1.png') }}" />
-                                </a>
-                                <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
-                                    <p class="job_title text_ellipsis mt-1">
-                                        <a href="/job-detail" data-toggle="tooltip" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)"
-                                            target="_blank">
-                                            <span>
-                                                <strong>Loan Processor (hỗ Trợ Cho Vay Tiền Mua Nhà)</strong>
-                                            </span>
-                                        </a></p>
-                                    <div class="job_company">
-                                        <div class="name">
-                                            <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
-                                                <span>Cali-land, Inc</span>
-                                            </a>
-                                        </div>
+                        @foreach ($jobs_hot as $job)
+                    <div class="col-md-6 col-lg-6 job-over-item">
+                        <div class="row job-item-show">
+                            <a href="/job-detail/{{$job->id}}" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
+                                @if ($job->logo != null)
+                                    <img @ src="{{ asset('images/)') }}{{$job->logo}}" />
+                                @else
+                            <img @ src="{{ asset('images/logo/icon-defaut.png') }}" />
+                                @endif
+                                
+                            </a>
+                            <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
+                                <p class="job_title text_ellipsis mt-1">
+                                    <a href="/job-detail" data-toggle="tooltip" title="{{$job->name_job}}"
+                                        target="_blank">
+                                        <span>
+                                            <strong>{{$job->name_job}}</strong>
+                                        </span>
+                                    </a></p>
+                                <div class="job_company">
+                                    <div class="name">
+                                        <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
+                                            <span>{{$job->name_company}}</span>
+                                        </a>
                                     </div>
-                                    <div class="row mb-1 job_info">
-                                        <div class="col-5 text_ellipsis">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash-stack mb-1"
-                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z" />
-                                                <path fill-rule="evenodd"
-                                                    d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z" />
-                                                <path
-                                                    d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
-                                            </svg>
-                                            11 triệu - 24 triệu
-                                        </div>
-                                        <div title="Hồ Chí Minh, Bình Dương" class="col-7 text_ellipsis">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1"
-                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
-                                            </svg>
-                                            Hồ Chí Minh, Bình Dương
-                                        </div>
+                                </div>
+                                <div class="row mb-1 job_info">
+                                    <div class="col-5 text_ellipsis">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash-stack mb-1"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z" />
+                                            <path fill-rule="evenodd"
+                                                d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z" />
+                                            <path
+                                                d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+                                        </svg>
+                                        {{$job->salary}}
+                                    </div>
+                                    <div title="{{$job->city}}" class="col-7 text_ellipsis">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
+                                        </svg>
+                                        {{$job->city}}
                                     </div>
                                 </div>
                             </div>
-                    </div>
-                    @endfor
+                        </div>
+                        </div>
+                        @endforeach
+                        {{ $jobs_hot->links() }}
                 </div>
             </div>
         </div>
@@ -331,9 +343,9 @@
                 </h2>
                 <div class="col-lg-12 col-md-12 expander">
                     <div class="row d-flex justify-content-around p-3 inner-bit">
-                        @foreach ($careers as $item)
+                        @foreach (App\Models\Career::all() as $item)
                         <div class="col-md-4 col-lg-3 mb-2 font-weight-medium inner-bit_title">
-                            <a href="" data-toggle="tooltip"
+                            <a href="{{URL('/job?career=')}}{{$item->id}}" data-toggle="tooltip"
                                         title="{{$item->name}}" 
                                         target="_blank" class="p-2 text-dark">Việc làm <strong class="text-blue">{{$item->name}}</strong>
                             </a>
@@ -352,9 +364,9 @@
                 </h2>
                 <div class="col-lg-12 col-md-12 expander">
                     <div class="row d-flex justify-content-around p-3 inner-bit">
-                        @foreach ($city as $item)
+                        @foreach (App\Models\City::all() as $item)
                         <div class="col-md-4 col-lg-3 mb-2 font-weight-medium inner-bit_title">
-                            <a href="" data-toggle="tooltip"
+                            <a href="{{URL('/job?city=')}}{{$item->id}}" data-toggle="tooltip"
                                         title="{{$item->name}}" 
                                         target="_blank" class="p-2 text-dark">Việc làm <strong class="text-blue">{{$item->name}}</strong>
                             </a>

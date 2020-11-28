@@ -16,13 +16,7 @@
         <meta property="og:title" content="Tìm Việc Làm - Tuyển dụng, tìm việc nhanh và hiệu quả với TimViecLam.xyz">
         <meta property="og:description" content="Tìm Việc Làm - Trang Tìm Việc Làm Hiệu Quả và Uy Tín, Cập Nhật Hàng Nghìn Việc Làm Mới Mỗi Ngày. Website Tin Cậy Của Ứng Viên và Nhà Tuyển Dụng. Tạo Hồ Sơ Miễn Phí.">
         <meta property="og:image" content="{{ asset('images/Meta_TVL.png') }}">
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://metatags.io/">
-        <meta property="twitter:title" content="Tìm Việc Làm - Tuyển dụng, tìm việc nhanh và hiệu quả với TimViecLam.xyz">
-        <meta property="twitter:description" content="Tìm Việc Làm - Trang Tìm Việc Làm Hiệu Quả và Uy Tín, Cập Nhật Hàng Nghìn Việc Làm Mới Mỗi Ngày. Website Tin Cậy Của Ứng Viên và Nhà Tuyển Dụng. Tạo Hồ Sơ Miễn Phí.">
-        <meta property="twitter:image" content="{{ asset('images/Meta_TVL.png') }}">
-
+    
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <!-- Fontawesome 4.7 -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
@@ -40,6 +34,7 @@
 </head>
 
 <body>
+    <div id="app">
     <header>
         <nav class="container-fluid navbar navbar-expand-xl navbar-light px-3">
             <a class="navbar-brand" href="/">
@@ -64,13 +59,36 @@
     @yield('content')
     @include('home.element.footer')
 
+
+    <div id="sy-whatshelp">
+        <div class="sywh-services">
+          <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+            <i class="fa fa-comments"></i>
+          </a>
+          <a href="" class="whatsapp" data-tooltip="WhatsApp" data-placement="left" target="_blank">
+            <i class="fa fa-whatsapp"></i>
+          </a>
+          <a href="" class="call" data-tooltip="Call" data-placement="left">
+            <i class="fa fa-phone"></i>
+          </a>
+        </div>
+        <a class="sywh-open-services" data-tooltip="HOTLINE TƯ VẤN" data-placement="left">
+                      <i class="fa fa-comments"></i>
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
     <a id="back-to-top" href="#" class="btn back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    @if(Auth::guard('admin')->user() != null )
+    <a href="{{Route('admin.dashboard')}}" class="btn admin-btn" ><i class="fas fa-cog fa-spin"></i></a>
+    @endif
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <script src="{{ asset('home/js/main.js') }}"></script>
+
 </body>
 
 </html>

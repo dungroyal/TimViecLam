@@ -11,14 +11,19 @@
     },
     "devDependencies": {
         "axios": "^0.19",
+        "bootstrap": "^4.5.3",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1",
         "cross-env": "^7.0",
         "laravel-mix": "^5.0.9",
         "lodash": "^4.17.19",
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.29.0",
         "sass-loader": "^8.0.0",
-        "vue": "^2.5.17",
+        "vue": "^2.6.12",
         "vue-template-compiler": "^2.6.10"
     },
-    "dependencies": {}
+    "dependencies": {
+        "vee-validate": "^2.2.4"
+    }
 }

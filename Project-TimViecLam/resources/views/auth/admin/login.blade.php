@@ -15,9 +15,9 @@
     <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
     <!-- CSS -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -30,20 +30,17 @@
                 <div class="col-md-8 col-lg-6 col-xl-5">
                     <div class="card overflow-hidden">
                         <div class="bg-soft-primary">
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col-6">
                                     <div class="text-primary p-4">
                                         <h5 class="text-primary">Welcome Back !</h5>
                                         <p>Quản trị viên</p>
                                     </div>
                                 </div>
-                                <div class="col-6 align-self-end">
-                                    <img src="{{ asset('/images/login_admin.png') }}" alt="" class="img-fluid p-3">
-                                </div>
                             </div>
                         </div>
                         <div class="card-body pt-0"> 
-                            <div>
+                            {{-- <div>
                                 <a href="{{ Route('home')}}">
                                     <div class="avatar-md profile-user-wid mb-4">
                                         <span class="avatar-title rounded-circle bg-light">
@@ -51,18 +48,31 @@
                                         </span>
                                     </div>
                                 </a>
-                            </div>
+                            </div> --}}
                             <div class="p-2">
-                                <form class="form-horizontal" action="index.html">
+                                <form class="form-horizontal" method="POST" action="{{ route('admin.login.submit') }}">
+                                    @csrf
     
                                     <div class="form-group">
                                         <label for="username">Email</label>
-                                        <input type="email" class="form-control" id="username" placeholder="Nhập email">
+                                        <input type="email" class="form-control  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
+                                    
+                                    
             
                                     <div class="form-group">
                                         <label for="userpassword">Mật khẩu</label>
-                                        <input type="password" class="form-control" id="userpassword" placeholder="Nhập mật khẩu">
+                                        <input type="password" name="password" class="form-control @error('email') is-invalid @enderror" placeholder="Nhập mật khẩu">
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
             
                                     <div class="custom-control custom-checkbox">
@@ -98,7 +108,7 @@
     <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('plugin/metisMenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('js/admin.js') }}"></script>
+    <script src="{{ asset('admin/js/admin.js') }}"></script>
 </body>
 
 </html>

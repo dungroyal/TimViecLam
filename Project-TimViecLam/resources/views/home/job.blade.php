@@ -29,7 +29,7 @@
                                 data-size="7" 
                                 data-live-search="true"
                                 title="Tất cả ngành nghề">
-                                @foreach ($careers as $item)
+                                @foreach (App\Models\Career::all() as $item)
                                     <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
                                 @endforeach
                             </select>
@@ -46,7 +46,7 @@
                                 data-size="7" 
                                 data-live-search="true"
                                 title="Địa điểm làm việc">
-                                @foreach ($city as $item)
+                                @foreach (App\Models\City::all() as $item)
                                     <option class="py-2" value="{{ $item->id }}"> {{ $item->name }}</option>
                                 @endforeach
                             </select>
@@ -109,23 +109,30 @@
                 <section class="jobs-side-list column-list-job-scoll">
                     <div class="jobs-list" id="jobs-list">
                         <!-- job 1 -->
-                        @for ($i = 0; $i < 10; $i++)
-                        <div class="col job-over-item px-0">
+                        @forelse ($jobs as $job)
+                        <?php $company =  App\Models\Company::find($job->company_id) ?>
+                        <div class="col job-over-item px-0" id="job-item">
                             <div class="row job-item-show">
-                                    <a href="#" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
-                                        <img src="{{ asset('images/job1.png') }}" />
+                                    <a href="" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
+                                        @if ($company->logo != null)
+                                            <img src="{{ asset('images/') }}{{$company->logo}}" />
+                                        @else
+                                            <img src="https://ui-avatars.com/api/?size=250&bold=true&background=0091cf&color=fffff&name={{$company->name_company}}" />
+                                        @endif
+                                        
                                     </a>
                                     <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
                                         <p class="job_title text_ellipsis mt-1">
-                                            <a href="/job-detail" data-toggle="tooltip" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
+                                            <a href="{{ Route('job-detail',['id' => $job->id]) }}" data-toggle="tooltip" title="{{$job->name_job}}" target="_blank">
                                                 <span>
-                                                    <strong>Trưởng nhóm Telesales</strong>
+                                                <strong>{{$job->name_job}}</strong>
                                                 </span>
-                                            </a></p>
+                                            </a>
+                                        </p>
                                         <div class="job_company">
                                             <div class="name">
-                                                <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
-                                                    <span>Cali-land, Inc</span>
+                                                <a href="/job-detail" target="_blank" title="{{$company->name_company}}" data-toggle="tooltip">
+                                                <span>{{$company->name_company}}</span>
                                                 </a>
                                             </div>
                                         </div>
@@ -136,20 +143,22 @@
                                                     <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"/>
                                                     <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
                                                   </svg> 
-                                                11 triệu - 24 triệu
+                                                {{App\Models\Salary::find($job->salary_id)->name}}
                                             </div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="col-7 text_ellipsis">
+                                            <div class="col-7 text_ellipsis" id="jobs-list">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
                                                   </svg>
-                                                Hồ Chí Minh, Bình Dương
+                                                  {{App\Models\City::find($job->city)->name}}
                                             </div>
                                         </div>
                                 </div>
                             </div>
                         </div>
-                        @endfor
-
+                        @empty
+                            <h5 class="text-center mb-4">Không có kết quả</h5>
+                        @endforelse
+                        
                         <div class="col job-over-item px-0 text-center mb-3">
                             <a class="btn btn-primary">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="mt-n1 mr-1 bi bi-plus-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -572,3 +581,10 @@
     </div> 
 
 @endsection
+
+
+@push('scripts')
+<script>
+
+</script>
+@endpush

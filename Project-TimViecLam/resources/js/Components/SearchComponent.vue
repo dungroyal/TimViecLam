@@ -5,9 +5,9 @@
   <div class="card-footer" v-if="results.length">
     <ul class="list-group">
         <li class="list-group-item" v-for="result in results">
-            <a style="color:#000;" :href=" '/jobs/' + result.id +''">{{result.name}}
+            <a style="color:#000;" :href=" '/jobs/' + result.id +'/'+result.slug+'/'  ">{{result.title}}
                 <br>
-                <small class="badge badge-success">Đang hoạt động</small>
+                <small class="badge badge-success">{{result.position}}</small>
             </a>
             
         </li>
@@ -29,8 +29,8 @@
   methods: {
    searchJobs(){
     this.results = [];
-    if(this.keyword.length>=1){
-        axios.get('api/data/search',{params:{keyword:this.keyword}}).then(response=>{
+    if(this.keyword.length>1){
+        axios.get('/jobs/search',{params:{keyword:this.keyword}}).then(response=>{
             this.results = response.data;
         });
     }
