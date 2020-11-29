@@ -14,10 +14,10 @@ class CreateCompaniesTable extends Migration
             $table->integer('employer_id')->unsigned();
             $table->string('name_company');
             $table->tinyInteger('personnel_size');
-            $table->string('career');
+            $table->integer('career_id')->unsigned();
             $table->string('phone');
             $table->string('address');
-            $table->string('city');
+            $table->string('city')->comment('Chọn từ 1 đến 60');
             $table->text('description')->nullable();
             $table->string('website')->nullable();
             $table->string('fax')->nullable();
@@ -35,6 +35,7 @@ class CreateCompaniesTable extends Migration
         // Tạo khóa ngoại
         Schema::table('companies', function($table) {
             $table->foreign('employer_id')->references('id')->on('employer');
+            $table->foreign('career_id')->references('id')->on('career');
         });
     }
 

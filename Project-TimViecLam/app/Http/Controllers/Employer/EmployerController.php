@@ -28,7 +28,7 @@ class EmployerController extends Controller
     public function index()
     {
         $info_company = $this->data_company;
-        return view(' employer.dashboard',compact('info_company'));
+        return view('employer.dashboard',compact('info_company'));
     }
 
     public function company()

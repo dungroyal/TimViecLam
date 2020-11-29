@@ -1,8 +1,11 @@
-$("img.lazy").lazyload({
-    effect : "fadeIn"
-});
-
 $(document).ready(function () {
+    if($.cookie('searchJobView')==null){
+        $.cookie('searchJobView', "detail", { expires: 365 });
+    }
+
+    $("img.lazy").lazyload({
+        effect : "fadeIn"
+    });
     
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -91,9 +94,3 @@ $(document).ready(function () {
         }
       });
 });
-
-// Btn Support
-jQuery(function ($) {
-    
-  });
-  // Btn admin

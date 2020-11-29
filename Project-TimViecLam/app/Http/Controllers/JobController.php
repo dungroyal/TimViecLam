@@ -84,6 +84,11 @@ class JobController extends Controller
             return view('home.job',compact('jobs'));
         }
     }
+
+    public function AllJobs(Request $request){
+        $data = Job::limit(10)->get();
+        return view('home.element.jobsListItems',['jobs' => $data]);
+    }
     
     public function searchJobs(Request $request){
         $keyword = $request->get('keyword');
@@ -97,5 +102,11 @@ class JobController extends Controller
     {
         $jobs_detail = Job::findOrFail($id);
         return view('home/job_detail',compact('jobs_detail'));
+    }
+
+    public function job_detail_ajax($id)
+    {
+        $data = Job::findOrFail($id);
+        return view('home.element.jobDetail',['jobs_detail' => $data]);
     }
 }

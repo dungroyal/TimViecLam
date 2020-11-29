@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/job', 'JobController@index');
+Route::get('/jobData', 'JobController@AllJobs')->name('job-data');
 Route::get('/job-detail/{id}', 'JobController@job_detail')->name('job-detail');
+Route::get('/job-detail-ajax/{id}', 'JobController@job_detail_ajax');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
 
 Route::prefix('job-seeker')->group(function() {
@@ -75,3 +78,7 @@ Route::prefix('tvl')->group(function() {
     Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
     Route::get('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');
 });
+
+
+
+Route::get('/searchJobView/{val}', 'HomeController@searchJobView')->name('searchJobView');

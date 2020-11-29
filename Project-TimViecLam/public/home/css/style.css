@@ -338,6 +338,47 @@ header {
     cursor: pointer;
 }
 
+.active-job-item .job-item-show{
+    background-color: var(--Blue);
+    color: var(--while)!important;
+}
+
+.active-job-item .job-item-show .company_name .job_title a{
+    color: var(--while)!important;
+}
+
+.active-job-item .job-item-show .company_name .job_company .name a{
+    color: var(--while)!important;
+}
+
+
+.searchJobView{
+    cursor: pointer;
+}
+
+.job-view-list{
+    min-height: 65vh;
+}
+.searchJobView i{
+    font-size: 1.48rem;
+    margin-top: 10px;
+}
+
+.searchJobView svg{
+    margin-top: -8px;
+    margin-right: 5px;
+    margin-left: 1rem;
+}
+
+.searchJobView--active svg{
+    color:#ffeb00;
+}
+
+.searchJobView--active i{
+    color:#ffeb00;
+}
+
+
 /* job-item */
 
 .container-catalog--top {

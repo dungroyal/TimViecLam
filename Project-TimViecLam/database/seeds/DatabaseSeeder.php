@@ -223,9 +223,9 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        // factory(App\JobSeeker::class,20)->create();
-        // factory(App\Employer::class,20)->create();
-        // factory(App\Models\Company::class,20)->create();
-        // factory(App\Models\Job::class,100)->create();
+        factory(App\JobSeeker::class,20)->create();
+        factory(App\Employer::class,20)->create();
+        factory(App\Models\Company::class,20)->create();
+        factory(App\Models\Job::class,100)->create();
     }
 }

@@ -160,7 +160,7 @@
                                             title="Chọn lĩnh vực hoạt động" 
                                             multiple
                                             >
-                                            @foreach ($careers as $item)
+                                            @foreach (App\Models\Career::all() as $item)
                                                 <option class="py-2" value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -196,7 +196,7 @@
                                         id="city"
                                         data-size="7" data-live-search="true"
                                         title="Địa điểm làm việc">
-                                            @foreach ($city as $item)
+                                            @foreach (App\Models\City::all()  as $item)
                                                 <option class="py-2" value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         </select>

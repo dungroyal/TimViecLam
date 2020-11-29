@@ -27,7 +27,7 @@ $factory->define(App\Models\Company::class, function (Faker $faker) {
         'employer_id' =>App\Employer::all()->random()->id,
         'name_company'=>vnfaker()->company(),
         'personnel_size'=>vnfaker()->numberBetween($min = 1, $max = 4),
-        'career'=>vnfaker()->numberBetween($min = 0, $max = 30),
+        'career_id'=>vnfaker()->numberBetween($min = 1, $max = 38),
         'phone'=>vnfaker()->mobilephone($numbers = 10),
         'address'=>"Đang cập nhật",
         'city'=>51,

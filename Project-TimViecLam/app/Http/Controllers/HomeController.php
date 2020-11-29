@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Cookie;
 use App\Models\Job;
 use App\Models\Company;
 
@@ -44,4 +46,12 @@ class HomeController extends Controller
     {
         return view('home/landingPageEmployer');
     } 
+
+    
+    public function searchJobView($val)
+    {
+        Cookie::queue(Cookie::make('searchJobView', $val, 100000));
+        return Redirect::back()->with('message','Đã đỗi chế độ xem!');
+    }
+
 }
