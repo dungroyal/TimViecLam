@@ -54,8 +54,23 @@ Route::prefix('employer')->group(function() {
 
 Route::prefix('tvl')->group(function() {
     Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
+    Route::get('/all-company', 'Admin\AdminController@allCompany')->name('admin.all.company');
+    Route::get('/all-company-data', 'Admin\AdminController@allCompanyData')->name('admin.all.company.data');
+    Route::get('/new-company', 'Admin\AdminController@NewCompany')->name('admin.new.company');
+    Route::get('/new-company-data', 'Admin\AdminController@NewCompanyData')->name('admin.new.company.data');
 
+    Route::get('/all-job-seeker', 'Admin\AdminController@allJobSeeker')->name('admin.all.job_seeker');
+    Route::get('/all-job-seeker-data', 'Admin\AdminController@allJobSeekerData')->name('admin.all.job_seeker.data');
+    Route::get('/new-job-seeker', 'Admin\AdminController@NewJobSeeker')->name('admin.new.job_seeker');
+    Route::get('/new-job-seeker-data', 'Admin\AdminController@NewJobSeekerData')->name('admin.new.job_seeker.data');
     
+    Route::get('/account-employer', 'Admin\AccountController@AccountEmployer')->name('admin.account.employer');
+    Route::get('/account-employer-data', 'Admin\AccountController@AccountEmployerData')->name('admin.account.employer.data');
+    Route::get('/account-job-seeker', 'Admin\AccountController@AccountJobSeeker')->name('admin.account.job_seeker');
+    Route::get('/account-job-seeker-data', 'Admin\AccountController@AccountJobSeekerData')->name('admin.account.job_seeker.data');
+    Route::get('/account-admin', 'Admin\AccountController@AccountAdmin')->name('admin.account.admin');
+    Route::get('/account-admin-data', 'Admin\AccountController@AccountAdminData')->name('admin.account.admin.data');
+
     Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
     Route::get('/logout', 'Auth\Admin\LoginController@logout')->name('admin.logout');

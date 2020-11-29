@@ -3,11 +3,11 @@
 @section('title', 'Danh sách tin | ')
 
 @section('header')
-@include('employer.element.header')
+@include('admin.element.header')
 @endsection
 
 @section('sidebar')
-@include('employer.element.sidebar')
+@include('admin.element.sidebar')
 @endsection
 
 @section('content')
@@ -34,10 +34,10 @@
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Mã bài đăng</th>
-                            <th>Tên công việc</th>
-                            <th>Ngành nghề</th>
-                            <th>Lược xem</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Địa chỉ</th>
                             <th>Trạng thái</th>
                             <th>Ngày cập nhật</th>
                             <th>Hành động</th>
@@ -93,67 +93,18 @@
             "autoWidth": true,
             "pageLength": 5,
             "lengthMenu": [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
-            ajax: '{!! route('jobs.anyData') !!}',
+            ajax: '{!! route('admin.account.admin.data') !!}',
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: true, searchable: false},
-                { data: 'job_code', name: 'job_code' },
-                { data: 'name_job', name: 'name_job' },
-                { data: 'career', name: 'career'},
-                { data: 'views', name: 'views', searchable: false},
+                { data: 'name', name: 'name' },
+                { data: 'checkEmail', name: 'checkEmail' },
+                { data: 'phone', name: 'phone' },
+                { data: 'address', name: 'address' },
                 { data: 'status', name: 'status', orderable: false, searchable: false},
                 { data: 'update_at', name: 'update_at', orderable: true, searchable: false},
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]
         });
     });
-
-    function deleteConfirmation(id) {
-        swal({
-            title: "Xóa tin tuyển dụng?",
-            text: "Tin bạn xóa sẽ không khôi phục lại được!",
-            type: "warning",
-            showCancelButton: !0,
-            confirmButtonText: "Xóa",
-            cancelButtonText: "Hủy bỏ!",
-            reverseButtons: !0
-        }).then(function (e) {
-            if (e.value === true) {
-                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                $.ajax({
-                    type: 'POST',
-                    url: "{!! route('employer.delJobPost') !!}",
-                    data: {
-                        _token: CSRF_TOKEN,
-                        id: id
-                    },
-                    dataType: 'JSON',
-                    success: function (results) {
-                        $('#users-table').DataTable().ajax.reload();
-                        if (results.success === true) {
-                            swal({
-                                title: "Chúc mừng!",
-                                text: results.message,
-                                type: "success",
-                                showConfirmButton: false,
-                                toast: true,
-                                position: "bottom-end",
-                                timer: 3000
-                            })
-                        } else {
-                            swal("Xóa không thành công!", results.message, "error");
-                        }
-                    }
-                });
-            } else {
-                e.dismiss;
-            }
-        }, function (dismiss) {
-            return false;
-        })
-    }
-
-    function showModal(id) {
-            console.log(id);
-        }
 </script>
 @endpush

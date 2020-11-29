@@ -26,6 +26,7 @@ class CreateProfilesTable extends Migration
             $table->integer('degree_id')->unsigned();
             $table->integer('experience_id')->unsigned();
             $table->string('work_location',50);
+            $table->string('servece')->nullable();
             $table->tinyInteger('status');
             $table->timestamps();
         });

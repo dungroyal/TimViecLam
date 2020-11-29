@@ -9,7 +9,6 @@ class Company extends Model
 {
     use Notifiable;
     protected $table='companies';
-    public $timestamps = false;
 
     protected $fillable = [
         'id',

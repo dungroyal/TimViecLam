@@ -28,6 +28,150 @@ header {
     background: #ffffff;
     transition: left 0.5s ease-in-out;
 }
+
+
+
+/* Custom Main Search */
+.main-search-bar {
+    margin-top: 0px;
+    background-color: var(--Blue);
+    border-radius: 3px;
+}
+
+.main-search-bar__job {
+    z-index: 555;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 77px;
+    left: 0;
+    width: 100%;
+    margin-top: 0px;
+    background-color: var(--Blue-While);
+}
+
+.input-field {
+    height: 40px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+}
+
+.input-field i {
+    text-align: center;
+    line-height: 40px;
+    color: var(--Blue-While);
+    font-size: 1.1rem;
+}
+
+.input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333;
+}
+
+.input-field select {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.input-field input::placeholder {
+    color: rgb(151, 142, 142);
+    font-weight: 500;
+}
+
+.search-custom__btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #ddad0e;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 10px 0;
+    transition: 0.5s;
+    border: none;
+}
+
+.search-custom__btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.bootstrap-select__icon {
+    position: absolute;
+    left: 26px;
+    top: 17px;
+    font-size: 1.1rem;
+    color: var(--Blue-While);
+    z-index: 1;
+}
+
+.bootstrap-select-city__custom .filter-option {
+    height: 80% !important;
+    margin-left: 40px !important;
+    overflow: inherit !important;
+}
+
+.bootstrap-select-city__custom .btn {
+    background-color: #f7f7f7 !important;
+    color: #858383f2;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #000000;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 10px 0;
+    transition: 0.5s;
+    overflow: hidden !important;
+}
+
+.selectpicker+button,
+.select-city button,
+.select-career button {
+    background-color: white !important;
+    border: 1px solid #ced4da !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+    color: #495057 !important;
+}
+
+
+.selectpicker+.dropdown-toggle:focus,
+.bootstrap-select-city__custom .dropdown-toggle:focus,
+.select-city .dropdown-toggle:focus,
+.select-career .dropdown-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.selectpicker+.show .inner .dropdown-menu li a:hover,
+.select-city .dropdown-menu li a:hover,
+.select-career .dropdown-menu li a:hover,
+.bootstrap-select-city__custom .dropdown-menu li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #008db1;
+}
+
+/* End Custom Main Search */
+
 .box_general .location_full {
     color: #1790d4;
     cursor: pointer;
@@ -2653,147 +2797,6 @@ a:hover {
     outline: 0;
 }
 
-
-/* Custom Main Search */
-.main-search-bar {
-    margin-top: 0px;
-    background-color: var(--Blue);
-    border-radius: 3px;
-}
-
-.main-search-bar__job {
-    z-index: 555;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 77px;
-    left: 0;
-    width: 100%;
-    margin-top: 0px;
-    background-color: var(--Blue-While);
-}
-
-.input-field {
-    height: 40px;
-    margin: 10px 0;
-    background-color: #ffffff;
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    padding: 0 0.4rem;
-}
-
-.input-field i {
-    text-align: center;
-    line-height: 40px;
-    color: var(--Blue-While);
-    font-size: 1.1rem;
-}
-
-.input-field input {
-    background: none;
-    outline: none;
-    border: none;
-    line-height: 1;
-    font-weight: 700;
-    font-size: 1rem;
-    color: #333;
-}
-
-.input-field select {
-    background: none;
-    outline: none;
-    border: none;
-    line-height: 1;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.input-field input::placeholder {
-    color: rgb(151, 142, 142);
-    font-weight: 500;
-}
-
-.search-custom__btn {
-    width: 100%;
-    height: 40px;
-    border-radius: 3px;
-    cursor: pointer;
-    background-color: #ddad0e;
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 10px 0;
-    transition: 0.5s;
-    border: none;
-}
-
-.search-custom__btn:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.bootstrap-select__icon {
-    position: absolute;
-    left: 26px;
-    top: 17px;
-    font-size: 1.1rem;
-    color: var(--Blue-While);
-    z-index: 1;
-}
-
-.bootstrap-select-city__custom .filter-option {
-    height: 80% !important;
-    margin-left: 40px !important;
-    overflow: inherit !important;
-}
-
-.bootstrap-select-city__custom .btn {
-    background-color: #f7f7f7 !important;
-    color: #858383f2;
-    text-transform: capitalize;
-    font-weight: 500;
-    border: none;
-    width: 100%;
-    height: 40px;
-    border-radius: 3px;
-    cursor: pointer;
-    color: #000000;
-    text-transform: capitalize;
-    font-weight: 500;
-    margin: 10px 0;
-    transition: 0.5s;
-    overflow: hidden !important;
-}
-
-.selectpicker+button,
-.select-city button,
-.select-career button {
-    background-color: white !important;
-    border: 1px solid #ced4da !important;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
-    color: #495057 !important;
-}
-
-
-.selectpicker+.dropdown-toggle:focus,
-.bootstrap-select-city__custom .dropdown-toggle:focus,
-.select-city .dropdown-toggle:focus,
-.select-career .dropdown-toggle:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.selectpicker+.show .inner .dropdown-menu li a:hover,
-.select-city .dropdown-menu li a:hover,
-.select-career .dropdown-menu li a:hover,
-.bootstrap-select-city__custom .dropdown-menu li a:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #008db1;
-}
-
-/* End Custom Main Search */
 
 .fieldset_custom {
     border: 1px solid #eee;

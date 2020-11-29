@@ -16,14 +16,11 @@ $factory->define(App\JobSeeker::class, function (Faker $faker) {
 
 $factory->define(App\Employer::class, function (Faker $faker) {
     return [
-        'name_company'=> $faker->company,
         'email'=> $faker->companyEmail,
         'email_verified_at'=> now(),
         'password'=> '$2y$10$KBqTqSANnzLpLQnb6PHNou4GBvOSO5fvHwc3fISLL0KGewZdvhkR6', //Mật khẩu: 12345678
-        'remember_token'=> Str::random(10)
     ];
 });
-
 
 $factory->define(App\Models\Company::class, function (Faker $faker) {
     return [

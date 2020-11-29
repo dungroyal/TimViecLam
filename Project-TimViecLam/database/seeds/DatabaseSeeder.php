@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\JobSeeker;
-use App\Employer;
+use App\Admin;
 use App\Models\TypeJob;
 use App\Models\Career;
 use App\Models\Grade;
@@ -208,10 +207,25 @@ class DatabaseSeeder extends Seeder
             City::create($City);
         }
 
+        $Admin = [            
+            [
+                'name' => "Dũng Admin",
+                'email' => "admin@gmail.com",
+                'password' => '$2y$10$KBqTqSANnzLpLQnb6PHNou4GBvOSO5fvHwc3fISLL0KGewZdvhkR6',
+                'phone' => '0328050520',
+                'address' => '34D, Đường số 12, Gò vấp',
+                'city' => 51,
+                'status' => 1
+            ],
+        ];
+        foreach ($Admin as $Admin) {
+            Admin::create($Admin);
+        }
 
-        factory(App\JobSeeker::class,20)->create();
-        factory(App\Employer::class,20)->create();
-        factory(App\Models\Company::class,20)->create();
-        factory(App\Models\Job::class,100)->create();
+
+        // factory(App\JobSeeker::class,20)->create();
+        // factory(App\Employer::class,20)->create();
+        // factory(App\Models\Company::class,20)->create();
+        // factory(App\Models\Job::class,100)->create();
     }
 }

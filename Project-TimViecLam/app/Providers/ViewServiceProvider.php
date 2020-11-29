@@ -26,13 +26,13 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // View::share('careers',DB::table('career')->get());
-        // View::share('city',DB::table('city')->get());
-        // View::share('degree',DB::table('degree')->get());
-        // View::share('experience',DB::table('experience')->get());
-        // View::share('grade',DB::table('grade')->get());
-        // View::share('salary',DB::table('salary')->get());
-        // View::share('type_job',DB::table('type_job')->get());
+        View::share('careers',DB::table('career')->get());
+        View::share('city',DB::table('city')->get());
+        View::share('degree',DB::table('degree')->get());
+        View::share('experience',DB::table('experience')->get());
+        View::share('grade',DB::table('grade')->get());
+        View::share('salary',DB::table('salary')->get());
+        View::share('type_job',DB::table('type_job')->get());
 
         // view()->composer( 
         //     '*', 'App\Http\ViewComposers\BasicDataComposer',

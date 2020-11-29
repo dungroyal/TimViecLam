@@ -43,37 +43,6 @@
             </div>
 
             <div class="dropdown d-none d-lg-inline-block ml-1">
-                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="bx bx-customize"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                    <div class="px-lg-2">
-                        <div class="row no-gutters">
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="{{ Route('home') }}">
-                                    <img src="{{ asset('images\house-icon.png') }}" alt="Trang chủ">
-                                    <span>Trang chủ</span>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('images\recruitment-icon.png') }}" alt="Tuyển dụng">
-                                    <span>Tìm ứng viên</span>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('images\orders.png') }}" alt="Hỗ trợ">
-                                    <span>Bảng giá</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dropdown d-none d-lg-inline-block ml-1">
                 <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
                     <i class="bx bx-fullscreen"></i>
                 </button>

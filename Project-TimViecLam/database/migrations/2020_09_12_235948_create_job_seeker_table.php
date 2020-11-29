@@ -16,6 +16,7 @@ class CreateJobSeekerTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone');
+            $table->string('status')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

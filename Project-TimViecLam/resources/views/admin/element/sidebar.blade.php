@@ -21,8 +21,8 @@
                         <span>QL Nhà Tuyển Dụng</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">Đăng tuyển dụng mới</a></li>
-                        <li><a href="#">Tất cả tin tuyển dụng</a></li>
+                        <li><a href="{{ Route('admin.new.company')}}">Công ty mới</a></li>
+                        <li><a href="{{ Route('admin.all.company')}}">Tất cả công ty</a></li>
                     </ul>
                 </li>
                 <li>
@@ -31,9 +31,19 @@
                         <span>QL Người tìm việc</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">Hồ sơ đã lưu</a></li>
-                        <li><a href="#">Hồ sơ đã xem</a></li>
-                        <li><a href="#">Hồ sơ ứng tuyển</a></li>
+                        <li><a href="{{ Route('admin.new.job_seeker')}}">Người tìm việc mới</a></li>
+                        <li><a href="{{ Route('admin.all.job_seeker')}}">Tất cả Người tìm việc</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-info-circle"></i>
+                        <span>QL tài khoản</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="{{ Route('admin.account.employer')}}">TK Nhà tuyển dụng</a></li>
+                    <li><a href="{{ Route('admin.account.job_seeker')}}">TK Người tìm việc</a></li>
+                    <li><a href="{{ Route('admin.account.admin')}}">TK Quản trị viên</a></li>
                     </ul>
                 </li>
                 <li>
@@ -45,16 +55,6 @@
                         <li><a href="#">Hồ sơ đã lưu</a></li>
                         <li><a href="#">Hồ sơ đã xem</a></li>
                         <li><a href="#">Hồ sơ ứng tuyển</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-info-circle"></i>
-                        <span>QL tài khoản</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="#">Cập nhật thông tin</a></li>
-                        <li><a href="#">Đổi mật khẩu</a></li>
                     </ul>
                 </li>
             </ul>
