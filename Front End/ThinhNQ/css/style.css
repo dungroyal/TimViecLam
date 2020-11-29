@@ -3653,4 +3653,172 @@ a:hover {
   color: #666;
   font-weight: 300;
 }
+.modal-footer-textleft{
+  margin-right: 330px;
+font-size: 14px;
+  position: relative;
+  float: left;
+  
+}
+/* lọc hồ sơ */
+.price .breadcrumb{
+  padding: 25px 0;
+  background-color: #0095d5;
+  border-radius: 0;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+color: #ffffff;
+  border-radius: 4px;
+}
+.breadcrumb .title-service-file {
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  font-weight: 700;
+}
+.feature {
+  font-size: 15px;
+}
+.box-service-file{
+  padding: 10px 16px;
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.price .box-service-file {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.box-service-file{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    overflow: hidden;
+}
+.price .col-left .box-service-file p{
+  margin: 0 0 10px;
+}
+.price .box-service-file .title-service-file {
+  margin-top: 0;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+}
+.price .box-service-file  .title-service-file:before {
+  background: #fdb144 none repeat scroll 0 0;
+  border-radius: 15px;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 30px;
+  width: 50px;
+}
+.price .box-service-file{
+  margin-top: 36px;
+}
+.el-table--fit {
+  border-right: 0;
+  border-bottom: 0;
+}
+.el-table {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  border: 1px solid #dfe6ec;
+  font-size: 14px;
+  color: #1f2d3d;
+}
+.el-table {
+  border-radius: 0!important;
+  color: #4a4a4a!important;
+}
+.price .box-service-file .benefit {
+  margin-top: 20px;
+}
+.price .box-service-file .benefit .dropdown-header {
+  margin-top: 0;
+  padding: 8px 12px 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  background-color: #e8e8e8;
+  color: #3f3f3f;
+  font-weight: 600;
+}
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777;
+  white-space: nowrap;
+}
+.list-inline, .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.price .box-service-file .benefit li {
+  padding: 5px 0;
+}
+.list-unstyled .fw-500{
+  font-weight: 600;
+}
+.stats .circle {
+  margin-top: 30px;
+  padding-top: 38px;
+  width: 140px;
+  height: 140px;
+  background-color: #f1fcff;
+  border: 2px solid #009cde;
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+}
+.stats .circle .num{
+  font-size: 24px;
+  font-weight: 700;
+  color: #009cde;
+}
+.stats .circle .object {
+  font-size: 16px;
+  color: #777;
+}
+.widget .hotline li{
+  padding: 10px 0;
+}
+.widget .hotline li i{
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+  width: 20px;
+  display: inline-block;
+}
+.price {
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+.font-selection{
+  font-weight: 500;
+
+}
 /*  */
