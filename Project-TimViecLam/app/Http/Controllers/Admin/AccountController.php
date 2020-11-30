@@ -84,9 +84,9 @@ class AccountController extends Controller
                 })
                 ->addColumn('status', function($row){
                     if ($row->status == 1) {
-                        $status = 'Đang hoạt động';
+                        $status = 'Đã duyệt';
                     }else{
-                        $status = '<span class="badge badge-pill badge-success">Đã xác minh</span>';
+                        $status = 'Chờ duyệt';
                     }
                     return $status;
                 })

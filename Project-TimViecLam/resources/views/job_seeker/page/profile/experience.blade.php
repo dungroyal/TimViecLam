@@ -25,189 +25,42 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body pb-0">
-                        <div class="row">
-                            <div class="w-100 float-left px-3">
-                                <div class="wizard-progress-with-circle">
-                                    <div class="wizard-progress-bar background-progress-bar w-100"></div>
-                                </div>
-                                <div class="row">
-                                    <ul class="col-10 wizard-nav wizard-nav-pills w-100 float-left">
-                                        <li>
-                                            <a href="{{ Route('job-seeker.profile.step1') }}">
-                                                <div class="wizard-icon-circle md checked border-color">
-                                                    <div class="wizard-icon-container">
-                                                        <svg width="100%" height="auto" viewBox="0 0 16 16"
-                                                            class="bi bi-person-fill p-3" fill="currentColor"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <p class="stepTitle mb-0 pb-0">Thông tin cá nhân</p>
-                                                <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ Route('job-seeker.profile.step2') }}">
-                                                <div class="wizard-icon-circle md checked border-color">
-                                                    <div class="wizard-icon-container">
-                                                        <svg width="100%" height="auto" viewBox="0 0 16 16"
-                                                            class="bi bi-info p-2" fill="currentColor"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-                                                            <circle cx="8" cy="4.5" r="1" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <p class="stepTitle">Thông tin hồ sơ</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ Route('job-seeker.profile.step3') }}">
-                                                <div class="wizard-icon-circle md checked border-color">
-                                                    <div class="wizard-icon-container">
-                                                        <svg width="100%" height="auto" viewBox="0 0 16 16"
-                                                            class="bi bi-book-half p-3" fill="currentColor"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M8.5 2.687v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <p class="stepTitle">Học vấn bằng cấp</p>
-                                            </a>
-                                        </li>
-                                        <li  class="step-active">
-                                            <a href="{{ Route('job-seeker.profile.step4') }}">
-                                                <div class="wizard-icon-circle md checked border-color">
-                                                    <div class="wizard-icon-container">
-                                                        <svg width="100%" height="auto" viewBox="0 0 16 16"
-                                                            class="bi bi-building p-3" fill="currentColor"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
-                                                            <path
-                                                                d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <p class="stepTitle">Kinh nghiệm</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ Route('job-seeker.profile.step5') }}">
-                                                <div class="wizard-icon-circle md checked border-color">
-                                                    <div class="wizard-icon-container">
-                                                        <svg width="100%" height="auto" viewBox="0 0 16 16"
-                                                            class="bi bi-tools p-3" fill="currentColor"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
-                                                            <path fill-rule="evenodd"
-                                                                d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <p class="stepTitle">Kỹ năng</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="col-2 float-left text-right mt-3">
-                                        <button type="button" class="button_public">
-                                            <span> ĐĂNG HỒ SƠ </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
+        @include('job_seeker.element.headerProfile')
+
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                     <h4 class="card-title">Kinh nghiệm làm việc</h4>
-                    <div class="row">         
-                        <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="formrow-email-input">Họ tên</label>
-                                <input type="text" class="form-control" id="formrow-email-input">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="formrow-email-input">Địa chỉ email</label>
+                                <label for="formrow-email-input">Công ty</label>
                                 <input type="email" class="form-control" id="formrow-email-input">
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="formrow-password-input">Số điện thoại</label>
+                                <label for="formrow-password-input">Chức danh / vị trí</label>
                                 <input type="text" class="form-control" id="formrow-password-input">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">         
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="formrow-email-input">Ngày sinh</label>
-                                <input type="date" class="form-control" id="formrow-email-input">
+                                <label for="formrow-password-input">Thời gian bắt đầu</label>
+                                <input type="date" class="form-control" id="formrow-password-input">
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="formrow-email-input">Địa chỉ</label>
-                                <input type="email" class="form-control" id="formrow-email-input">
+                                <label for="formrow-password-input">Thời gian kết thúc</label>
+                                <input type="date" class="form-control" id="formrow-password-input">
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <label for="formrow-password-input">Tỉnh/thành phố</label>
-                                <select class="selectpicker form-control  @error('city') is-invalid @enderror" 
-                                    name="city"
-                                    data-live-search="true" 
-                                    data-size="5" 
-                                    title="Chọn tỉnh/thành phố.">
-                                    @foreach ($city as $item)
-                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">         
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="d-block mb-3">Giới tính:</label>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="Male" name="sex" class="custom-control-input">
-                                    <label class="custom-control-label" for="Male">Nam</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="Female" name="sex" class="custom-control-input">
-                                    <label class="custom-control-label" for="Female">Nữ</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="d-block mb-3">Tình trạng hôn nhân:</label>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="alone" name="marriage" class="custom-control-input">
-                                    <label class="custom-control-label" for="alone">Độc thân</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="married" name="marriage" class="custom-control-input">
-                                    <label class="custom-control-label" for="married">Đã kết hôn</label>
-                                </div>
+                                <label for="formrow-password-input">Mô tả</label>
+                                <textarea class="form-control" id="productdesc" placeholder="Mô tả về các nhiệm vụ, trách nhiệm trong quá trình làm việc tại công ty. Các kỹ năng bạn học hỏi được hoặc các thành tựu đã đạt được (Ví dụ: Nhân viên xuất sắc tháng/năm...)" rows="5"></textarea>
                             </div>
                         </div>
                     </div>
@@ -218,6 +71,117 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                    <h4 class="card-title">Kinh nghiệm làm việc</h4>
+                    <hr>
+                    <div class="list-profile-item row mx-1  mb-3">
+                        <div class="float-left">
+                            <svg width="3rem" height="3rem" viewBox="0 0 16 16"
+                                class="bi bi-building p-1" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
+                                <path
+                                    d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
+                            </svg>
+                        </div>
+                        <div class="col-8">
+                            <div><strong>Thành Nhân</strong> (Từ 08/2018 - hiện tại)</div>
+                            <div><strong>Vị trí:</strong> Nhân viên</div>
+                        </div>
+                        <div class="ml-auto">
+                            <a href="" data-toggle="tooltip" title="Chỉnh sửa">
+                                <svg width="1.4rem" height="1.4rem" viewBox="0 0 16 16" class="bi mt-3 bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>
+                            </a>
+                            <a href="" data-toggle="tooltip" title="Xóa">
+                                <svg width="1.4rem" height="1.4rem" viewBox="0 0 16 16" class="bi text-danger ml-2 mr-3 mt-3 bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                  </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="list-profile-item row mx-1 mb-3 text-center" type="button" data-toggle="modal" data-target="#modal-add-exp">
+                        <div class="m-auto">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="my-1 bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-add-exp" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title mt-0" id="myExtraLargeModalLabel">Thêm kinh nghiệm làm việc</h6>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="formrow-email-input">Công ty</label>
+                                                <input type="email" class="form-control" id="formrow-email-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="formrow-password-input">Chức danh / vị trí</label>
+                                                <input type="text" class="form-control" id="formrow-password-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="formrow-password-input">Thời gian bắt đầu</label>
+                                                <input type="month" class="form-control" id="formrow-password-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="formrow-password-input">Thời gian kết thúc</label>
+                                                <input type="month" class="form-control" id="day-end-job">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group pl-4">
+                                                <input class="form-check-input" type="checkbox" value="" id="nowJob">
+                                                <label class="form-check-label" for="nowJob">
+                                                Công việc hiện tại
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="formrow-password-input">Mô tả</label>
+                                                <textarea class="form-control" id="productdesc" placeholder="Mô tả về các nhiệm vụ, trách nhiệm trong quá trình làm việc tại công ty. Các kỹ năng bạn học hỏi được hoặc các thành tựu đã đạt được (Ví dụ: Nhân viên xuất sắc tháng/năm...)" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+                                    <button type="button" id="addNewExpBtn" class="btn btn-sm btn-primary">Thêm mới</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -225,3 +189,20 @@
 
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    $("#nowJob").click( function(){
+        if( $(this).is(':checked') ){
+            $("#day-end-job").prop( "disabled", true );
+        }else{
+            $("#day-end-job").prop( "disabled", false );
+        };
+    });
+
+    $("#addNewExpBtn").click(function(e){
+        $('#modal-add-exp').modal('hide');
+        // alert("Đã thêm mới kinh nghiệm!");
+    });
+</script>
+@endpush

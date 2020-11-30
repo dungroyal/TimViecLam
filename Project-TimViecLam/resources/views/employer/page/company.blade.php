@@ -64,7 +64,7 @@
                                             data-size="5"
                                             value="{{ $info_company['city'] }}"
                                             title="Chọn tỉnh thành phố">
-                                            @foreach ($city as $item)
+                                            @foreach (App\Models\City::all() as $item)
                                                 <option value="{{ $item->id }}"> {{ $item->name }}</option>
                                             @endforeach
                                     </select>

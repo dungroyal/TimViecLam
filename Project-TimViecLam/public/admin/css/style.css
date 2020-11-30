@@ -46,6 +46,7 @@
     margin: 20px auto;
 }
 
+
 .avatar-upload .avatar-edit {
     position: absolute;
     right: 12px;
@@ -99,6 +100,81 @@
 }
 
 .avatar-preview  div {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+/* Avatar Upload and Preview */
+
+
+
+/* Avatar Upload and Preview */
+.avatar-upload-jsk {
+    position: relative;
+    margin: 20px auto;
+}
+
+
+.avatar-upload-jsk .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+}
+
+.avatar-upload-jsk .avatar-edit input{
+    display: none
+}
+
+.avatar-upload-jsk .avatar-edit input{
+    display: none
+}
+
+.imageUpload i{
+   font-size:2rem;
+   color:rgb(5, 139, 228);
+}
+.avatar-preview-jsk label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.avatar-upload-jsk .avatar-edit input:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.avatar-upload-jsk .avatar-edit label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.avatar-preview-jsk {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 5px;
+    border: 6px solid #00aeff2c;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin: 0px auto;
+}
+
+.avatar-preview-jsk  div {
         width: 100%;
         height: 100%;
         border-radius: 5px;
@@ -226,6 +302,7 @@
     -ms-flex-line-pack: center;
     align-content: center;
     margin-left: 60px;
+    margin: 0px auto;
 }
 
 .wizard-icon-container {
@@ -314,6 +391,23 @@
     color: #009ce0;
 }
 
+.list-profile-item{
+    background-color: #f6f6f6b4;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #00e7ff;
+    cursor: pointer;
+}
+
+.list-profile-item:hover{
+    box-shadow: 2px 2px 2px gainsboro;
+    transition: 0.3s;
+}
+
+.list-profile-item:hover div svg{
+    color: rgb(2, 100, 165);
+    transition: 0.3s;
+}
 
 
 

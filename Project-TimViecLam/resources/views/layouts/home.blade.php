@@ -54,7 +54,7 @@
     @include('home.element.footer')
 
 
-    <div id="sy-whatshelp">
+    {{-- <div id="sy-whatshelp">
         <div class="sywh-services">
           <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
             <i class="fa fa-comments"></i>
@@ -70,7 +70,7 @@
                       <i class="fa fa-comments"></i>
           <i class="fa fa-times"></i>
         </a>
-      </div>
+      </div> --}}
     <a id="back-to-top" href="#" class="btn back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
     @if(Auth::guard('admin')->user() != null )
     <a href="{{Route('admin.dashboard')}}" class="btn admin-btn" ><i class="fas fa-cog fa-spin"></i></a>

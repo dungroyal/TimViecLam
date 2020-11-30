@@ -3,7 +3,7 @@
         <div id="sidebar-menu">
             <ul class="metismenu list-unstyled" id="side-menu">
 
-                <li class="menu-title text-center text-white-50">Trang cá nhân</li>
+                <li class="menu-title text-center text-white-50">Trang quản lý ứng viên</li>
                 <li>
                     <a data-pjax href="{{ Route('job-seeker.dashboard') }}" class="waves-effect">
                         <i class="bx bxs-dashboard"></i>

@@ -50,7 +50,7 @@
 </div>
 
     <!--  Modal -->
-    <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -98,7 +98,7 @@
                 { data: 'name', name: 'name' },
                 { data: 'checkEmail', name: 'checkEmail' },
                 { data: 'phone', name: 'phone',orderable: false },
-                { data: 'status', name: 'status', orderable: false, searchable: false},
+                { data: 'status', name: 'status', orderable: true, searchable: false},
                 { data: 'update_at', name: 'update_at', orderable: true, searchable: false},
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]

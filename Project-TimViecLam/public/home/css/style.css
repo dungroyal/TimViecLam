@@ -1005,12 +1005,13 @@ input:focus {
 
 .back-to-top {
     position: fixed;
-    bottom: 100px;
+    bottom: 40px;
     right: 33px;
     display: none;
-    border-radius: 1px;
+    border-radius: 5px;
     background-color: var(--Blue);
     color: var(--while);
+    opacity: .8;
 }
 
 

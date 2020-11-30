@@ -16,6 +16,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#" class="waves-effect">
+                        <i class="bx bx-message-detail"></i>
+                        <span>Liên hệ</span>
+                    </a>
+                </li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-briefcase"></i>
                         <span>QL Nhà Tuyển Dụng</span>

@@ -162,7 +162,7 @@
                                             data-size="8" 
                                             value="{{ $info_company['city'] }}"
                                             title="Chọn tỉnh/thành phố.">
-                                            @foreach ($city as $item)
+                                            @foreach (App\Models\City::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('city') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
