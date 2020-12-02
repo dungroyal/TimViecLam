@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="shortcut icon" href="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="bgGray">
+        <header>
+            <nav class="container navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="home-ntd.html">
+                    <img src="images/logo.png" width="250" alt="Logo Tìm Việc Làm" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
+                            <li class="nav-item">
+                                <a class="nav-link" href="banggia.html"><i class="fas fa-blog mr-2 icon-menu"></i> BẢNG
+                                    GIÁ
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-lock mr-2 icon-menu"></i> ĐĂNG TIN
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="service-file.html"><i
+                                        class="fas fa-user mr-2 icon-menu"></i>LỌC HỒ SƠ</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="dropdown-menu-top">
+                            <li
+                                class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3 header-menu-bottom bg-info">
+                                <a class="text-white p-1" href="#" data-toggle="modal" data-target="#exampleModal"><i
+                                        class="far fa-hand-pointer mr-1"></i> ĐĂNG KÝ DỊCH VỤ</a>
+                            </li>
+                            <!-- modal title -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content modal-content-width">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title el-dialog__header" id="exampleModalLabel">
+                                                Đăng ký tư vấn dịch vụ
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!--  -->
+                                            <div class="el-dialog__body">
+                                                <p class="el-dialog-modal-title mb-3">
+                                                    Mời quý công ty điền các thông tin dưới đây để đăng ký
+                                                    dịch vụ:
+                                                </p>
+                                                <div class="mw_form">
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Người liên hệ
+                                                            <span>(*)</span></label>
+                                                        <div class="form-item-modal">
+                                                            <i class="fas fa-user icon-modal"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Số điện thoại
+                                                            <span>(*)</span></label>
+                                                        <div class="form-item-modal">
+                                                            <i
+                                                                class="fas fa-phone fa-rotate-90 icon-modal-phone"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Địa chỉ email
+                                                            <span>(*)</span></label>
+                                                        <div class="form-item-modal">
+                                                            <i class="fas fa-envelope icon-modal-email"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Tên công ty
+                                                            <!----></label>
+                                                        <div class="form-item-modal">
+                                                            <i class="fas fa-building icon-modal-building"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Yêu cầu thêm
+                                                            <!----></label>
+                                                        <div class="form-item-modal">
+                                                            <textarea class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <span class="hotline pull-left modal-footer-textleft">
+                                                <h5 class="mb-1">Hoặc liên hệ bộ phận CSKH của TimViecLam:</h5>
+                                                <p class="text-danger"><i class="fas fa-phone-alt mr-1"></i> Miền Bắc:
+                                                    <strong class="fs-15">(024) 899 88688</strong><i
+                                                        class="fas fa-phone-alt ml-2 mr-1"></i> Miền Nam:
+                                                    <strong class="fs-15">(028) 894 88688</strong></p>
+                                                <p class="text-primary mt-1"><i class="far fa-envelope mr-1"></i> Email:
+                                                    <strong><a href="mailto:hotro@timvieclam.xyz"
+                                                            target="_top">hotro@timvieclam.xyzn</a></strong></p>
+                                            </span>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                Bỏ qua
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+                                                Đăng ký ngay
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <!--  -->
+        <div class="container">
+            
+        <div class="row box-candidate">
+            <div class="col-lg-3 col-md-3">
+                <section class="filter-candidate-side-box" >
+                    <form class="el-form box-filter-candidate-search-frm" >
+                        <div class="box-category-con box_search_header box-filter-candidate-search" >
+                            <p class="font-emp"><strong >Mức lương</strong></p>
+                                <select class="form-control search-job__input-emp">
+                                    <option value="">Mức lương mong muốn</option>
+                                    <option value="1">1-3 triệu</option>
+                                    <option value="2">3-5 triệu</option>
+                                    <option value="3">5-7 triệu</option>
+                                    <option value="4">7-10 triệu</option>
+                                    <option value="5">10-15 triệu</option>
+                                    <option value="6">20-25 triệu</option>
+                                    <option value="7">25-30 triệu</option>
+                                    <option value="8">Trên 50 triệu</option>
+                                </select>
+                        </div>
+                        <div class="box-category-con box_general box-filter-candidate-search">
+                            <p class="font-emp" ><strong>Ngành nghề</strong></p>
+                            <div class="el1 vb vb-visible dislock-search">
+                                <div class="el2 vb-content box-search-emp">
+                                    <div class="box-category-search" >
+                                        <div class="mw_checkbox input_search" >
+                                            <div name="categories" class="el-checkbox-group"><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="31" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bán hàng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="42" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Biên tập/ Báo chí/ Truyền hình
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="3" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bảo hiểm/ Tư vấn bảo hiểm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="55" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bảo vệ/ An ninh/ Vệ sỹ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="56" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Phiên dịch/ Ngoại ngữ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="47" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bưu chính
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="1" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Chứng khoán - Vàng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="67" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Cơ khí - Chế tạo
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="94" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Công chức - Viên chức
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="15" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Công nghệ cao
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="16" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Công nghiệp
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="68" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Dầu khí - Hóa chất
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="17" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Dệt may - Da giày
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="57" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Dịch vụ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="12" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Du lịch
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="4" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Đầu tư
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="69" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Điện - Điện tử - Điện lạnh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="48" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Điện tử viễn thông
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="86" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Freelance
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="36" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Games
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="58" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Giáo dục - Đào tạo
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="98" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Giao nhận/ Vận chuyển/ Kho bãi
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="50" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hàng gia dụng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="59" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hàng hải
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="60" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hàng không
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="74" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hành chính - Văn phòng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="70" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hóa học - Sinh học
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="78" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hoạch định - Dự án
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="37" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">IT phần cứng/mạng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="38" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">IT phần mềm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="18" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">In ấn - Xuất bản
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="6" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kế toán - Kiểm toán
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="13" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Khách sạn - Nhà hàng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="9" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kiến trúc - Thiết kế nội thất
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="5" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bất động sản
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="71" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kỹ thuật
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="72" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kỹ thuật ứng dụng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="25" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Làm bán thời gian
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="99" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Làm đẹp/ Thể lực/ Spa
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="19" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lao động phổ thông
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="91" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lương cao
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="43" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Marketing - PR
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="89" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Môi trường
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="51" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Mỹ phẩm - Trang sức
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="90" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Phi chính phủ/ Phi lợi nhuận
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="7" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Ngân hàng/ Tài Chính
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="79" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Ngành nghề khác
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="80" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nghệ thuật - Điện ảnh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="61" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Người giúp việc/ Phục vụ/ Tạp vụ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="75" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nhân sự
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="32" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nhân viên kinh doanh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="20" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nông - Lâm - Ngư nghiệp
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="21" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Ô tô - Xe máy
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="62" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Pháp luật/ Pháp lý
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="95" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Phát triển thị trường
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="27" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Promotion Girl/ Boy (PG-PB)
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="88" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">QA-QC/ Thẩm định/ Giám định
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="82" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quan hệ đối ngoại
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="33" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quản trị kinh doanh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="28" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Sinh viên làm thêm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="85" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Startup
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="100" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thể dục/ Thể thao
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="81" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thiết kế - Mỹ thuật
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="39" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thiết kế đồ họa - Web
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="52" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thời trang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="22" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thủ công mỹ nghệ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="76" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thư ký - Trợ lý
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="53" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thực phẩm - Đồ uống
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="29" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thực tập
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="40" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thương mại điện tử
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="44" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tiếp thị - Quảng cáo
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="45" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tổ chức sự kiện - Quà tặng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="63" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tư vấn/ Chăm sóc khách hàng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="64" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Vận tải - Lái xe/ Tài xế
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="26" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nhân viên trông quán internet
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="23" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Vật tư/Thiết bị/Mua hàng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="92" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Việc làm cấp cao
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="93" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Việc làm Tết
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="10" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Xây dựng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="34" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Xuất - Nhập khẩu
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="84" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Xuất khẩu lao động
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="65" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Y tế - Dược
+                                                        <!----></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vb-dragger" style="position: absolute; height: 14px; top: 0px;">
+                                    <div class="vb-dragger-styler"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-category-con box_general box-filter-candidate-search"
+                             >
+                            <p class="font-emp" ><strong>Tỉnh thành</strong></p>
+                            <div class="el1 vb vb-visible" style="height: 200px; position: relative; overflow: hidden;"
+                                >
+                                <div class="el2 vb-content" 
+                                    style="display: block; overflow: hidden scroll; height: 100%; width: calc(100% + 17px);">
+                                    <div class="box-locations-search" >
+                                        <div class="mw_checkbox input_search" >
+                                            <div name="locations" class="el-checkbox-group"><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="1" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hà Nội
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="2" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hồ Chí Minh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="3" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">An Giang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="4" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bạc Liêu
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="5" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bà Rịa - Vũng Tàu
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="6" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bắc Cạn
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="7" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bắc Giang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="8" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bắc Ninh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="9" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bến Tre
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="10" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bình Dương
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="11" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bình Định
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="12" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bình Phước
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="13" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Bình Thuận
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="14" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Cao Bằng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="15" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Cà Mau
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="16" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Cần Thơ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="17" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Đà Nẵng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="18" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Đắc Lắc
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="19" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Đắc Nông
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="20" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Điện Biên
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="21" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Đồng Nai
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="22" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Đồng Tháp
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="23" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Gia Lai
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="24" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hà Giang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="25" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hà Nam
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="26" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hà Tây
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="27" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hà Tĩnh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="28" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hải Dương
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="29" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hải Phòng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="30" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hậu Giang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="31" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hòa Bình
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="32" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Hưng Yên
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="33" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Khánh Hòa
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="34" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kiên Giang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="35" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kon Tum
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="36" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lai Châu
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="37" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lạng Sơn
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="38" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lào Cai
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="39" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lâm Đồng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="40" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Long An
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="41" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nam Định
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="42" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nghệ An
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="43" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Ninh Bình
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="44" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Ninh Thuận
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="45" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Phú Thọ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="46" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Phú Yên
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="47" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quảng Bình
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="48" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quảng Nam
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="49" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quảng Ngãi
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="50" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quảng Ninh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="51" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Quảng Trị
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="52" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Sóc Trăng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="53" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Sơn La
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="54" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tây Ninh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="55" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thái Bình
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="56" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thái Nguyên
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="57" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thanh Hóa
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="58" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thừa Thiên Huê
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="59" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tiền Giang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="60" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Trà Vinh
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="61" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tuyên Quang
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="62" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Vĩnh Long
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="63" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Vĩnh Phúc
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="64" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Yên Bái
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="65" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Khác
+                                                        <!----></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vb-dragger" style="position: absolute; height: 18px; top: 0px;">
+                                    <div class="vb-dragger-styler"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-category-con box_general box-filter-candidate-search"
+                             >
+                            <p class="font-emp" ><strong
+                                    >Trình độ</strong></p>
+                            <div class="el1 vb vb-visible" style="height: 200px; position: relative; overflow: hidden;"
+                                >
+                                <div class="el2 vb-content" 
+                                    style="display: block; overflow: hidden scroll; height: 100%; width: calc(100% + 17px);">
+                                    <div class="box-ranks-search" >
+                                        <div class="mw_checkbox input_search" >
+                                            <div name="educations" class="el-checkbox-group"><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Chọn trình độ học vấn
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="7" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Lao động phổ thông
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="5" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Trung học
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="4" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Trung cấp
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="3" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Cao đẳng
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="8" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Kỹ sư
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="9" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Cử nhân
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="10" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Thạc sĩ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="11" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tiến sĩ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="1" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Trên đại học
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="6" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Khác
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="0" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Tất cả trình độ
+                                                        <!----></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vb-dragger" style="position: absolute; height: 95px; top: 0px;">
+                                    <div class="vb-dragger-styler"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-category-con box_general box-filter-candidate-search"
+                             >
+                            <p class="font-emp" ><strong
+                                    >Kinh nghiệm</strong></p>
+                            <div class="el1 vb vb-visible" style="height: 200px; position: relative; overflow: hidden;"
+                                >
+                                <div class="el2 vb-content" 
+                                    style="display: block; overflow: hidden scroll; height: 100%; width: calc(100% + 17px);">
+                                    <div class="box-models-search" >
+                                        <div class="mw_checkbox" >
+                                            <div name="experiences_candidate_min" class="el-checkbox-group"><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="100" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Chưa có kinh nghiệm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="1" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">1 năm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="2" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">2 năm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="3" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">3 năm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="4" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">4 năm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="5" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">5 năm
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="6" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Trên 5 năm
+                                                        <!----></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vb-dragger" style="position: absolute; height: 163px; top: 0px;">
+                                    <div class="vb-dragger-styler"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-category-con box_general box-filter-candidate-search"
+                             >
+                            <p class="font-emp" ><strong
+                                    >Giới tính</strong></p>
+                            <div class="el1 vb vb-invisible" style="height: 100%; position: relative; overflow: hidden;"
+                                >
+                                <div class="el2 vb-content" 
+                                    style="display: block; overflow: hidden scroll; height: 100%; width: calc(100% + 17px);">
+                                    <div class="box-models-search" >
+                                        <div class="mw_checkbox" >
+                                            <div name="gender" class="el-checkbox-group"><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="0" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nữ
+                                                        <!----></span></label><label
+                                                    class="el-checkbox checkbox-filter"><span
+                                                        class="el-checkbox__input"><span
+                                                            class="el-checkbox__inner"></span><input type="checkbox"
+                                                            value="1" class="el-checkbox__original"></span><span
+                                                        class="el-checkbox__label">Nam
+                                                        <!----></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vb-dragger" style="position: absolute; height: 0px; top: 0px;">
+                                    <div class="vb-dragger-styler"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="col-md-9 col-lg-9">
+                <div class="box_general grid-items">
+                    <p style="font-weight: 700;padding: 14px;font-size: 16px;margin-bottom: 0">Tìm
+                        thấy 1,058,155 kết quả ứng viên.</p>
+                    <div class="box-body" style="padding-top: 0">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr style="background-color: #f9eba4">
+                                            <th scope="col" style="text-align: left;padding-left: 40px"
+                                               >Hồ sơ</th>
+                                            <th scope="col">Mức lương</th>
+                                            <th scope="col">Khu vực</th>
+                                            <th scope="col">Kinh nghiệm</th>
+                                            <th scope="col">Cập nhật</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+   
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"
+                                                   ><a href="#"title="Trưởng Phòng Nhân Sự" target="_blank" class="capitalize fontsize-search-emp"> <!---->Trưởng Phòng Nhân Sự </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Lê Ngọc Thảo <span >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="25-30 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    25-30 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    3 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-emp-search" >
+                                            <td scope="row" class="pt-2" style="text-align: left;">
+                                                <p class="item-title text_ellipsis text_ellipsis-emp"><a href="#" title="Trợ Lý Tổng Giám Đốc" target="_blank" class="capitalize fontsize-search-emp">
+                                                        <!---->Trợ Lý Tổng Giám Đốc
+                                                    </a></p>
+                                                <p class="user_name text_ellipsis capitalize mb-2"><i class="far fa-user mr-2"></i>Sảm Quốc Hùng <span
+                                                       >
+                                                        <!---->
+                                                        <!----></span></p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="15-20 triệu" class="year_exp text_ellipsis"
+                                                   >
+                                                    15-20 triệu
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p title="Hồ Chí Minh" class="year_exp text_ellipsis"
+                                                    style="width: 100px !important;">
+                                                    Hồ Chí Minh
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="year_exp text_ellipsis">
+                                                    4 năm
+                                                </p>
+                                            </td>
+                                            <td class="pt-2">
+                                                <p class="text-muted year_exp text_ellipsis">
+                                                    02/12
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </section>
+        <!--  -->
+        <!--  -->
+        <footer class="page-footer font-small mdb-color pt-4">
+            <div class="container page-footer__bottom text-center text-md-left text-primary">
+                <div class="row text-center text-md-left mt-3 pb-3">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <img src="images/Logo_White.png" alt="" class="footer-img" />
+                    </div>
+                    <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            VỀ CHÚNG TÔI
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="about.html">Về Timvieclam.xyz</a>
+                            </p>
+                            <!-- <p>
+                    <a href="#!">Quy Chế</a>
+                  </p> -->
+                            <p>
+                                <a href="security.html">Quy Định Bảo Mật</a>
+                            </p>
+                            <p>
+                                <a href="use.html">Thỏa Thuận Sử Dụng</a>
+                            </p>
+                            <p>
+                                <a href="regulations.html">Chính Sách BV Thông Tin Cá Nhân</a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            CÔNG CỤ
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Quản Lý Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Quản Lý Hồ Sơ</a>
+                            </p>
+                            <p>
+                                <a href="#!">Báo Giá</a>
+                            </p>
+                            <p>
+                                <a href="#!">Liên Hệ Tài Trợ Sự Kiện</a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Liên Hệ
+                        </h6>
+                        <div class="text__info--address">
+                            <p>
+                                <i class="fas fa-home mr-3"></i> Tô Ký, Phường Tân Chánh Hiệp,
+                                Q12
+                            </p>
+                            <p><i class="fas fa-envelope mr-3"></i> huynq156@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-100 clearfix d-md-none" />
+                <div class="row page_footer--category">
+                    <div class="col-md-3 text__info col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Việc Làm Theo Ngành Nghề
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Việc Làm Kinh Doanh</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Bán Hàng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Kế Toán</a>
+                            </p>
+                            <p>
+                                <a href="#!">Chăm Sóc Khách Hàng</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Việc Làm Công Ty
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">VinFast Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Timvieclam.xyz Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Family Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Nhà Tao Tuyển Dụng</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            VIỆC LÀM THEO TỈNH
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Việc Làm TPHCM</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Hà Nội</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Quảng Ngãi</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Vũng Tàu</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-4 text__info col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Việc Làm Hấp Dẫn
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Tìm Việc Làm</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Thêm</a>
+                            </p>
+                            <p>
+                                <a href="#!">Lao Động Phổ Thong</a>
+                            </p>
+                            <p>
+                                <a href="#!">Thực Tập Sinh</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-center text-md-left">
+                            © 2020 Copyright:
+                            <a href="timvieclam.xyz">
+                                <strong> Timvieclam.xyz</strong>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-lg-4 ml-lg-0">
+                        <div class="text-center text-md-right">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--fb btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--tw btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--gg btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--link btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="plugin/jquery/jquery-3.5.1.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

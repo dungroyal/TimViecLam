@@ -102,9 +102,10 @@ body {
   background: #fff;
   padding-bottom: 10px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .btn-employer {
@@ -4253,4 +4254,79 @@ h1.pageinfo-headline {
 .box-company-detail .content p {
   margin-bottom: 20px;
 }
+/*  */
+
+/* search ung vien */
+.box_search_header {
+  background: #fff;
+  margin-bottom: 20px;
+}
+.font-emp{
+  font-size:15px;
+  padding-top:10px;
+  margin-bottom:10px;
+  font-weight:700;
+}
+.box-filter-candidate-search{
+  padding: 0 20px 10px;
+}
+.dislock-search{
+  height: 200px; 
+  position: relative; 
+  overflow: hidden;
+}
+.box-search-emp{
+  display: block; overflow: hidden scroll; height: 100%; width: calc(100% + 17px);
+}
+.checkbox-filter {
+  display: block;
+  padding: 5px 0;
+  margin-left: 0!important;
+  color: #1f2d3d;
+
+}
+.el-checkbox__label {
+  font-size: 14px;
+  padding-left: 5px;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #20a0ff;
+  border-color: #0190fe;
+}
+
+.el-checkbox__inner, .el-checkbox__input.is-checked .el-checkbox__inner {
+  width: 16px!important;
+  height: 16px!important;
+  border-radius: 2px!important;
+  margin-top: -2px!important;
+  margin-right: 2px!important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #20a0ff;
+  border-color: #0190fe;
+}
+.el-checkbox__inner:hover {
+  border-color: #20a0ff;
+  color: #20a0ff;
+}
+.el-checkbox__label:hover {
+  color: #20a0ff;
+}
+.el-checkbox__inner:hover {
+  border-color: #20a0ff;
+}
+.border-emp-search{
+  border-bottom: 1px dashed #eee;
+}
+.text_ellipsis-emp{
+  width: 250px !important;
+}
+.fontsize-search-emp{
+  font-weight: 700; 
+}
+  /* option:nth-child(odd) {background: #FFF}
+  option:nth-child(even) {background: #CCC}; */
+
+
 /*  */
