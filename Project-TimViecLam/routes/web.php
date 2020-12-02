@@ -22,6 +22,7 @@ Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('emplo
 
 Route::prefix('job-seeker')->group(function() {
     Route::get('/', 'JobSeeker\HomeController@index')->name('job-seeker.dashboard');
+    Route::post('/applications/{id}','JobSeeker\JobController@applyJob')->name('applyJob');
     Route::get('/account', 'JobSeeker\HomeController@account')->name('job-seeker.account');
     Route::get('/profile-manager', 'JobSeeker\ProfileController@index')->name('job-seeker.profile_manager');
     Route::get('/profile-attached', 'JobSeeker\ProfileController@profileAttached')->name('job-seeker.profile_attached');
@@ -41,6 +42,12 @@ Route::prefix('employer')->group(function() {
     Route::get('/anyData', 'Employer\JobController@anyData')->name('jobs.anyData');
     Route::get('/create-job-post', 'Employer\JobController@showCreateJobPostForm')->name('employer.showCreateJobPostForm');
     Route::post('/create_job_post', 'Employer\JobController@store')->name('employer.createJobPost');
+    Route::get('/job-seeker-by-id/{id}', 'Employer\EmployerController@jobSeekerById');
+
+    
+    Route::get('/list-profile-apply', 'Employer\EmployerController@listProfileApply')->name('employer.listProfileApply');
+    Route::get('/list-profile-apply-data', 'Employer\EmployerController@listProfileApplyData')->name('employer.listProfileApply.data');
+    
 
     // Login Logout Routes
     Route::get('/login', 'Auth\Employer\LoginController@showLoginForm')->name('employer.login');

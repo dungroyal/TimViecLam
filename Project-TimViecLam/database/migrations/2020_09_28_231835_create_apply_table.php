@@ -11,7 +11,8 @@ class CreateApplyTable extends Migration
         Schema::create('apply', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('job_id')->unsigned();
-            $table->integer('profiles_id')->unsigned();
+            $table->integer('job_seeker_id')->unsigned();
+            $table->integer('employer_id')->unsigned();
             $table->tinyInteger('status');
             $table->timestamps();
         });

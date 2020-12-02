@@ -33,7 +33,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="#">Hồ sơ đã lưu</a></li>
                         <li><a href="#">Hồ sơ đã xem</a></li>
-                        <li><a href="#">Hồ sơ ứng tuyển</a></li>
+                        <li><a href="{{Route('employer.listProfileApply')}}">Hồ sơ ứng tuyển</a></li>
                     </ul>
                 </li>
                 <li>

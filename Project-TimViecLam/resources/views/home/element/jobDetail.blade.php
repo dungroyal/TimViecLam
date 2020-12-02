@@ -6,9 +6,21 @@
                 <p class="title">{{ $jobs_detail->name_job }}</p>
             <a class="employer job-company-name" href="#">{{$compamy->name_company}}</a>
             </div>
-            <div class="apply-now-btn ">
-                <a href="#" class="btn-gradient btnApplyClick"> Nộp Đơn Ứng Tuyển </a>
-            </div>
+            @if (Auth::guard('job_seeker')->user() != null)
+                @if(DB::table('apply')->where([['job_id', $jobs_detail->id],['job_seeker_id', Auth::guard('job_seeker')->user()->id]])->count() > 0)
+                    <div class="apply-now-btn ">
+                        <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob--active"><i class="far fa-check-circle mr-2"></i> Đã ứng tuyển</a>
+                    </div>
+                @else
+                    <div class="apply-now-btn ">
+                        <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob" data-job="{{ $jobs_detail->id }}" data-jsk="{{Auth::guard('job_seeker')->user()->id}}">Nộp Đơn Ứng Tuyển </a>
+                    </div>
+                @endif
+            @else
+                <div class="apply-now-btn ">
+                    <a href="{{ Route('login') }}" class="btn-gradient btnApplyClick">Đăng nhập ngay</a>
+                </div>
+            @endif
         </div>
     </section>
     <section>
@@ -161,16 +173,21 @@
                         <div class="job-detail-bottom mb-0">
                             <div class="job-detail-bottom-wrapper">
                                 <div class="apply-now-content text-center">
-                                    <div class="apply-now-right ml-auto mr-3">
-                                        <div class="apply-now-btn">
-                                            <a href="/job-detail" class="btn-gradient k">Xem chi tiết</a>
+                                    @if (Auth::guard('job_seeker')->user() != null)
+                                        @if(DB::table('apply')->where([['job_id', $jobs_detail->id],['job_seeker_id', Auth::guard('job_seeker')->user()->id]])->count() > 0)
+                                            <div class="apply-now-btn ">
+                                                <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob--active"><i class="far fa-check-circle mr-2"></i> Đã ứng tuyển</a>
+                                            </div>
+                                        @else
+                                            <div class="apply-now-btn ">
+                                                <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob" data-job="{{ $jobs_detail->id }}" data-jsk="{{Auth::guard('job_seeker')->user()->id}}">Nộp Đơn Ứng Tuyển </a>
+                                            </div>
+                                        @endif
+                                    @else
+                                        <div class="apply-now-btn ">
+                                            <a href="{{ Route('login') }}" class="btn-gradient btnApplyClick">Đăng nhập ngay</a>
                                         </div>
-                                    </div>
-                                    <div class="apply-now-right">
-                                        <div class="apply-now-btn"> <a href="#" class="btn-gradient k"> Nộp
-                                                Đơn Ứng Tuyển </a>
-                                        </div>
-                                    </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

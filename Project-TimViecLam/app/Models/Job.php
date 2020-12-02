@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+use App\JobSeeker;
+
 class Job extends Model
 {
     use Notifiable;
@@ -42,5 +44,9 @@ class Job extends Model
 
     public function company(){
     	return $this->belongsTo('App\Models\Company');
+    }
+    
+    public function job_seeker(){
+        return $this->belongsToMany(JobSeeker::class,'apply')->withTimeStamps();
     }
 }

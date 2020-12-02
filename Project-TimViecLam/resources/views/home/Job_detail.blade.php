@@ -92,14 +92,21 @@
                             <p class="title">{{ $jobs_detail->name_job }}</p>
                             <a class="employer job-company-name" href="#">{{ $company->name_company }}</a>
                         </div>
-                        @auth
-                        <div class="apply-now-btn ">
-                            <a href="#" class="btn-gradient btnApplyClick">Nộp Đơn Ứng Tuyển </a>
-                        </div>
-                        @endauth
-                        <div class="apply-now-btn ">
-                            <a href="{{ Route('login') }}" class="btn-gradient btnApplyClick"> Đăng nhập ngay</a>
-                        </div>
+                        @if (Auth::guard('job_seeker')->user() != null)
+                            @if(DB::table('apply')->where([['job_id', $jobs_detail->id],['job_seeker_id', Auth::guard('job_seeker')->user()->id]])->count() > 0)
+                                <div class="apply-now-btn ">
+                                    <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob--active"><i class="far fa-check-circle mr-2"></i> Đã ứng tuyển</a>
+                                </div>
+                            @else
+                                <div class="apply-now-btn ">
+                                    <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob" data-job="{{ $jobs_detail->id }}" data-jsk="{{Auth::guard('job_seeker')->user()->id}}">Nộp Đơn Ứng Tuyển </a>
+                                </div>
+                            @endif
+                        @else
+                            <div class="apply-now-btn ">
+                                <a href="{{ Route('login') }}" class="btn-gradient btnApplyClick">Đăng nhập ngay</a>
+                            </div>
+                        @endif
                     </div>
                 </section>
                 <section>
@@ -219,14 +226,21 @@
                                         <div class="job-detail-bottom-wrapper">
                                             <div class="apply-now-content text-center">
                                                 <div class="apply-now-right">
-                                                    @auth
-                                                    <div class="apply-now-btn"> <a href="#" class="btn-gradient k"> 
-                                                        Nộp Đơn Ứng Tuyển </a>
-                                                    </div>
-                                                    @endauth
-                                                    <div class="apply-now-btn ">
-                                                        <a href="{{ Route('login') }}" class="btn-gradient k"> Đăng nhập ngay</a>
-                                                    </div>
+                                                    @if (Auth::guard('job_seeker')->user() != null)
+                                                        @if(DB::table('apply')->where([['job_id', $jobs_detail->id],['job_seeker_id', Auth::guard('job_seeker')->user()->id]])->count() > 0)
+                                                            <div class="apply-now-btn ">
+                                                                <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob--active"><i class="far fa-check-circle mr-2"></i> Đã ứng tuyển</a>
+                                                            </div>
+                                                        @else
+                                                            <div class="apply-now-btn ">
+                                                                <a href="javascript:void(0)" class="btn-gradient btnApplyClick btnApplyJob" data-job="{{ $jobs_detail->id }}" data-jsk="{{Auth::guard('job_seeker')->user()->id}}">Nộp Đơn Ứng Tuyển </a>
+                                                            </div>
+                                                        @endif
+                                                    @else
+                                                        <div class="apply-now-btn ">
+                                                            <a href="{{ Route('login') }}" class="btn-gradient btnApplyClick">Đăng nhập ngay</a>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -467,3 +481,36 @@
     </div> 
 
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function(){
+        $(".btnApplyJob").click(function(){
+            if ($(this).hasClass('btnApplyJob--active')) {
+                return;
+            }
+            $(".btnApplyJob").html('<i class="fas fa-spinner text-white fa-spin"></i>');
+            var idJob = this.getAttribute("data-job");
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'post',
+                dataType: 'html',
+                url: '/job-seeker/applications/'+idJob,
+                success:function(response){
+                    setTimeout(function() {
+                        $(".btnApplyJob").html('<i class="far fa-check-circle mr-2"></i> Đã ứng tuyển');
+                        $(".btnApplyJob").addClass("btnApplyJob--active");
+                    }, 500);
+                }, 
+                error: function(e){
+                    console.log(e);
+                    alert("Thất bại!");
+                }
+            });
+        });
+    });
+
+</script>
+@endpush
