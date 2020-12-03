@@ -6,17 +6,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <title>@yield('title') Tìm Việc Làm - Tuyển dụng, tìm việc nhanh và hiệu quả với TimViecLam.xyz</title>
         <meta name="title" content="Tìm Việc Làm - Tuyển dụng, tìm việc nhanh và hiệu quả với TimViecLam.xyz">
         <meta name="description" content="Tìm Việc Làm - Trang Tìm Việc Làm Hiệu Quả và Uy Tín, Cập Nhật Hàng Nghìn Việc Làm Mới Mỗi Ngày. Website Tin Cậy Của Ứng Viên và Nhà Tuyển Dụng. Tạo Hồ Sơ Miễn Phí.">
-        <!-- Open Graph / Facebook -->
+
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://timvieclam.xyz/">
         <meta property="og:title" content="Tìm Việc Làm - Tuyển dụng, tìm việc nhanh và hiệu quả với TimViecLam.xyz">
         <meta property="og:description" content="Tìm Việc Làm - Trang Tìm Việc Làm Hiệu Quả và Uy Tín, Cập Nhật Hàng Nghìn Việc Làm Mới Mỗi Ngày. Website Tin Cậy Của Ứng Viên và Nhà Tuyển Dụng. Tạo Hồ Sơ Miễn Phí.">
         <meta property="og:image" content="{{ asset('/images/Meta_TVL.png') }}">
-    
+
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>

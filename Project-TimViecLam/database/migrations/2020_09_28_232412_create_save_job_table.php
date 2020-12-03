@@ -15,10 +15,10 @@ class CreateSaveJobTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('save_job', function($table) {
-            $table->foreign('job_id')->references('id')->on('job');
-            $table->foreign('job_seeker_id')->references('id')->on('job_seeker');
-        });
+        // Schema::table('save_job', function($table) {
+        //     $table->foreign('job_id')->references('id')->on('job');
+        //     $table->foreign('job_seeker_id')->references('id')->on('job_seeker');
+        // });
     }
 
     public function down()

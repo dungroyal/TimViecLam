@@ -39,17 +39,17 @@ class CreateJobTable extends Migration
         });
         
         // Tạo khóa ngoại
-        Schema::table('job', function($table) {
-            $table->foreign('employer_id')->references('id')->on('employer');
-            $table->foreign('company_id')->references('id')->on('companies');
-            $table->foreign('type_job_id')->references('id')->on('type_job');
-            $table->foreign('career_id')->references('id')->on('career');
-            $table->foreign('grade_id')->references('id')->on('grade');
-            $table->foreign('salary_id')->references('id')->on('salary');
-            $table->foreign('degree_id')->references('id')->on('degree');
-            $table->foreign('experience_id')->references('id')->on('experience');
-            // $table->foreign('city_id')->references('id')->on('city');
-        });
+        // Schema::table('job', function($table) {
+        //     $table->foreign('employer_id')->references('id')->on('employer');
+        //     $table->foreign('company_id')->references('id')->on('companies');
+        //     $table->foreign('type_job_id')->references('id')->on('type_job');
+        //     $table->foreign('career_id')->references('id')->on('career');
+        //     $table->foreign('grade_id')->references('id')->on('grade');
+        //     $table->foreign('salary_id')->references('id')->on('salary');
+        //     $table->foreign('degree_id')->references('id')->on('degree');
+        //     $table->foreign('experience_id')->references('id')->on('experience');
+        //     $table->foreign('city_id')->references('id')->on('city');
+        // });
     }
     
     public function down()

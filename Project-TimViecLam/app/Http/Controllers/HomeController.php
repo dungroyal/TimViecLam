@@ -37,7 +37,7 @@ class HomeController extends Controller
 
         $all_jobs = Job::latest()->where('status',1)->paginate(8);
         $jobs_recommend = Job::latest()->where('status',3)->paginate(8); // Việc làm gấp    
-        $companies = Company::get()->random(12);
+        // $companies = Company::get()->random(10);
        
     	return view('home/index',compact('all_jobs','jobs_hot','jobs_urgently','jobs_recommend'));
     } 

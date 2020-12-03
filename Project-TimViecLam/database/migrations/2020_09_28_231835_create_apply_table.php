@@ -17,10 +17,10 @@ class CreateApplyTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('apply', function($table) {
-            $table->foreign('job_id')->references('id')->on('job');
-            $table->foreign('profiles_id')->references('id')->on('profiles');
-        });
+        // Schema::table('apply', function($table) {
+        //     $table->foreign('job_id')->references('id')->on('job');
+        //     $table->foreign('profiles_id')->references('id')->on('profiles');
+        // });
     }
 
     public function down()

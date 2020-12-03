@@ -33,10 +33,10 @@ class CreateCompaniesTable extends Migration
         });
         
         // Tạo khóa ngoại
-        Schema::table('companies', function($table) {
-            $table->foreign('employer_id')->references('id')->on('employer');
-            $table->foreign('career_id')->references('id')->on('career');
-        });
+        // Schema::table('companies', function($table) {
+        //     $table->foreign('employer_id')->references('id')->on('employer');
+        //     $table->foreign('career_id')->references('id')->on('career');
+        // });
     }
 
     public function down()

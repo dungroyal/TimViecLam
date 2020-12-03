@@ -1,6 +1,6 @@
 @forelse ($jobs as $job)
 <?php $company =  App\Models\Company::find($job->company_id) ?>
-<div class="col job-over-item px-0" id="job-item">
+<div class="col job-over-item px-0" data-job="{{$job->id}}">
     <div class="row job-item-show">
             <a href="" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
                 @if ($company->logo != null)

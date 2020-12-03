@@ -10,11 +10,8 @@
 
 <div class="container-fluid  main-search-bar__job">
     <div class="container-fluid">
-        <!-- <div class="w-100 text-center text-white pt-2"> Tìm kiếm <strong>409</strong> việc làm mới trong
-            <strong>6,509</strong> việc đang tuyển dụng
-        </div> -->
         <div class="forms-container">
-            <form method="GET" action="" class="sign-in-form">
+            <form id="formSearch" class="sign-in-form">
                 <div class="row d-flex justify-content-around">
                     <div class="col-sm-12 col-lg-3 pr-lg-1">
                         <div class="input-field  mb-sm-0">
@@ -24,7 +21,8 @@
                             name="keyword" 
                             id="txtKeyword"
                             value="{{ old('keyword') }}" 
-                            placeholder="Tiêu đề công việc, vị trí, ...">
+                            placeholder="Tiêu đề công việc, vị trí, ..."
+                            autocomplete="off" spellcheck="false">
                             <div class="search-icon-container">
                                 <i class="search-icon-container__loader"></i>
                               </div>
@@ -35,6 +33,7 @@
                             <span class="bootstrap-select__icon"><i class="fas fa-tools"></i></span>
                             <select  
                                 name="career"
+                                id="career"
                                 class="bootstrap-select-city__custom w-100" 
                                 data-size="7" 
                                 data-live-search="true"
@@ -51,6 +50,7 @@
                             <span class="bootstrap-select__icon"><i class="fas fa-map-marker-alt"></i></span>
                             <select 
                                 name="city"
+                                id="city"
                                 class="bootstrap-select-city__custom w-100" 
                                 data-selected-text-format="count > 5"
                                 data-size="7" 
@@ -68,8 +68,8 @@
                         </button>
                     </div>
                     <div class="col-sm-12 col-lg-1 w-100 pl-lg-1">
-                        <button type="button" class="search-custom__btn text-white">
-                            <i class="fas fa-filter"></i>
+                        <button type="button" id="clearSearch" class="search-custom__btn text-white">
+                            <i class="fas fa-times"></i>
                         </button>
                     </div>
                     <div class="col-sm-12 col-lg-1 w-100 pl-lg-1 mt-2">
@@ -119,7 +119,7 @@
                         <div id="jobData">
                         @forelse ($jobs as $job)
                         <?php $company =  App\Models\Company::find($job->company_id) ?>
-                        <div class="col job-over-item px-0" data-job="{{$job->company_id}}">
+                        <div class="col job-over-item px-0" data-job="{{$job->id}}">
                             <div class="row job-item-show">
                                     <div class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
                                         @if ($company->logo != null)
@@ -289,29 +289,46 @@
 
 @push('scripts')
 <script>
-    $('.search-icon-container').hide()
-        .ajaxStart(function() {
-            $('.search-icon-container').show();
-        })
-        .ajaxStop(function() {
-            $('.search-icon-container').hide();
-        });
-
+    $('.search-icon-container').fadeOut();
     $(document).ready(function(){
-        $("#findBtn").click(function(){
-            $.ajax({
-                type: 'get',
-                dataType: 'html',
-                url: '{{Route('job-data')}}',
-                // data: 'cat_id=' + cat + '&price=' + price,
-                success:function(response){
-                    console.log(response);
-                    $("#jobData").html(response);
-                }
-            });
+        // Search
+        $("#txtKeyword").keyup(function() {
+            $('.search-icon-container').fadeIn();
+            $txtKeyword = $("#txtKeyword").val();
+            $career = $("#career").val();
+            $city = $("#city").val();
+
+            if($txtKeyword.length >= 3){
+                autoSearch($txtKeyword,$career,$city)
+            }
+            if($txtKeyword.length <= 1){
+                allJob();
+            }
         });
 
-        $(".job-over-item").click(function(){
+        $("#formSearch").submit(function() {
+            $txtKeyword = $("#txtKeyword").val();
+            $career = $("#career").val();
+            $city = $("#city").val();
+
+            if($txtKeyword.length >= 3){
+                autoSearch($txtKeyword,$career,$city)
+            }
+            if($txtKeyword.length <= 1){
+                allJob();
+            }
+            return false;
+        });
+
+        $("#clearSearch").click(function() {
+            $("#txtKeyword").val("");
+            $(".bootstrap-select-city__custom").val('default');
+            $(".bootstrap-select-city__custom").selectpicker("refresh");
+            allJob();
+        });
+
+        // Get Job Detail
+        $('#jobData').on('click', '.job-over-item', function() {
             if ($(this).hasClass('active-job-item')) {
                 return;
             }
@@ -322,21 +339,13 @@
             var idJob = this.getAttribute("data-job");
             $JobView = "<?php echo Cookie::get('searchJobView') ?>";
             if($JobView == "detail"){
-                $.ajax({
-                    type: 'get',
-                    dataType: 'html',
-                    url: '/job-detail-ajax/'+idJob,
-                    success:function(response){
-                        setTimeout(function() {
-                            $("#jobDetailData").html(response);
-                        }, 200);
-                    }
-                });
+                getJobDetail(idJob);
             }else{
                 return;
             }
         });
 
+        // Apply
         $('#jobDetailData').on('click', '.btnApplyJob', function() {
             if ($(this).hasClass('btnApplyJob--active')) {
                 return;
@@ -362,6 +371,44 @@
                 }
             });
         });
+
+        function allJob(){
+            $.ajax({
+                type: 'get',
+                dataType: 'html',
+                url: '{{Route('all-job')}}',
+                success:function(response){
+                    $('.search-icon-container').fadeOut();
+                    $("#jobData").html(response);
+                }
+            });
+        }
+
+        function autoSearch(txtKeyword,career,city){
+            $.ajax({
+                type: 'get',
+                dataType: 'html',
+                url: '{{Route('search-job')}}',
+                data: 'txtKeyword=' + txtKeyword + '&career=' + career + '&city=' + city,
+                success:function(response){
+                    $('.search-icon-container').fadeOut();
+                    $("#jobData").html(response);
+                }
+            });
+        }
+
+        function getJobDetail(idJob){
+            $.ajax({
+                type: 'get',
+                dataType: 'html',
+                url: '/job-detail-ajax/'+idJob,
+                success:function(response){
+                    setTimeout(function() {
+                        $("#jobDetailData").html(response);
+                    }, 100);
+                }
+            });
+        }
     });
 </script>
 @endpush

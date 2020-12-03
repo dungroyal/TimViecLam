@@ -16,7 +16,6 @@ class JobController extends Controller
     }
 
     public function index(Request $request){
-
         $keyword = $request->get('keyword');
         $career = $request->get('career');
         $city = $request->get('city');
@@ -80,22 +79,28 @@ class JobController extends Controller
                     ->paginate(20);
             return view('home.job',compact('jobs'));
         }else{
-            $jobs = Job::latest()->paginate(20);
+            $jobs = Job::latest()->paginate(10);
             return view('home.job',compact('jobs'));
         }
+        
+
     }
 
-    public function AllJobs(Request $request){
-        $data = Job::limit(10)->get();
+    public function searchJob(Request $request){
+        $keyword = $request->get('txtKeyword');
+        $career = $request->get('career');
+        $city = $request->get('city');
+
+        $data = Job::where('name_job','like','%'.$keyword.'%')
+                ->orWhere('career_id',$career)
+                ->orWhere('city',$city)
+                ->limit(10)->get();
         return view('home.element.jobsListItems',['jobs' => $data]);
     }
-    
-    public function searchJobs(Request $request){
-        $keyword = $request->get('keyword');
-        $users = Job::where('title','like','%'.$keyword.'%')
-                ->orWhere('position','like','%'.$keyword.'%')
-                ->limit(5)->get();
-        return response()->json($users);
+
+    public function allJob(Request $request){
+        $data = Job::latest()->paginate(10);
+        return view('home.element.jobsListItems',['jobs' => $data]);
     }
 
     public function job_detail($id)

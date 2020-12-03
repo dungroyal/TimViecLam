@@ -16,11 +16,11 @@ class CreateSaveProfilesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('save_profiles', function($table) {
-            $table->foreign('job_id')->references('id')->on('job');
-            $table->foreign('profiles_id')->references('id')->on('profiles');
-            $table->foreign('employer_id')->references('id')->on('employer');
-        });
+        // Schema::table('save_profiles', function($table) {
+        //     $table->foreign('job_id')->references('id')->on('job');
+        //     $table->foreign('profiles_id')->references('id')->on('profiles');
+        //     $table->foreign('employer_id')->references('id')->on('employer');
+        // });
     }
 
     public function down()

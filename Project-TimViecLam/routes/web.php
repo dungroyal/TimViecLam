@@ -15,7 +15,8 @@ Auth::routes(['verify' => true]);
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/job', 'JobController@index');
-Route::get('/jobData', 'JobController@AllJobs')->name('job-data');
+Route::get('/all-job', 'JobController@allJob')->name('all-job');
+Route::get('/search-job', 'JobController@searchJob')->name('search-job');
 Route::get('/job-detail/{id}', 'JobController@job_detail')->name('job-detail');
 Route::get('/job-detail-ajax/{id}', 'JobController@job_detail_ajax');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
