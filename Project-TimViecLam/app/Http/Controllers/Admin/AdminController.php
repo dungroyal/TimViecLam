@@ -12,6 +12,8 @@ use App\JobSeeker;
 use App\Models\Company;
 use App\Models\Job;
 use App\Models\Career;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class AdminController extends Controller
 {
@@ -22,6 +24,8 @@ class AdminController extends Controller
 
     public function index()
     {
+        // $data=(Analytics::fetchMostVisitedPages(Period::days(7)));
+        // dd($data);
         return view('admin.dashboard');
     }
 

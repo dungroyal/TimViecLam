@@ -85,7 +85,7 @@ class RegisterController extends Controller
             ['employer_id' => $user->id,
             'name_company' => $request->name_company,
             'personnel_size' => $request->personnel_size,
-            'career' => $request->career,
+            'career_id' => $request->career,
             'phone' => $request->phone,
             'address' => $request->address,
             'city' => $request->city,

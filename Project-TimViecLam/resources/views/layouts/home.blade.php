@@ -26,7 +26,6 @@
         <link rel="stylesheet" type="text/css" href="/home/css/style.css">
     </head>
 </head>
-
 <body>
     <div id="app">
     <header>
@@ -83,7 +82,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
     <script src="/home/js/main.js"></script>
     @stack('scripts')
 </body>

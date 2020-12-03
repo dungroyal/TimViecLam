@@ -72,6 +72,14 @@
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
     <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('plugin/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.vi.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
@@ -83,12 +91,12 @@
 </body>
 
 <script>
-    $(document).ready(function(){
-        $(document).pjax('[data-pjax] a, a[data-pjax]', '.page-content')
-        $(document).on('pjax:start', function() { topbar.show(); });
-        $(document).on('pjax:end',   function() { topbar.hide();  });
-        $.pjax.defaults.timeout = 500;
-    });
+    // $(document).ready(function(){
+    //     $(document).pjax('[data-pjax] a, a[data-pjax]', '.page-content')
+    //     $(document).on('pjax:start', function() { topbar.show(); });
+    //     $(document).on('pjax:end',   function() { topbar.hide();  });
+    //     $.pjax.defaults.timeout = 500;
+    // });
     
 </script>
 </html>

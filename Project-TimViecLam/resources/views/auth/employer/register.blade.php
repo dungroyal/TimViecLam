@@ -157,8 +157,7 @@
                                             name="career[]"
                                             data-size="7" 
                                             data-live-search="true"
-                                            title="Chọn lĩnh vực hoạt động" 
-                                            multiple
+                                            title="Chọn lĩnh vực hoạt động"
                                             >
                                             @foreach (App\Models\Career::all() as $item)
                                                 <option class="py-2" value="{{ $item->id }}">{{ $item->name }}</option>

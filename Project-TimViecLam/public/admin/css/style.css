@@ -525,3 +525,15 @@
   }
     
   /* Profile */
+
+  #users-table_length{
+      margin-bottom: -40px;
+  }
+
+  .dt-buttons .btn-secondary{
+    background-color: rgb(255, 255, 255)!important;
+  }
+
+  .dt-buttons .btn-secondary span{
+    color: rgb(100, 68, 68) !important;
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tim-viec-lam-2020",
+  "private_key_id": "ec6ff2db6f78e540ddf1d562969c860bd02770ca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQD4g3DA5L6iXnY8\noCp5F4MW78NJAM2VMhmDRI+UxOOCzBUXUC90jsX2zexfqZ1YJWyxcmeoTEB8i9D2\n9UzmrJv8wVjDM/CspRq9GCLrxXGCl5/xF9Q6Gs0EpGjT3arh8yJ5bigg9nRk00jg\ntplFIJdgRzAIMSbYR2qIf5A/pUM7q9WmpiUdUp4n/uEGjZ3vUbEnfjrRmVjzdhbA\n2Td20nFzF+BNpR5qqXfQXh7KSTOQN0N6VIi+Vl3W0dOSvToyCvJKnCdMPCLbNf/p\nKnMS9Zf5IKr40dszI9rzXw+SLPgBU875LKhwiZMaCZIpMgvRrKt+QLzRiAUdPVP3\nJWcKB12TAgMBAAECggEAJYnZQNHst+MT8iFxePwjuZW7Bm6AH17DetAi7iJ1iV7h\nerWKjY05ewftAiBBW7y/d+hjnwjxnr6R8JPqK1f8cggUq9vPKY0BBno8YCfhdwwH\nRWhHjwVYXbCmAwbTVrEezn/kwOHpgAdoVUVPzqDXLNxj9YDTMM1M2tSGCg8hIkSM\n21Jx3+kymjdYWowlPv2YDrbNK5paBXpI3GgiGd05UbygbBYr89UoM5ZAL//iDtPX\nw0/bBlbtTDBcW6b72Yi0v/txb8J991H0UMuQuEACme8RYkF0hp13WUDftkZ3fU3E\nGpiwhkN0I7fIpd9XGbPXAwfpwRFKquOEedJtuHEARQKBgQD++qGh24NMcaoN2BM4\nmpKMLUUH2Ru2kJ5Ythsjfu0MVxjqAjlUvemiNzXjO32S4d/XvF7A+R6IYO7Nzwyw\nvnzaR5EBLnbazgzf20665t4cIebZ89RBofrbrWoYeEEJ5Z5gbUBPbhlk+4ggs27O\niNTUqTCaJRC5hE9Vu66xtOiatQKBgQD5gi5zzzxYGhMFysnKgR0KXBFnWjOorKox\nv0HzSBD20WQ8/XN3mGuvdigzHvm1YF0RpGT+uwSC5ljt8nYX8F3LCPkw+OIin8Mu\nmAff8xPhUP7mQUmBGgy4ZgfEKpVsA1eTYzZRGP0UjV51TyDXCI6V43S8aUfjVqv9\nPaa98nwcJwKBgBO8sOBHjq1PKxuxOyOpi2iAZJSL8MI8BZXWWtlvjMfkwg/zJh7y\nKHCfF3PEeh7xjxMzCJ6lagCiiDm0KkZQKHf5DDdsMlUTmBmH71s2XcENusHqRubh\ns/pnPQwx2s76UD0kl9LOMfcIJWxql0wzeU4Q3qs/7UB/BmkbgxVMbKj1AoGAOdtr\nJCWxC4j4UkaE5nVsI4PX8UxkYD+xs5lzFJPogyNpCA+Jn/jzN5vBlKEhLGLtEfM6\nDCuXzzbU9lBb/A8b4MHy7t03qum7G+nbIZ4/ROdARGptPgepXXUjZeSuA37+5smB\nxepyfTqO5cr0hYiRb8ZvwmTza48kkLOkH7XD+88CgYB6pmxCR1Gx62OXEBJyVaqf\njhjsokAdpwK4rKkY+l3iBKQAMBSq1X2OYDBYr9FR7VQH6BcTQxLFiIed/uQc6Nkt\nYSV4nTLvAdgTvAzTNsJoVJ0AqT9rmq3qy7aDD4KpcfMti6hBCjfs2f4yjoMkX2Vh\n0OC/XqNKL/ilNzzKcHCJ8Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tvl-google-api@tim-viec-lam-2020.iam.gserviceaccount.com",
+  "client_id": "117928062753440814884",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tvl-google-api%40tim-viec-lam-2020.iam.gserviceaccount.com"
+}
