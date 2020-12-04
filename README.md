@@ -12,7 +12,7 @@
     3️⃣ Trần Quang Chánh (Front End)
     4️⃣ Nguyễn Quốc Thịnh (Front End)
 
-## Công nghệ được sử dụng
+<!--## Công nghệ được sử dụng
 
 <div align="center">
   <img align="center" src="Data\Images\TechnologyUsed.png"/>
@@ -30,4 +30,4 @@
     8. php artisan db:seed 
     9. php artisan serve
 
-<div align="center">Thank You For Watching <3</div>
+<div align="center">Thank You For Watching <3</div> -->
