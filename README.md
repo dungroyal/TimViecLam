@@ -9,7 +9,6 @@
 ## Thành viên nhóm:
 
     1️⃣ Đoàn Quốc Dũng (Project Manager - Full Stack)
-    2️⃣ Nguyễn Quang Huy (Front End)
     3️⃣ Trần Quang Chánh (Front End)
     4️⃣ Nguyễn Quốc Thịnh (Front End)
 
