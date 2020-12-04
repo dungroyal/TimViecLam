@@ -42,10 +42,10 @@ class AccountController extends Controller
                     return Company::where('employer_id', $row->id)->first()->phone;
                 })
                 ->addColumn('status', function($row){
-                    if ($row->status == 1) {
-                        $status = 'Đang hoạt động';
+                    if ($row->status == 0) {
+                        $status = '<span class="badge badge-pill badge-success">Active</span>';
                     }else{
-                        $status = '<span class="badge badge-pill badge-success">Đã xác minh</span>';
+                        $status = '<span class="badge badge-pill badge-danger">Unactive</span>';
                     }
                     return $status;
                 })
@@ -84,9 +84,9 @@ class AccountController extends Controller
                 })
                 ->addColumn('status', function($row){
                     if ($row->status == 1) {
-                        $status = 'Đã duyệt';
+                        $status = '<span class="badge badge-pill badge-success">Active</span>';
                     }else{
-                        $status = 'Chờ duyệt';
+                        $status = '<span class="badge badge-pill badge-danger">Unactive</span>';
                     }
                     return $status;
                 })
@@ -100,8 +100,7 @@ class AccountController extends Controller
                 })
                 ->addColumn('action', function($row){
                     $actionBtn = '
-                    <button onclick="showModal('.$row->id.')" type="button" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target=".bs-example-modal-xl"><i class="far fa-eye"></i></button>
-                        <a href=" '. Route("employer.editJobPost",["id" =>$row->id]).' " class="edit btn btn-primary btn-sm"><i class="far fa-edit"></i></a>';
+                    <button onclick="showModal('.$row->id.')" type="button" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target=".bs-example-modal-xl"><i class="far fa-eye"></i></button>';
                     return $actionBtn;
                 })
                 ->rawColumns(['checkEmail','action','status'])
@@ -133,17 +132,15 @@ class AccountController extends Controller
                 })
                 ->addColumn('status', function($row){
                     if ($row->status == 1) {
-                        $status = '<span class="badge badge-pill badge-danger">Mới</span>';
+                        $status = '<span class="badge badge-pill badge-danger">Active</span>';
                     }else{
-                        $status = '<span class="badge badge-pill badge-success">Đã xác minh</span>';
+                        $status = '<span class="badge badge-pill badge-success">Unactive</span>';
                     }
                     return $status;
                 })
                 ->addColumn('action', function($row){
                     $actionBtn = '
-                    <button onclick="showModal('.$row->id.')" type="button" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target=".bs-example-modal-xl"><i class="far fa-eye"></i></button>
-                        <a href=" '. Route("employer.editJobPost",["id" =>$row->id]).' " class="edit btn btn-primary btn-sm"><i class="far fa-edit"></i></a>
-                        <a onclick="deleteConfirmation('.$row->id.')" class="delete btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
+                    <button onclick="showModal('.$row->id.')" type="button" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target=".bs-example-modal-xl"><i class="far fa-eye"></i></button>';
                     return $actionBtn;
                 })
                 ->rawColumns(['checkEmail','update_at','action','status'])

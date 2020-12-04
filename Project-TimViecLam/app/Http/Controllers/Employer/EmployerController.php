@@ -52,7 +52,6 @@ class EmployerController extends Controller
         return view('employer.element.profileJobSeeker',compact('jobSeekerById','profile'));
     }
     
-    
     public function listProfileApplyData(Request $request)
     {
         if ($request->ajax()) {

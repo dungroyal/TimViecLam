@@ -54,4 +54,10 @@ class HomeController extends Controller
         return Redirect::back()->with('message','Đã đỗi chế độ xem!');
     }
 
+    public function company($id)
+    {
+        $company = Company::findOrFail($id);
+        $listJob = Job::Where('company_id',$id)->orderBy('id', 'desc')->get();
+        return view('home/company',compact('company','listJob'));
+    } 
 }

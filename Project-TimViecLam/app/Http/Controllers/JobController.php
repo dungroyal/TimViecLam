@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Job;
+use App\Models\Company;
 use Yajra\Datatables\Datatables;
 
 class JobController extends Controller
@@ -106,12 +107,16 @@ class JobController extends Controller
     public function job_detail($id)
     {
         $jobs_detail = Job::findOrFail($id);
-        return view('home/job_detail',compact('jobs_detail'));
+        $company = Company::findOrFail($jobs_detail->company_id);
+        $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
+        return view('home/job_detail',compact('jobs_detail','company','listJob'));
     }
 
     public function job_detail_ajax($id)
     {
-        $data = Job::findOrFail($id);
-        return view('home.element.jobDetail',['jobs_detail' => $data]);
+        $jobs_detail = Job::findOrFail($id);
+        $company = Company::findOrFail($jobs_detail->company_id);
+        $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
+        return view('home.element.jobDetail',compact('jobs_detail','company','listJob'));
     }
 }

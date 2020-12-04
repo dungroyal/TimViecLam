@@ -20,10 +20,13 @@ Route::get('/search-job', 'JobController@searchJob')->name('search-job');
 Route::get('/job-detail/{id}', 'JobController@job_detail')->name('job-detail');
 Route::get('/job-detail-ajax/{id}', 'JobController@job_detail_ajax');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
+Route::get('/company/{id}', 'HomeController@company')->name('company');
 
 Route::prefix('job-seeker')->group(function() {
     Route::get('/', 'JobSeeker\HomeController@index')->name('job-seeker.dashboard');
     Route::post('/applications/{id}','JobSeeker\JobController@applyJob')->name('applyJob');
+    Route::get('/list-apply-job','JobSeeker\JobController@listApplyJob')->name('listApplyJob');
+    Route::get('/list-apply-job-data','JobSeeker\JobController@listApplyJobData')->name('listApplyJobData');
     Route::get('/account', 'JobSeeker\HomeController@account')->name('job-seeker.account');
     Route::get('/profile-manager', 'JobSeeker\ProfileController@index')->name('job-seeker.profile_manager');
     Route::get('/profile-attached', 'JobSeeker\ProfileController@profileAttached')->name('job-seeker.profile_attached');

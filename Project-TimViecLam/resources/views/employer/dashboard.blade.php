@@ -38,15 +38,15 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted font-weight-bold">Số lượng công ty</p>
+                                        <p class="text-muted font-weight-bold">VIỆC LÀM ĐÃ ĐĂNG</p>
                                         <h5 class="mb-0">
-                                            {{App\Models\Company::all()->count()}}
+                                            {{App\Models\Job::where('employer_id',Auth::guard('employer')->user()->id)->count()}}
                                         </h5>
                                     </div>
 
                                     <div class="mini-stat-icon avatar-sm rounded-circle bg-primary align-self-center">
                                         <span class="avatar-title">
-                                            <i class="bx bxs-store-alt font-size-24"></i>
+                                            <i class="fas fa-clone font-size-24"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -58,10 +58,9 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted font-weight-bold">Tài khoản</p>
+                                        <p class="text-muted font-weight-bold">HỒ SƠ ỨNG TUYỂN</p>
                                         <h5 class="mb-0">
-                                            <i class="fas fa-user-tie mr-2" title="Nhà tuyển dụng"></i>{{App\Employer::all()->count()}} |
-                                             <i class="fas fa-user mr-2" title="Người tìm việc"></i> {{App\JobSeeker::all()->count()}}
+                                            <i class="fas fa-user-tie mr-2" title="Nhà tuyển dụng"></i>{{DB::table('apply')->where('employer_id',Auth::guard('employer')->user()->id)->count()}}
                                         </h5>
                                     </div>
 
@@ -79,13 +78,13 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted font-weight-bold">Công việc</p>
-                                        <h5 class="mb-0">{{App\Models\Job::all()->count()}}</h5>
+                                        <p class="text-muted font-weight-bold">HỒ SƠ ĐÃ LƯU</p>
+                                        <h5 class="mb-0">0</h5>
                                     </div>
 
                                     <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
                                         <span class="avatar-title rounded-circle bg-primary">
-                                            <i class="fas fa-briefcase font-size-24"></i>
+                                            <i class="fas fa-address-card font-size-24"></i>
                                         </span>
                                     </div>
                                 </div>
@@ -97,13 +96,13 @@
                             <div class="card-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="text-muted font-weight-bold">Hồ sơ ứng viên</p>
+                                        <p class="text-muted font-weight-bold">LƯỢT XEM VIỆC LÀM</p>
                                         <h5 class="mb-0">{{App\JobSeeker::all()->count()}}</h5>
                                     </div>
 
                                     <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
                                         <span class="avatar-title rounded-circle bg-primary">
-                                            <i class="fas fa-id-card font-size-24"></i>
+                                            <i class="far fa-eye font-size-24"></i>
                                         </span>
                                     </div>
                                 </div>

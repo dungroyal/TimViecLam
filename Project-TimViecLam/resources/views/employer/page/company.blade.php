@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="personnel_size">Quy mô nhân sự</label>
-                                    <input id="personnel_size" value="{{ $info_company['personnel_size'] }}" type="text" class="form-control"
+                                    <input id="personnel_size" value="Dưới 10 người" type="text" class="form-control"
                                         disabled>
                                 </div>
                             </div>
@@ -117,10 +117,10 @@
                                             multiple 
                                             data-live-search="true" 
                                             data-size="5"
-                                            value="{{ $info_company['career'] }}"
+                                            {{-- value="{{ $info_company['career'] }}" --}}
                                             title="Chọn lĩnh vực hoạt động">
 
-                                            @foreach ($careers as $item)
+                                            @foreach (\App\Models\Career::all() as $item)
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                     </select>

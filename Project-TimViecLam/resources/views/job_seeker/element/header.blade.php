@@ -102,7 +102,7 @@
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name={{ Auth::guard('job_seeker')->user()->name}}" alt="{{ Auth::guard('job_seeker')->user()->name}}">
+                    <img class="rounded-circle header-profile-user" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&bold=true&name={{ Auth::guard('job_seeker')->user()->name}}" alt="TVL">
                     <span class="d-none d-xl-inline-block ml-1">{{ Auth::guard('job_seeker')->user()->name}}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

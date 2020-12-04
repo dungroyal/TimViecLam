@@ -42,9 +42,9 @@
                                       {{$jobSeekerById->phone}} </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">
+                          <a class="nav-link pr-5" href="#">
                                       <i class="fa fa-flag"></i>
-                                      {{$jobSeekerById->phone}} </a>
+                                      {{\App\Models\City::findOrFail($profile->work_location)->name}} </a>
                         </li>
                       </ul>
                     </div>
@@ -81,7 +81,7 @@
                             <h6 class="font-weight-bold">Mục tiêu nghề nghiệp</h6>
                             <div class="row">
                                 <div class="col-md-12">
-                                    {{$profile->career_goals}}
+                                    {{-- {{$profile->career_goals}} --}}
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,14 @@
                             <h6 class="font-weight-bold">Kinh nghiệm làm việc</h6>
                             <div class="row">
                                 <div class="col-md-12">
-                                    {{$profile->work_exp}}
+                                    {{-- {{$profile->work_exp}} --}}
+                                    Thực Tập Sinh
+                                    Công ty: Cty Thành Nhân Computer
+
+                                    Mô tả:
+                                    Thực tập tại các khoa huyết học, sinh hoá, vi sinh, phòng khám, truyền máu.
+                                    Thực hiện các công việc cơ bản ( lấy mẫu, xử lý mẫu, chạy các máy sinh hoá, miễn dịch, nước tiểu, điện giải đồ, nuôi cấy vi khuẩn, chạy công thức máu,...)
+                                    các công việc khác
                                 </div>
                             </div>
                         </div>
@@ -110,7 +117,11 @@
                             <h6 class="font-weight-bold">Kỹ năng</h6>
                             <div class="row">
                                 <div class="col-md-12">
-                                    {{$profile->describe_skill}}
+                                    {{-- {{$profile->describe_skill}} --}}
+                                    - Cẩn thận trong công việc
+                                    - Tham gia làm việc nhóm tốt
+                                    - Làm việc có trách nhiệm và hết mình trong công việc
+                                    - Kỹ năng tổ chức
                                 </div>
                             </div>
                         </div>
@@ -122,7 +133,9 @@
     </div>
     
     <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Đóng</button>
+      <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-sm btn-secondary mr-0" >In</button>
+        <button type="button" class="btn btn-sm btn-success" >Xác nhận</button>
         <button type="button" class="btn btn-sm btn-primary">Xem hồ sơ chi tiết</button>
     </div>
 </div>

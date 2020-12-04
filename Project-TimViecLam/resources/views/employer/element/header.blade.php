@@ -118,9 +118,11 @@
                         alt="{{$info_company['name_company']}}">
                     @else
                         <img class="rounded-circle header-profile-user"
-                        src="images/{{ $info_company["logo"] }}"
+                        src="/images/{{ $info_company["logo"] }}"
                         alt="{{ $info_company['name_company'] }}">
                     @endif
+
+                    
                     <span class="d-none d-xl-inline-block ml-1"> {{ $info_company['name_company'] }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

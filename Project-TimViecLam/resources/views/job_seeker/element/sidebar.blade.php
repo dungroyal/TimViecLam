@@ -22,7 +22,7 @@
                         <span>Quản lý việc làm</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">Việc làm đã ứng tuyển</a></li>
+                        <li><a href="{{ Route('listApplyJob')}}">Việc làm đã ứng tuyển</a></li>
                         <li><a href="#">Việc làm đã lưu</a></li>
                         <li><a href="#">Công việc phù hợp</a></li>
                     </ul>

@@ -78,7 +78,7 @@
                                         <select class="selectpicker form-control  @error('grade_id') is-invalid @enderror"  
                                             data-size="8" name="grade_id"
                                             title="Chọn cấp bậc">
-                                            @foreach ($grade as $item)
+                                            @foreach (\App\Models\Grade::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('grade_id')== $item->id ? "Selected" :""}}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -93,7 +93,7 @@
                                         <select class="selectpicker form-control @error('type_job_id') is-invalid @enderror" 
                                             name="type_job_id" data-size="8" 
                                             title="Chọn loại công việc">
-                                            @foreach ($type_job as $item)
+                                            @foreach (\App\Models\TypeJob::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('type_job_id')== $item->id ? "Selected" :""}}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -111,7 +111,7 @@
                                             name="salary_id" 
                                             data-size="8"
                                             value="" title="Chọn mức lương">
-                                            @foreach ($salary as $item)
+                                            @foreach (\App\Models\Salary::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('salary_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -129,7 +129,7 @@
                                             data-size="8" 
                                             value=""
                                             title="Chọn loại công việc">
-                                            @foreach ($careers as $item)
+                                            @foreach (\App\Models\Career::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('career_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -211,7 +211,7 @@
                                             name="experience_id" 
                                             data-size="5"
                                             title="Chọn cấp bậc">
-                                            @foreach ($experience as $item)
+                                            @foreach (\App\Models\Experience::all() as $item)
                                                 <option value="{{ $item->id }}"  {{ old('experience_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -227,7 +227,7 @@
                                             name="degree_id" data-size="5"
                                             value="{{ $info_company['city'] }}" 
                                             title="Chọn bằng cấp">
-                                            @foreach ($degree as $item)
+                                            @foreach (\App\Models\Degree::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('degree_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
