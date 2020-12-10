@@ -11,24 +11,24 @@
                     </a>
                 </li>
                 <li>
-                    <a data-pjax href="{{ Route('job-seeker.profile_manager') }}" class="waves-effect ">
+                    <a data-pjax href="{{ Route('job-seeker.profile_manager') }}" class="waves-effect">
                         <i class="bx bx-user-pin"></i>
                         <span>Quản lý hồ sơ</span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
                         <i class="bx bx-briefcase"></i>
                         <span>Quản lý việc làm</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ Route('listApplyJob')}}">Việc làm đã ứng tuyển</a></li>
                         <li><a href="#">Việc làm đã lưu</a></li>
-                        <li><a href="#">Công việc phù hợp</a></li>
+                        <li><a href="{{ Route('job-seeker.job-suitable')}}">Công việc phù hợp</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
                         <i class="bx bx-user"></i>
                         <span>Quản lý tài khoản</span>
                     </a>

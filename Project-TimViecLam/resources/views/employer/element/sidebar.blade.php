@@ -16,7 +16,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
                         <i class="bx bx-briefcase"></i>
                         <span>Tuyển dụng</span>
                     </a>
@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
                         <i class="bx bx-info-circle"></i>
                         <span>Thông tin công ty</span>
                     </a>

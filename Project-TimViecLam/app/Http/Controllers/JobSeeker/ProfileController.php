@@ -5,6 +5,9 @@ namespace App\Http\Controllers\JobSeeker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use App\JobSeeker;
+use App\Models\Profiles;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
@@ -23,27 +26,59 @@ class ProfileController extends Controller
         return view('job_seeker.page.profile.attached');
     }
 
-    public function complete_profile1()
+    public function complete_profile1(Request $request)
     {
+        if ($request->ajax()) {
+            $validator = Validator::make($request->all(), [
+                'name' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'birthday' => 'required',
+                'address' => 'required',
+                'city' => 'required',
+                'sex' => 'required',
+                'marriage' => 'required',
+            ]);
+
+            if($validator->passes()){
+                $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+                $profile = Profiles::findOrFail($JobSeeker->id);
+
+                $JobSeeker->name = $request->name;
+                $JobSeeker->email = $request->email;
+                $JobSeeker->phone = $request->phone;
+                $profile->birthday = $request->birthday;
+                $profile->address = $request->address;
+                $profile->work_location = $request->city;
+                $profile->gender = $request->sex;
+                $profile->marital_status = $request->marriage;
+            
+                $JobSeeker->save();
+                $profile->save();
+
+                return response()->json(['success'=>'Cập nhật thành công.']);
+            }
+            return response()->json(['error'=>$validator->errors()->all()]);
+        }
         return view('job_seeker.page.profile.information');
     }
     
-    public function complete_profile2()
+    public function complete_profile2(Request $request)
     {
         return view('job_seeker.page.profile.profile');
     }
 
-    public function complete_profile3()
+    public function complete_profile3(Request $request)
     {
         return view('job_seeker.page.profile.degree');
     }
 
-    public function complete_profile4()
+    public function complete_profile4(Request $request)
     {
         return view('job_seeker.page.profile.experience');
     }
 
-    public function complete_profile5()
+    public function complete_profile5(Request $request)
     {
         return view('job_seeker.page.profile.skill');
     }

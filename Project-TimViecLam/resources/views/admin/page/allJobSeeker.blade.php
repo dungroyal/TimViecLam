@@ -81,12 +81,8 @@
         $('#users-table').DataTable({
             "language": {"url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Vietnamese.json"},
             "processing": true,
-            "autoFill": true,
-            "retrieve": true,
             "serverSide": true,
-            "fixedColumns": true,
-            "responsive": true,
-            "lengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, 'Tất cả']],
+            "lengthMenu": [[8, 15, 25, 50, 100, -1], [8, 15, 25, 50, 100, 'Tất cả']],
             dom: 'lftiprB',
             buttons: [
                 { extend: 'excel', text: '<i class="fas fa-file-excel"></i> EXCEL'},

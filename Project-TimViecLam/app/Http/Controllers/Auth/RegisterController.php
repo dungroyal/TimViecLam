@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\JobSeeker;
+use Illuminate\Support\Facades\DB;
 
 class RegisterController extends Controller
 {
@@ -47,14 +48,15 @@ class RegisterController extends Controller
         ]);
     }
 
-    // protected function registered(Request $request, $user)
-    // {
-    //     dd($request->input('name'));
-    // }
+    protected function registered(Request $request, $user)
+    {
+        DB::table('profiles')->insert([
+            ['job_seeker_id' => $user->id]
+        ]);
+    }
 
     protected function guard()
     {
         return Auth::guard('job_seeker');
     }
-
 }

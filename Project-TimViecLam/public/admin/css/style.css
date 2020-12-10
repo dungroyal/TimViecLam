@@ -537,3 +537,7 @@
   .dt-buttons .btn-secondary span{
     color: rgb(100, 68, 68) !important;
 }
+
+.dataTables_length{
+    margin-bottom: -40px !important;
+}

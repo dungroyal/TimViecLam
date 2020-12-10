@@ -28,23 +28,9 @@
         @section('header') @show
         @section('sidebar') @show
         <div class="main-content">
-            {{-- <div id="preloader">
-                <div id="status">
-                    <div class="spinner-chase">
-                        <img src="{{ asset('favicon.ico') }}" id="preloader-logo__spinder" alt="Logo" height="30">
-                        <div class="chase-dot"></div>
-                        <div class="chase-dot"></div>
-                        <div class="chase-dot"></div>
-                        <div class="chase-dot"></div>
-                        <div class="chase-dot"></div>
-                    </div>
-                </div>
-            </div> --}}
-
         <div class="page-content">
             @yield('content')
         </div>
-
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">

@@ -291,19 +291,40 @@
     $('.search-icon-container').fadeOut();
     $(document).ready(function(){
         // Search
-        $("#txtKeyword").keyup(function() {
+        // $("#txtKeyword").keyup(function() {
+        //     $('.search-icon-container').fadeIn();
+        //     $txtKeyword = $("#txtKeyword").val();
+        //     $career = $("#career").val();
+        //     $city = $("#city").val();
+
+        //     if($txtKeyword.length >= 3){
+        //         autoSearch($txtKeyword,$career,$city)
+        //     }
+        //     if($txtKeyword.length <= 1){
+        //         allJob();
+        //     }
+        // });
+
+        $('#txtKeyword').bind('keyup', function() {
+            var timer,value;
+            clearTimeout(timer);
+
             $('.search-icon-container').fadeIn();
             $txtKeyword = $("#txtKeyword").val();
             $career = $("#career").val();
             $city = $("#city").val();
 
-            if($txtKeyword.length >= 3){
-                autoSearch($txtKeyword,$career,$city)
+            if ($txtKeyword.length >= 3 && value != $txtKeyword) {
+                timer = setTimeout(function() {
+                    value = $txtKeyword;
+                    autoSearch($txtKeyword,$career,$city);
+                }, 2000);
             }
-            if($txtKeyword.length <= 1){
-                allJob();
+            if($txtKeyword.length == 0){
+                console.log("AAAA");
             }
         });
+
 
         $("#formSearch").submit(function() {
             $txtKeyword = $("#txtKeyword").val();
@@ -313,7 +334,7 @@
             if($txtKeyword.length >= 3){
                 autoSearch($txtKeyword,$career,$city)
             }
-            if($txtKeyword.length <= 1){
+            if($txtKeyword.length == 0){
                 allJob();
             }
             return false;
@@ -384,6 +405,7 @@
         }
 
         function autoSearch(txtKeyword,career,city){
+            console.log('Ajax');
             $.ajax({
                 type: 'get',
                 dataType: 'html',

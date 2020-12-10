@@ -88,7 +88,7 @@
             "serverSide": true,
             "fixedColumns": true,
             "responsive": true,
-            "lengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, 'Tất cả']],
+            "lengthMenu": [[8, 15, 25, 50, 100, -1], [8, 15, 25, 50, 100, 'Tất cả']],
             dom: 'lftiprB',
             buttons: [
                 { extend: 'excel', text: '<i class="fas fa-file-excel"></i> EXCEL'},

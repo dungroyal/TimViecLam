@@ -63,4 +63,97 @@ class JobController extends Controller
                 ->make(true);
         }
     }
+
+    public function jobSuitable(Request $request)
+    {
+        if ($request->ajax()) {
+            $listJobSuitable = $this->listJobSuitable();
+            return Datatables::of($listJobSuitable)
+                ->addIndexColumn()
+                ->addColumn('infoJob', function($row){
+                    $nameCompany = DB::table('companies')->find($row->company_id)->name_company;
+                    $data = ' <div><a href="/job-detail/'.$row->id.'" target="_blank" class="datatable-name-job">'.$row->name_job.'</a> </br>
+                            <div class="datatable-name-company small">'.$nameCompany.'</div></div>';
+                    return $data;
+                })
+                ->addColumn('location', function($row){
+                    $location = DB::table('city')->find($row->city)->name;
+                    return $location;
+                })
+                ->addColumn('salary', function($row){
+                    $salary = DB::table('salary')->find($row->salary_id)->name;
+                    return $salary;
+                })
+                
+                ->addColumn('last_day', function($row){
+                    $Deadline = Carbon::parse($row->deadline);
+                    return $Deadline->format('d/m');
+                })
+                ->rawColumns(['infoJob','location','salary','last_day'])
+                ->make(true);
+        }
+        return view('job_seeker.page.jobSuitable');
+    }
+
+
+
+    public function listJobSuitable(){
+        $profiles = DB::table('profiles')->where('job_seeker_id', Auth::guard('job_seeker')->user()->id)->first();
+
+        $data = [];
+        
+        $jobsBasedOnCareer = Job::latest()
+                                ->where('career_id',$profiles->career_id)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobsBasedOnCareer);
+                           
+        $jobBasedOnLocation = Job::latest()
+                                ->where('city',$profiles->work_location)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobBasedOnLocation);
+
+        $jobBasedOnSalary = Job::latest()
+                                ->where('salary_id',$profiles->salary_id)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobBasedOnSalary);
+
+        $jobBasedOnTypeJob = Job::latest()
+                                ->where('type_job_id',$profiles->type_job_id)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobBasedOnTypeJob);
+
+        $jobBasedOnGrade = Job::latest()
+                                ->where('grade_id',$profiles->grade_id)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobBasedOnGrade);
+        
+        $jobBasedOnDegree = Job::latest()
+                                ->where('degree_id',$profiles->degree_id)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobBasedOnDegree);
+
+        $jobBasedOnExperience = Job::latest()
+                                ->where('experience_id',$profiles->experience_id)
+                                ->whereDate('deadline','>',date('Y-m-d'))
+                                ->where('status','<>',0)
+                                ->get();
+        array_push($data,$jobBasedOnExperience);
+
+       $collection  = collect($data);
+       $unique = $collection->unique("id");
+       $jobRecommendations =  $unique->values()->first();
+       return $jobRecommendations;
+    }
 }

@@ -24,13 +24,15 @@ Route::get('/company/{id}', 'HomeController@company')->name('company');
 
 Route::prefix('job-seeker')->group(function() {
     Route::get('/', 'JobSeeker\HomeController@index')->name('job-seeker.dashboard');
+    Route::get('/job-suitable','JobSeeker\JobController@jobSuitable')->name('job-seeker.job-suitable');
     Route::post('/applications/{id}','JobSeeker\JobController@applyJob')->name('applyJob');
     Route::get('/list-apply-job','JobSeeker\JobController@listApplyJob')->name('listApplyJob');
     Route::get('/list-apply-job-data','JobSeeker\JobController@listApplyJobData')->name('listApplyJobData');
     Route::get('/account', 'JobSeeker\HomeController@account')->name('job-seeker.account');
     Route::get('/profile-manager', 'JobSeeker\ProfileController@index')->name('job-seeker.profile_manager');
     Route::get('/profile-attached', 'JobSeeker\ProfileController@profileAttached')->name('job-seeker.profile_attached');
-    Route::get('/complete-profile/step/1', 'JobSeeker\ProfileController@complete_profile1')->name('job-seeker.profile.step1');
+    Route::match(['get', 'post'],'/complete-profile/step/1', 'JobSeeker\ProfileController@complete_profile1')->name('job-seeker.profile.step1');
+    // Route::get('/complete-profile/step/1', 'JobSeeker\ProfileController@complete_profile1')->name('job-seeker.profile.step1');
     Route::get('/complete-profile/step/2', 'JobSeeker\ProfileController@complete_profile2')->name('job-seeker.profile.step2');
     Route::get('/complete-profile/step/3', 'JobSeeker\ProfileController@complete_profile3')->name('job-seeker.profile.step3');
     Route::get('/complete-profile/step/4', 'JobSeeker\ProfileController@complete_profile4')->name('job-seeker.profile.step4');

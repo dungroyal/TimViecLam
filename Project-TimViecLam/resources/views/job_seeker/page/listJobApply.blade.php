@@ -29,7 +29,6 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                <h4 class="card-title">Tất cả hồ sơ ứng tuyển mới!</h4>
                 <table class="table table-bordered" id="all-profile-apply">
                     <thead>
                         <tr>
@@ -72,7 +71,7 @@
             "serverSide": true,
             "fixedColumns": true,
             "responsive": true,
-            "lengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, 'Tất cả']],
+            "lengthMenu": [[8, 15, 25, 50, 100, -1], [8, 15, 25, 50, 100, 'Tất cả']],
             dom: 'lftiprB',
             buttons: [
                 { extend: 'excel', text: '<i class="fas fa-file-excel"></i> EXCEL'},
