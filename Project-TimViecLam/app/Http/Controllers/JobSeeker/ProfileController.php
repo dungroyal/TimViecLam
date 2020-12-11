@@ -28,6 +28,8 @@ class ProfileController extends Controller
 
     public function complete_profile1(Request $request)
     {
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::findOrFail($JobSeeker->id);
         if ($request->ajax()) {
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
@@ -41,31 +43,61 @@ class ProfileController extends Controller
             ]);
 
             if($validator->passes()){
-                $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
-                $profile = Profiles::findOrFail($JobSeeker->id);
-
                 $JobSeeker->name = $request->name;
                 $JobSeeker->email = $request->email;
                 $JobSeeker->phone = $request->phone;
-                $profile->birthday = $request->birthday;
-                $profile->address = $request->address;
-                $profile->work_location = $request->city;
-                $profile->gender = $request->sex;
-                $profile->marital_status = $request->marriage;
+                $Profile->birthday = $request->birthday;
+                $Profile->address = $request->address;
+                $Profile->work_location = $request->city;
+                $Profile->gender = $request->sex;
+                $Profile->marital_status = $request->marriage;
             
                 $JobSeeker->save();
-                $profile->save();
+                $Profile->save();
 
                 return response()->json(['success'=>'Cập nhật thành công.']);
             }
             return response()->json(['error'=>$validator->errors()->all()]);
         }
-        return view('job_seeker.page.profile.information');
+        return view('job_seeker.page.profile.information',compact('Profile','JobSeeker'));
     }
     
     public function complete_profile2(Request $request)
     {
-        return view('job_seeker.page.profile.profile');
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::findOrFail($JobSeeker->id);
+
+        if ($request->ajax()) {
+            $validator = Validator::make($request->all(), [
+                'position' => 'required',
+                'degree_id' => 'required',
+                'experience_id' => 'required',
+                'work_location' => 'required',
+                'career_id' => 'required',
+                'type_job_id' => 'required',
+                'grade_id' => 'required',
+                'salary_id' => 'required',
+                'career_description' => 'required'
+            ]);
+
+            if($validator->passes()){
+                $Profile->position = $request->position;
+                $Profile->degree_id = $request->degree_id;
+                $Profile->experience_id = $request->experience_id;
+                $Profile->work_location = $request->work_location;
+                $Profile->career_id = $request->career_id;
+                $Profile->type_job_id = $request->type_job_id;
+                $Profile->grade_id = $request->grade_id;
+                $Profile->salary_id = $request->salary_id;
+                $Profile->career_description = $request->career_description;
+                $Profile->career_goals ="Mong muốn tìm được nơi có cơ hội cống hiến bản thân tốt";
+                $Profile->save();
+
+                return response()->json(['success'=>'Cập nhật thành công.']);
+            }
+            return response()->json(['error'=>$validator->errors()->all()]);
+        }
+        return view('job_seeker.page.profile.profile',compact('Profile'));
     }
 
     public function complete_profile3(Request $request)
@@ -83,49 +115,21 @@ class ProfileController extends Controller
         return view('job_seeker.page.profile.skill');
     }
 
+    public function uploadAvatars(Request $request){
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        request()->validate([
+        'avatar' => 'required',
+        'avatar.*' => 'mimes:doc,docx,pdf,txt,jpeg,png,jpg,gif,svg'
+       ]);
+            $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+            $Profile = Profiles::findOrFail($JobSeeker->id);
+            if($request->hasFile('avatar')){    
+                $file = $request->file('avatar');
+                $path = $file->store('uploads','public');
+                $Profile->avatar = $path;
+                $Profile->save();
+                return response()->json(['success'=>'Upload avatar success.']);
+            }
+            return response()->json(['error'=>'Can not Upload avatars']);
     }
 }

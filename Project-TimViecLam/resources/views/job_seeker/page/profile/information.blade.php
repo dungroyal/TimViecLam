@@ -34,10 +34,6 @@
                     <h4 class="card-title">Thông tin cá nhân</h4>
                         <div class="print-error-msg alert alert-warning alert-dismissible fade show" style="display:none" role="alert">
                             <div>
-                                <span>
-                                    <i class="fas fa-exclamation-circle mr-2"></i>
-                                    A simple warning alert—check it out!
-                                </span><br>
                             </div>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -48,24 +44,20 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Họ tên</label>
-                                        <input type="text" name="name" id="name" class="form-control">
+                                        <input type="text" name="name" value="{{$JobSeeker->name}}" id="name" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Địa chỉ email</label>
-                                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror">
-                                        @error('address')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
+                                        <input type="email" value="{{$JobSeeker->email}}" name="email" class="form-control">
+                                      
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="formrow-password-input">Số điện thoại</label>
-                                        <input type="text" name="phone" class="form-control">
+                                        <input type="text" value="{{$JobSeeker->phone}}" name="phone" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -73,19 +65,19 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Ngày sinh</label>
-                                        <input type="date" name="birthday" class="form-control">
+                                        <input type="date" value="{{$Profile->birthday}}" name="birthday" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
-                                        <input type="text" name="address" class="form-control">
+                                        <input type="text" value="{{$Profile->address}}" name="address" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Tỉnh/thành phố</label>
-                                        <select class="selectpicker form-control  @error('city') is-invalid @enderror" 
+                                        <select class="selectpicker selectpicker_city form-control" 
                                             name="city"
                                             data-live-search="true" 
                                             data-size="5" 
@@ -144,10 +136,11 @@
 @push('scripts')
     <script>
         $(document).ready(function(){
+            $('.selectpicker_city').selectpicker('val', '<?=$Profile->work_location?>');
+            $('input:radio[name="marriage"]').filter('[value="<?=$Profile->marital_status?>"]').attr('checked', true);
+            $('input:radio[name="sex"]').filter('[value="<?=$Profile->gender?>"]').attr('checked', true);
             $("#form-complete_profile1").on("submit", function(e){
-                e.preventDefault();
-                console.log($('#form-complete_profile1').serialize());
-                
+                e.preventDefault();                
                 $(".btn-submit-info").html('Cập nhật <i class="fas fa-spinner text-white fa-spin ml-2"></i>');
                 $.ajax({
                     headers: {

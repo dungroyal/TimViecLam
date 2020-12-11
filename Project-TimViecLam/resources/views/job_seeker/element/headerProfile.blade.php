@@ -13,7 +13,7 @@
                                     <a href="{{ Route('job-seeker.profile.step1') }}">
                                         <div class="wizard-icon-circle md checked border-color">
                                             <div class="wizard-icon-container">
-                                                <svg width="100%" height="auto" viewBox="0 0 16 16"
+                                                <svg width="100%" viewBox="0 0 16 16"
                                                     class="bi bi-person-fill p-3" fill="currentColor"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd"
@@ -29,7 +29,7 @@
                                     <a href="{{ Route('job-seeker.profile.step2') }}">
                                         <div class="wizard-icon-circle md checked border-color">
                                             <div class="wizard-icon-container">
-                                                <svg width="100%" height="auto" viewBox="0 0 16 16"
+                                                <svg width="100%" viewBox="0 0 16 16"
                                                     class="bi bi-info p-2" fill="currentColor"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -46,7 +46,7 @@
                                     <a href="{{ Route('job-seeker.profile.step3') }}">
                                         <div class="wizard-icon-circle md checked border-color">
                                             <div class="wizard-icon-container">
-                                                <svg width="100%" height="auto" viewBox="0 0 16 16"
+                                                <svg width="100%" viewBox="0 0 16 16"
                                                     class="bi bi-book-half p-3" fill="currentColor"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd"
@@ -62,7 +62,7 @@
                                     <a href="{{ Route('job-seeker.profile.step4') }}">
                                         <div class="wizard-icon-circle md checked border-color">
                                             <div class="wizard-icon-container">
-                                                <svg width="100%" height="auto" viewBox="0 0 16 16"
+                                                <svg width="100%" viewBox="0 0 16 16"
                                                     class="bi bi-building p-3" fill="currentColor"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd"
@@ -79,7 +79,7 @@
                                     <a href="{{ Route('job-seeker.profile.step5') }}">
                                         <div class="wizard-icon-circle md checked border-color">
                                             <div class="wizard-icon-container">
-                                                <svg width="100%" height="auto" viewBox="0 0 16 16"
+                                                <svg width="100%" viewBox="0 0 16 16"
                                                     class="bi bi-tools p-3" fill="currentColor"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd"
