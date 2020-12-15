@@ -135,7 +135,6 @@
 $("#imageUpload").change(function () {
     readURL(this);
 });
-
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -160,3 +159,4 @@ const Toast = Swal.mixin({
         toast.addEventListener('mouseleave', Swal.resumeTimer)
     }
 });
+

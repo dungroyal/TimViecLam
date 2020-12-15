@@ -22,7 +22,6 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Thông tin cá nhân</p>
-                                        <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
                                     </a>
                                 </li>
                                 <li @if(Route::current()->getName() == 'job-seeker.profile.step2') class="step-active" @endif >
@@ -39,7 +38,6 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Thông tin hồ sơ</p>
-                                        <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
                                     </a>
                                 </li>
                                 <li @if(Route::current()->getName() == 'job-seeker.profile.step3') class="step-active" @endif >
@@ -55,7 +53,9 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Học vấn bằng cấp</p>
-                                        <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
+                                        @if (DB::table('degree_details')->where('id_profile',$JobSeeker->id)->count() == 0)
+                                            <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
+                                        @endif
                                     </a>
                                 </li>
                                 <li  @if(Route::current()->getName() == 'job-seeker.profile.step4') class="step-active" @endif >
@@ -73,6 +73,9 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Kinh nghiệm</p>
+                                        @if (DB::table('experience_detail')->where('id_profile',$JobSeeker->id)->count() == 0)
+                                            <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
+                                        @endif
                                     </a>
                                 </li>
                                 <li @if(Route::current()->getName() == 'job-seeker.profile.step5') class="step-active" @endif >
@@ -90,14 +93,27 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Kỹ năng</p>
-                                        <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
+                                        @if (DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->count() == 0)
+                                            <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
+                                        @endif
                                     </a>
                                 </li>
                             </ul>
                             <div class="col-2 float-left text-right mt-3">
-                                <button type="button" class="button_public">
+                                @if (
+                                    DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->count() == 0 ||
+                                    DB::table('experience_detail')->where('id_profile',$JobSeeker->id)->count() == 0 ||
+                                    DB::table('degree_details')->where('id_profile',$JobSeeker->id)->count() == 0
+                                )
+                                    <a href="#" class="button_public no-copys" style="pointer-events: none;">
+                                        <span> ĐĂNG HỒ SƠ </span>
+                                    </a>
+                                @else
+                                <a href="{{ Route('job-seeker.profile.public')}}" class="button_public no-copys">
                                     <span> ĐĂNG HỒ SƠ </span>
-                                </button>
+                                </a>
+                                @endif
+                                
                             </div>
                         </div>
                     </div>

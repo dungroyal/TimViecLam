@@ -36,6 +36,7 @@ Route::prefix('job-seeker')->group(function() {
     Route::match(['get', 'post'],'/complete-profile/step/3', 'JobSeeker\ProfileController@complete_profile3')->name('job-seeker.profile.step3');
     Route::match(['get', 'post'],'/complete-profile/step/4', 'JobSeeker\ProfileController@complete_profile4')->name('job-seeker.profile.step4');
     Route::match(['get', 'post'],'/complete-profile/step/5', 'JobSeeker\ProfileController@complete_profile5')->name('job-seeker.profile.step5');
+    Route::get('/complete-profile/public', 'JobSeeker\ProfileController@complete_profile_public')->name('job-seeker.profile.public');
     Route::post('/complete-profile/uploadAvatar', 'JobSeeker\ProfileController@uploadAvatars')->name('job-seeker.profile.uploadAvatars');
 });
 

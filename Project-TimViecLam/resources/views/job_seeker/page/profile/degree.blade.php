@@ -87,7 +87,7 @@
                                   <div class="row">
                                       <div class="col-md-6">
                                         <select class="custom-select" name="month_start">
-                                            <option value="0" selected>Tháng kết thúc</option>
+                                            <option value="0" selected>Tháng bắc đầu</option>
                                             @for ($i = 1; $i <= 12; $i++)
                                                 <option value="{{$i}}">Tháng {{$i}}</option>
                                             @endfor
@@ -95,7 +95,7 @@
                                       </div>
                                       <div class="col-md-6">
                                         <select class="custom-select" name="year_start">
-                                            <option value="0" selected>Năm kết thúc</option>
+                                            <option value="0" selected>Năm bắc đầu</option>
                                             @for ($i = 2000; $i <= 2020; $i++)
                                                 <option value="{{$i}}">Năm {{$i}}</option>
                                             @endfor

@@ -98,7 +98,7 @@ class ProfileController extends Controller
             }
             return response()->json(['error'=>$validator->errors()->all()]);
         }
-        return view('job_seeker.page.profile.profile',compact('Profile'));
+        return view('job_seeker.page.profile.profile',compact('Profile','JobSeeker'));
     }
 
     public function complete_profile3(Request $request)
@@ -141,14 +141,76 @@ class ProfileController extends Controller
 
     public function complete_profile4(Request $request)
     {
-        return view('job_seeker.page.profile.experience');
+        $method = $request->method();
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        if ($request->isMethod('post')){
+            $validator = Validator::make($request->all(), [
+                'position' => 'required',
+                'company' => 'required',
+                'month_start' => 'required',
+                'year_start' => 'required',
+                'month_end' => 'required',
+                'year_end' => 'required'
+            ]);
+            DB::table('experience_detail')->insert([
+                'id_profile' => $JobSeeker->id,
+                'position' => $request->position,
+                'company' => $request->company,
+                'month_start' => $request->month_start,
+                'year_start' => $request->year_start,
+                'month_end' => $request->month_end,
+                'year_end' => $request->year_end,
+                'status' => 1,
+            ]);
+            if ($request->ajax()) {
+                return view('job_seeker.element.item_experience.blade',compact('request'));
+            }
+            return view('job_seeker.page.profile.experience',compact('JobSeeker'));
+        }
+        return view('job_seeker.page.profile.experience',compact('JobSeeker'));
     }
 
     public function complete_profile5(Request $request)
     {
-        return view('job_seeker.page.profile.skill');
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::findOrFail($JobSeeker->id);
+
+        if ($request->ajax()) {
+            $validator = Validator::make($request->all(), [
+                'professional_skills' => 'required',
+                'other_skill' => 'required'
+            ]);
+
+            if($validator->passes()){
+                if(DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->count() == 0){
+                    DB::table('skill_detail')->insert([
+                        'id_profile' => $JobSeeker->id,
+                        'professional_skills' => $request->professional_skills,
+                        'other_skill' => $request->other_skill
+                    ]);
+                }else{
+                    DB::table('skill_detail')
+                    ->where('id_profile',$JobSeeker->id)
+                    ->update([
+                        'professional_skills' => $request->professional_skills,
+                        'other_skill' => $request->other_skill
+                    ]);
+                }                
+                return response()->json(['success'=>'Cập nhật thành công.']);
+            }
+            return response()->json(['error'=>$validator->errors()->all()]);
+        }
+        return view('job_seeker.page.profile.skill',compact('JobSeeker'));
     }
 
+    public function complete_profile_public(Request $request)
+    {
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::findOrFail($JobSeeker->id);
+        $Profile->status =2;
+        $Profile->save();
+        return redirect()->route('job-seeker.profile_manager');
+    }
     public function uploadAvatars(Request $request){
 
         request()->validate([
