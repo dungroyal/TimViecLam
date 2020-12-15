@@ -31,7 +31,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                        <h4 class="card-title">Thông hồ sơ</h4>
+                        <h4 class="card-title">Thông tin hồ sơ</h4>
                         <div class="print-error-msg alert alert-warning alert-dismissible fade show" style="display:none" role="alert">
                             <div>
                             </div>
@@ -48,7 +48,12 @@
                                             </div>
                                             <div class="avatar-preview-jsk">
                                                 <label for="imageUpload" class="imageUpload"> <i class="bx bxs-cloud-upload"></i></label>
-                                                <div id="imagePreview" style="background-image: url('https://ui-avatars.com/api/?size=250&bold=true&background=0091cf&color=fffff&name=DoanQuocDung');"></div>
+                                                @if ($Profile->avatar != null)
+                                                    <div id="imagePreview" style="background-image: url('{{asset('/')}}{{$Profile->avatar}}');" ></div>
+                                                @else
+                                                    <div id="imagePreview" style="background-image: url('{{asset('/images/logo/timvieclam-placeholder.png')}}');" ></div>
+                                                @endif
+                                                
                                             </div>
                                         </div>
                                     </form>
@@ -204,6 +209,10 @@
                             setTimeout(function() {
                                 $(".print-error-msg").css('display','none');
                                 $(".btn-submit-profile").html('Cập nhật <i class="far fa-check-circle ml-2"></i>');
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: 'Cập nhật thông tin hồ sơ thành công!'
+                                });
                             }, 500);
                         }else{
                             printErrorMsg(res.error);
@@ -249,8 +258,10 @@
                     contentType: false,
                     processData: false,
                     success:function(res){
-                        console.log(res);
-                        
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Thay đổi ảnh đại diện thành công!'
+                        });
                     }, 
                     error: function(e){
                         console.log(e);

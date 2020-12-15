@@ -154,6 +154,10 @@
                             setTimeout(function() {
                                 $(".print-error-msg").css('display','none');
                                 $(".btn-submit-info").html('Cập nhật <i class="far fa-check-circle ml-2"></i>');
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: 'Cập nhật thông tin cá nhân thành công!'
+                                });
                             }, 500);
                         }else{
                             printErrorMsg(res.error);

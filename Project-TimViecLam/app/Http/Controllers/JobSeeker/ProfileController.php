@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\JobSeeker;
 use App\Models\Profiles;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
@@ -102,7 +103,40 @@ class ProfileController extends Controller
 
     public function complete_profile3(Request $request)
     {
-        return view('job_seeker.page.profile.degree');
+        $method = $request->method();
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        if ($request->isMethod('post')){
+            $validator = Validator::make($request->all(), [
+                'university' => 'required',
+                'faculty' => 'required',
+                'certificate' => 'required',
+                'major' => 'required',
+                'ranked' => 'required',
+                'month_start' => 'required',
+                'year_start' => 'required',
+                'graduation_year' => 'required',
+                'graduation_month' => 'required'
+            ]);
+            DB::table('degree_details')->insert([
+                'id_profile' => $JobSeeker->id,
+                'university' => $request->university,
+                'faculty' => $request->faculty,
+                'certificate' => $request->certificate,
+                'major' => $request->major,
+                'ranked' => $request->ranked,
+                'detail' => $request->detail,
+                'month_start' => $request->month_start,
+                'year_start' => $request->year_start,
+                'graduation_month' => $request->graduation_month,
+                'graduation_year' => $request->graduation_year,
+                'status' => 1,
+            ]);
+            if ($request->ajax()) {
+                return view('job_seeker.element.item_degree',compact('request'));
+            }
+            return view('job_seeker.page.profile.degree',compact('JobSeeker'));
+        }
+        return view('job_seeker.page.profile.degree',compact('JobSeeker'));
     }
 
     public function complete_profile4(Request $request)
