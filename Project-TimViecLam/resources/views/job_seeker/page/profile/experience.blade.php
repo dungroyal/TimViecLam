@@ -27,7 +27,7 @@
         </div>
         
         @include('job_seeker.element.headerProfile')
-        @if (DB::table('experience_detail')->where('id_profile', $JobSeeker->id)->count() == 0)
+        @if (DB::table('experience_detail')->where('id_profile', $Profile->id)->count() == 0)
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -127,7 +127,7 @@
                 <div class="card-body">
                 <h4 class="card-title">Kinh nghiệm làm việc</h4>
                 <hr>
-                @foreach (DB::table('experience_detail')->where('id_profile', $JobSeeker->id)->orderBy('year_end', 'asc')->get() as $experience)
+                @foreach (DB::table('experience_detail')->where('id_profile', $Profile->id)->orderBy('year_end', 'asc')->get() as $experience)
                 <div class="list-profile-item row mx-1  mb-3">
                     <div class="float-left">
                         <svg width="3rem" height="3rem" viewBox="0 0 16 16"

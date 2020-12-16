@@ -549,3 +549,20 @@
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */     
   }
+
+.button_public__disable{
+    background-color: #93d8f6;
+}
+
+.button_public:hover{
+    color: white;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+.swal2-icon{
+    font-size:15px !important;
+}

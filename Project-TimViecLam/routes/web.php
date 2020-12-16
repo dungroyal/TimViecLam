@@ -30,10 +30,12 @@ Route::prefix('job-seeker')->group(function() {
     Route::get('/list-apply-job-data','JobSeeker\JobController@listApplyJobData')->name('listApplyJobData');
     Route::get('/account', 'JobSeeker\HomeController@account')->name('job-seeker.account');
     Route::get('/profile-manager', 'JobSeeker\ProfileController@index')->name('job-seeker.profile_manager');
+    Route::post('/getProfileById', 'JobSeeker\ProfileController@getProfileById')->name('job-seeker.getProfileById');
     Route::get('/profile-attached', 'JobSeeker\ProfileController@profileAttached')->name('job-seeker.profile_attached');
     Route::match(['get', 'post'],'/complete-profile/step/1', 'JobSeeker\ProfileController@complete_profile1')->name('job-seeker.profile.step1');
     Route::match(['get', 'post'],'/complete-profile/step/2', 'JobSeeker\ProfileController@complete_profile2')->name('job-seeker.profile.step2');
     Route::match(['get', 'post'],'/complete-profile/step/3', 'JobSeeker\ProfileController@complete_profile3')->name('job-seeker.profile.step3');
+    Route::match(['get', 'post'],'/complete-profile/step/3/delete', 'JobSeeker\ProfileController@complete_profile3_delete')->name('job-seeker.profile.step3.delete');
     Route::match(['get', 'post'],'/complete-profile/step/4', 'JobSeeker\ProfileController@complete_profile4')->name('job-seeker.profile.step4');
     Route::match(['get', 'post'],'/complete-profile/step/5', 'JobSeeker\ProfileController@complete_profile5')->name('job-seeker.profile.step5');
     Route::get('/complete-profile/public', 'JobSeeker\ProfileController@complete_profile_public')->name('job-seeker.profile.public');

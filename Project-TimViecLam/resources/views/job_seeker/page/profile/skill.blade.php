@@ -45,7 +45,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Kỹ năng chuyên môn</label>
-                                    <?php $skill = DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->first() ?>
+                                    <?php $skill = DB::table('skill_detail')->where('id_profile',$Profile->id)->first() ?>
                                     <textarea 
                                     class="form-control" 
                                     id="professional_skills" 
@@ -163,7 +163,10 @@
                                     icon: 'success',
                                     title: 'Cập nhật kỹ năng thành công!'
                                 });
-                            }, 500);
+                            }, 100);
+                            setTimeout(function() {
+                                location.reload();
+                            }, 1000);
                         }else{
                             printErrorMsg(res.error);
                             $(".btn-submit-profile_add").append('Cập nhật <i class="far fa-times-circle ml-2"></i>');

@@ -53,7 +53,7 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Học vấn bằng cấp</p>
-                                        @if (DB::table('degree_details')->where('id_profile',$JobSeeker->id)->count() == 0)
+                                        @if (DB::table('degree_details')->where('id_profile',$Profile->id)->count() == 0)
                                             <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
                                         @endif
                                     </a>
@@ -73,7 +73,7 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Kinh nghiệm</p>
-                                        @if (DB::table('experience_detail')->where('id_profile',$JobSeeker->id)->count() == 0)
+                                        @if (DB::table('experience_detail')->where('id_profile',$Profile->id)->count() == 0)
                                             <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
                                         @endif
                                     </a>
@@ -93,7 +93,7 @@
                                             </div>
                                         </div>
                                         <p class="stepTitle mb-0 pb-0">Kỹ năng</p>
-                                        @if (DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->count() == 0)
+                                        @if (DB::table('skill_detail')->where('id_profile',$Profile->id)->count() == 0)
                                             <span class="m-0 p-0 text-danger small">(Chưa hoàn thiện)</span>
                                         @endif
                                     </a>
@@ -101,11 +101,11 @@
                             </ul>
                             <div class="col-2 float-left text-right mt-3">
                                 @if (
-                                    DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->count() == 0 ||
-                                    DB::table('experience_detail')->where('id_profile',$JobSeeker->id)->count() == 0 ||
-                                    DB::table('degree_details')->where('id_profile',$JobSeeker->id)->count() == 0
+                                    DB::table('skill_detail')->where('id_profile',$Profile->id)->count() == 0 ||
+                                    DB::table('experience_detail')->where('id_profile',$Profile->id)->count() == 0 ||
+                                    DB::table('degree_details')->where('id_profile',$Profile->id)->count() == 0
                                 )
-                                    <a href="#" class="button_public no-copys" style="pointer-events: none;">
+                                    <a href="#" class="button_public no-copys button_public__disable" style="pointer-events: none;">
                                         <span> ĐĂNG HỒ SƠ </span>
                                     </a>
                                 @else

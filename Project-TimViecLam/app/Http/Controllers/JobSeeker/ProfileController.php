@@ -27,10 +27,16 @@ class ProfileController extends Controller
         return view('job_seeker.page.profile.attached');
     }
 
+    public function getProfileById(Request $request){
+        $DegreeDetails = DB::table('degree_details')->where('id',$request->idDegree)->first();
+        return response()->json(['degree_details'=>$DegreeDetails]);
+    }
+
     public function complete_profile1(Request $request)
     {
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
-        $Profile = Profiles::findOrFail($JobSeeker->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
+
         if ($request->ajax()) {
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
@@ -66,7 +72,7 @@ class ProfileController extends Controller
     public function complete_profile2(Request $request)
     {
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
-        $Profile = Profiles::findOrFail($JobSeeker->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
 
         if ($request->ajax()) {
             $validator = Validator::make($request->all(), [
@@ -105,8 +111,10 @@ class ProfileController extends Controller
     {
         $method = $request->method();
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
         if ($request->isMethod('post')){
             $validator = Validator::make($request->all(), [
+                'idDegree'=> 'required',
                 'university' => 'required',
                 'faculty' => 'required',
                 'certificate' => 'required',
@@ -117,32 +125,61 @@ class ProfileController extends Controller
                 'graduation_year' => 'required',
                 'graduation_month' => 'required'
             ]);
-            DB::table('degree_details')->insert([
-                'id_profile' => $JobSeeker->id,
-                'university' => $request->university,
-                'faculty' => $request->faculty,
-                'certificate' => $request->certificate,
-                'major' => $request->major,
-                'ranked' => $request->ranked,
-                'detail' => $request->detail,
-                'month_start' => $request->month_start,
-                'year_start' => $request->year_start,
-                'graduation_month' => $request->graduation_month,
-                'graduation_year' => $request->graduation_year,
-                'status' => 1,
-            ]);
-            if ($request->ajax()) {
-                return view('job_seeker.element.item_degree',compact('request'));
+            if($validator->passes()){
+                if($request->idDegree == 0){
+                    DB::table('degree_details')->insert([
+                        'id_profile' => $Profile->id,
+                        'university' => $request->university,
+                        'faculty' => $request->faculty,
+                        'certificate' => $request->certificate,
+                        'major' => $request->major,
+                        'ranked' => $request->ranked,
+                        'detail' => $request->detail,
+                        'month_start' => $request->month_start,
+                        'year_start' => $request->year_start,
+                        'graduation_month' => $request->graduation_month,
+                        'graduation_year' => $request->graduation_year,
+                        'status' => 1,
+                    ]);
+                    return view('job_seeker.element.item_degree',compact('request'));
+                }else{
+                    $idDegree = $request->idDegree;
+                    DB::table('degree_details')
+                        ->where('id',$idDegree)
+                        ->update([
+                            'university' => $request->university,
+                            'faculty' => $request->faculty,
+                            'certificate' => $request->certificate,
+                            'major' => $request->major,
+                            'ranked' => $request->ranked,
+                            'detail' => $request->detail,
+                            'month_start' => $request->month_start,
+                            'year_start' => $request->year_start,
+                            'graduation_month' => $request->graduation_month,
+                            'graduation_year' => $request->graduation_year
+                        ]);
+                    return view('job_seeker.element.item_degree',compact('request','idDegree'));
+                }
             }
-            return view('job_seeker.page.profile.degree',compact('JobSeeker'));
+            return view('job_seeker.page.profile.degree',compact('JobSeeker','Profile'));
         }
-        return view('job_seeker.page.profile.degree',compact('JobSeeker'));
+        return view('job_seeker.page.profile.degree',compact('JobSeeker','Profile'));
+    }
+    
+    public function complete_profile3_delete(Request $request){
+        if ($request->ajax()) {
+            DB::table('degree_details')->delete($request->idDegree);
+
+            return response()->json(['success'=>'Xóa thành công.']);
+        }
+        return response()->json(['error'=>'Xóa không thành công.']);
     }
 
     public function complete_profile4(Request $request)
     {
         $method = $request->method();
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
         if ($request->isMethod('post')){
             $validator = Validator::make($request->all(), [
                 'position' => 'required',
@@ -153,7 +190,7 @@ class ProfileController extends Controller
                 'year_end' => 'required'
             ]);
             DB::table('experience_detail')->insert([
-                'id_profile' => $JobSeeker->id,
+                'id_profile' => $Profile->id,
                 'position' => $request->position,
                 'company' => $request->company,
                 'month_start' => $request->month_start,
@@ -165,15 +202,15 @@ class ProfileController extends Controller
             if ($request->ajax()) {
                 return view('job_seeker.element.item_experience.blade',compact('request'));
             }
-            return view('job_seeker.page.profile.experience',compact('JobSeeker'));
+            return view('job_seeker.page.profile.experience',compact('JobSeeker','Profile'));
         }
-        return view('job_seeker.page.profile.experience',compact('JobSeeker'));
+        return view('job_seeker.page.profile.experience',compact('JobSeeker','Profile'));
     }
 
     public function complete_profile5(Request $request)
     {
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
-        $Profile = Profiles::findOrFail($JobSeeker->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
 
         if ($request->ajax()) {
             $validator = Validator::make($request->all(), [
@@ -184,13 +221,13 @@ class ProfileController extends Controller
             if($validator->passes()){
                 if(DB::table('skill_detail')->where('id_profile',$JobSeeker->id)->count() == 0){
                     DB::table('skill_detail')->insert([
-                        'id_profile' => $JobSeeker->id,
+                        'id_profile' => $Profile->id,
                         'professional_skills' => $request->professional_skills,
                         'other_skill' => $request->other_skill
                     ]);
                 }else{
                     DB::table('skill_detail')
-                    ->where('id_profile',$JobSeeker->id)
+                    ->where('id_profile',$Profile->id)
                     ->update([
                         'professional_skills' => $request->professional_skills,
                         'other_skill' => $request->other_skill
@@ -200,25 +237,26 @@ class ProfileController extends Controller
             }
             return response()->json(['error'=>$validator->errors()->all()]);
         }
-        return view('job_seeker.page.profile.skill',compact('JobSeeker'));
+        return view('job_seeker.page.profile.skill',compact('JobSeeker','Profile'));
     }
 
     public function complete_profile_public(Request $request)
     {
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
-        $Profile = Profiles::findOrFail($JobSeeker->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
         $Profile->status =2;
         $Profile->save();
         return redirect()->route('job-seeker.profile_manager');
     }
+
     public function uploadAvatars(Request $request){
 
         request()->validate([
         'avatar' => 'required',
-        'avatar.*' => 'mimes:doc,docx,pdf,txt,jpeg,png,jpg,gif,svg'
-       ]);
+        'avatar.*' => 'mimes:jpeg,png,jpg,gif,svg'
+        ]);
             $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
-            $Profile = Profiles::findOrFail($JobSeeker->id);
+            $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
             if($request->hasFile('avatar')){    
                 $file = $request->file('avatar');
                 $path = $file->store('uploads','public');

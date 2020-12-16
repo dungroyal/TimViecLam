@@ -27,7 +27,7 @@
         </div>
         
         @include('job_seeker.element.headerProfile')
-        @if (DB::table('degree_details')->where('id_profile', $JobSeeker->id)->count() == 0)
+        @if (DB::table('degree_details')->where('id_profile', $Profile->id)->count() == 0)
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -43,6 +43,7 @@
                     
                     <form method="POST" action="{{route('job-seeker.profile.step3')}}">
                         @csrf
+                        <input type="hidden" id="idDegree" name="idDegree" value="0">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -152,8 +153,8 @@
                 <div class="card-body">
                 <h4 class="card-title">HỌC VẤN - BẰNG CẤP</h4>
                 <hr>
-                @foreach (DB::table('degree_details')->where('id_profile', $JobSeeker->id)->orderBy('graduation_year', 'asc')->get() as $degree)
-                <div class="list-profile-item row mx-1  mb-3">
+                @foreach (DB::table('degree_details')->where('id_profile', $Profile->id)->orderBy('graduation_year', 'asc')->get() as $degree)
+                <div class="list-profile-item row mx-1 mb-3" data-item="{{$degree->id}}">
                     <div class="float-left">
                         <svg width="3rem" height="4rem" viewBox="0 0 16 16"
                             class="bi bi-book-half p-2" fill="currentColor"
@@ -184,17 +185,17 @@
                         </div>
                     </div>
                     <div class="ml-auto">
-                        <a href="" data-toggle="tooltip" title="Chỉnh sửa">
+                        <a href="#" class="updateDegree" data-item="{{$degree->id}}" data-toggle="tooltip" title="Chỉnh sửa">
                             <svg width="1.4rem" height="2.5rem" viewBox="0 0 16 16" class="bi mt-3 bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                              </svg>
+                            </svg>
                         </a>
-                        <a href="" data-toggle="tooltip" title="Xóa">
+                        <a href="#" class="deleteDegree" data-item="{{$degree->id}}" data-toggle="tooltip" title="Xóa">
                             <svg width="1.4rem" height="1.4rem" viewBox="0 0 16 16" class="bi text-danger ml-2 mr-3 mt-3 bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                              </svg>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -222,29 +223,30 @@
                             <div class="modal-body px-4">
                                 <form id="form-complete_profile3">
                                     @csrf
+                                    <input type="hidden" id="idDegree" name="idDegree" value="0">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Trường, cơ sở, trung tâm đào tạo</label>
-                                                <input type="text" name="university" class="form-control">
+                                                <input type="text" id="university" name="university" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Khoa đào tạo</label>
-                                                <input type="text" name="faculty" class="form-control">
+                                                <input type="text" id="faculty" name="faculty" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Tên bằng cấp chứng chỉ</label>
-                                                <input type="text" name="certificate" class="form-control">
+                                                <input type="text" id="certificate" name="certificate" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Chuyên ngành đào tạo</label>
-                                                <input type="text" name="major" class="form-control">
+                                                <input type="text" id="major" name="major" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -311,7 +313,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Thông tin bổ sung</label>
-                                                <textarea class="form-control" name="detail" placeholder="Mô tả, giới thiệu về định hướng công việc của bản thân trong tương lai ngắn hạn hoặc dài hạn." rows="3"></textarea>
+                                                <textarea class="form-control" id="detail" name="detail" placeholder="Mô tả, giới thiệu về định hướng công việc của bản thân trong tương lai ngắn hạn hoặc dài hạn." rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -371,6 +373,80 @@
                     error: function(e){
                         console.log(e);
                         alert("Thất bại!");
+                    }
+                });
+            });
+
+            $(".updateDegree").click(function(event) {
+                event.preventDefault()
+                var idDegree = this.getAttribute("data-item")
+                $('#modal-add-exp').modal('show')
+                $('#idDegree').val(idDegree);
+
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'post',
+                    url: '{!! route('job-seeker.getProfileById') !!}',
+                    data: {idDegree:idDegree},
+                    success:function(res){
+                        var degree_details = res.degree_details;
+                        $('#myExtraLargeModalLabel').html("Chỉnh sửa: <strong>" + degree_details.university + "</strong>")
+                        $('.btn-submit-profile_add').html("Lưu thay đổi")
+                        $('.btn-submit-profile_add').addClass("btn_update")
+                        $('#university').val(degree_details.university);
+                        $('#faculty').val(degree_details.faculty);
+                        $('#certificate').val(degree_details.certificate);
+                        $('#major').val(degree_details.major);
+                        $('#detail').val(degree_details.detail);
+                    }, 
+                    error: function(e){
+                        console.log(e);
+                        alert("Thất bại!");
+                    }
+                });
+            });
+
+            $(".btn_update").click(function() {
+                setTimeout(() => {
+                    location.reload();
+                }, 500);
+            })
+
+            $(".deleteDegree").click(function(event) {
+                event.preventDefault();
+                var idDegree = this.getAttribute("data-item");
+                Swal.fire({
+                    icon:'warning',
+                    title: 'Bạn có chắc chắn muốn xóa học vấn / bằng cấp này?',
+                    showCancelButton: true,
+                    confirmButtonText: `Đồng ý`,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            },
+                            type: 'post',
+                            url: '{!! route('job-seeker.profile.step3.delete') !!}',
+                            data: {idDegree:idDegree},
+                            success:function(res){
+                                if($.isEmptyObject(res.error)){
+                                    $('.list-profile-item[data-item="'+idDegree+'"]').remove();
+                                    setTimeout(function() {
+                                        Toast.fire({
+                                            icon: 'success',
+                                            title: 'Xóa học vấn, bằng cấp thành công!'
+                                        });
+                                    }, 500);
+                                }
+                            }, 
+                            error: function(e){
+                                console.log(e);
+                                alert("Thất bại!");
+                            }
+                        });
                     }
                 });
             });

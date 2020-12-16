@@ -32,7 +32,6 @@
                 <h4 class="card-title text-center">Hồ sơ online</h4>
                 <hr>
                 <?php $profile = DB::table('profiles')->where('job_seeker_id',Auth::guard('job_seeker')->user()->id)->first() ?>
-   
                 @if ($profile->status != 1 )
                     <div class="row px-2">      
                         <div class="col-sm-12 col-lg-8">
