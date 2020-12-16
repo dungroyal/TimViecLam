@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="shortcut icon" href="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="bgGray">
+        <header>
+            <nav class="container navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="home-ntd.html">
+                    <img src="images/logo.png" width="250" alt="Logo Tìm Việc Làm" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <div class="form-inline my-2 my-lg-0 navbar-nav font-weight-normal font-header">
+                            <li class="nav-item">
+                                <a class="nav-link" href="banggia.html"><i class="fas fa-blog mr-2 icon-menu"></i> BẢNG
+                                    GIÁ
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-lock mr-2 icon-menu"></i> ĐĂNG TIN
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="service-file.html"><i
+                                        class="fas fa-user mr-2 icon-menu"></i>LỌC
+                                    HỒ SƠ</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="dropdown-menu-top">
+                            <li
+                                class="nav-item dropdown btn btn-bd-submit mb-3 mb-md-0 ml-md-3 header-menu-bottom bg-info">
+                                <a class="text-white p-1" href="#" data-toggle="modal" data-target="#exampleModal"><i
+                                        class="far fa-hand-pointer mr-1"></i> ĐĂNG KÝ DỊCH VỤ</a>
+                            </li>
+                            <!-- modal title -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content modal-content-width">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title el-dialog__header" id="exampleModalLabel">
+                                                Đăng ký tư vấn dịch vụ
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!--  -->
+                                            <div class="el-dialog__body">
+                                                <p class="el-dialog-modal-title mb-3">
+                                                    Mời quý công ty điền các thông tin dưới đây để đăng ký
+                                                    dịch vụ:
+                                                </p>
+                                                <div class="mw_form">
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Người liên hệ
+                                                            <span>(*)</span></label>
+                                                        <div class="form-item-modal">
+                                                            <i class="fas fa-user icon-modal"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Số điện thoại
+                                                            <span>(*)</span></label>
+                                                        <div class="form-item-modal">
+                                                            <i
+                                                                class="fas fa-phone fa-rotate-90 icon-modal-phone"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Địa chỉ email
+                                                            <span>(*)</span></label>
+                                                        <div class="form-item-modal">
+                                                            <i class="fas fa-envelope icon-modal-email"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Tên công ty
+                                                            <!----></label>
+                                                        <div class="form-item-modal">
+                                                            <i class="fas fa-building icon-modal-building"></i><input
+                                                                class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="el-dialog-title-section">Yêu cầu thêm
+                                                            <!----></label>
+                                                        <div class="form-item-modal">
+                                                            <textarea class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <span class="hotline pull-left modal-footer-textleft">
+                                                <h5 class="mb-1">Hoặc liên hệ bộ phận CSKH của TimViecLam:</h5>
+                                                <p class="text-danger"><i class="fas fa-phone-alt mr-1"></i> Miền Bắc:
+                                                    <strong class="fs-15">(024) 899 88688</strong><i
+                                                        class="fas fa-phone-alt ml-2 mr-1"></i> Miền Nam:
+                                                    <strong class="fs-15">(028) 894 88688</strong></p>
+                                                <p class="text-primary mt-1"><i class="far fa-envelope mr-1"></i> Email:
+                                                    <strong><a href="mailto:hotro@timvieclam.xyz"
+                                                            target="_top">hotro@timvieclam.xyzn</a></strong></p>
+                                            </span>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                Bỏ qua
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+                                                Đăng ký ngay
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <!--  -->
+        <div class="container">
+            <section class="candidate-detail">
+
+
+
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-left">
+                        <div id="detail-el" class="box-general-detail pb-15">
+                            <div class="mw-box-item detail-header">
+                                <div class="info">
+                                    <div class="info-candidate">
+                                        <div class="picture">
+                                            <div class="image-cover"><img class="lazy-load image-pro-emp" src="images/timvieclam-placeholder.png" lazy="loaded"></div>
+                                        </div>
+                                        <div class="info-basic">
+                                            <div class="white">
+                                                <h2 class="title capitalize">phạm ngọc chiêu ánh</h2>
+                                                <h1 class="sub-title capitalize cv-title">Chuyên Viên Marketing</h1>
+                                            </div>
+                                            <div class="mt-4">
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <p class="font-pro-emp"><span class="icon"><i
+                                                                    class="far fa-calendar-alt"></i></span>&nbsp;29/10/1987
+                                                        </p>
+                                                        <p class="font-pro-emp"><span class="icon"><i
+                                                                    class="fas fa-map-marker-alt"></i></i></span>&nbsp;Chung
+                                                            Cư 4S Riverside, Kp4, Phường Hiệp Bình Chánh, Quận Thủ Đức,
+                                                            Hồ
+                                                            Chí Minh</p>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <p class="font-pro-emp"><span class="icon"><i
+                                                                    class="fas fa-mars"></i></span>&nbsp;Nam</p>
+                                                        <p class="font-pro-emp"><span class="icon"><i
+                                                                    class="fas fa-ribbon"></i></span>&nbsp;Đã kết
+                                                            hôn</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-half"></div>
+                            </div>
+                            <div class="alert alert-warning alert-service"><span>
+                                    Bạn đang xem hồ sơ ứng viên đã được phân loại trên TimViecLam. Hồ sơ có giá trị
+                                    <span class="text-danger">3</span> điểm.
+                                </span><span>Đồng ý xem
+                                    <a href="#">bấm vào đây</a>. Hoặc
+                                    <a href="#" target="_blank" class=""> bấm vào đây </a>để đăng
+                                    ký dịch vụ.
+                                </span>
+                                <div class="box-function">
+                                    <!----><button type="button" class="el-button el-button--info is-plain">
+                                        <!---->
+                                        <!----><span class="font-pro-emp"><i class="far fa-heart"></i>&nbsp;Lưu hồ sơ
+                                        </span></button><button type="button"
+                                        class="el-button btn-call-action el-button--warning">
+                                        <!---->
+                                        <!----><span class="font-pro-emp-limit"><i class="far fa-eye"></i>&nbsp;Xem liên
+                                            hệ
+                                        </span></button></div>
+                            </div>
+                            <div class="common-info item-info mt-0 pt-0">
+                                <h3 class="head-title "><span class="bg"><span class="icon"><i
+                                                class="far fa-user icon-pro-emp"></i></span> Thông tin hồ sơ </span>
+                                </h3>
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <ul class="list-unstyled properties">
+                                                <li><strong>Ngành nghề: </strong><span
+                                                        class="el-tag candidate-tag el-tag--primary"
+                                                        ><a href="#"
+                                                            class="">Marketing -
+                                                            PR</a>
+                                                        <!----></span><span class="el-tag candidate-tag el-tag--primary"
+                                                        ><a href="#" class="">Tiếp
+                                                            thị -
+                                                            Quảng cáo</a>
+                                                        <!----></span><span class="el-tag candidate-tag el-tag--primary"
+                                                        ><a href="#" class="">Tổ
+                                                            chức sự kiện - Quà tặng</a>
+                                                        <!----></span></li>
+                                                <li class="font-pro-emp"><strong>Trình độ học vấn:</strong>Cử nhân</li>
+                                                <li  class="font-pro-emp"><strong>Loại hình công việc: </strong><span>Toàn thời gian cố
+                                                        định,&nbsp;</span></li>
+                                                <li  class="font-pro-emp"><strong>Cấp bậc mong muốn: </strong>Nhân viên</li>
+                                                <li  class="font-pro-emp"><strong>Mức lương mong muốn:</strong>&nbsp;<span
+                                                        class="text-danger">10
+                                                        triệu - 12 triệu</span></li>
+                                                <li  class="font-pro-emp"><strong>Số năm kinh nghiệm:</strong><span class="text-danger"> 5
+                                                        năm</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <ul class="list-unstyled properties">
+                                                <li  class="font-pro-emp"><strong>Nơi làm việc: </strong><span class="el-tag candidate-tag el-tag--primary" ><a href="#" class="">Hồ Chí
+                                                            Minh</a>
+                                                        <!----></span></li>
+                                                <li  class="font-pro-emp"><strong>Quận / huyện: </strong>&nbsp;Thủ Đức</li>
+                                                <li  class="font-pro-emp"><strong>Tỉnh / thành phố: </strong>&nbsp;Hồ Chí Minh</li>
+                                                <li class="font-pro-emp"><strong>Mã hồ sơ:</strong> 2120588</li>
+                                                <li class="font-pro-emp"><strong>Số lượt xem:</strong> 3114</li>
+                                                <li class="font-pro-emp"><strong>Ngày cập nhật: </strong>06/12/2020</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="common-info item-info pt-0">
+                                    <h3 class="head-title"><span class="bg"><span class="icon"><i class="fas fa-trophy"></i></span>
+                                            Mục tiêu nghề nghiệp
+                                        </span></h3>
+                                    <div class="content">
+                                        <div class="ort-description">
+                                            <article class="pre-line font-pro-emp">- Được làm việc trong môi trường hiện đại, năng động, sáng tạo, có điều kiện học hỏi, phát triển kỹ năng và vận dụng hiệu quả kiến thức vào công việc. Mong muốn có nhiều cơ hội thử thách, rèn luyện, nâng cao khả năng làm việc.
+                                            </article>
+                                        </div>
+                                        <ul class="list-unstyled properties font-pro-emp mt-2">
+                                            <li><i class="fas fa-check-circle icon-pro-color"></i> Mong muốn tìm được chỗ làm ổn
+                                                định lâu dài</li>
+                                            <li><i class="fas fa-check-circle icon-pro-color"></i> Mong muốn tìm được chỗ làm có
+                                                cơ
+                                                hội thăng tiến tốt</li>
+                                            <li><i class="fas fa-check-circle icon-pro-color"></i> Mong muốn tìm được chỗ làm có
+                                                mức
+                                                lương tốt</li>
+                                            <li><i class="fas fa-check-circle icon-pro-color"></i> Mong muốn tìm được nơi có cơ
+                                                hội
+                                                cống hiến bản thân tốt</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="common-info item-info pt-0">
+                                    <h3 class="head-title"><span class="bg"><span class="icon"><i class="fas fa-magic"></i></span>
+                                            Kỹ năng bản thân
+                                        </span></h3>
+                                    <div class="content">
+                                        <div>
+                                            <article class="pre-line font-pro-emp">Maketing - Truyền Thông - Event</article>
+                                        </div>
+                                        <div>
+                                            <ul class="properties list-unstyled mt-2"></ul>
+                                            <ul class="properties list-unstyled font-pro-emp mb-0">
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Kỹ năng tổ chức</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Kỹ năng giao tiếp</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Kỹ năng làm việc theo
+                                                    nhóm
+                                                </li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Kỹ năng lãnh đạo</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Kỹ năng thuyết trình</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Giải quyết vấn đề</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Lập kế hoạch</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Quản lý thời gian hiệu
+                                                    quả
+                                                </li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Dễ dàng thích nghi với
+                                                    môi
+                                                    trường mới</li>
+                                                <li><i class="fas fa-check-circle icon-pro-color"></i> Tư duy sáng tạo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-info item-info pt-0">
+                                    <h3 class="head-title"><span class="bg"><span class="icon"><i class="fas fa-book-open"></i></span>
+                                            Trình độ ngoại ngữ
+                                        </span></h3>
+                                    <div class="content">
+                                        <ul class="list-unstyled properties rate-list mt-2">
+                                            <li class="">
+                                                <span class="left font-pro-emp">Tiếng Anh</span><span class="star-right">
+                                                        <i class="fas fa-star on"></i>
+                                                        <i class="fas fa-star on"></i>
+                                                        <i class="fas fa-star on"></i>
+                                                        <i class="far fa-star off"></i>
+                                                        <i class="far fa-star off"></i>
+                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!---->
+                                <div class="common-info item-info pt-0">
+                                    <h3 class="head-title mb-0 pb-0"><span class="bg"><span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                                            Học vấn / bằng cấp
+                                        </span></h3>
+                                    <div class="content">
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Đã từng</span></div>
+                                                <div class="info">
+                                                    <h4>Cử nhân </h4>
+                                                    <p><strong class="text-pro-emp">Trường / nơi đào tạo: </strong>ĐH Khoa Học Tự Nhiên -
+                                                        TPHCM
+                                                    </p>
+                                                    <!---->
+                                                    <!---->
+                                                    <p><strong class="text-pro-emp">Ngành:</strong> Công nghệ thông tin</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <div class="item-desc pre-line font-pro-emp">- Kỹ thuật viên khóa Đồ Họa Đa truyền thông Tại trung tâm Khoa Học Tự Nhiên
+                                                            - Ngoại ngữ: Anh văn ( Bằng B), nghe nói đọc viết tốt
+                                                            - Bằng Master&nbsp;: Lập trình PHP và ASP.Net tại trung tâm Nhất Nghệ
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-info item-info pt-0">
+                                    <h3 class="head-title mb-0 pb-0"><span class="bg"><span class="icon"><i class="fas fa-briefcase"></i></span>
+                                            Kinh nghiệm làm việc <span class="text-danger">(5 năm)</span></span></h3>
+                                    <div class="content">
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Đã từng</span></div>
+                                                <div class="info">
+                                                    <h4>Marketing Executive</h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 1/ Bất Động Sản Việt Á</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <ul class="list-unstyled font-pro-emp">
+                                                            <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                            <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                            </li>
+                                                            <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                            <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                            <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                          </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Từ 09/2019 - 06/2020</span></div>
+                                                <div class="info">
+                                                    <h4>Project Manager</h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 2/ Công Ty Ar Việt Nam (agency)</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <ul class="list-unstyled font-pro-emp">
+                                                            <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                            <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                            </li>
+                                                            <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                            <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                            <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                          </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Từ 09/2018 - 09/2019</span></div>
+                                                <div class="info">
+                                                    <h4>Operation Manager</h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 3/ Công Ty Vinstar Moving (agency)</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <ul class="list-unstyled font-pro-emp">
+                                                            <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                            <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                            </li>
+                                                            <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                            <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                            <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                          </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Từ 05/2018 - 09/2018</span></div>
+                                                <div class="info">
+                                                    <h4>Marketing Executive</h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 4/ Công Ty Tam Kim (điện Gia Dụng)</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <ul class="list-unstyled font-pro-emp">
+                                                            <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                            <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                            </li>
+                                                            <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                            <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                            <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                          </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Từ 08/2015 - 08/2017</span></div>
+                                                <div class="info">
+                                                    <h4>Trợ Lý Giám Sát Thi Công Cụp Rạp Chiếu Phim</h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 5/ Rạp Chiếu Phim Bhd Cineplex</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <ul class="list-unstyled font-pro-emp">
+                                                            <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                            <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                            </li>
+                                                            <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                            <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                            <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                          </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Từ 09/2012 - 08/2015</span></div>
+                                                <div class="info">
+                                                    <h4>Trợ Lý Hoạ Sĩ Thiết Kế </h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 6/ Công Ty Bhd Media</p>
+                                                    <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                        <ul class="list-unstyled font-pro-emp">
+                                                            <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                            <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                            </li>
+                                                            <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                            <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                            <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                          </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline">
+                                            <div class="item">
+                                                <div class="time"><span>Từ 08/2010 - 08/2012</span></div>
+                                                <div class="info">
+                                                    <h4>Web Developer</h4>
+                                                    <p><strong class="text-pro-emp">Công ty:</strong> 7/công Ty Tin Học Đất Lành (goodland
+                                                        Informatic)</p>
+                                                        <div class="cert-info"><strong>Mô tả:</strong><br>
+                                                            <ul class="list-unstyled font-pro-emp">
+                                                                <li> - Lên chiến dịch bán đất nền, khu nghỉ dưỡng thông qua các hoạt động mở bán tại Sài Gòn và Bảo Lộc</li>
+                                                                <li> -Lên chiến dịch Digital kiếm khách hàng tiềm năng (Facebook Ads, Viral Video, Podcast, Google Ad), Phát triển kênh Youtube Bất Động Sản, làm Content Marketing cho website và fanpage
+                                                                </li>
+                                                                <li>-Thiết kế Sale Kit bán hàng cho từng nơi mở bán (mỗi nơi mỗi brief) nhằm vào từng tệp khách hàng.</li>
+                                                                <li class="cert-info"><strong>Thành tích:</strong></li>
+                                                                <li>- Bán thành công 25 lô đất nền tại Bảo Lộc - Lâm Đồng</li>
+                                                              </ul>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div id="box-contact" class="box_general">
+                            <h3 class="title-h2">Thông tin liên hệ</h3>
+                            <div class="mw-box-item box-contact">
+                                <div class="row pt-3">
+                                    <div class="col-md-6 col-lg-3 label-contact"><strong>Họ tên:</strong></div>
+                                    <div class="col-md-6 col-lg-9 item font-pro-emp"><span class="capitalize">phạm ngọc chiêu
+                                            ánh</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-3 label-contact"><strong>Địa chỉ:</strong></div>
+                                    <div class="col-md-6 col-lg-9 item font-pro-emp">
+                                        Chung Cư 4S Riverside, Kp4, Phường Hiệp Bình Chánh, Quận Thủ Đức, Hồ Chí Minh
+                                    </div>
+                                </div>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-3 label-contact"></div>
+                                    <div class="col-md-6 col-lg-9 item pt-15 pb-5"><button type="button"
+                                            class="el-button btn-call-action el-button--warning font-pro-emp">
+                                            <!---->
+                                            <!----><span><i class="far fa-eye"></i>&nbsp;Xem liên hệ
+                                            </span></button>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <!---->
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-right">
+                        <div class="row-left">
+                            <!---->
+                            <!---->
+                            <div class="box_right">
+                                <div class="candidate_right pt-2 pb-2"><span>
+                                    </span>
+                                    <div class="box-rp-function row text-center pr-2">
+                                        <!---->
+                                        <div class="col-md-6">
+                                            <div class="box-func save-pdf el-tooltip">
+                                                <p><i class="far fa-file-alt"></i></p>
+                                                <p class="font-pro-emp">Lưu PDF</p><span class="badge">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="box-func el-tooltip">
+                                                <p><i class="fas fa-share-alt"></i></p>
+                                                <p class="font-pro-emp">Chia sẻ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="box_right">
+                                <h3 class="title_right title-font-right">Tìm kiếm nâng cao</h3>
+                                <div class="candidate_right pd-15">
+                                    <div>
+                                        <div class="box-search-relate">
+                                            <div class="box_search pt-0">
+                                                <div class="mw_select input_search"><span class="icon-before"><i class="fas fa-tools"></i>
+                                                </span><input placeholder="Ngành nghề" readonly="readonly" class="form-control"><span class="icon-after">
+                                                    <i class="fas fa-angle-down"></i></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div class="box_search">
+                                                <div class="mw_select input_search"><span class="icon-before"><i class="fas fa-map-marker-alt"></i></span><input
+                                                        placeholder="Địa điểm" readonly="readonly"
+                                                        class="form-control"><span class="icon-after"><i class="fas fa-angle-down"></i></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div class="box_search">
+                                                <div class="mw_select input_search"><span class="icon-before"><i class="far fa-clock"></i></span><input placeholder="Kinh nghiệm"
+                                                        readonly="readonly" class="form-control"><span
+                                                        class="icon-after"><i class="fas fa-angle-down"></i></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div class="box_search">
+                                                <div class="mw_select input_search"><span class="icon-before"><i class="far fa-clipboard"></i></span><input
+                                                        placeholder="Vị trí" readonly="readonly"
+                                                        class="form-control"><span class="icon-after"><i class="fas fa-angle-down"></i></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <div class="box_search">
+                                                <div class="mw_select input_search"><span class="icon-before"><i class="fas fa-store"></i></span><input
+                                                        placeholder="Trình độ học vấn" readonly="readonly"
+                                                        class="form-control"><span class="icon-after"><i class="fas fa-angle-down"></i></span>
+                                                    <!---->
+                                                </div>
+                                            </div><button type="button"
+                                                class="el-button btn-block mt-10 mb-0 el-button--primary">
+                                                <!---->
+                                                <!----><span>Tìm kiếm</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <footer class="page-footer font-small mdb-color pt-4">
+            <div class="container page-footer__bottom text-center text-md-left text-primary">
+                <div class="row text-center text-md-left mt-3 pb-3">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <img src="images/Logo_White.png" alt="" class="footer-img" />
+                    </div>
+                    <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            VỀ CHÚNG TÔI
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="about.html">Về Timvieclam.xyz</a>
+                            </p>
+                            <!-- <p>
+                    <a href="#!">Quy Chế</a>
+                  </p> -->
+                            <p>
+                                <a href="security.html">Quy Định Bảo Mật</a>
+                            </p>
+                            <p>
+                                <a href="use.html">Thỏa Thuận Sử Dụng</a>
+                            </p>
+                            <p>
+                                <a href="regulations.html">Chính Sách BV Thông Tin Cá Nhân</a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            CÔNG CỤ
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Quản Lý Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Quản Lý Hồ Sơ</a>
+                            </p>
+                            <p>
+                                <a href="#!">Báo Giá</a>
+                            </p>
+                            <p>
+                                <a href="#!">Liên Hệ Tài Trợ Sự Kiện</a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Liên Hệ
+                        </h6>
+                        <div class="text__info--address">
+                            <p>
+                                <i class="fas fa-home mr-3"></i> Tô Ký, Phường Tân Chánh Hiệp,
+                                Q12
+                            </p>
+                            <p><i class="fas fa-envelope mr-3"></i> huynq156@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-100 clearfix d-md-none" />
+                <div class="row page_footer--category">
+                    <div class="col-md-3 text__info col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Việc Làm Theo Ngành Nghề
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Việc Làm Kinh Doanh</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Bán Hàng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Kế Toán</a>
+                            </p>
+                            <p>
+                                <a href="#!">Chăm Sóc Khách Hàng</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-2 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Việc Làm Công Ty
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">VinFast Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Timvieclam.xyz Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Family Tuyển Dụng</a>
+                            </p>
+                            <p>
+                                <a href="#!">Nhà Tao Tuyển Dụng</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-3 text__info col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            VIỆC LÀM THEO TỈNH
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Việc Làm TPHCM</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Hà Nội</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Quảng Ngãi</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Vũng Tàu</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-4 text__info col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-white">
+                            Việc Làm Hấp Dẫn
+                        </h6>
+                        <div class="text__info--title">
+                            <p>
+                                <a href="#!">Tìm Việc Làm</a>
+                            </p>
+                            <p>
+                                <a href="#!">Việc Làm Thêm</a>
+                            </p>
+                            <p>
+                                <a href="#!">Lao Động Phổ Thong</a>
+                            </p>
+                            <p>
+                                <a href="#!">Thực Tập Sinh</a>
+                            </p>
+                            <div class="text__info--all">
+                                <p>
+                                    <a class="text-primary" href="#!">Xem Tất Cả</a>&nbsp;<i
+                                        class="fa fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-center text-md-left">
+                            © 2020 Copyright:
+                            <a href="timvieclam.xyz">
+                                <strong> Timvieclam.xyz</strong>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-lg-4 ml-lg-0">
+                        <div class="text-center text-md-right">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--fb btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--tw btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--gg btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating--link btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="plugin/jquery/jquery-3.5.1.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
