@@ -14,7 +14,7 @@ class JobSeeker extends Authenticatable implements MustVerifyEmail
     protected $guard = 'job_seeker';
 
     protected $fillable = [
-        'name', 'email', 'email_verified_at', 'password', 'phone'
+        'name', 'email', 'email_verified_at', 'password', 'phone', 'access_token'
     ];
 
     protected $hidden = [

@@ -38,7 +38,8 @@
                             <th>Tên công việc</th>
                             <th>Ngành nghề</th>
                             <th>Lược xem</th>
-                            <th>Trạng thái</th>
+                            {{-- <th>Trạng thái</th> --}}
+                            <th>Ngày hết hạn</th>
                             <th>Ngày cập nhật</th>
                             <th>Hành động</th>
                         </tr>
@@ -99,8 +100,9 @@
                 { data: 'job_code', name: 'job_code' },
                 { data: 'name_job', name: 'name_job' },
                 { data: 'career', name: 'career'},
-                { data: 'views', name: 'views', searchable: false},
-                { data: 'status', name: 'status', orderable: false, searchable: false},
+                { data: 'view', name: 'view', searchable: false},
+                // { data: 'status', name: 'status', orderable: false, searchable: false},
+                { data: 'deadline', name: 'deadline'},
                 { data: 'update_at', name: 'update_at', orderable: true, searchable: false},
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]

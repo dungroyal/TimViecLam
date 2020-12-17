@@ -373,18 +373,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <h4 class="card-title">GÓI DỊCH VỤ</h4>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="personnel_size">Dịch vụ cho tin đăng</label>
-                                            <input value="" type="text"
-                                                class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <a href="{{ Route('employer.dashboard') }}" class="btn btn-danger mt-3 waves-effect waves-light m-auto">Hủy bỏ</a>
                         <button type="submit" class="btn btn-primary mt-3 waves-effect waves-light m-auto">Đăng tuyển dụng</button>

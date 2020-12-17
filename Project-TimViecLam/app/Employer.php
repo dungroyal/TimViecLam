@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Company;
 
-class Employer extends Authenticatable
+class Employer extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     protected $table='employer';

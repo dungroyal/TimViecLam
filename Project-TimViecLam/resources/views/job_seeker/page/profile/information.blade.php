@@ -50,7 +50,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Địa chỉ email</label>
-                                        <input type="email" value="{{$JobSeeker->email}}" name="email" class="form-control">
+                                        <input type="email" readonly value="{{$JobSeeker->email}}" name="email" class="form-control">
                                       
                                     </div>
                                 </div>

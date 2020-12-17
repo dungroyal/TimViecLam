@@ -107,6 +107,8 @@ class JobController extends Controller
     public function job_detail($id)
     {
         $jobs_detail = Job::findOrFail($id);
+        $jobs_detail->view = ($jobs_detail->view)+1;
+        $jobs_detail->save();
         $company = Company::findOrFail($jobs_detail->company_id);
         $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
         return view('home/job_detail',compact('jobs_detail','company','listJob'));
@@ -115,6 +117,8 @@ class JobController extends Controller
     public function job_detail_ajax($id)
     {
         $jobs_detail = Job::findOrFail($id);
+        $jobs_detail->view = ($jobs_detail->view)+1;
+        $jobs_detail->save();
         $company = Company::findOrFail($jobs_detail->company_id);
         $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
         return view('home.element.jobDetail',compact('jobs_detail','company','listJob'));

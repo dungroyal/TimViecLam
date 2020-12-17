@@ -59,5 +59,16 @@ class HomeController extends Controller
         $company = Company::findOrFail($id);
         $listJob = Job::Where('company_id',$id)->orderBy('id', 'desc')->get();
         return view('home/company',compact('company','listJob'));
-    } 
+    }
+
+    public function profiles()
+    {
+        return view('home/profiles');
+    }
+
+    public function profileDetail($id)
+    {
+        return view('home/profileDetail');
+    }
+    
 }

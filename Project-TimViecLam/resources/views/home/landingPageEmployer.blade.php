@@ -49,7 +49,7 @@
             <span>Đăng Tin tuyển dụng</span></button></a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <a href="{{ Route('employer.dashboard') }}"><button type="button"
+        <a href="{{ Route('all-profile') }}"><button type="button"
             class="el-button btn-block mb-n mt-10 el-button--primary selective-uv">
             <span>Lọc hồ sơ ứng viên</span></button></a>
       </div>

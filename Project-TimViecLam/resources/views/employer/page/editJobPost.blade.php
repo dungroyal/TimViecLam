@@ -32,6 +32,7 @@
                     <div class="card-title">Thông tin công việc</div>
                     <form method="POST" action="{{ route('employer.createJobPost')}}">
                         @csrf
+                        <input type="hidden" name="idJob" id="idJob" value="{{$infoJob->id}}">
                         <div class="row">
                             <div class="col-sm-6 col-lg-6">
                                 <div class="form-group">
@@ -50,7 +51,7 @@
                                 <div class="row">
                                     <div class="form-group col">
                                         <label for="job_code">Mã số</label>
-                                        <input name="job_code" 
+                                        <input name="job_code" readonly
                                             value="{{ old('job_code') == null ? $infoJob->job_code : old('job_code') }}" 
                                             type="text"
                                             class="form-control  @error('job_code') is-invalid @enderror">
@@ -76,9 +77,9 @@
                                     <div class="form-group col">
                                         <label for="grade_id">Cấp bậc</label>
                                         <select class="selectpicker form-control  @error('grade_id') is-invalid @enderror"  
-                                            data-size="8" name="grade_id"
+                                            data-size="8" name="grade_id" id="grade_id"
                                             title="Chọn cấp bậc">
-                                            @foreach ($grade as $item)
+                                            @foreach (App\Models\Grade::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('grade_id') == $item->id ? "Selected" :""}} >{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -91,9 +92,9 @@
                                     <div class="form-group col">
                                         <label for="type_job_id">Loại hình công việc</label>
                                         <select class="selectpicker form-control @error('type_job_id') is-invalid @enderror" 
-                                            name="type_job_id" data-size="8" 
+                                            name="type_job_id" id="type_job_id" data-size="8" 
                                             title="Chọn loại công việc">
-                                            @foreach ($type_job as $item)
+                                            @foreach (App\Models\TypeJob::all()  as $item)
                                                 <option value="{{ $item->id }}" {{ old('type_job_id')== $item->id ? "Selected" :""}}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -108,10 +109,10 @@
                                     <div class="form-group col">
                                         <label for="salary_id">Mức lương</label>
                                         <select class="selectpicker form-control @error('salary_id') is-invalid @enderror"
-                                            name="salary_id" 
+                                            name="salary_id" id="salary_id" 
                                             data-size="8"
-                                            value="" title="Chọn mức lương">
-                                            @foreach ($salary as $item)
+                                            title="Chọn mức lương">
+                                            @foreach (App\Models\Salary::all()  as $item)
                                                 <option value="{{ $item->id }}" {{ old('salary_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -125,11 +126,11 @@
                                         <label for="career_id">Nghành nghề</label>
                                         <select class="selectpicker form-control @error('career_id') is-invalid @enderror" 
                                             name="career_id"
+                                            id="career_id"
                                             data-live-search="true" 
                                             data-size="8" 
-                                            value=""
                                             title="Chọn loại công việc">
-                                            @foreach ($careers as $item)
+                                            @foreach (App\Models\Career::all()  as $item)
                                                 <option value="{{ $item->id }}" {{ old('career_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -158,9 +159,9 @@
                                         <label for="city">Tỉnh/thành phố<span class="text-danger">*</span></label>
                                         <select class="selectpicker form-control  @error('city') is-invalid @enderror" 
                                             name="city"
+                                            id="city"
                                             data-live-search="true" 
                                             data-size="8" 
-                                            value="{{ $info_company['city'] }}"
                                             title="Chọn tỉnh/thành phố.">
                                             @foreach (App\Models\City::all() as $item)
                                                 <option value="{{ $item->id }}" {{ old('city') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
@@ -179,7 +180,7 @@
                                     <label for="description">Mô tả công việc <span class="text-danger"><i class="bx bx-message-square-error" data-toggle="tooltip" data-placement="top" title="Mô tả công việc"></i></span></label>
                                     <textarea class="form-control  @error('description') is-invalid @enderror" 
                                         name="description"
-                                        rows="7">{{ old('description') }}</textarea>
+                                        rows="7">{{ (old('description') == null) ? $infoJob->description : old('description')}}</textarea>
                                         @error('description')
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -191,7 +192,7 @@
                                             class="text-danger">*</span></label>
                                     <textarea class="form-control  @error('benefits') is-invalid @enderror" 
                                         name="benefits" 
-                                        rows="8">{{ old('benefits') }}</textarea>
+                                        rows="8">{{ (old('benefits')== null) ? $infoJob->benefits : old('benefits') }}</textarea>
                                         @error('benefits')
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -209,9 +210,10 @@
                                         <label for="experience_id">Kinh nghiệm</label>
                                         <select class="selectpicker form-control  @error('experience_id') is-invalid @enderror" 
                                             name="experience_id" 
+                                            id="experience_id" 
                                             data-size="5"
                                             title="Chọn cấp bậc">
-                                            @foreach ($experience as $item)
+                                            @foreach (App\Models\Experience::all()  as $item)
                                                 <option value="{{ $item->id }}"  {{ old('experience_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -224,10 +226,10 @@
                                     <div class="form-group col-sm-6 col-md-6 col-lg-3">
                                         <label for="degree_id">Bằng cấp</label>
                                         <select class="selectpicker form-control @error('degree_id') is-invalid @enderror" 
-                                            name="degree_id" data-size="5"
+                                            name="degree_id" id="degree_id" data-size="5"
                                             value="{{ $info_company['city'] }}" 
                                             title="Chọn bằng cấp">
-                                            @foreach ($degree as $item)
+                                            @foreach (App\Models\Degree::all()  as $item)
                                                 <option value="{{ $item->id }}" {{ old('degree_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -241,6 +243,7 @@
                                         <label for="deadline">Hạn nộp hồ sơ (Tối đa 90 ngày)</label> 
                                         <input class="form-control datepicker @error('deadline') is-invalid @enderror"  
                                         name="deadline"
+                                        id="deadline"
                                         value="{{ old('deadline') == null ? $infoJob->deadline : old('deadline')}}"
                                         data-date-start-date="+1d" 
                                         data-date-end-date="+3m"
@@ -273,7 +276,7 @@
                                         <label for="job_requirements">Yêu cầu công việc <span class="text-danger">*</span></label>
                                         <textarea class="form-control @error('job_requirements') is-invalid @enderror" 
                                             name="job_requirements" id="job_requirements"
-                                            rows="5">{{ old('job_requirements') }}</textarea>
+                                            rows="5">{{ old('job_requirements')== null ? $infoJob->job_requirements : old('job_requirements') }}</textarea>
                                         @error('job_requirements')
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -284,11 +287,7 @@
                                         <label for="profile_request">Yêu cầu hồ sơ <span class="text-danger">*</span></label>
                                         <textarea class="form-control  @error('profile_request') is-invalid @enderror" 
                                             name="profile_request"
-                                            rows="5">
-{{ old('profile_request')!=null ? old('profile_request') :'- Đơn xin việc.
-- Sơ yếu lý lịch.
-- Hộ khẩu, chứng minh nhân dân và giấy khám sức khỏe.
-- Các bằng cấp có liên quan.' }}</textarea>
+                                            rows="5">{{ old('profile_request')== null ? $infoJob->profile_request : old('profile_request')}}</textarea>
                                         @error('profile_request')
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -360,34 +359,8 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="row">
-                            <div class="col-6">
-                                <h4 class="card-title">GÓI DỊCH VỤ</h4>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="personnel_size">Dịch vụ cho tin đăng</label>
-                                            <input value="" type="text"
-                                                class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <h4 class="card-title">GÓI DỊCH VỤ</h4>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="personnel_size">Dịch vụ cho tin đăng</label>
-                                            <input value="" type="text"
-                                                class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="{{ Route('employer.dashboard') }}" class="btn btn-danger mt-3 waves-effect waves-light m-auto">Hủy bỏ</a>
-                        <button type="submit" class="btn btn-primary mt-3 waves-effect waves-light m-auto">Đăng tuyển dụng</button>
+                        <a href="{{ Route('employer.listJobPost') }}" class="btn btn-danger mt-3 waves-effect waves-light m-auto">Quay lại</a>
+                        <button type="submit" class="btn btn-primary mt-3 waves-effect waves-light m-auto">Lưu thay đổi</button>
                     </form>
                 </div>
             </div>
@@ -397,3 +370,23 @@
 
 </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $('#grade_id').selectpicker('val', '<?=$infoJob->grade_id?>');
+        $('#type_job_id').selectpicker('val', '<?=$infoJob->type_job_id?>');
+        $('#salary_id').selectpicker('val', '<?=$infoJob->salary_id?>');
+        $('#career_id').selectpicker('val', '<?=$infoJob->career_id?>');
+        $('#city').selectpicker('val', '<?=$infoJob->city?>');
+        $('#experience_id').selectpicker('val', '<?=$infoJob->experience_id?>');
+        $('#degree_id').selectpicker('val', '<?=$infoJob->degree_id?>');
+        $('#deadline').datepicker('date', '<?=$infoJob->deadline?>');
+
+        if('<?=session('message')?>'){
+            Toast.fire({
+                icon: 'success',
+                title: 'Cập nhật công việc thành công!'
+            });
+        }        
+    </script>
+@endpush
