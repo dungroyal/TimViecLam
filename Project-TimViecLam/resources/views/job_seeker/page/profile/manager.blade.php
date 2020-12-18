@@ -94,7 +94,7 @@
                 </div>
                 <hr>
                 <div class="row mt-3">
-                    <button type="button" class="btn btn-primary btn-sm btn-label m-auto"><i class="bx bxs-edit-alt label-icon"></i> Cập nhật</button>
+                    <a href="{{Route('job-seeker.profile_attached')}}" type="button" class="btn btn-primary btn-sm btn-label m-auto"><i class="bx bxs-edit-alt label-icon"></i> Cập nhật</a>
                 </div>
                 </div>
             </div>

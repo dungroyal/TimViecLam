@@ -1,8 +1,11 @@
 <?php
 
+use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response as FacadesResponse;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,9 @@ Route::prefix('job-seeker')->group(function() {
     Route::get('/profile-manager', 'JobSeeker\ProfileController@index')->name('job-seeker.profile_manager');
     Route::post('/getProfileById', 'JobSeeker\ProfileController@getProfileById')->name('job-seeker.getProfileById');
     Route::get('/profile-attached', 'JobSeeker\ProfileController@profileAttached')->name('job-seeker.profile_attached');
+    Route::match(['get', 'post'],'/upload-attached-profile', 'JobSeeker\ProfileController@attachedProfile')->name('job-seeker.profile_attached_upload');
+    Route::get('/download-attached-profile', 'JobSeeker\ProfileController@attachedProfileDownload')->name('job-seeker.profile_attached_download');
+    Route::get('/delete-attached-profile', 'JobSeeker\ProfileController@attachedProfileDelete')->name('job-seeker.profile_attached_delete');
     Route::match(['get', 'post'],'/complete-profile/step/1', 'JobSeeker\ProfileController@complete_profile1')->name('job-seeker.profile.step1');
     Route::match(['get', 'post'],'/complete-profile/step/2', 'JobSeeker\ProfileController@complete_profile2')->name('job-seeker.profile.step2');
     Route::match(['get', 'post'],'/complete-profile/step/3', 'JobSeeker\ProfileController@complete_profile3')->name('job-seeker.profile.step3');

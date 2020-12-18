@@ -8,7 +8,9 @@ use App\Http\Controllers\Controller;
 use App\JobSeeker;
 use App\Models\Profiles;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class ProfileController extends Controller
 {
@@ -20,11 +22,6 @@ class ProfileController extends Controller
     public function index()
     {
         return view('job_seeker.page.profile.manager');
-    }
-
-    public function profileAttached()
-    {
-        return view('job_seeker.page.profile.attached');
     }
 
     public function getProfileById(Request $request){
@@ -250,20 +247,71 @@ class ProfileController extends Controller
     }
 
     public function uploadAvatars(Request $request){
-
         request()->validate([
         'avatar' => 'required',
         'avatar.*' => 'mimes:jpeg,png,jpg,gif,svg'
         ]);
+        
             $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
             $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
             if($request->hasFile('avatar')){    
                 $file = $request->file('avatar');
-                $path = $file->store('uploads','public');
+                $path = $file->store('uploads/images','public');
                 $Profile->avatar = $path;
                 $Profile->save();
                 return response()->json(['success'=>'Upload avatar success.']);
             }
             return response()->json(['error'=>'Can not Upload avatars']);
+    }
+
+    public function profileAttached()
+    {
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
+        return view('job_seeker.page.profile.attached',compact('JobSeeker','Profile'));
+    }
+
+    public function attachedProfile(Request $request){
+        if($request->idAttached == 0){
+            $validator = Validator::make($request->all(), [
+                'attachedProfile'=>'required|mimes:pdf,doc,docx|max:30000'
+            ]);
+    
+            if($validator->passes()){
+                $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+                $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
+                if($request->hasFile('attachedProfile')){    
+                    $file = $request->file('attachedProfile');
+                    $path = $file->store('uploads/files','public');
+                    $Profile->attached_profile = $path;
+                    $Profile->save();
+                    return response()->json(['success'=>'Tải lên hồ sơ thành công!']);
+                }
+                return response()->json(['error'=>'Tải lên không thành công!']);
+            }
+            return response()->json(['error'=>$validator->errors()->all()]);
+        }else{
+            return "DELETEeeeeeeeeeee";
+        }
+   }
+
+    public function attachedProfileDownload()
+    {
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
+        $type = Str::afterLast($Profile->attached_profile, '.');
+        $file = public_path().'/'.$Profile->attached_profile;
+        $name = 'Hồ sơ '.$JobSeeker->name.' - Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz.'.$type;
+        $headers = array('Content-Type: application/'.$type,);
+        return Response::download($file, $name, $headers);
+    }
+
+    public function attachedProfileDelete()
+    {
+        $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
+        $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
+        $Profile->attached_profile = null;
+        $Profile->save();
+        return redirect()->back()->with('message','Xóa hồ sơ thành công!');
     }
 }
