@@ -9,36 +9,36 @@
                         <span>Quản lý chung</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#" class="waves-effect">
                         <i class="bx bx-search-alt"></i>
                         <span>Thống kê</span>
                     </a>
-                </li>
-                <li>
+                </li> --}}
+                {{-- <li>
                     <a href="#" class="waves-effect">
                         <i class="bx bx-message-detail"></i>
                         <span>Liên hệ</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-briefcase"></i>
-                        <span>QL Nhà Tuyển Dụng</span>
+                        <span>QL Công ty</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ Route('admin.new.company')}}">Công ty mới</a></li>
+                        <li><a href="{{ Route('admin.new.company')}}">Công ty chờ duyệt</a></li>
                         <li><a href="{{ Route('admin.all.company')}}">Tất cả công ty</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-user-pin"></i>
-                        <span>QL Người tìm việc</span>
+                        <span>QL Hồ sơ</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ Route('admin.new.job_seeker')}}">Người tìm việc mới</a></li>
-                        <li><a href="{{ Route('admin.all.job_seeker')}}">Tất cả Người tìm việc</a></li>
+                        <li><a href="{{ Route('admin.new.job_seeker')}}">Hồ sơ chờ duyệt</a></li>
+                        <li><a href="{{ Route('admin.all.job_seeker')}}">Tất cả hồ sơ</a></li>
                     </ul>
                 </li>
                 <li>
@@ -54,14 +54,19 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-user-pin"></i>
-                        <span>Quản lý hệ thống</span>
+                        <i class="bx bx-grid-alt"></i>
+                        <span>Quản lý danh mục</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">Hồ sơ đã lưu</a></li>
-                        <li><a href="#">Hồ sơ đã xem</a></li>
-                        <li><a href="#">Hồ sơ ứng tuyển</a></li>
+                        <li><a href="{{ Route('admin.category.career')}}">Ngành nghề</a></li>
+                        <li><a href="{{ Route('admin.category.type_job')}}">Loại công việc</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a data-pjax href="{{ Route('admin.system')}}" class="waves-effect">
+                        <i class="bx bx-slider"></i>
+                        <span>Cấu hình hệ thống</span>
+                    </a>
                 </li>
             </ul>
         </div>

@@ -121,16 +121,16 @@
                         <h4 class="card-title mb-4">Hồ sơ ứng viên</h4>
                         <div class="row text-center">
                             <div class="col-4">
-                                <h5 class="mb-0">2</h5>
-                                <p class="text-muted text-truncate">Không được duyệt</p>
-                            </div>
-                            <div class="col-4">
-                                <h5 class="mb-0">5</h5>
+                                <h5 class="mb-0" id="profileWaitingAccept">{{App\Models\Profiles::where('status',0)->count()}}</h5>
                                 <p class="text-muted text-truncate">Chời duyệt</p>
                             </div>
                             <div class="col-4">
-                                <h5 class="mb-0">1</h5>
+                                <h5 class="mb-0" id="profileAccepted">2{{App\Models\Profiles::where('status',1)->count()}}</h5>
                                 <p class="text-muted text-truncate">Đã duyệt</p>
+                            </div>
+                            <div class="col-4">
+                                <h5 class="mb-0" id="profileNotAccept">{{App\Models\Profiles::where('status',2)->count()}}</h5>
+                                <p class="text-muted text-truncate">Không được duyệt</p>
                             </div>
                         </div>
                         <canvas id="lineChart" height="150"></canvas>
@@ -144,41 +144,19 @@
                         <h4 class="card-title mb-4">Hồ sơ công ty</h4>
                         <div class="row text-center">
                             <div class="col-4">
-                                <h5 class="mb-0">2</h5>
-                                <p class="text-muted text-truncate">Không được duyệt</p>
-                            </div>
-                            <div class="col-4">
-                                <h5 class="mb-0">5</h5>
+                                <h5 class="mb-0" id="companyWaitingAccept">{{App\Models\Company::where('status',0)->count()}}</h5>
                                 <p class="text-muted text-truncate">Chời duyệt</p>
                             </div>
                             <div class="col-4">
-                                <h5 class="mb-0">1</h5>
+                                <h5 class="mb-0" id="companyAccepted">{{App\Models\Company::where('status',1)->count()}}</h5>
                                 <p class="text-muted text-truncate">Đã duyệt</p>
+                            </div>
+                            <div class="col-4">
+                                <h5 class="mb-0" id="companyNotAccept">{{App\Models\Company::where('status',2)->count()}}</h5>
+                                <p class="text-muted text-truncate">Không được duyệt</p>
                             </div>
                         </div>
                         <canvas id="Pie" height="150"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Hồ sơ công ty</h4>
-                        <div class="row text-center">
-                            <div class="col-4">
-                                <h5 class="mb-0">2</h5>
-                                <p class="text-muted text-truncate">Không được duyệt</p>
-                            </div>
-                            <div class="col-4">
-                                <h5 class="mb-0">5</h5>
-                                <p class="text-muted text-truncate">Chời duyệt</p>
-                            </div>
-                            <div class="col-4">
-                                <h5 class="mb-0">1</h5>
-                                <p class="text-muted text-truncate">Đã duyệt</p>
-                            </div>
-                        </div>
-                        <canvas id="line" height="100"></canvas>
                     </div>
                 </div>
             </div>
@@ -189,13 +167,16 @@
 @push('scripts')
     <script>
     var ctx = document.getElementById('lineChart');
+        var profileAccepted = $('#profileAccepted').html();
+        var profileWaitingAccept = $('#profileWaitingAccept').html();
+        var profileNotAccept = $('#profileNotAccept').html();
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Không được duyệt', 'Chời duyệt', 'Đã duyệt'],
+                labels: ['Chời duyệt', 'Đã duyệt', 'Không được duyệt'],
                 datasets: [{
                     label: 'Tổng quan',
-                    data: [2, 5, 1],
+                    data: [profileWaitingAccept, profileAccepted, profileNotAccept],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -227,36 +208,16 @@
         });
 
         var Pie = document.getElementById('Pie');
+        var companyAccepted = $('#companyAccepted').html();
+        var companyWaitingAccept = $('#companyWaitingAccept').html();
+        var companyNotAccept = $('#companyNotAccept').html();
         var myDoughnutChart = new Chart(Pie, {
             type: 'doughnut',
             data: {
-                labels: ["Không được duyệt", "Chời duyệt", "Đã duyệt"],
+                labels: [ "Chời duyệt", "Đã duyệt","Không được duyệt"],
                 datasets: [{
-                data: [2, 5, 1],
+                data: [companyWaitingAccept, companyAccepted, companyNotAccept],
                 backgroundColor: ["#556ee6", "#ebeff2"],
-                hoverBackgroundColor: ["#556ee6", "#ebeff2"],
-                hoverBorderColor: "#fff"
-            }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-
-        var line = document.getElementById('line');
-        var myLineChart = new Chart(line, {
-            type: 'line',
-            data: {
-                labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
-                datasets: [{
-                data: [2, 5, 1, 1, 1, 15, 15, 10, 15, 17, 10, 20],
-                backgroundColor: ["#fff", "#333"],
                 hoverBackgroundColor: ["#556ee6", "#ebeff2"],
                 hoverBorderColor: "#fff"
             }]

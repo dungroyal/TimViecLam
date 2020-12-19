@@ -145,7 +145,7 @@
                                     <label for="address">Địa điểm làm việc <span class="text-danger">*</span></label>
                                     <input id="address" 
                                         name="address" 
-                                        value="{{ (old('address')!= null) ? old('address') : $info_company['address'] }}" 
+                                        value="{{ (old('address')!= null) ? old('address') : $info_company->address }}" 
                                         type="text"
                                         class="form-control @error('address') is-invalid @enderror"/>
                                         @error('address')
@@ -227,7 +227,7 @@
                                         <label for="degree_id">Bằng cấp</label>
                                         <select class="selectpicker form-control @error('degree_id') is-invalid @enderror" 
                                             name="degree_id" id="degree_id" data-size="5"
-                                            value="{{ $info_company['city'] }}" 
+                                            value="{{ $info_company->city }}" 
                                             title="Chọn bằng cấp">
                                             @foreach (App\Models\Degree::all()  as $item)
                                                 <option value="{{ $item->id }}" {{ old('degree_id') == $item->id ? 'Selected' : '' }}>{{ $item->name }}</option>
@@ -307,7 +307,7 @@
                                         <div class="form-group">
                                             <label for="name_contact">Người liên hệ</label>
                                             <input name="name_contact" 
-                                                value="{{ (old('name_contact')!= null) ? old('name_contact') : $info_company['name_contact'] }}" 
+                                                value="{{ (old('name_contact')!= null) ? old('name_contact') : $info_company->name_contact }}" 
                                                 type="text"
                                                 class="form-control @error('name_contact') is-invalid @enderror">
                                                 @error('name_contact')
@@ -321,7 +321,7 @@
                                         <div class="form-group">
                                             <label for="phone_contact">Số điện thoại liên hệ</label>
                                             <input  name="phone_contact" 
-                                                value="{{ (old('phone_contact')!= null) ? old('phone_contact') : $info_company['phone_contact'] }}" 
+                                                value="{{ (old('phone_contact')!= null) ? old('phone_contact') : $info_company->phone_contact }}" 
                                                 type="text"
                                                 class="form-control  @error('phone_contact') is-invalid @enderror">
                                                 @error('phone_contact')
@@ -334,7 +334,7 @@
                                     <div class="col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <label for="address_contact">Địa chỉ người liên hệ</label>
-                                            <input name="address_contact" value="{{ (old('address_contact')!= null) ? old('address_contact') : $info_company['address_contact'] }}"
+                                            <input name="address_contact" value="{{ (old('address_contact')!= null) ? old('address_contact') : $info_company->address_contact }}"
                                                 type="text" class="form-control  @error('address_contact') is-invalid @enderror">
                                                 @error('address_contact')
                                                     <span class="invalid-feedback d-block" role="alert">
@@ -346,7 +346,7 @@
                                     <div class="col-sm-12 col-lg-6">
                                         <div class="form-group">
                                             <label for="email_contact">Email liên hệ</label>
-                                            <input name="email_contact" value="{{ (old('email_contact')!= null) ? old('email_contact') : $info_company['email_contact'] }}" type="text"
+                                            <input name="email_contact" value="{{ (old('email_contact')!= null) ? old('email_contact') : $info_company->email_contact }}" type="text"
                                                 class="form-control @error('email_contact') is-invalid @enderror">
                                                 @error('email_contact')
                                                     <span class="invalid-feedback d-block" role="alert">
@@ -359,8 +359,8 @@
                             </div>
                         </div>
                         <hr>
-                        <a href="{{ Route('employer.listJobPost') }}" class="btn btn-danger mt-3 waves-effect waves-light m-auto">Quay lại</a>
-                        <button type="submit" class="btn btn-primary mt-3 waves-effect waves-light m-auto">Lưu thay đổi</button>
+                        <a href="{{ Route('employer.listJobPost') }}" class="btn btn-sm btn-danger mt-3 waves-effect waves-light m-auto">Quay lại</a>
+                        <button type="submit" class="btn btn-sm btn-primary mt-3 waves-effect waves-light m-auto">Lưu thay đổi</button>
                     </form>
                 </div>
             </div>

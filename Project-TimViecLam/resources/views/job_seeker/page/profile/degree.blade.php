@@ -354,6 +354,7 @@
                     url: '{!! route('job-seeker.profile.step3') !!}',
                     data: $('#form-complete_profile3').serialize(),
                     success:function(res){
+                        return res;
                         if($.isEmptyObject(res.error)){
                             setTimeout(function() {
                                 $(".print-error-msg").css('display','none');

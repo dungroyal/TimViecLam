@@ -81,15 +81,26 @@ Route::prefix('employer')->group(function() {
 
 Route::prefix('tvl')->group(function() {
     Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
+    Route::match(['get', 'post'],'/system', 'Admin\AdminController@system')->name('admin.system');
+    Route::match(['get', 'post'],'/category/type-job', 'Admin\AdminController@categoryTypeJob')->name('admin.category.type_job');
+    Route::match(['get', 'post'],'/category/career', 'Admin\AdminController@categoryCareer')->name('admin.category.career');
     Route::get('/all-company', 'Admin\AdminController@allCompany')->name('admin.all.company');
     Route::get('/all-company-data', 'Admin\AdminController@allCompanyData')->name('admin.all.company.data');
+    Route::get('/new-company-data', 'Admin\AdminController@newCompanyData')->name('admin.new.company.data');
+    Route::get('/check-company/{id}', 'Admin\AdminController@checkCompany')->name('admin.check.company');
+    Route::get('/accept-company/{id}', 'Admin\AdminController@acceptCompany')->name('admin.accept.company');
+    Route::post('/not-accept-company', 'Admin\AdminController@notAcceptCompany')->name('admin.notAccept.company');
     Route::get('/new-company', 'Admin\AdminController@NewCompany')->name('admin.new.company');
     Route::get('/new-company-data', 'Admin\AdminController@NewCompanyData')->name('admin.new.company.data');
 
-    Route::get('/all-job-seeker', 'Admin\AdminController@allJobSeeker')->name('admin.all.job_seeker');
+    Route::get('/all-job-profile', 'Admin\AdminController@allJobSeeker')->name('admin.all.job_seeker');
     Route::get('/all-job-seeker-data', 'Admin\AdminController@allJobSeekerData')->name('admin.all.job_seeker.data');
-    Route::get('/new-job-seeker', 'Admin\AdminController@NewJobSeeker')->name('admin.new.job_seeker');
+    Route::get('/new-job-profile', 'Admin\AdminController@NewJobSeeker')->name('admin.new.job_seeker');
     Route::get('/new-job-seeker-data', 'Admin\AdminController@NewJobSeekerData')->name('admin.new.job_seeker.data');
+    Route::get('/check-job-seeker/{id}', 'Admin\AdminController@checkJobSeeker')->name('admin.check.job_seeker');
+    Route::get('/accept-profile/{id}', 'Admin\AdminController@acceptProfile')->name('admin.accept.profile');
+    Route::post('/not-accept-profile', 'Admin\AdminController@notAcceptProfile')->name('admin.notAccept.profile');
+
     
     Route::get('/account-employer', 'Admin\AccountController@AccountEmployer')->name('admin.account.employer');
     Route::get('/account-employer-data', 'Admin\AccountController@AccountEmployerData')->name('admin.account.employer.data');

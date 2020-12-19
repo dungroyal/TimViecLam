@@ -18,31 +18,31 @@ class EmployerController extends Controller
         $this->middleware(function ($request, $next) {
             // Get all data of Employer and Company
             $this->idEmployer = Auth::guard('employer')->user()->id;
-            $company = DB::table('companies')->where('employer_id', $this->idEmployer)->first();
-            $employer = Auth::guard('employer')->user();
-            $collection = collect($company);
-            $data = $collection->merge($employer);
-            $this->data_company =  $data->all();
+            $this->company = DB::table('companies')->where('employer_id', $this->idEmployer)->first();
+            $this->employer = Auth::guard('employer')->user();
             return $next($request);
         });
     }
 
     public function index()
     {
-        $info_company = $this->data_company;
-        return view('employer.dashboard',compact('info_company'));
+        $info_company = $this->company;
+        $info_employer = $this->employer;
+        return view('employer.dashboard',compact('info_company','info_employer'));
     }
 
     public function company()
     {
-        $info_company = $this->data_company;
-        return view('employer.page.company',compact('info_company'));
+        $info_company = $this->company;
+        $info_employer = $this->employer;
+        return view('employer.page.company',compact('info_company','info_employer'));
     }
 
     public function listProfileApply()
     {
-        $info_company = $this->data_company;
-        return view('employer.page.listProfileApply',compact('info_company'));
+        $info_company = $this->company;
+        $info_employer = $this->employer;
+        return view('employer.page.listProfileApply',compact('info_company','info_employer'));
     }
 
     public function jobSeekerById($id)

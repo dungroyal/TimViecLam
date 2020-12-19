@@ -19,14 +19,11 @@ class JobController extends Controller
     public function __construct()
     {
         $this->middleware('auth:employer');
-        $this->middleware(function ($request, $next) { 
+        $this->middleware(function ($request, $next) {
             // Get all data of Employer and Company
             $this->idEmployer = Auth::guard('employer')->user()->id;
-            $company = DB::table('companies')->where('employer_id', $this->idEmployer)->first();
-            $employer = Auth::guard('employer')->user();
-            $collection = collect($company);
-            $data = $collection->merge($employer);
-            $this->data_company =  $data->all();
+            $this->company = DB::table('companies')->where('employer_id', $this->idEmployer)->first();
+            $this->employer = Auth::guard('employer')->user();
             return $next($request);
         });
         }
@@ -34,8 +31,9 @@ class JobController extends Controller
     
     public function showCreateJobPostForm()
     {
-        $info_company = $this->data_company;
-        return view('employer.page.createJob',compact('info_company'));
+        $info_company = $this->company;
+        $info_employer = $this->employer;
+        return view('employer.page.createJob',compact('info_company','info_company'));
     }
     
     public function store(Request $request)
@@ -90,7 +88,7 @@ class JobController extends Controller
                 'email_contact' =>request('email_contact'),
                 'deadline' =>format_date(request('deadline')),
                 'slug'=> str_slug ($name_job),
-                'status' =>"1",
+                'status' =>0,
             ]);
             return redirect('/employer')->with('message','Thêm tin tuyển dụng thành công');
         }else{
@@ -163,21 +161,23 @@ class JobController extends Controller
 
     public function editJobPostForm($id)
     {
-        $info_company = $this->data_company;
+        $info_company = $this->company;
+        $info_employer = $this->employer;
         $infoJob = Job::findOrFail($id);
-        return view('employer.page.editJobPost',compact('infoJob','info_company'));
+        return view('employer.page.editJobPost',compact('infoJob','info_company','info_company'));
     }
 
     public function listJobPost()
     {
-        $info_company = $this->data_company;
-        return view('employer.page.listJobPost',compact('info_company'));
+        $info_company = $this->company;
+        $info_employer = $this->employer;
+        return view('employer.page.listJobPost',compact('info_company','info_company'));
     }
 
     public function anyData(Request $request)
     {
         if ($request->ajax()) {
-            $data = Job::latest()->where('employer_id',$this->data_company['id'])->get();
+            $data = Job::latest()->where('employer_id',$this->company->id)->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('update_at', function($row){

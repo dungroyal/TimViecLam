@@ -96,7 +96,7 @@
                 { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: true, searchable: false},
                 { data: 'name_company', name: 'name_company' },
                 { data: 'count_post', name: 'count_post' },
-                { data: 'status', name: 'status', orderable: false, searchable: false},
+                { data: 'status', name: 'status', searchable: false},
                 { data: 'update_at', name: 'update_at', orderable: true, searchable: false},
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]

@@ -107,7 +107,8 @@ class JobController extends Controller
     public function job_detail($id)
     {
         $jobs_detail = Job::findOrFail($id);
-        $jobs_detail->view = ($jobs_detail->view)+1;
+        $jobs_detail->increments('view');
+        // $jobs_detail->view = ($jobs_detail->view)+1;
         $jobs_detail->save();
         $company = Company::findOrFail($jobs_detail->company_id);
         $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
@@ -117,7 +118,8 @@ class JobController extends Controller
     public function job_detail_ajax($id)
     {
         $jobs_detail = Job::findOrFail($id);
-        $jobs_detail->view = ($jobs_detail->view)+1;
+        $jobs_detail->increments('view');
+        // $jobs_detail->view = ($jobs_detail->view)+1;
         $jobs_detail->save();
         $company = Company::findOrFail($jobs_detail->company_id);
         $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();

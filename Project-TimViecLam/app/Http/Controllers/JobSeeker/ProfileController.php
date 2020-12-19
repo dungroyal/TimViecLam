@@ -241,7 +241,7 @@ class ProfileController extends Controller
     {
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
         $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
-        $Profile->status =2;
+        $Profile->status =0;
         $Profile->save();
         return redirect()->route('job-seeker.profile_manager');
     }

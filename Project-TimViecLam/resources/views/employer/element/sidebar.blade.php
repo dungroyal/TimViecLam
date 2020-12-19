@@ -10,7 +10,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{Route('all-profile')}}" class="waves-effect">
                         <i class="bx bx-search-alt"></i>
                         <span>Tìm kiếm ứng viên</span>
                     </a>
@@ -32,7 +32,6 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="#">Hồ sơ đã lưu</a></li>
-                        <li><a href="#">Hồ sơ đã xem</a></li>
                         <li><a href="{{Route('employer.listProfileApply')}}">Hồ sơ ứng tuyển</a></li>
                     </ul>
                 </li>

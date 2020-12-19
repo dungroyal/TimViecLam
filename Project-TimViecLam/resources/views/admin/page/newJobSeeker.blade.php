@@ -35,6 +35,10 @@
                         <tr>
                             <th>STT</th>
                             <th>Tên người tìm việc</th>
+                            <th>Vị trí</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Tỉnh thành</th>
                             <th>Trạng thái</th>
                             <th>Ngày cập nhật</th>
                             <th>Hành động</th>
@@ -94,7 +98,11 @@
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: true, searchable: false},
                 { data: 'name', name: 'name' },
-                { data: 'status', name: 'status', orderable: false, searchable: false},
+                { data: 'position', name: 'position' },
+                { data: 'email', name: 'email' },
+                { data: 'phone', name: 'phone' },
+                { data: 'city', name: 'city' },
+                { data: 'status', name: 'status', searchable: false},
                 { data: 'update_at', name: 'update_at', orderable: true, searchable: false},
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]

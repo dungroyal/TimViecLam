@@ -143,8 +143,5 @@
             }
         });
     }
-
-        
-
 </script>
 @endpush

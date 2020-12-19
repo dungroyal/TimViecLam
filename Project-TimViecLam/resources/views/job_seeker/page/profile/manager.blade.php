@@ -25,20 +25,39 @@
             </div>
         </div>
     </div>
+    <?php $profile = DB::table('profiles')->where('job_seeker_id',Auth::guard('job_seeker')->user()->id)->first() ?>
+    @if($profile->status==2)
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="alert alert-danger" role="alert">
+                        <h6 class="alert-heading"><i class="fas fa-times-circle text-danger mr-1"></i><strong>Hồ sơ của bạn bạn không được duyệt!</h6>
+                        <hr>
+                        <p class="mb-0"><strong>Lý do: </strong> {{ $profile->note }}.</p>
+                    </div>
+                </div>
+            </div>
+        @endif
     <div class="row">
         <div class="col-6">
             <div class="card">
                 <div class="card-body">
                 <h4 class="card-title text-center">Hồ sơ online</h4>
                 <hr>
-                <?php $profile = DB::table('profiles')->where('job_seeker_id',Auth::guard('job_seeker')->user()->id)->first() ?>
                 @if ($profile->status != 1 )
                     <div class="row px-2">      
                         <div class="col-sm-12 col-lg-8">
                             <p class="text-primary font-weight-bold">{{$profile->position}}</p>
                             <p class="">Ngày tạo: <strong>{{date('H:i - d/m/Y', strtotime($profile->created_at))}}</strong></p>
                             <p class="">Ngày cập nhật: <strong>{{date('H:i - d/m/Y', strtotime($profile->updated_at))}}</strong></p>
-                            <p class="">Trạng thái: <strong>{{$profile->status == 2 ? "Chờ duyệt" : "Đã duyệt"}}</strong></p>
+                            <p class="">Trạng thái:<strong>
+                                @if ($profile->status == 0)
+                                    <span class="badge badge-pill badge-warning">Chờ duyệt</span>
+                                @elseif($profile->status ==1 )
+                                    <span class="badge badge-pill badge-success">Đã duyệt</span>
+                                @else
+                                <span class="badge badge-pill badge-danger">Không được duyệt</span>
+                                @endif
+                                </strong></p>
                         </div>
                         <div class="col-sm-12 col-lg-4">
                             <svg width="80%" height="auto" viewBox="0 0 16 16" class="bi bi-person-lines-fill text-black-50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
