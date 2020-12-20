@@ -24,7 +24,7 @@ Route::get('/job-detail/{id}', 'JobController@job_detail')->name('job-detail');
 Route::get('/job-detail-ajax/{id}', 'JobController@job_detail_ajax');
 Route::get('/nha-tuyen-dung', 'HomeController@landingPageEmployer')->name('employer.landingPage');
 Route::get('/company/{id}', 'HomeController@company')->name('company');
-Route::get('/profile', 'HomeController@profiles')->name('all-profile');
+Route::match(['get', 'post'],'/profile', 'HomeController@profiles')->name('all-profile');
 Route::get('/profile/{id}', 'HomeController@profileDetail')->name('profile-detail');
 
 Route::prefix('job-seeker')->group(function() {

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\JobSeeker;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Cookie;
 use App\Models\Job;
 use App\Models\Company;
+use App\Models\Profiles;
 
 class HomeController extends Controller
 {
@@ -61,14 +63,41 @@ class HomeController extends Controller
         return view('home/company',compact('company','listJob'));
     }
 
-    public function profiles()
+    public function profiles(Request $request)
     {
-        return view('home/profiles');
+        $career = $request->get('career');
+        $city = $request->get('city');
+        $salary = $request->get('salary');
+        $experience = $request->get('experience');
+        $degree = $request->get('degree');
+
+        $profiles = Profiles::when($career, function ($query, $career) {
+                        return $query->where('career_id', $career);
+                    }) 
+                    ->when($city, function ($query, $city) {
+                        return $query->where('work_location', $city);
+                    }) 
+                    ->when($salary, function ($query, $salary) {
+                        return $query->where('salary_id', $salary);
+                    }) 
+                    ->when($experience, function ($query, $experience) {
+                        return $query->where('experience_id', $experience);
+                    }) 
+                    ->when($degree, function ($query, $degree) {
+                        return $query->where('degree_id', $degree);
+                    })
+                    ->where('status',1)
+                    ->paginate(5);
+        return view('home.profiles',compact('profiles','request'));
     }
 
     public function profileDetail($id)
     {
-        return view('home/profileDetail');
+        $Profile = Profiles::findOrFail($id);
+        $Profile->view = ($Profile->view)+1;
+        $Profile->save();
+        $JobSeeker = JobSeeker::findOrFail($Profile->job_seeker_id);
+        return view('home.profileDetail',compact('Profile','JobSeeker'));
     }
     
 }
