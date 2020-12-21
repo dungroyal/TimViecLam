@@ -8,7 +8,6 @@
     <title>@yield('title') Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz</title>
     <meta content="Tìm việc làm nhanh" name="description">
     <meta content="Royal Team" name="author">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
@@ -19,9 +18,7 @@
     <link href="{{ asset('plugin/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" type="text/css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
-
 <body data-sidebar="dark">
     <div id="layout-wrapper">
         @section('header') @show
@@ -50,7 +47,6 @@
         </div>
     </div>
     <div class="rightbar-overlay"></div>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('plugin/metisMenu/metisMenu.min.js') }}"></script>
@@ -74,14 +70,4 @@
     <script src="{{ asset('admin/js/admin.js') }}"></script>
     @stack('scripts')
 </body>
-
-<script>
-    // $(document).ready(function(){
-    //     $(document).pjax('[data-pjax] a, a[data-pjax]', '.page-content')
-    //     $(document).on('pjax:start', function() { topbar.show(); });
-    //     $(document).on('pjax:end',   function() { topbar.hide();  });
-    //     $.pjax.defaults.timeout = 500;
-    // });
-    
-</script>
 </html>

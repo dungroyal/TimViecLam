@@ -75,7 +75,7 @@
                             <div class="form-group text-center">
                                 <button type="submit" class="btn float-right login_btn">Đăng ký ứng viên</button>
                             </div>
-                            <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                            {{-- <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
                                 <div class="border-bottom w-100 ml-5 mt-4"></div>
                                 <span class="px-2 small text-muted font-weight-bold text-muted active  mt-4">Hoặc</span>
                                 <div class="border-bottom w-100 mr-5 mt-4"></div>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="form-group text-center">
                                 <a href="#" class="btn float-right login_btn  bg-danger">  <i class="fab fa-google mr-3"></i> Đăng ký nhanh qua Google</a>
-                            </div>
+                            </div> --}}
                         </form>
                     </div>
                 </div>

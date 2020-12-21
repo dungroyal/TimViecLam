@@ -47,6 +47,7 @@
                         <h6 class="alert-heading"><i class="fas fa-times-circle text-danger mr-1"></i><strong>{{ $info_company->name_company }}!</strong> của bạn không được duyệt!</h6>
                         <hr>
                         <p class="mb-0"><strong>Lý do: </strong> {{ $info_company->note }}.</p>
+                        <a class="btn btn-primary btn-sm mt-3 bg-primary text-white" href="{{route('employer.company_info')}}" role="button">Cập nhật ngay</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +140,7 @@
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-4">Hồ sơ ứng viên</h4>
+                        <h4 class="card-title mb-4">Tin tuyển dụng</h4>
                         <div class="row text-center">
                             <div class="col-4">
                                 <h5 class="mb-0">2</h5>
@@ -178,28 +179,6 @@
                             </div>
                         </div>
                         <canvas id="Pie" height="150"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Hồ sơ công ty</h4>
-                        <div class="row text-center">
-                            <div class="col-4">
-                                <h5 class="mb-0">2</h5>
-                                <p class="text-muted text-truncate">Không được duyệt</p>
-                            </div>
-                            <div class="col-4">
-                                <h5 class="mb-0">5</h5>
-                                <p class="text-muted text-truncate">Chời duyệt</p>
-                            </div>
-                            <div class="col-4">
-                                <h5 class="mb-0">1</h5>
-                                <p class="text-muted text-truncate">Đã duyệt</p>
-                            </div>
-                        </div>
-                        <canvas id="line" height="100"></canvas>
                     </div>
                 </div>
             </div>

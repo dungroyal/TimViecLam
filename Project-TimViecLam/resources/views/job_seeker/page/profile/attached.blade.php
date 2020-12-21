@@ -63,7 +63,7 @@
                                 </tr>
                             @endif
                           <tr>
-                            <td colspan="2" class="text-center small"><strong>Hồ sơ đính kèm</strong> phải có định dạng <strong>.doc</strong>, <strong>.docx</strong>, <strong>.pdf</strong>. Dung lượng file tải lên không được vượt quá <strong>3Mb</strong>.
+                            <td colspan="2" class="text-center small"><strong>Hồ sơ đính kèm</strong> phải có định dạng <strong>.pdf</strong>. Dung lượng file tải lên không được vượt quá <strong>3Mb</strong>.
                             </td>
                           </tr>
                         </tbody>
@@ -72,6 +72,7 @@
             </div>
         </div> 
     </div> 
+
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -83,7 +84,7 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <iframe data-v-7b8bd654="" type="application/pdf" id="cv-pdf" src="http://127.0.0.1:8000/uploads/files/ryLgff1Hxs5CIqiyD4b8yik0lnsPJSydvR9SQaLb.pdf" width="100%" height="685" style="border: none;"></iframe>
+                    <iframe type="application/pdf" src="{{url('/')}}/{{$Profile->attached_profile}}" width="100%" height="685" style="border: none;"></iframe>
                 </div>
             </div>
             </div>

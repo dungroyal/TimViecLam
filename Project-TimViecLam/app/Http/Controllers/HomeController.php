@@ -21,27 +21,10 @@ class HomeController extends Controller
 
     public function index()
     {
-        $jobs_urgently = DB::table('job')
-            ->where('job.status',3)
-            ->join('companies', 'job.company_id', '=', 'companies.id')
-            ->join('city', 'job.city', '=', 'city.id')
-            ->join('salary', 'job.salary_id', '=', 'salary.id')
-            ->select('job.name_job', 'companies.name_company', 'companies.logo', 'companies.id', 'city.name as city', 'salary.name as salary')
-            ->paginate(8);
-
-        $jobs_hot = DB::table('job')
-            ->where('job.status',2)
-            ->join('companies', 'job.company_id', '=', 'companies.id')
-            ->join('city', 'job.city', '=', 'city.id')
-            ->join('salary', 'job.salary_id', '=', 'salary.id')
-            ->select('job.name_job', 'companies.name_company', 'companies.logo', 'companies.id', 'city.name as city', 'salary.name as salary')
-            ->paginate(8);
-
-        $all_jobs = Job::latest()->where('status',1)->paginate(8);
-        $jobs_recommend = Job::latest()->where('status',3)->paginate(8); // Việc làm gấp    
-        // $companies = Company::get()->random(10);
+        $new_jobs = Job::where('status',1)->latest()->paginate(8);
+        $jobs_recommend = Job::where('status',1)->orderBy('view', 'desc')->paginate(8);
        
-    	return view('home/index',compact('all_jobs','jobs_hot','jobs_urgently','jobs_recommend'));
+    	return view('home/index',compact('new_jobs','jobs_recommend'));
     } 
 
     public function landingPageEmployer()
@@ -99,5 +82,29 @@ class HomeController extends Controller
         $JobSeeker = JobSeeker::findOrFail($Profile->job_seeker_id);
         return view('home.profileDetail',compact('Profile','JobSeeker'));
     }
-    
+
+
+    public function blog(){
+        return view('home.blog.blog');
+    }
+
+    public function blogDetail(){
+        return view('home.blog.blog-detail');
+    }
+
+    public function about(){
+        return view('home.pages.about');
+    }
+
+    public function privacy(){
+        return view('home.pages.privacy');
+    }
+
+    public function TermsOfUse(){
+        return view('home.pages.termsOfUse');
+    }
+
+    public function security(){
+        return view('home.pages.security');
+    }
 }

@@ -215,8 +215,8 @@
                                                     type="checkbox" value="1"
                                                     id="confirm" name="confirm" required>
                                                 <label class="form-check-label" for="confirm"> Đồng ý với các 
-                                                    <a href=""><strong>Quy định bảo mật</strong></a> & 
-                                                    <a href=""><strong>Thỏa thuận sử dụng</strong></a> của <strong>Tìm Việc Làm</strong>
+                                                    <a href="{{ Route('privacy')}}"><strong>Quy định bảo mật</strong></a> & 
+                                                    <a href="{{ Route('termsOfUse')}}"><strong>Thỏa thuận sử dụng</strong></a> của <strong>Tìm Việc Làm</strong>
                                                 </label>
                                                 @error('confirm')
                                                     <div class="invalid-feedback">

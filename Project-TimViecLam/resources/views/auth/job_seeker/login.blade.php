@@ -66,8 +66,8 @@
                                 <button type="submit" class="btn float-right login_btn">
                                     {{ __('Login') }}
                                 </button>
-                            </div>
-                            <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                            </div> <br>
+                            {{-- <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
                                 <div class="border-bottom w-100 ml-5 mt-3"></div>
                                 <span class="px-2 small text-muted font-weight-bold text-muted mt-3">Hoặc</span>
                                 <div class="border-bottom w-100 mr-5 mt-3"></div>
@@ -86,9 +86,9 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="text-center forgotpassword__login-uv">
-                                <a href="{{ route('password.request') }}" class=>Quên Mật Khẩu?</a>
+                            </div> --}}
+                            <div class="text-center forgotpassword__login-uv  mt-4">
+                                <a href="{{ route('password.request') }}" class="">Quên Mật Khẩu?</a>
                             </div>
                         </form>
                     </div>

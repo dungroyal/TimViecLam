@@ -62,12 +62,6 @@
                                     <span>Tìm ứng viên</span>
                                 </a>
                             </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('images\orders.png') }}" alt="Hỗ trợ">
-                                    <span>Bảng giá</span>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,7 +112,7 @@
                         alt="{{$info_company->name_company}}">
                     @else
                         <img class="rounded-circle header-profile-user"
-                        src="/images/{{ $info_company->logo }}"
+                        src="{{asset('/')}}{{$info_company->logo}}"
                         alt="{{ $info_company->name_company }}">
                     @endif
 

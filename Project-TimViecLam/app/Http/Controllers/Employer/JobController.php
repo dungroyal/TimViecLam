@@ -137,6 +137,7 @@ class JobController extends Controller
             $Job->address_contact =$request->address_contact;
             $Job->email_contact =$request->email_contact;
             $Job->deadline =$request->deadline;
+            $Job->status =0;
 
             $Job->save();
             return redirect()->back()->with('message','Cập nhật thành công');
@@ -195,9 +196,13 @@ class JobController extends Controller
                 })
                 ->addColumn('status', function($row){
                     if ($row->status == 0) {
-                        $status = '<span class="badge badge-pill badge-danger">Đã tắt</span>';
-                    }else{
-                        $status = '<span class="badge badge-pill badge-success">Đang chạy</span>';
+                        $status = '<span class="badge badge-pill badge-warning">Chờ duyệt</span>';
+                    }else if ($row->status == 1){
+                        $status = '<span class="badge badge-pill badge-success">Đã duyệt</span>';
+                    }else if ($row->status == 2){
+                        $status = '<span class="badge badge-pill badge-danger">Không được duyệt</span>';
+                    }else {
+                        $status = '<span class="badge badge-pill badge-danger">Công ty chưa được duyệt</span>';
                     }
                     return $status;
                 })

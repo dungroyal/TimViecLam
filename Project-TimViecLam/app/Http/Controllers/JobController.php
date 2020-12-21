@@ -11,17 +11,13 @@ use Yajra\Datatables\Datatables;
 
 class JobController extends Controller
 {
-    public function __construct()
-    {
-        // $this->middleware('auth');
-    }
-
     public function index(Request $request){
         $keyword = $request->get('keyword');
         $career = $request->get('career');
         $city = $request->get('city');
 
-        $jobs = Job::when($keyword, function ($query, $keyword) {
+        $jobs = Job::where('status',1)
+                    ->when($keyword, function ($query, $keyword) {
                         return $query->where('name_job','LIKE','%'.$keyword.'%');
                     })
                     ->when($career, function ($query, $career) {
@@ -30,7 +26,7 @@ class JobController extends Controller
                     ->when($city, function ($query, $city) {
                         return $query->where('city', $city);
                     })
-                    ->paginate(10);
+                    ->paginate(15);
         return view('home.job',compact('jobs'));   
     }
 
@@ -39,15 +35,16 @@ class JobController extends Controller
         $career = $request->get('career');
         $city = $request->get('city');
 
-        $data = Job::where('name_job','like','%'.$keyword.'%')
+        $data = Job::where('status',1)
+                ->where('name_job','like','%'.$keyword.'%')
                 ->orWhere('career_id',$career)
                 ->orWhere('city',$city)
-                ->limit(10)->get();
+                ->get();
         return view('home.element.jobsListItems',['jobs' => $data]);
     }
 
     public function allJob(Request $request){
-        $data = Job::latest()->paginate(10);
+        $data = Job::where('status',1)->latest()->get();
         return view('home.element.jobsListItems',['jobs' => $data]);
     }
 
@@ -57,7 +54,7 @@ class JobController extends Controller
         $jobs_detail->view = $jobs_detail->view++;
         $jobs_detail->save();
         $company = Company::findOrFail($jobs_detail->company_id);
-        $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
+        $listJob = Job::where('status',1)->Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
         return view('home/job_detail',compact('jobs_detail','company','listJob'));
     }
 
@@ -67,7 +64,7 @@ class JobController extends Controller
         $jobs_detail->view = $jobs_detail->view++;
         $jobs_detail->save();
         $company = Company::findOrFail($jobs_detail->company_id);
-        $listJob = Job::Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
+        $listJob = Job::where('status',1)->Where('company_id',$jobs_detail->company_id)->orderBy('id', 'desc')->get();
         return view('home.element.jobDetail',compact('jobs_detail','company','listJob'));
     }
 }

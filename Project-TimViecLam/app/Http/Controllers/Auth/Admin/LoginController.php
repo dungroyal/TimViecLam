@@ -23,6 +23,11 @@ class LoginController extends Controller
     {
         return view('auth.admin.login');
     }
+    
+    public function showResetForm()
+    {
+        return view('auth.admin.passwords.reset');
+    }
 
     protected function guard()
     {

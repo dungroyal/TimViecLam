@@ -31,11 +31,11 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">{{$JobSeeker->name}} 
                         @if ($Profile->status == 0)
-                            <i class="fas fa-exclamation-circle text-warning"></i>
+                            <i class="fas fa-exclamation-circle text-warning fa-sm"></i>
                         @elseif($Profile->status == 1)
-                            <i class="fas fa-check-circle text-success"></i>
+                            <i class="fas fa-check-circle text-success fa-sm"></i>
                         @else
-                            <i class="fas fa-times-circle text-danger"></i>
+                            <i class="fas fa-times-circle text-danger fa-sm"></i>
                         @endif
                     </h4>
 
@@ -61,6 +61,16 @@
                                     <th scope="row" width="10%">Số điện thoại :</th>
                                     <td>
                                         {!! $JobSeeker->phone ?? "<span class='badge badge-pill badge-warning'>Thiếu Số điện thoại</span>" !!}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" width="10%">Giới tính:</th>
+                                    <td>
+                                        {{ $JobSeeker->gender ==0 ? "Nam":"Nữ"}}
+                                    </td>
+                                    <th scope="row" width="10%">Số điện thoại :</th>
+                                    <td>
+                                        {{ $JobSeeker->marital_status ==0 ? "Độc thân":"Đã kết hôn"}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -127,7 +137,6 @@
             </div>
         </div>
         <!-- Modal -->
-        <!-- Modal -->
         <div class="modal fade" id="viewAttachedProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -138,13 +147,135 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <iframe data-v-7b8bd654="" type="application/pdf" id="cv-pdf" src="http://127.0.0.1:8000/{{$Profile->attached_profile}}" width="100%" height="685" style="border: none;"></iframe>
+                    <iframe data-v-7b8bd654="" type="application/pdf" id="cv-pdf" src="{{url('/')}}/{{$Profile->attached_profile}}" width="100%" height="685" style="border: none;"></iframe>
                 </div>
             </div>
             </div>
         </div>
         <!-- Modal -->
     </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <?php $degree_details = DB::table('degree_details')->where('id_profile',$Profile->id)->get() ?>
+                    <h4 class="card-title mb-4">
+                        Học vấn / Bằng cấp
+                        {!! count($degree_details) ==0 ? "<span class='badge badge-pill badge-warning'>Thiếu học vấn bằng cấp</span>":"<i class='fas fa-check-circle text-success'></i>" !!}
+                    
+                    </h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Trường</th>
+                                <th scope="col">Tên chứng chỉ</th>
+                                <th scope="col">Nghành</th>
+                                <th scope="col">Xếp loại</th>
+                                <th scope="col">Thời gian</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($degree_details as $item)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{$item->university}}</td>
+                                        <td>{{$item->certificate}}</td>
+                                        <td>{{$item->major}}</td>
+                                        <td>{{$item->ranked}}</td>
+                                        <td>Từ {{$item->month_start}}/{{$item->year_start}} đến {{$item->graduation_month}}/{{$item->graduation_year}}</td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="4">Chưa có học vấn / bằng cấp</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                          </table>                          
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <?php $experience_detail = DB::table('experience_detail')->where('id_profile',$Profile->id)->get() ?>
+                    <h4 class="card-title mb-4">
+                        Kinh ngiệm làm việc
+                        {!! count($experience_detail) == 0 ? "<span class='badge badge-pill badge-warning'>Thiếu kinh nghiệm làm việc</span>":"<i class='fas fa-check-circle text-success'></i>" !!}
+                    </h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Vị trí công việc</th>
+                                <th scope="col">Công ty</th>
+                                <th scope="col">Thời gian</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($experience_detail as $item)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{$item->position}}</td>
+                                        <td>{{$item->company}}</td>
+                                        <td>Từ {{$item->month_start}}/{{$item->year_start}} 
+                                            đến {{$item->month_end}}/{{$item->year_start}}</td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="4" class="text-center">Chưa có kinh nghiệm làm việc</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                          </table>                          
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <?php $skill_detail = DB::table('skill_detail')->where('id_profile',$Profile->id)->first() ?>
+                    <h4 class="card-title mb-4">
+                        Kỹ năng
+                        {!! $skill_detail==null ? "<span class='badge badge-pill badge-warning'>Thiếu kỹ năng</span>":"<i class='fas fa-check-circle text-success'></i>" !!}
+                    </h4>
+                    Mô tả: {!!$skill_detail->professional_skills ?? "<span class='badge badge-pill badge-warning'>Thiếu mô tả kỹ năng</span>"!!}
+                    <div class="table-responsive mt-3">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Kỹ năng</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <?php $otherSkill = explode(",",$skill_detail->other_skill)?>
+                                @forelse ($otherSkill as $item)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{$item}}</td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="4" class="text-center">Chưa có kỹ năng</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                          </table>                          
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+    
 </div>
 </div>
 </div>

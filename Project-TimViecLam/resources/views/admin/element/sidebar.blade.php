@@ -9,18 +9,6 @@
                         <span>Quản lý chung</span>
                     </a>
                 </li>
-                {{-- <li>
-                    <a href="#" class="waves-effect">
-                        <i class="bx bx-search-alt"></i>
-                        <span>Thống kê</span>
-                    </a>
-                </li> --}}
-                {{-- <li>
-                    <a href="#" class="waves-effect">
-                        <i class="bx bx-message-detail"></i>
-                        <span>Liên hệ</span>
-                    </a>
-                </li> --}}
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-briefcase"></i>
@@ -39,6 +27,16 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ Route('admin.new.job_seeker')}}">Hồ sơ chờ duyệt</a></li>
                         <li><a href="{{ Route('admin.all.job_seeker')}}">Tất cả hồ sơ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user-pin"></i>
+                        <span>QL Tin tuyển dụng</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ Route('admin.new.job_post')}}">Tin chờ duyệt</a></li>
+                        <li><a href="{{ Route('admin.all.job_post')}}">Tất cả tin</a></li>
                     </ul>
                 </li>
                 <li>

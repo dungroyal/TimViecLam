@@ -121,9 +121,21 @@
                                         quan công ty</a>
                                 </li>
                                 <li class="ml-auto">
-                                    <a href="#" data-toggle="tooltip" title="Lưu công việc">
-                                        <i class="far fa-heart fa-lg mr-3 mt-2"></i>
-                                    </a>
+                                    @if (Auth::guard('job_seeker')->user() != null)
+                                        @if(DB::table('save_job')->where([['job_id', $jobs_detail->id],['job_seeker_id', Auth::guard('job_seeker')->user()->id]])->count() > 0)
+                                            <a data-toggle="tooltip" title="Đã lưu công việc">
+                                                <i class="fas fa-heart fa-lg mr-3 mt-2 text-danger"></i>
+                                            </a>
+                                        @else
+                                            <a href="#" data-toggle="tooltip" data-id="{{$jobs_detail->id}}" class="saveJob" title="Lưu công việc">
+                                                <i class="far fa-heart fa-lg mr-3 mt-2 saveJob"></i>
+                                            </a>
+                                        @endif
+                                    @else
+                                        <a href="{{ Route('login') }}" data-toggle="tooltip" title="Đăng nhập để lưu lại công việc">
+                                            <i class="far fa-heart fa-lg mr-3 mt-2"></i>
+                                        </a>
+                                    @endif
                                     <a href="#" data-toggle="tooltip" title="Chia sẻ công việc">
                                         <i class="fas fa-share-alt fa-lg mr-3"></i>
                                     </a>
@@ -252,9 +264,9 @@
                                             <div class="row">
                                               <div class="col-md-1">
                                                 @if ($company->logo != null)
-                                                <img src="{{ asset('images/') }}/{{$company->logo}}" alt="TVL"/>
+                                                <img src="{{ asset('/') }}{{$company->logo}}" alt="TVL"/>
                                                 @else
-                                                <img src="/images/logo/timvieclam-placeholder.png" alt="TVL"/>
+                                                <img src="{{ asset('/images/logo/timvieclam-placeholder.png') }}" alt="TVL"/>
                                                 @endif
                                                 </div>
                                               <div class="j_company col-md-8">
@@ -269,7 +281,7 @@
                                                     </div>
                                                 </div>
                                               </div>
-                                              <div class="col-md-3">
+                                              {{-- <div class="col-md-3">
                                                 <div class="row">
                                                   <div class="col mt-3"><a href="#"><i class="icofont icon-radius fab fa-facebook"></i></a>
                                                   </div>
@@ -277,7 +289,7 @@
                                                   </div>
                                                   <div class="col mt-3"><a href="#"><i class="icofont icon-radius fab fa-twitter"></i></a></div>
                                                 </div>
-                                              </div>
+                                              </div> --}}
                                             </div>
                                           </div>
                                         </div>
@@ -340,26 +352,7 @@
                                                   <div class="col-lg-12">
                                                     <div class="row">
                                                     <div class="content">
-                                                      <p>{{$company->name_company}} chúng tôi cung cấp các dịch vụ sau :</p>
-                                                      <p>1-Thiết kế, Quản lý xây dựng, và Xây dựng công trình với thương hiệu <strong>FOSUP Design &amp;
-                                                          Build&nbsp;</strong> &nbsp;&nbsp;,</p>
-                                                      <p>2-Giáo dục Song ngữ quốc tế từ bậc Mầm non đến Trung học với thương hiệu <strong>TESLA&nbsp;
-                                                        </strong>&nbsp;,&nbsp;</p>
-                                                      <p>3-Đầu tư xây dựng và Cho thuê văn phòng làm việc hạng B&nbsp; cho khách hàng đối tác doanh nghiệp
-                                                        với thương hiệu<strong> SOHO Biz</strong>&nbsp;&nbsp; .</p>
-                                                      <p>Thực hiện dịch vụ Design &amp; Build, chúng tôi thực hiện công việc các công việc như sau</p>
-                                                      <p>1. Phác thảo nắm bắt ý tưởng mong muốn của chủ đầu tư, thu thập thông tin cần thiết.</p>
-                                                      <p>2. Tìm đưa phương án thiết kế thích dụng, và đạt thẩm mỹ cao, phù hợp nhu cầu chủ đầu tư .</p>
-                                                      <p>Tìm những ý tốt nhất từ những team tốt nhất để đáp ứng mong muốn của khách hàng 1 cách tốt nhất.
-                                                      </p>
-                                                      <p>3. Trên Phương án concept tốt, chúng tôi thực hiện việc Triển khai thiết kế kỹ thuật từ lập Quy
-                                                        hoạch Phân khu/TMB đến Thiết kế Kiến trúc, Kết cấu, M/E/P và Nội thất công trình đảm bảo Ý tưởng
-                                                        thiết kế, và Giải quyết các vấn đề kĩ thuật thiết kế theo Tiêu chuẩn Thiết kế và Tiêu chuẩn công
-                                                        trình Xanh (như LEED, Edge, Lotus, Greenmark).</p>
-                                                      <p>4. Chúng tôi thực hiện xây dựng Công trình trên Máy tính bằng Revit &amp; các Phần mềm chuyên dụng
-                                                        khác. Ứng dụng công nghệ BIM trong quá trình thiết kế kĩ thuật và quản lý thi công xây dựng để xử lý
-                                                        các vướn mắc kĩ thuật, các va chạm kĩ thật giữa các hệ thống khác nhau (Kết cấu, M/E/P), xây dựng
-                                                        biện pháp thi công, lập tiến độ thi công, và mô phỏng quá trình thi công trên máy tính.</p>
+                                                      <p>{{$company->description}}</p>
                                                     </div>
                                                   </div>
                                                   </div>
@@ -375,115 +368,9 @@
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
     </div>
-
-    <!-- Việc làm 2  -->
-    <div class="container-fluid px-5 mt-5" style="display: block;">
-        <div class="row">
-            <div class="col-lg-12 col-custom-xxl-12">
-                <div class="job-found">
-                    <div class="job-found-amout text-uppercase">
-                        <p>Việc làm tương tự</p>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 mt-3 mb-5">
-                    <!--  -->
-                    <div class="row d-flex justify-content-around">
-                        @for ($i = 0; $i < 3; $i++)
-                        <div class="col-md-6 col-lg-4 job-over-item">
-                            <div class="row job-item-show">
-                                    <a href="/job-detail" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
-                                        <img src="{{ asset('images/job1.png') }}" />
-                                    </a>
-                                    <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
-                                        <p class="job_title text_ellipsis mt-1">
-                                            <a href="/job-detail" data-toggle="tooltip" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                                <span>
-                                                    <strong>Loan Processor (hỗ Trợ Cho Vay Tiền Mua Nhà)</strong>
-                                                </span>
-                                            </a></p>
-                                        <div class="job_company">
-                                            <div class="name">
-                                                <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
-                                                    <span>Cali-land, Inc</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-1 job_info" >
-                                            <div class="col-5 text_ellipsis">
-                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash-stack mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"/>
-                                                    <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"/>
-                                                    <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
-                                                  </svg> 
-                                                11 triệu - 24 triệu
-                                            </div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="col-7 text_ellipsis">
-                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-                                                  </svg>
-                                                Hồ Chí Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 job-over-item">
-                            <div class="row job-item-show">
-                                    <a href="/job-detail" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
-                                        <img src="{{ asset('images/job1.png') }}" />
-                                    </a>
-                                    <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
-                                        <p class="job_title text_ellipsis mt-1">
-                                            <a href="/job-detail" data-toggle="tooltip" title="Loan Processor (hỗ Trợ Cho Vay Tiền  Mua Nhà)" target="_blank">
-                                                <span>
-                                                    <strong>Loan Processor (hỗ Trợ Cho Vay Tiền Mua Nhà)</strong>
-                                                </span>
-                                            </a></p>
-                                        <div class="job_company">
-                                            <div class="name">
-                                                <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
-                                                    <span>Cali-land, Inc</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-1 job_info" >
-                                            <div class="col-5 text_ellipsis">
-                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash-stack mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"/>
-                                                    <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"/>
-                                                    <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
-                                                  </svg> 
-                                                11 triệu - 24 triệu
-                                            </div>
-                                            <div title="Hồ Chí Minh, Bình Dương" class="col-7 text_ellipsis">
-                                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
-                                                  </svg>
-                                                Hồ Chí Minh, Bình Dương
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endfor
-                        <div class="col job-over-item px-0 text-center">
-                            <a class="btn btn-primary">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="mt-n1 mr-1 bi bi-plus-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                  </svg>
-                                Xem thêm</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-
 @endsection
 
 @push('scripts')
@@ -513,6 +400,12 @@
                     alert("Thất bại!");
                 }
             });
+        });
+
+        $(".saveJob").click(function(e){
+            e.preventDefault();
+            var idJob = $(this).data("id");        
+            window.location.href = "/job-seeker/saveJob/"+idJob;
         });
     });
 

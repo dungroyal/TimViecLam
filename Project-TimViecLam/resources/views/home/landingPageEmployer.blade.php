@@ -15,7 +15,7 @@
               <i class="icon-hs-ntd"></i>
             </div>
             <h3>
-              <div class="title-note-banner-ntd text-white">300.000 +</div>
+              <div class="title-note-banner-ntd text-white">12{{ App\Models\Profiles::all()->count()}}+</div>
               <div class="note-banner-ntd">Hồ sơ ứng tuyển</div>
             </h3>
           </div>
@@ -24,7 +24,7 @@
               <i class="icon-ntv-ntd"></i>
             </div>
             <h3>
-              <div class="title-note-banner-ntd text-white">100.000 +</div>
+              <div class="title-note-banner-ntd text-white">21{{ App\JobSeeker::all()->count()}}+</div>
               <div class="note-banner-ntd">Người tìm việc</div>
             </h3>
           </div>
@@ -34,7 +34,7 @@
               <i class="icon-num-ut"></i>
             </div>
             <h3>
-              <div class="title-note-banner-ntd text-white">12.000.000 +</div>
+              <div class="title-note-banner-ntd text-white">500+</div>
               <div class="note-banner-ntd">Lượt ứng tuyển</div>
             </h3>
           </div>
@@ -108,7 +108,7 @@
           </li>
         </ul>
         <div>
-          <a target="_blank" href="#" class="btn btn-orange-48">ĐĂNG TUYỂN NGAY <i
+          <a target="_blank" href="{{ Route('employer.dashboard') }}" class="btn btn-orange-48">ĐĂNG TUYỂN NGAY <i
               class="fas fa-arrow-right icon-sprite-new icon-next-white"></i></a>
         </div>
 
@@ -172,7 +172,7 @@
           </li>
         </ul>
         <div class="paddingTop10">
-          <a target="_blank" href="#" class="btn btn-orange-48">LỌC HỒ SƠ ỨNG VIÊN NGAY <i
+          <a target="_blank" href="{{ Route('all-profile') }}" class="btn btn-orange-48">LỌC HỒ SƠ ỨNG VIÊN NGAY <i
               class="fas fa-arrow-right icon-sprite-new icon-next-white"></i></a>
         </div>
 
@@ -186,7 +186,7 @@
       <div class="div-dky-tv">
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <a href="#" class="btn btn-orange-52">ĐĂNG KÝ TƯ VẤN NGAY</a>
+            <a href="{{ Route('employer.dashboard') }}" class="btn btn-orange-52">ĐĂNG KÝ TƯ VẤN NGAY</a>
           </div>
 
           <div class="col-xs-12 col-sm-8">

@@ -24,6 +24,12 @@ class JobController extends Controller
         return redirect()->back()->with('message','Ứng tuyển thành công!');
     }
 
+    public function saveJob($id){
+        $jobId = Job::find($id);
+        $jobId->saveJob()->attach(Auth::guard('job_seeker')->user()->id,['job_id' => $id]);
+        return redirect()->back()->with('message','Lưu công việc thành công thành công!');
+    }
+
     public function listApplyJob()
     {
         return view('job_seeker.page.listJobApply');
@@ -55,13 +61,41 @@ class JobController extends Controller
                     return $updated_at->diffForHumans($now);
                 })
                 ->addColumn('action', function($row){
-                    $id_jsk=\App\JobSeeker::find($row->job_seeker_id)->id;
-                    $actionBtn = '<button onclick="showModal('.$id_jsk.')" type="button" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target=".bs-example-modal-xl"><i class="far fa-eye"></i></button>';
+                    $idProfile = \App\Models\Profiles::where('job_seeker_id',$row->job_seeker_id)->first()->id;
+                    $actionBtn = '<a href="'.Route("profile-detail",["id" =>$idProfile]).'" target="_blank" class="btn btn-success btn-sm"><i class="far fa-eye"></i></a>';
                     return $actionBtn;
                 })
                 ->rawColumns(['name_jsk','name_job','status','date','action'])
                 ->make(true);
         }
+    }
+
+    public function listSaveJob(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = DB::table('save_job')->where('job_seeker_id',Auth::guard('job_seeker')->user()->id)->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('name_job', function($row){
+                    return \App\Models\Job::find($row->job_id)->name_job;
+                })
+                ->addColumn('company', function($row){
+                    $company_id = \App\Models\Job::find($row->job_id)->company_id;
+                    return \App\Models\Company::find($company_id)->name_company;
+                })
+                ->addColumn('date', function($row){
+                    $now = Carbon::now('Asia/Ho_Chi_Minh');
+                    $updated_at =  Carbon::parse($row->updated_at);
+                    return $updated_at->diffForHumans($now);
+                })
+                ->addColumn('action', function($row){
+                    $actionBtn = '<a href="'.Route("job-detail",["id" =>$row->job_id]).'" target="_blank" class="btn btn-success btn-sm"><i class="far fa-eye"></i></a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['name_job','company','date','action'])
+                ->make(true);
+        }
+        return view('job_seeker.page.listSaveJob');
     }
 
     public function jobSuitable(Request $request)

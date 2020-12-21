@@ -4,9 +4,9 @@
     <div class="row job-item-show">
             <a href="" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
                 @if ($company->logo != null)
-                    <img src="{{ asset('images/') }}/{{$company->logo}}" alt="TVL"/>
+                    <img src="{{ asset('/') }}{{$company->logo}}" alt="TVL"/>
                 @else
-                <img src="/images/logo/timvieclam-placeholder.png" alt="{{$job->name_job}}" alt="TVL"/>
+                <img src="{{ asset('/images/logo/timvieclam-placeholder.png') }}" alt="{{$job->name_job}}" alt="TVL"/>
                 @endif
             </a>
             <div class="col-sm-10 col-lg-10 col-xl-10 company_name">

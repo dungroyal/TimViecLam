@@ -23,7 +23,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ Route('listApplyJob')}}">Việc làm đã ứng tuyển</a></li>
-                        <li><a href="#">Việc làm đã lưu</a></li>
+                        <li><a href="{{ Route('listSaveJob')}}">Việc làm đã lưu</a></li>
                         <li><a href="{{ Route('job-seeker.job-suitable')}}">Công việc phù hợp</a></li>
                     </ul>
                 </li>

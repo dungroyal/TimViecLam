@@ -71,7 +71,7 @@
                 @foreach (App\Models\Career::all() as $career)
                 <div class="item-top-field">
                     <div class="box_shadow_slider">
-                        <a href="#" target="_blank">
+                        <a href="/job?career={{$career->id}}" target="_blank">
                             <div class="row">
                                 <div class="col-3 icon-top-field p-0 pl-1">
                                     <img alt="item" class="w-100" src="images/catalog.png" alt="Carrers"/>
@@ -83,7 +83,7 @@
                                         </p>
                                     </span>
                                     <p class="text_ellipsis text_italic text-center">
-                                        <small>(15 việc làm đang tuyển)</small>
+                                        <small>({{App\Models\Job::where('career_id',$career->id)->count()}} việc làm đang tuyển)</small>
                                     </p>
                                 </div>
                             </div>
@@ -95,23 +95,24 @@
         </div>
     </div>
     <div class="container mb-3">
-        <!-- việc làm tuyển gấp -->
+        <!-- Việc làm nỗi bậc -->
         <div class="box_general mt-5">
             <h2 class="text_ellipsis text-uppercase font-weight-bold p-3"><i class="fas fa-briefcase"></i>
-                Việc làm tuyển gấp
+                Việc làm nỗi bậc
             </h2>
             <!-- wp slider list job -->
             <div class="col-lg-12 col-md-12 mt-3">
                 <!--  -->
                 <div class="row d-flex justify-content-around">
-                    @foreach ($jobs_urgently as $job)
+                    @foreach ($jobs_recommend as $job)
                     <div class="col-md-6 col-lg-6 job-over-item">
                         <div class="row job-item-show">
-                            <a href="{{ Route('job-detail',['id' => $job->id]) }}" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
+                            <a class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
                                 @if ($job->logo != null)
-                                    <img src="{{ asset('images/') }}{{$job->logo}}" alt="{{$job->name_job}}"/>
+                                    <img src="{{ asset('/') }}{{$job->logo}}" alt="{{$job->name_job}}"/>
                                 @else
-                                <img src="/images/logo/timvieclam-placeholder.png" alt="{{$job->name_job}}"/>
+                                <img src="{{ asset('/')}}images/logo/timvieclam-placeholder.png" 
+                                        alt="{{$job->name_job}}"/>
                                 @endif
                             </a>
                             <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
@@ -121,11 +122,12 @@
                                         <span>
                                             <strong>{{$job->name_job}}</strong>
                                         </span>
-                                    </a></p>
+                                    </a>
+                                </p>
                                 <div class="job_company">
                                     <div class="name">
-                                        <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
-                                            <span>{{$job->name_company}}</span>
+                                        <a href="{{Route('company',['id'=>$job->company_id])}}"  class="text_ellipsis" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
+                                            <span>{{ App\Models\Company::findOrFail($job->company_id)->name_company}}</span>
                                         </a>
                                     </div>
                                 </div>
@@ -139,7 +141,7 @@
                                             <path
                                                 d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
                                         </svg>
-                                        {{$job->salary}}
+                                        {{App\Models\Salary::findOrFail($job->salary_id)->name}}
                                     </div>
                                     <div title="{{$job->city}}" class="col-7 text_ellipsis">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1"
@@ -147,14 +149,18 @@
                                             <path fill-rule="evenodd"
                                                 d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
                                         </svg>
-                                        {{$job->city}}
+                                        {{App\Models\City::findOrFail($job->city)->name}}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                        @endforeach
-                        {{ $jobs_urgently->links() }}
+                    </div>
+                    @endforeach
+                        <a href="{{ Route('job')}}" class="btn btn-sm btn-view-more text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill mb-1 mr-1" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg>
+                        Tất cả công việc</a>
                     </div>
                 </div>
             </div>
@@ -196,36 +202,36 @@
             <!-- việc làm tuyển gấp -->
             <div class="box_general mt-4">
                 <h2 class="text_ellipsis text-uppercase font-weight-bold p-3"><i class="fas fa-briefcase"></i>
-                    Việc làm nỗi bật
+                    Việc làm mới
                 </h2>
                 <!-- wp slider list job -->
                 <div class="col-lg-12 col-md-12 mt-3">
                     <!--  -->
                     <div class="row d-flex justify-content-around">
-                        @foreach ($jobs_hot as $job)
+                    @foreach ($new_jobs as $job)
                     <div class="col-md-6 col-lg-6 job-over-item">
                         <div class="row job-item-show">
-                            <a href="/job-detail/{{$job->id}}" class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
+                            <a class="col-sm-2 col-lg-2 col-xl-2 job-item-show__logo">
                                 @if ($job->logo != null)
-                                    <img src="{{ asset('images/') }}{{$job->logo}}" alt="{{$job->name_job}}"/>
+                                    <img src="{{ asset('/') }}{{$job->logo}}" alt="{{$job->name_job}}"/>
                                 @else
-                                <img src="/images/logo/timvieclam-placeholder.png" 
+                                <img src="{{ asset('/')}}images/logo/timvieclam-placeholder.png" 
                                         alt="{{$job->name_job}}"/>
                                 @endif
-                                
                             </a>
                             <div class="col-sm-10 col-lg-10 col-xl-10 company_name">
                                 <p class="job_title text_ellipsis mt-1">
-                                    <a href="/job-detail" data-toggle="tooltip" title="{{$job->name_job}}"
+                                    <a href="{{ Route('job-detail',['id' => $job->id]) }}" data-toggle="tooltip" title="{{$job->name_job}}"
                                         target="_blank">
                                         <span>
                                             <strong>{{$job->name_job}}</strong>
                                         </span>
-                                    </a></p>
+                                    </a>
+                                </p>
                                 <div class="job_company">
                                     <div class="name">
-                                        <a href="/job-detail" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
-                                            <span>{{$job->name_company}}</span>
+                                        <a href="{{Route('company',['id'=>$job->company_id])}}" class="text_ellipsis" target="_blank" title="Cali-land, Inc tuyển dụng" data-toggle="tooltip">
+                                            <span>{{ App\Models\Company::findOrFail($job->company_id)->name_company}}</span>
                                         </a>
                                     </div>
                                 </div>
@@ -239,7 +245,7 @@
                                             <path
                                                 d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
                                         </svg>
-                                        {{$job->salary}}
+                                        {{App\Models\Salary::findOrFail($job->salary_id)->name}}
                                     </div>
                                     <div title="{{$job->city}}" class="col-7 text_ellipsis">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill mb-1"
@@ -247,14 +253,18 @@
                                             <path fill-rule="evenodd"
                                                 d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
                                         </svg>
-                                        {{$job->city}}
+                                        {{App\Models\City::findOrFail($job->city)->name}}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                        @endforeach
-                        {{ $jobs_hot->links() }}
+                    </div>
+                    @endforeach
+                        <a href="{{ Route('job')}}" class="btn btn-sm btn-view-more text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill mb-1 mr-1" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            </svg>
+                        Tất cả công việc</a>
                 </div>
             </div>
         </div>
@@ -262,12 +272,12 @@
 
 
         <section class="blog py-3 mt-2 bg-white">
-            <h3 class="font-weight-semibold text-center text-uppercase pt-2">Cẩm nang nghề nghiệp</h3>
+            <h2 class="font-weight-semibold text-center text-uppercase pt-3">Cẩm nang nghề nghiệp</h2>
             <div id="cards_landscape_wrap-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="">
+                            <a href="{{ Route('blog.detail')}}">
                                 <div class="card-flyer bg-white">
                                     <div class="text-box">
                                         <div class="image-box">
@@ -279,8 +289,8 @@
                                             <div class="card__content  pb-3">
                                                 <img src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=AD" alt=""
                                                     class="card__image-avt" />
-                                                <a href="#" class="btn btn--primary">Admin</a>
-                                                <a href="#" class="btn btn--secondary">Đọc Tiếp <i
+                                                <a href="{{ Route('blog.detail')}}" class="btn btn--primary">Admin</a>
+                                                <a href="{{ Route('blog.detail')}}" class="btn btn--secondary">Đọc Tiếp <i
                                                         class="fa fa-angle-double-right"></i></a>
                                             </div>
                                         </div>
@@ -289,7 +299,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="">
+                            <a href="{{ Route('blog.detail')}}">
                                 <div class="card-flyer">
                                     <div class="text-box">
                                         <div class="image-box">
@@ -300,8 +310,8 @@
                                             <div class="card__content  pb-3">
                                                 <img src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=AD" alt=""
                                                     class="card__image-avt" />
-                                                <a href="#" class="btn btn--primary">Admin</a>
-                                                <a href="#" class="btn btn--secondary">Đọc Tiếp <i
+                                                <a href="{{ Route('blog.detail')}}" class="btn btn--primary">Admin</a>
+                                                <a href="{{ Route('blog.detail')}}" class="btn btn--secondary">Đọc Tiếp <i
                                                         class="fa fa-angle-double-right"></i></a>
                                             </div>
                                         </div>
@@ -310,7 +320,7 @@
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a href="">
+                            <a href="{{ Route('blog.detail')}}">
                                 <div class="card-flyer">
                                     <div class="text-box">
                                         <div class="image-box">
@@ -322,8 +332,8 @@
                                             <div class="card__content  pb-3">
                                                 <img src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=AD" alt=""
                                                     class="card__image-avt" />
-                                                <a href="#" class="btn btn--primary">Admin</a>
-                                                <a href="#" class="btn btn--secondary">Đọc Tiếp <i
+                                                <a href="{{ Route('blog.detail')}}" class="btn btn--primary">Admin</a>
+                                                <a href="{{ Route('blog.detail')}}" class="btn btn--secondary">Đọc Tiếp <i
                                                         class="fa fa-angle-double-right"></i></a>
                                             </div>
                                         </div>
@@ -346,8 +356,8 @@
                         @foreach (App\Models\Career::all() as $item)
                         <div class="col-md-4 col-lg-3 mb-2 font-weight-medium inner-bit_title">
                             <a href="{{URL('/job?career=')}}{{$item->id}}" data-toggle="tooltip"
-                                        title="{{$item->name}}" 
-                                        target="_blank" class="p-2 text-dark">Việc làm <strong class="text-blue">{{$item->name}}</strong>
+                                title="{{$item->name}}" 
+                                target="_blank" class="p-2 text-dark">Việc làm <strong class="text-blue">{{$item->name}}</strong> ({{App\Models\Job::where('career_id',$item->id)->count()}})
                             </a>
                         </div>
                         @endforeach
@@ -368,7 +378,7 @@
                         <div class="col-md-4 col-lg-3 mb-2 font-weight-medium inner-bit_title">
                             <a href="{{URL('/job?city=')}}{{$item->id}}" data-toggle="tooltip"
                                         title="{{$item->name}}" 
-                                        target="_blank" class="p-2 text-dark">Việc làm <strong class="text-blue">{{$item->name}}</strong>
+                                        target="_blank" class="p-2 text-dark">Việc làm <strong class="text-blue">{{$item->name}}</strong> ({{App\Models\Job::where('city',$item->id)->count()}})
                             </a>
                         </div>
                         @endforeach

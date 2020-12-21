@@ -221,7 +221,7 @@
                                 </button>
                             </div>
                             <div class="modal-body px-4">
-                                <form id="form-complete_profile3">
+                                <form method="POST" action="{{route('job-seeker.profile.step3')}}">
                                     @csrf
                                     <input type="hidden" id="idDegree" name="idDegree" value="0">
                                     <div class="row">
@@ -343,41 +343,6 @@
 @push('scripts')
     <script>
         $(document).ready(function(){
-            $("#form-complete_profile3").on("submit", function(e){
-                e.preventDefault();    
-                $(".btn-submit-profile_add").html('Cập nhật <i class="fas fa-spinner text-white fa-spin ml-2"></i>');
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    type: 'post',
-                    url: '{!! route('job-seeker.profile.step3') !!}',
-                    data: $('#form-complete_profile3').serialize(),
-                    success:function(res){
-                        return res;
-                        if($.isEmptyObject(res.error)){
-                            setTimeout(function() {
-                                $(".print-error-msg").css('display','none');
-                                
-                                $(".list-profile-item").html(res);
-                                $('#modal-add-exp').modal('hide')
-                                Toast.fire({
-                                    icon: 'success',
-                                    title: 'Thêm mới học vấn, bằng cấp thành công!'
-                                });
-                            }, 500);
-                        }else{
-                            printErrorMsg(res.error);
-                            $(".btn-submit-profile_add").append('Cập nhật <i class="far fa-times-circle ml-2"></i>');
-                        }
-                    }, 
-                    error: function(e){
-                        console.log(e);
-                        alert("Thất bại!");
-                    }
-                });
-            });
-
             $(".updateDegree").click(function(event) {
                 event.preventDefault()
                 var idDegree = this.getAttribute("data-item")

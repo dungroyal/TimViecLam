@@ -25,6 +25,28 @@
             </div>
         </div>
     </div>
+    @if ($infoJob->status==0)
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong><i class="fas fa-exclamation-circle text-warning mr-1"></i> Tin tuyển dụng của bạn đang chờ duyệt!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                </div>
+            </div>
+        @elseif($infoJob->status==2)
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="alert alert-danger" role="alert">
+                        <h6 class="alert-heading"><i class="fas fa-times-circle text-danger mr-1"></i><strong> Tin tuyển dụng này đã bị từ chối!</h6>
+                        <hr>
+                        <p class="mb-0"><strong>Lý do: </strong> {{ $infoJob->note }}</p>
+                    </div>
+                </div>
+            </div>
+        @endif
     <div class="row">
         <div class="col-12">
             <div class="card">

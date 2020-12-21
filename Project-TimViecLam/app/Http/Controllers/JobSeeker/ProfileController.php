@@ -29,6 +29,11 @@ class ProfileController extends Controller
         return response()->json(['degree_details'=>$DegreeDetails]);
     }
 
+    public function getExperienceById(Request $request){
+        $ExperienceDetails = DB::table('experience_detail')->where('id',$request->idExperience)->first();
+        return response()->json(['experience_detail'=>$ExperienceDetails]);
+    }
+
     public function complete_profile1(Request $request)
     {
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
@@ -138,7 +143,7 @@ class ProfileController extends Controller
                         'graduation_year' => $request->graduation_year,
                         'status' => 1,
                     ]);
-                    return view('job_seeker.element.item_degree',compact('request'));
+                    return view('job_seeker.page.profile.degree',compact('JobSeeker','Profile'));
                 }else{
                     $idDegree = $request->idDegree;
                     DB::table('degree_details')
@@ -155,10 +160,10 @@ class ProfileController extends Controller
                             'graduation_month' => $request->graduation_month,
                             'graduation_year' => $request->graduation_year
                         ]);
-                    return view('job_seeker.element.item_degree',compact('request','idDegree'));
+                        return view('job_seeker.page.profile.degree',compact('JobSeeker','Profile'));
                 }
             }
-            return view('job_seeker.page.profile.degree',compact('JobSeeker','Profile'));
+            return response()->json(['error'=>$validator->errors()->all()]);
         }
         return view('job_seeker.page.profile.degree',compact('JobSeeker','Profile'));
     }
@@ -178,30 +183,56 @@ class ProfileController extends Controller
         $JobSeeker = JobSeeker::findOrFail(Auth::guard('job_seeker')->user()->id);
         $Profile = Profiles::where('job_seeker_id', $JobSeeker->id)->first();
         if ($request->isMethod('post')){
-            $validator = Validator::make($request->all(), [
+            $validated = $request->validate([
+                'idExperience'=> 'required',
                 'position' => 'required',
                 'company' => 'required',
                 'month_start' => 'required',
                 'year_start' => 'required',
                 'month_end' => 'required',
-                'year_end' => 'required'
+                'year_end' => 'required',
+                'note' => 'required',
             ]);
-            DB::table('experience_detail')->insert([
-                'id_profile' => $Profile->id,
-                'position' => $request->position,
-                'company' => $request->company,
-                'month_start' => $request->month_start,
-                'year_start' => $request->year_start,
-                'month_end' => $request->month_end,
-                'year_end' => $request->year_end,
-                'status' => 1,
-            ]);
-            if ($request->ajax()) {
-                return view('job_seeker.element.item_experience.blade',compact('request'));
+
+            if($request->idExperience == 0){
+                DB::table('experience_detail')->insert([
+                    'id_profile' => $Profile->id,
+                    'position' => $request->position,
+                    'company' => $request->company,
+                    'month_start' => $request->month_start,
+                    'year_start' => $request->year_start,
+                    'month_end' => $request->month_end,
+                    'year_end' => $request->year_end,
+                    'note' => $request->note,
+                    'status' => 1,
+                ]);
+                return view('job_seeker.page.profile.experience',compact('JobSeeker','Profile'));
+            }else{
+                $idExperience = $request->idExperience;
+                DB::table('experience_detail')
+                    ->where('id',$idExperience)
+                    ->update([
+                        'position' => $request->position,
+                        'company' => $request->company,
+                        'month_start' => $request->month_start,
+                        'year_start' => $request->year_start,
+                        'month_end' => $request->month_end,
+                        'year_end' => $request->year_end,
+                        'note' => $request->note,
+                    ]);
+                return view('job_seeker.page.profile.experience',compact('JobSeeker','Profile'));
             }
-            return view('job_seeker.page.profile.experience',compact('JobSeeker','Profile'));
         }
         return view('job_seeker.page.profile.experience',compact('JobSeeker','Profile'));
+    }
+
+    public function complete_profile4_delete(Request $request){
+        if ($request->ajax()) {
+            DB::table('experience_detail')->delete($request->idExperience);
+
+            return response()->json(['success'=>'Xóa thành công.']);
+        }
+        return response()->json(['error'=>'Xóa không thành công.']);
     }
 
     public function complete_profile5(Request $request)
@@ -274,7 +305,7 @@ class ProfileController extends Controller
     public function attachedProfile(Request $request){
         if($request->idAttached == 0){
             $validator = Validator::make($request->all(), [
-                'attachedProfile'=>'required|mimes:pdf,doc,docx|max:30000'
+                'attachedProfile'=>'required|mimes:pdf|max:30000'
             ]);
     
             if($validator->passes()){

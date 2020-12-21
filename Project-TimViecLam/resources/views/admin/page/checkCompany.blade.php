@@ -68,9 +68,29 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <th scope="row" width="10%">Tên liên hệ:</th>
+                                    <td>
+                                        {!! $Company->name_contact ?? "<span class='badge badge-pill badge-warning'>Thiếu tên liên hệ</span>" !!}
+                                    </td>
+                                    <th scope="row" width="10%">Địa chỉ liên hệ :</th>
+                                    <td>
+                                        {!! $Company->address_contact ?? "<span class='badge badge-pill badge-warning'>Thiếu địa chỉ liên hệ</span>" !!}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" width="10%">Email liên hệ:</th>
+                                    <td>
+                                        {!! $Company->email_contact ?? "<span class='badge badge-pill badge-warning'>Thiếu Email liên hệ</span>" !!}
+                                    </td>
+                                    <th scope="row" width="10%">Số điện thoại liên hệ:</th>
+                                    <td>
+                                        {!! $Company->phone_contact ?? "<span class='badge badge-pill badge-warning'>Thiếu số điện thoại liên hệ</span>" !!}
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th scope="row" width="10%">Địa chỉ:</th>
                                     <td>
-                                        @if ($Company->address == null)
+                                    @if ($Company->address == null)
                                         <span class='badge badge-pill badge-warning'>Thiếu địa chỉ công ty</span>
                                     @else
                                         {{$Company->address}},  {{App\Models\City::findOrFail($Company->city)->name}}
@@ -78,9 +98,30 @@
                                     </td>
                                     <th scope="row" width="10%">Giấy phép kinh doanh :</th>
                                     <td>
-                                        {!! $Company->business_license ?? "<span class='badge badge-pill badge-warning'>Thiếu giấy phép kinh doanh</span>" !!}
+                                        @if ($Company->business_license != null)
+                                        GPKD.pdf 
+                                            <a class="btn btn-success btn-sm ml-2" data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-eye"></i></a>
+                                        @else
+                                            <span class='badge badge-pill badge-warning'>Thiếu giấy phép kinh doanh</span>
+                                        @endif
                                     </td>
                                 </tr>
+                                 <!-- Modal -->
+                                 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h6 class="modal-title" id="staticBackdropLabel">Giấy phép kinh doanh {{$Company->name_company}}</h6>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <iframe type="application/pdf" src="{{url('/')}}/{{$Company->business_license}}" width="100%" height="685" style="border: none;"></iframe>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                                 <tr>
                                     <td colspan="4" class="text-center">
                                     @if ($Company->status == 0)
@@ -150,10 +191,14 @@
                                         <td>{{App\Models\Career::findOrFail($job->career_id)->name}}</td>
                                         <td>{{App\Models\City::findOrFail($job->city)->name}}</td>
                                         <td>
-                                            @if ($job->status==1)
-                                            <span class='badge badge-pill badge-success'>Đang chạy</span>
+                                            @if ($job->status==0)
+                                            <span class='badge badge-pill badge-warning'>Chờ duyệt</span>
+                                            @elseif($job->status==1)
+                                            <span class='badge badge-pill badge-success'>Đã duyệt</span>
+                                            @elseif($job->status==2)
+                                            <span class='badge badge-pill badge-danger'>Không được duyệt</span>
                                             @else
-                                                Tạm dừng
+                                            <span class='badge badge-pill badge-dark'>Tạm dừng</span>
                                             @endif
                                         </td>
                                     </tr>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Employer;
 
+use App\Employer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -9,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Yajra\Datatables\Datatables;
 use Carbon\Carbon;
 use App\JobSeeker;
+use Illuminate\Support\Facades\Response;
+use App\Models\Company;
+use Illuminate\Support\Str;
 
 class EmployerController extends Controller
 {
@@ -31,11 +35,82 @@ class EmployerController extends Controller
         return view('employer.dashboard',compact('info_company','info_employer'));
     }
 
-    public function company()
+    public function company(Request $request)
     {
+        $method = $request->method();
         $info_company = $this->company;
         $info_employer = $this->employer;
+
+        if ($request->isMethod('post')){
+            $employer  = Employer::findOrFail($info_employer->id);
+            $company  = Company::findOrFail($info_company->id);
+            $company->address = $request->address;
+            $company->city = $request->city;
+            $company->description = $request->description;
+            $company->website = $request->website;
+            $company->phone = $request->phone;
+            $company->fax = $request->fax;
+            $company->name_contact = $request->name_contact;
+            $company->phone_contact = $request->phone_contact;
+            $company->address_contact = $request->address_contact;
+            $company->email_contact = $request->email_contact;
+            $company->status = 0;
+            $company->save();
+            return redirect()->back()->with('success','Cập nhật thành công!');
+        }
         return view('employer.page.company',compact('info_company','info_employer'));
+    }
+
+    public function uploadLogo(Request $request){
+        $this->validate($request,[
+            'logo'=>'required|mimes:png,jpeg,jpg|max:20000'
+        ]);
+        $info_company = $this->company;
+        $company  = Company::findOrFail($info_company->id);
+        if($request->hasFile('logo')){    
+            $file = $request->file('logo');
+            $path = $file->store('uploads/images','public');
+            $company->logo = $path;
+            $company->save();
+            return redirect()->back()->with('success','Cập nhật thành công!');
+        }
+        return redirect()->back()->with('error','Cập nhật không thành công!');
+    }
+
+    public function uploadBusinessLicense(Request $request){
+        $this->validate($request,[
+            'business_license'=>'required|mimes:pdf|max:30000'
+        ]);
+        $info_company = $this->company;
+        $company  = Company::findOrFail($info_company->id);
+        if($request->hasFile('business_license')){    
+            $file = $request->file('business_license');
+            $path = $file->store('uploads/files','public');
+            $company->business_license = $path;
+            $company->save();
+            return redirect()->back()->with('success','Tải lên giấy phép kinh doanh thành công!');
+        }
+        return redirect()->back()->with('error','Tải lên giấy phép kinh doanh không thành công!');
+    }
+
+    public function downloadBusinessLicense()
+    {
+        $info_company = $this->company;
+        $company  = Company::findOrFail($info_company->id);
+        $type = Str::afterLast($company->business_license, '.');
+        $file = public_path().'/'.$company->business_license;
+        $name = 'GPKD-'.$company->name_company.' - Tuyển dụng, tìm việc làm nhanh hiệu quả tại Timvieclam.xyz.'.$type;
+        $headers = array('Content-Type: application/'.$type,);
+        return Response::download($file, $name, $headers);
+    }
+
+    public function deleteBusinessLicense()
+    {
+        $info_company = $this->company;
+        $company  = Company::findOrFail($info_company->id);
+        $company->business_license = "";
+        $company->save();
+        return redirect()->back()->with('success','Xóa giấy phép kinh doanh không thành công!');
     }
 
     public function listProfileApply()

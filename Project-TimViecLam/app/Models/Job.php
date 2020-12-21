@@ -49,4 +49,8 @@ class Job extends Model
     public function job_seeker(){
         return $this->belongsToMany(JobSeeker::class,'apply')->withTimeStamps();
     }
+
+    public function saveJob(){
+        return $this->belongsToMany(JobSeeker::class,'save_job')->withTimeStamps();
+    }
 }

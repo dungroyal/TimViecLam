@@ -43,17 +43,28 @@
                     
                     <form method="POST" action="{{route('job-seeker.profile.step4')}}">
                         @csrf
+                        <input type="hidden" name="idExperience" value="0">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Chức danh / vị trí</label>
-                                    <input type="text" name="position" class="form-control">
+                                    <input type="text" name="position" value="{{ old('position') }}" class="form-control  @error('position') is-invalid @enderror">
+                                    @error('position')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Công ty</label>
-                                    <input type="text" name="company" class="form-control">
+                                    <input type="text" name="company" class="form-control @error('company') is-invalid @enderror" value="{{ old('company') }}">
+                                    @error('company')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -61,12 +72,17 @@
                                   <label for="">Thời gian bắt đầu</label>
                                   <div class="row">
                                       <div class="col-md-6">
-                                        <select class="custom-select" name="month_start">
+                                        <select class="custom-select @error('month_start') is-invalid @enderror" name="month_start">
                                             <option value="0" selected>Tháng bắc đầu</option>
                                             @for ($i = 1; $i <= 12; $i++)
                                                 <option value="{{$i}}">Tháng {{$i}}</option>
                                             @endfor
                                           </select>
+                                          @error('month_start')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                       </div>
                                       <div class="col-md-6">
                                         <select class="custom-select" name="year_start">
@@ -107,7 +123,12 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Thông tin bổ sung</label>
-                                    <textarea class="form-control" name="detail" placeholder="Mô tả về các nhiệm vụ, trách nhiệm trong quá trình làm việc tại công ty. Các kỹ năng bạn học hỏi được hoặc các thành tựu đã đạt được (Ví dụ: Nhân viên xuất sắc tháng/năm...)" rows="3"></textarea>
+                                    <textarea class="form-control @error('month_start') is-invalid @enderror" name="note" placeholder="Mô tả về các nhiệm vụ, trách nhiệm trong quá trình làm việc tại công ty. Các kỹ năng bạn học hỏi được hoặc các thành tựu đã đạt được (Ví dụ: Nhân viên xuất sắc tháng/năm...)" rows="3"></textarea>
+                                    @error('note')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
@@ -151,13 +172,13 @@
                         </div>
                     </div>
                     <div class="ml-auto">
-                        <a href="" data-toggle="tooltip" title="Chỉnh sửa">
+                        <a href="" class="updateExperience" data-item="{{$experience->id}}">
                             <svg width="1.4rem" height="2.5rem" viewBox="0 0 16 16" class="bi mt-3 bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                               </svg>
                         </a>
-                        <a href="" data-toggle="tooltip" title="Xóa">
+                        <a href="" data-toggle="tooltip" title="Xóa" class="deleteExperience" data-item="{{$experience->id}}">
                             <svg width="1.4rem" height="1.4rem" viewBox="0 0 16 16" class="bi text-danger ml-2 mr-3 mt-3 bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
@@ -189,17 +210,28 @@
                             <div class="modal-body px-4">
                                 <form method="POST" action="{{route('job-seeker.profile.step4')}}">
                                     @csrf
+                                    <input type="hidden" name="idExperience" id="idExperience" value="0">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Chức danh / vị trí</label>
-                                                <input type="text" name="position" class="form-control">
+                                                <input type="text" name="position" id="position" value="{{ old('position') }}" class="form-control  @error('position') is-invalid @enderror">
+                                                @error('position')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Công ty</label>
-                                                <input type="text" name="company" class="form-control">
+                                                <input type="text" name="company" id="company" class="form-control @error('company') is-invalid @enderror" value="{{ old('company') }}">
+                                                @error('company')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -207,12 +239,17 @@
                                               <label for="">Thời gian bắt đầu</label>
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                    <select class="custom-select" name="month_start">
-                                                        <option value="0" selected>Tháng bắc đầu</option>
+                                                    <select class="custom-select @error('month_start') is-invalid @enderror" name="month_start">
+                                                        <option>Tháng bắc đầu</option>
                                                         @for ($i = 1; $i <= 12; $i++)
                                                             <option value="{{$i}}">Tháng {{$i}}</option>
                                                         @endfor
                                                       </select>
+                                                      @error('month_start')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                   </div>
                                                   <div class="col-md-6">
                                                     <select class="custom-select" name="year_start">
@@ -253,7 +290,12 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Thông tin bổ sung</label>
-                                                <textarea class="form-control" name="detail" placeholder="Mô tả về các nhiệm vụ, trách nhiệm trong quá trình làm việc tại công ty. Các kỹ năng bạn học hỏi được hoặc các thành tựu đã đạt được (Ví dụ: Nhân viên xuất sắc tháng/năm...)" rows="3"></textarea>
+                                                <textarea class="form-control @error('month_start') is-invalid @enderror" name="note" id="note" placeholder="Mô tả về các nhiệm vụ, trách nhiệm trong quá trình làm việc tại công ty. Các kỹ năng bạn học hỏi được hoặc các thành tựu đã đạt được (Ví dụ: Nhân viên xuất sắc tháng/năm...)" rows="3"></textarea>
+                                                @error('note')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -281,36 +323,67 @@
 @push('scripts')
     <script>
         $(document).ready(function(){
-            $("#form-complete_profile3").on("submit", function(e){
-                e.preventDefault();    
-                $(".btn-submit-profile_add").html('Cập nhật <i class="fas fa-spinner text-white fa-spin ml-2"></i>');
+            $(".updateExperience").click(function(event) {
+                event.preventDefault()
+                var idExperience = this.getAttribute("data-item")
+                $('#modal-add-exp').modal('show')
+                $('#idExperience').val(idExperience);
                 $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     type: 'post',
-                    url: '{!! route('job-seeker.profile.step4') !!}',
-                    data: $('#form-complete_profile3').serialize(),
+                    url: '{!! route('job-seeker.getExperienceById') !!}',
+                    data: {idExperience:idExperience},
                     success:function(res){
-                        if($.isEmptyObject(res.error)){
-                            setTimeout(function() {
-                                $(".print-error-msg").css('display','none');
-                                
-                                $(".list-profile-item").html(res);
-                                $('#modal-add-exp').modal('hide')
-                                Toast.fire({
-                                    icon: 'success',
-                                    title: 'Thêm mới kinh nghiệm thành công!'
-                                });
-                            }, 500);
-                        }else{
-                            printErrorMsg(res.error);
-                            $(".btn-submit-profile_add").append('Cập nhật <i class="far fa-times-circle ml-2"></i>');
-                        }
+                        var experience_detail = res.experience_detail;
+                        $('#myExtraLargeModalLabel').html("Chỉnh sửa: <strong>" + experience_detail.company + "</strong>")
+                        $('.btn-submit-profile_add').html("Lưu thay đổi")
+                        $('.btn-submit-profile_add').addClass("btn_update")
+                        $('#position').val(experience_detail.position)
+                        $('#company').val(experience_detail.company)
+                        $('#note').html(experience_detail.note)
                     }, 
                     error: function(e){
                         console.log(e);
                         alert("Thất bại!");
+                    }
+                });
+            });
+
+            $(".deleteExperience").click(function(event) {
+                event.preventDefault();
+                var idExperience = this.getAttribute("data-item");
+                Swal.fire({
+                    icon:'warning',
+                    title: 'Bạn có chắc chắn muốn xóa kinh nghiệm này?',
+                    showCancelButton: true,
+                    confirmButtonText: `Đồng ý`,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            },
+                            type: 'post',
+                            url: '{!! route('job-seeker.profile.step4.delete') !!}',
+                            data: {idExperience:idExperience},
+                            success:function(res){
+                                if($.isEmptyObject(res.error)){
+                                    $('.list-profile-item[data-item="'+idExperience+'"]').remove();
+                                    setTimeout(function() {
+                                        Toast.fire({
+                                            icon: 'success',
+                                            title: 'Xóa học vấn, bằng cấp thành công!'
+                                        });
+                                    }, 500);
+                                }
+                            }, 
+                            error: function(e){
+                                console.log(e);
+                                alert("Thất bại!");
+                            }
+                        });
                     }
                 });
             });

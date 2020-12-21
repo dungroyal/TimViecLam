@@ -9,10 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Tìm việc làm nhanh" name="description">
     <meta content="Royal Team" name="author">
-
-    <!-- BootStrap 4 -->
-    <link href="{{ asset('plugin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('plugin/fontawesome/css/all.min.css') }}" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
 
     <!-- CSS -->
     <link href="{{ asset('admin/css/app.css') }}" rel="stylesheet" type="text/css">
@@ -85,7 +84,7 @@
                                     </div>
 
                                     <div class="mt-4 text-center">
-                                        <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Quên mật khẩu?</a>
+                                        <a href="{{Route('admin.forgot_password')}}" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Quên mật khẩu?</a>
                                     </div>
                                 </form>
                             </div>
@@ -104,8 +103,8 @@
         </div>
     </div>
 
-    <script src="{{ asset('plugin/jquery/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('plugin/metisMenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('plugin/simplebar/simplebar.min.js') }}"></script>
     <script src="{{ asset('admin/js/admin.js') }}"></script>
