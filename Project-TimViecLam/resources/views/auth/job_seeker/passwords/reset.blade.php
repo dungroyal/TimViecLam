@@ -2,9 +2,9 @@
 @section('title', 'Reset - ')
 
 @section('content')
-<div class="container margin-header">
+<div class="container margin-header my-3">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 my-5">
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 

@@ -7,7 +7,7 @@
 <div class="container">
     <section class="candidate-detail">
         <div class="row">
-            <div class="col-md-8 col-lg-8 col-left">
+            <div class="col-md-12 col-lg-12 col-left">
                 <div id="detail-el" class="box-general-detail pb-15">
                     <div class="mw-box-item detail-header">
                         <div class="info">
@@ -125,10 +125,10 @@
                                     Kỹ năng bản thân
                                 </span>
                             </h3>
+                            @if(count($skill_detail)>0)
                             <div class="content">
                                 <div>
                                     <article class="pre-line font-pro-emp">{{$skill_detail[0]->professional_skills}}</article>
-
                                 </div>
                                 <?php $otherSkill = explode(",",$skill_detail[0]->other_skill)?>
                                 <div>
@@ -140,25 +140,8 @@
                                     </ul>
                                 </div>
                             </div>
+                            @endif
                         </div>
-                        {{-- <div class="common-info item-info pt-0">
-                            <h3 class="head-title"><span class="bg"><span class="icon"><i class="fas fa-book-open"></i></span>
-                                    Trình độ ngoại ngữ
-                                </span></h3>
-                            <div class="content">
-                                <ul class="list-unstyled properties rate-list mt-2">
-                                    <li class="">
-                                        <span class="left font-pro-emp">Tiếng Anh</span><span class="star-right">
-                                                <i class="fas fa-star on"></i>
-                                                <i class="fas fa-star on"></i>
-                                                <i class="fas fa-star on"></i>
-                                                <i class="far fa-star off"></i>
-                                                <i class="far fa-star off"></i>
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> --}}
                         
                         <div class="common-info item-info pt-0">
                             <h3 class="head-title mb-0 pb-0"><span class="bg"><span class="icon"><i class="fas fa-graduation-cap"></i></span>
@@ -215,21 +198,17 @@
                         </div>
                     </div>
                 </div>
-                </div>
                 <div id="box-contact" class="box_general mb-3">
                     <h3 class="title-h2">Thông tin liên hệ</h3>
                     <div class="mw-box-item box-contact">
                         <div class="row pt-3">
                             <div class="col-md-6 col-lg-3 label-contact"><strong>Họ tên:</strong></div>
-                            <div class="col-md-6 col-lg-9 item font-pro-emp"><span class="capitalize">phạm ngọc chiêu
-                                    ánh</span>
+                            <div class="col-md-6 col-lg-9 item font-pro-emp"><span class="capitalize">{{$JobSeeker->name}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-lg-3 label-contact"><strong>Địa chỉ:</strong></div>
-                            <div class="col-md-6 col-lg-9 item font-pro-emp">
-                                Chung Cư 4S Riverside, Kp4, Phường Hiệp Bình Chánh, Quận Thủ Đức, Hồ Chí Minh
-                            </div>
+                            <div class="col-md-6 col-lg-9 item font-pro-emp">{{$Profile->address}}</div>
                         </div>
                         @if (Auth::guard('employer')->user())
                             @if (App\Models\Company::where('employer_id',Auth::guard('employer')->user()->id)->first()->status == 1)
@@ -279,7 +258,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-4 col-right">
+            </div>
+            {{-- <div class="col-md-4 col-lg-4 col-right">
                 <div class="row-left">
                     <div class="box_right">
                         <div class="candidate_right pt-2 pb-2"><span>
@@ -370,7 +350,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 </div>

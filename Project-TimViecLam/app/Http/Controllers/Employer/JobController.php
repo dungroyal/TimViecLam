@@ -38,6 +38,8 @@ class JobController extends Controller
     
     public function store(Request $request)
     {
+        $info_company = $this->company;
+        $info_employer = $this->employer;
         if($request->idJob == null){
             $this->validate($request,[
                 'job_code'=>['required', 'unique:App\Models\Job,job_code', 'max:10'],
@@ -65,8 +67,8 @@ class JobController extends Controller
     
             Job::create([
                 'job_code'=>request('job_code'), request('job_code'),
-                'company_id'=>$this->data_company['employer_id'],
-                'employer_id'=>$this->data_company['id'],
+                'company_id'=>$info_company->id,
+                'employer_id'=>$info_employer->id,
                 'name_job'=>$name_job = request('name_job'),
                 'type_job_id'=>request('type_job_id'),
                 'amount'=>request('amount'),
